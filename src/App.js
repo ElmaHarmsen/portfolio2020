@@ -1,12 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+//This is a functional components, not a class component.
+function App() { //Between () are the props that can be used within the HTML.
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header>
+        Helloooooo
+      </header>
+      {/* <header className="App-header">
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -18,7 +20,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
