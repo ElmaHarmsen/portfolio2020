@@ -1,0 +1,15 @@
+@import "./index.scss";
+
+.Footer {
+  text-align: left;
+  padding: 1.5rem;
+
+  h2, h1 {
+    text-transform: uppercase;
+    padding: 0px;
+    color: $green;
+  }
+  h1::first-letter {
+    color: $blue-green;
+  }
+}

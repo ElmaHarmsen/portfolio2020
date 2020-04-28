@@ -1,0 +1,58 @@
+@import "./index.scss";
+
+.nav-menu-bar {
+  width: 100vw;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+
+  .nav-content {
+    h2 {
+      text-align: left;
+      color: $green;
+      text-transform: uppercase;
+      padding: 1.5rem;
+    }
+    h2::first-letter {
+      color: $blue-green;
+    }
+    .nav-menu {
+      width: 30px;
+      height: 35px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 1.5rem;
+      top: 1.5rem;
+  
+      span {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: $pink-red;
+      }
+    }
+  }
+}
+.nav-items {
+  display: flex;
+  flex-flow: column nowrap;
+  width: calc(100% - 3rem);
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 1.5rem 3rem 1.5rem 0px;
+  height: calc(100vh - 100px - 3rem);
+  background-color: #fff;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+
+  h1 {
+    color: $pink-red;
+  }
+}

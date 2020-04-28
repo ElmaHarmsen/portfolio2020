@@ -1,0 +1,66 @@
+// body {
+//   margin: 0;
+//   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+//     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+//     sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// code {
+//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//     monospace;
+// }
+$green: #79BD9A;
+$blue-green: #155457;
+$red: #703831;
+$pink-red: #BD8079;
+
+@font-face {
+  font-family: "old-news";
+  src: url('./assets/Oranienbaum-Regular.ttf');
+}
+@font-face {
+  font-family: "ibm";
+  src: url('./assets/IBMPlexSans-Regular.ttf');
+}
+body {
+  margin: 0;
+}
+h1 {
+  font-family: "old-news";
+  font-size: 65px;
+}
+h2 {
+  font-family: "old-news";
+  font-size: 35px;
+}
+p {
+  font-family: "ibm";
+  font-size: 15px;
+}
+.double-border {
+  width: 100%;
+  height: auto;
+  
+  span {
+    display: block;
+    background-color: $green;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0px 0px 0px;
+  }
+}
+.next-arrow {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  h2 {
+    text-transform: uppercase;
+    color: $blue-green;
+  }
+  img {
+    width: 35px;
+    height: auto;
+  }
+}
