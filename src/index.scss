@@ -29,7 +29,8 @@ body {
 }
 h1 {
   font-family: "old-news";
-  font-size: 65px;
+  font-size: 55px;
+  text-transform: uppercase;
 }
 h2 {
   font-family: "old-news";
@@ -39,17 +40,9 @@ p {
   font-family: "ibm";
   font-size: 15px;
 }
-.double-border {
-  width: 100%;
-  height: auto;
-  
-  span {
-    display: block;
-    background-color: $green;
-    width: 100%;
-    height: 2px;
-    margin: 5px 0px 0px 0px;
-  }
+.Header, .About, .Skills, .Projects {
+  box-shadow: 0px 2px 2px 1px rgba(21, 84, 87, .3);
+  padding: 1rem;
 }
 .next-arrow {
   display: flex;

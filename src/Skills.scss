@@ -1,0 +1,28 @@
+@import "./index.scss";
+
+.Skills {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  h1 {
+    color: $green;
+
+    span {
+      color: $blue-green;
+    }
+  }
+  h1::first-letter {
+    color: $blue-green;
+  }
+  .the-skills {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    height: 40%;
+    justify-content: space-between;
+
+    h2 {
+      color: $blue-green;
+    }
+  }
+}
