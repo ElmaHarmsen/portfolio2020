@@ -1,7 +1,7 @@
 @import "./index.scss";
 
 .App {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 80px 1fr 1fr 1fr 1fr 130px;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
 }

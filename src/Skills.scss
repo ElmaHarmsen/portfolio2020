@@ -5,21 +5,21 @@
   flex-flow: column wrap;
   justify-content: space-between;
   h1 {
-    color: $green;
+    color: $blue-green;
 
     span {
-      color: $blue-green;
+      color: $green;
     }
   }
   h1::first-letter {
-    color: $blue-green;
+    color: $green;
   }
   .the-skills {
     display: flex;
     flex-flow: column wrap;
-    text-align: center;
-    height: 40%;
-    justify-content: space-between;
+    text-align: left;
+    height: 800px;
+    justify-content: space-evenly;
 
     h2 {
       color: $blue-green;

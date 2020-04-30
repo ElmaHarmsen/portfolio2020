@@ -8,7 +8,7 @@ import '../index.scss';
 function Navigation() { //Navigation is the name of the component. //Between () are the props that can be used within the HTML.
 
   //This is the place where the HOOKS will be located.c'
-  const [banana, setBanana] = useState(0); 
+  const [isNavigationOpen, toggleNavigation] = useState(false); 
   //useState declares a state variable. Before it was this.state. Between ( ) can be anything: number, string, object, boolean (hopefuly).
   //useState returns 2 values: the current state 'banana' and an updated one 'setBanana'.
 
@@ -19,7 +19,7 @@ function Navigation() { //Navigation is the name of the component. //Between () 
       <div className="nav-menu-bar">
         <div className="nav-content">
           <h2>home</h2> {/* Dynamically changes to the current visited page. */}
-          <div className="nav-menu">
+          <div className="nav-menu" onClick={() => toggleNavigation(!isNavigationOpen)}>
             <span></span>
             <span></span>
             <span></span>
@@ -30,13 +30,13 @@ function Navigation() { //Navigation is the name of the component. //Between () 
           Click +1.
         </button> */}
       </div>
-      {/* <div className="nav-items">
+      <div className={isNavigationOpen ? "nav-items open" : "nav-items"}>
         <h1>Home</h1>
         <h1>About</h1>
         <h1>Skills</h1>
         <h1>Projects</h1>
         <h1>Contact</h1>
-      </div> */}
+      </div>
           
     </section>
   );

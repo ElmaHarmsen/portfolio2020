@@ -1,9 +1,10 @@
 @import "./index.scss";
 
 .Header {
-  height: calc(100vh - 94px - 1rem); //The view port height minus the navigation, 1 time the double border and the padding. 
   padding: 1rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+  color: $blue-green;
+  margin-top: 80px;
 }
