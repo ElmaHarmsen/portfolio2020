@@ -17,7 +17,6 @@ function Home() {
       <Skills /> {/* Skills page with 3 items and these are switching content. */}
       <Projects /> {/* Projects page with 5 projects and a changing image, with the stack underneath the project link. */}
       <Footer /> {/* Small, like 15% height section with contact info, is a link that links to the contact component. About 150px */}
-      <Contact />
     </div>
   );
 }

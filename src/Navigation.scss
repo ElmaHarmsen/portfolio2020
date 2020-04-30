@@ -55,14 +55,14 @@
   height: calc(100vh - 80px - 2rem);
   position: fixed;
   z-index: 2;
-  bottom: calc(-100vh + 2rem);
+  bottom: calc(-100vh + 4rem);
   transition: bottom 0.5s ease-out;
   transition-delay: 0.2s;
   background-color: #fff;
 
   h1 {
     color: $pink-red;
-    padding: 2rem 0px;
+    padding: 1.5rem 0px;
   }
   &.open {
     bottom: 0;

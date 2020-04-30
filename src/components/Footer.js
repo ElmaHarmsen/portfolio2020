@@ -13,7 +13,7 @@ function Footer() {
         <h2>click here for</h2>
         <h1>contact</h1>
       </div>
-      <Contact className={isContactOpen ? ".Contact open" : ".Contact"} />
+      <Contact isContactOpen={isContactOpen} />
     </section>
   );
 }

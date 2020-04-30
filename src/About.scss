@@ -13,25 +13,35 @@
   }
   .the-about {
     padding: 2rem 0px;
-    .about-img {
-      height: 400px;
-      margin: 2rem 0px;
-      img {
-        height: 400px;
-        width: auto;
-        position: relative;
-        bottom: 400px;
-        box-shadow: 1px 1px 5px 5px rgba(21, 84, 87, .3);
-        // animation: "theBorder" 30s infinite;
-      }
-      .the-border {
-        height: 380px;
-        width: 280px;
-        position: relative;
-        left: 6px;
-        bottom: 6px;
-        z-index: 1;
-      }
+    // .about-img {
+    //   height: 400px;
+    //   margin: 2rem 0px;
+    //   img {
+    //     height: 400px;
+    //     width: auto;
+    //     position: relative;
+    //     bottom: 400px;
+    //     // box-shadow: 1px 1px 5px 5px rgba(21, 84, 87, .3);
+    //     // animation: "theBorder" 30s infinite;
+    //   }
+    //   .the-border {
+    //     height: 380px;
+    //     width: 280px;
+    //     position: relative;
+    //     left: 6px;
+    //     bottom: 6px;
+    //     z-index: 1;
+    //   }
+    // }
+    img {
+      height: auto;
+      width: 50%;
+      padding: 2rem 0px 1rem;
+      // box-shadow: 1px 1px 5px 5px rgba(21, 84, 87, .3);
+      // animation: "theBorder" 30s infinite;
+    }
+    p {
+      padding: 2rem 0.5rem 1rem;
     }
     p::first-letter{
       color: $green;
