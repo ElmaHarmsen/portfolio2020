@@ -13,9 +13,13 @@ function Home() {
     <div className="App">
       <Navigation /> {/* Top bar with current page tekst and nav menu. About 200px*/}
       <Header /> {/* First page after animation */}
+      <div className="line line-header"></div>
       <About /> {/* About me page with the sliding paragraphs and an image. */} 
+      <div className="line line-about"></div>
       <Skills /> {/* Skills page with 3 items and these are switching content. */}
+      <div className="line line-skills"></div>
       <Projects /> {/* Projects page with 5 projects and a changing image, with the stack underneath the project link. */}
+      <div className="line line-projects"></div>
       <Footer /> {/* Small, like 15% height section with contact info, is a link that links to the contact component. About 150px */}
     </div>
   );

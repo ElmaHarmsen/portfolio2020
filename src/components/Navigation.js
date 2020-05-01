@@ -27,11 +27,12 @@ function Navigation() { //Navigation is the name of the component. //Between () 
             </div>
           </div>
         </div>
-        {/* <h2>This is {banana}.</h2>
-        <button onClick={() => setBanana(banana + 1)}>
-          Click +1.
-        </button> */}
+        <div className="nav-lines">
+          <span></span>
+          <span></span>
+          </div>
       </div>
+
       <div className={isNavigationOpen ? "nav-items open" : "nav-items"}>
         <h1>Home</h1>
         <h1>About</h1>

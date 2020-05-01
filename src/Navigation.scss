@@ -2,32 +2,51 @@
 
 .nav-menu-bar {
   width: 100vw;
-  display: flex;
-  flex-flow: column wrap;
+  // display: flex;
+  // flex-flow: column wrap;
   justify-content: space-between;
   position: fixed;
   top: 0;
-  height: 60px;
+  height: 67px;
   background-color: #fff;
-  box-shadow: 0px 2px 2px 1px rgba(21, 84, 87, .3);
+  // box-shadow: 0px 2px 2px 1px rgba(21, 84, 87, .3);
   z-index: 4;
+
+  .nav-lines {
+    width: 100vw;
+
+    span {
+      display: block;
+      background-color: $blue-green;
+      width: 100%;
+      margin: 0px 0px 3px 0px;
+    }
+    span:first-of-type {
+      height: 2px;
+    }
+    span:last-of-type {
+      height: 4px; // 2 4 6 8 10 12
+    }
+  }
 
   .nav-content {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    margin: auto 1rem;
+    width: calc(50% + 33.5px); //Half of the screen width + half of the nav-menu so it's in the middle.
     h2 {
       text-align: left;
       color: $blue-green;
-      text-transform: uppercase;
+      text-transform: capitalize;
       font-size: 35px;
+      margin: auto 0px auto 1rem;
     }
-    h2::first-letter {
-      color: $green;
-    }
+    // h2::first-letter {
+    //   color: $green;
+    // }
     div {
       .nav-menu {
+        padding: 1rem;
         width: 35px;
         height: 35px;
         display: flex;
@@ -35,24 +54,25 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        background-color: $orange;
     
         span {
           display: block;
           width: 35px;
           height: 2px;
-          background-color: $pink-red;
+          background-color: $red-orange;
         }
       }
       &.open {
         span:first-of-type {
           transform: rotate(0deg);
           transition: 0.1s ease-out;
-          transition-delay: 0.3s;
+          transition-delay: 0.1s;
         }
         span:nth-of-type(2) {
           opacity: 1;
           transition: 0.1s ease-out;
-          transition-delay: 0.6s;
+          transition-delay: 0.2s;
         }
         span:last-of-type {
           transform: rotate(0deg);
@@ -64,7 +84,7 @@
         span:first-of-type {
           transform: rotate(-45deg) translate(-8px, 6px);
           transition: 0.1s ease-out;
-          transition-delay: 0.3s;
+          transition-delay: 0.1s;
         }
         span:nth-of-type(2) {
           opacity: 0;
@@ -74,7 +94,7 @@
         span:last-of-type {
           transform: rotate(45deg) translate(-10px, -8px);
           transition: 0.1s ease-out;
-          transition-delay: 0.6s;
+          transition-delay: 0.2s;
         }
       }
     }
@@ -83,21 +103,21 @@
 .nav-items {
   display: flex;
   flex-flow: column nowrap;
-  width: calc(100% - 3rem);
+  width: 100%;
+  // width: calc(100% - 67px);
   justify-content: flex-end;
   align-items: flex-end;
-  padding: 1.5rem 3rem 1.5rem 0px;
   height: 100vh;
   position: fixed;
   z-index: 2;
   bottom: calc(-100vh - 60px - 4rem);
   transition: bottom 0.5s ease-out;
-  transition-delay: 0.8s;
+  transition-delay: 0.2s;
   background-color: #fff;
 
   h1 {
-    color: $pink-red;
-    padding: 1.5rem 0px;
+    color: $blue-green;
+    padding: 1.5rem;
   }
   &.open {
     bottom: 0;

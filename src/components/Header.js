@@ -4,11 +4,13 @@ import NextArrow from '../components/NextArrow.js';
 
 function Header() {
   return (
-    <section className="Header">
-      <div>
-        <h1>This is the awesome sweet cute interesting animated homepage. </h1>
+    <section>
+      <div className="Header">
+        <div className="section-top">
+          <h1>Welcome!</h1>
+        </div>
+        <NextArrow />
       </div>
-      <NextArrow />
     </section>
   )
 }
