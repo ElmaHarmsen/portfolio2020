@@ -12,101 +12,31 @@
     color: $green;
   }
   .the-about {
-    padding: 2rem 0px;
-    // .about-img {
-    //   height: 400px;
-    //   margin: 2rem 0px;
-    //   img {
-    //     height: 400px;
-    //     width: auto;
-    //     position: relative;
-    //     bottom: 400px;
-    //     // box-shadow: 1px 1px 5px 5px rgba(21, 84, 87, .3);
-    //     // animation: "theBorder" 30s infinite;
-    //   }
-    //   .the-border {
-    //     height: 380px;
-    //     width: 280px;
-    //     position: relative;
-    //     left: 6px;
-    //     bottom: 6px;
-    //     z-index: 1;
-    //   }
-    // }
+    margin: 2rem 0px;
     img {
       height: auto;
       width: 50%;
-      padding: 2rem 0px 1rem;
-      // box-shadow: 1px 1px 5px 5px rgba(21, 84, 87, .3);
-      // animation: "theBorder" 30s infinite;
     }
-    p {
-      padding: 2rem 0.5rem 1rem;
+    .paragraph-border {
+      border: 2px solid $green;
+      border-top: 2px solid transparent;
+      p {
+        padding: 3rem 2rem;
+        color: $blue-green;
+        margin: 1rem;
+        border: 2px solid $green
+      }
+      p::first-letter{
+        color: $green;
+        float: left;
+        font-family: "old-news";
+        font-size: 85px;
+        padding-right: 10px;
+        padding-left: 3px;
+      }
     }
-    p::first-letter{
-      color: $green;
-      float: left;
-      font-family: "old-news";
-      font-size: 85px;
-      padding-right: 10px;
-      padding-left: 3px;
-    }
   }
-}
-@keyframes theBorder {
-  0%{
-    bottom: 400px;
-    left: 0;
-    right: 0;
-  }
-  10%{
-    bottom: 403px;
-    left: 5px;
-    right: 0;
-  }
-  20%{
-    bottom: 401px;
-    left: 5px;
-    right: 0;
-  }
-  30%{
-    bottom: 399px;
-    left: 5px;
-    right: 0;
-  }
-  40%{
-    bottom: 400px;
-    left: 5px;
-    right: 0;
-  }
-  50%{
-    bottom: 404px;
-    left: 5px;
-    right: 0;
-  }
-  60%{
-    bottom: 402px;
-    left: 5px;
-    right: 0;
-  }
-  70%{
-    bottom: 401px;
-    left: 5px;
-    right: 0;
-  }
-  80%{
-    bottom: 398px;
-    left: 5px;
-    right: 0;
-  }
-  90%{
-    bottom: 402px;
-    left: 5px;
-    right: 0;
-  }
-  100%{
-    bottom: 400px;
-    left: 0;
-    right: 0;
+  .arrow {
+    width: 50px;
   }
 }

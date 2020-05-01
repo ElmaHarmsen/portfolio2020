@@ -6,9 +6,7 @@ function Header() {
   return (
     <section className="Header">
       <div>
-        <h1>This is the homepage.</h1>
-        <h2>Here I will present something cute.</h2>
-        <p>It is going to draw attention.</p>
+        <h1>This is the awesome sweet cute interesting animated homepage. </h1>
       </div>
       <NextArrow />
     </section>

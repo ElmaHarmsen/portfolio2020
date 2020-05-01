@@ -40,14 +40,10 @@ p {
   font-family: "ibm";
   font-size: 16px;
   line-height: 1.4rem;
-  color: $blue-green;
 }
 .Header, .About, .Skills, .Projects {
   box-shadow: 0px 2px 2px 1px rgba(21, 84, 87, .3);
   padding: 1rem;
-}
-.Header {
-  height: calc(100vh - 80px);
 }
 .next-arrow {
   display: flex;
@@ -58,7 +54,7 @@ p {
     color: $blue-green;
   }
   img {
-    width: 30px;
+    width: 20px;
     height: auto;
   }
 }

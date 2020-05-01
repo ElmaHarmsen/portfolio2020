@@ -6,7 +6,6 @@
   height: 100vh;
   z-index: 4;
   display: flex;
-  align-items: end;
   position: fixed;
   top: calc(100vh + 3rem);
   transition: top 0.5s ease-out;
@@ -23,7 +22,24 @@
       text-align: left;
       color: $pink-red;
       font-size: 35px;
-      margin: auto 0px 0px 0px;
+      margin: auto 0px;
+    }
+
+    .contact-menu {
+      width: 35px;
+      height: 35px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+  
+      span {
+        display: block;
+        width: 35px;
+        height: 2px;
+        background-color: $pink-red;
+      }
     }
 
     .contact-info {
@@ -32,7 +48,7 @@
       justify-content: space-between;
       align-items: center;
 
-       h1 {
+       h2 {
         color: $green;
         padding: 2rem 0px;
         font-size: 35px;

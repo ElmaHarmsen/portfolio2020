@@ -19,10 +19,12 @@ function Navigation() { //Navigation is the name of the component. //Between () 
       <div className="nav-menu-bar">
         <div className="nav-content">
           <h2>home</h2> {/* Dynamically changes to the current visited page. */}
-          <div className="nav-menu" onClick={() => toggleNavigation(!isNavigationOpen)}>
-            <span></span>
-            <span></span>
-            <span></span>
+          <div onClick={() => toggleNavigation(!isNavigationOpen)}>
+            <div className={isNavigationOpen ? "nav-menu close" : "nav-menu open"} >
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
         {/* <h2>This is {banana}.</h2>

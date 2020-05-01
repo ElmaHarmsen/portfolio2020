@@ -5,12 +5,17 @@ function Contact(props) {
   return (
     <section className={props.isContactOpen ? "Contact open" : "Contact"}>
       <div className="contact-content">
-        <h1 className="contact-header">please use one of these and let's have a talk!</h1>
+        <h2 className="contact-header">Hey there, please use one of these and let's have a talk!</h2>
+        <div className={props.isContactOpen ? "contact-menu close" : "contact-menu"} >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div className="contact-info">
-          <h1><span>(+31)</span> 06 23957767</h1>
-          <h1>elmaharmsen<span>01</span> @gmail.com</h1>
-          <h1>Elma Harmsen
-            <span> at</span> LinkedIn</h1>
+          <h2><span>(+31)</span> 06 23957767</h2>
+          <h2>elmaharmsen<span>01</span> @gmail.com</h2>
+          <h2>Elma Harmsen <br></br>
+            <span>at</span> LinkedIn</h2>
         </div>
       </div>
     </section>

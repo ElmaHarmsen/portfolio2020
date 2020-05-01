@@ -5,6 +5,12 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  color: $blue-green;
-  margin-top: 80px;
+  margin-top: 60px; //The height of the navigation
+  height: calc(100vh - 60px - 2rem);
+
+  h1 {
+    background: linear-gradient(#E67600, #E6AD0B);
+    background-clip: text;
+	  -webkit-text-fill-color: transparent;
+  }
 }
