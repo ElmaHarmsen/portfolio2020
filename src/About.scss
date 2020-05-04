@@ -1,16 +1,6 @@
 @import "./index.scss";
 
 .About {
-  h1 {
-    color: $blue-green;
-
-    span {
-      color: $green;
-    }
-  }
-  h1::first-letter {
-    color: $green;
-  }
   .the-about {
     margin: 2rem 0px;
     img {
@@ -18,16 +8,16 @@
       width: 50%;
     }
     .paragraph-border {
-      border: 2px solid $green;
+      border: 2px solid $old-green;
       border-top: 2px solid transparent;
       p {
         padding: 3rem 2rem;
-        color: $blue-green;
+        color: $old-blue;
         margin: 1rem;
-        border: 2px solid $green
+        border: 2px solid $old-green
       }
       p::first-letter{
-        color: $green;
+        color: $old-orange;
         float: left;
         font-family: "old-news";
         font-size: 85px;

@@ -11,7 +11,7 @@ function Footer() {
     <section>
       <div className="Footer" onClick={() => toggleContact(!isContactOpen)}>
         <h2>click here for</h2>
-        <h1>contact</h1>
+        <h1>contact<span>!</span></h1>
       </div>
       <Contact isContactOpen={isContactOpen} />
     </section>

@@ -7,7 +7,7 @@ function Header() {
     <section>
       <div className="Header">
         <div className="section-top">
-          <h1>Welcome!</h1>
+          <h1>Welcome<span>!</span></h1>
         </div>
         <NextArrow />
       </div>

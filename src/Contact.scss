@@ -1,7 +1,7 @@
 @import "./index.scss";
 
 .Contact {
-  background-color: $blue-green;
+  background-color: #fff;
   width: 100%;
   height: 100vh;
   z-index: 4;
@@ -35,9 +35,14 @@
 
     .contact-header {
       text-align: left;
-      color: $green;
-      font-size: 35px;
+      color: $old-blue;
+      font-size: 45px;
       margin: auto 1rem;
+      text-transform: uppercase;
+
+      span {
+        color: $old-orange;
+      }
     }
 
     // .contact-menu {
@@ -64,15 +69,14 @@
       align-items: flex-end;
 
        h2, a {
-        background-color: $green;
-        color: $blue-green;
+        color: $old-blue;
         padding: 2rem 1rem;
         font-size: 35px;
         width: 100%;
         text-decoration: none;
       }
       span {
-        color: $red-orange;
+        color: $old-orange;
       }
       a {
         padding: 0 2rem;

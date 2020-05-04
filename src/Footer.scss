@@ -7,13 +7,17 @@
   h2, h1 {
     text-transform: uppercase;
     padding: 0px;
-    color: $blue-green;
+    color: $old-blue;
   }
   h2 {
     font-size: 35px;
   }
   h1 {
-    font-size: 65px;
+    font-size: 60px;
+
+    span {
+      color: $old-orange;
+    }
   }
   // h1::first-letter {
   //   color: $green;

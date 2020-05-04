@@ -11,13 +11,47 @@
 //   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 //     monospace;
 // }
-$green: #79BD9A;
 $blue-green: #155457;
 $orange: #f69a0b;
 $red-orange: #9b0800;
 
-$red: #703831;
-$pink-red: #BD8079;
+$yellow: #e0ae05;
+$pink: #8b023c;
+$terquoise:#03525c;
+$purple: #520d48;
+$red-purple: #410521;
+
+$red: #b80025;
+$old-red: #8c4949;
+$greenish: #826c2a;
+$green: #578a3f;
+$light-terquoise: #00b386;
+
+//1
+$bright-black: #05161f;
+$bright-orange: #fa4904;
+$bright-light-yellow: #f6f2a9;
+$bright-yellow: #dfc608;
+$bright-green: #36ab8a;
+
+//2
+$old-blue: #2a3141;
+$old-orange: #ff9928;
+$old-pink: #f8333c;
+$old-yellow: #f8f4b7;
+$old-green: #468374;
+
+$blue3: #1c2130;
+$green3: #028f76;
+$light-green3: #b3e099;
+$yellow3: #ffeaad;
+$red3: #d14334;
+
+$black4: #0c0c0b;
+$light-green4: #8bba78;
+$orange4: #e68e28;
+$red4: #e12222;
+$green4: #3f7d54;
 
 @font-face {
   font-family: "old-news";
@@ -45,31 +79,38 @@ p {
   line-height: 1.4rem;
 }
 .Header, .About, .Skills, .Projects {
-  // box-shadow: 0px 2px 2px 1px rgba(21, 84, 87, .3);
   padding: 1rem;
+  h1 {
+    color: $old-blue;
+
+    span {
+      color: $old-orange;
+    }
+  }
 }
 .Skills, .Projects {
   height: 100vh;
 }
 .line {
-  background-color: $blue-green;
+  background-color: $old-yellow;
   width: 100%;
   position: sticky;
+  height: 2px;
 }
 .line-header {
-  height: 6px;
-  top: 79px;
+  top: 77px;
 }
 .line-about {
-  height: 8px;
-  top: 88px;
+  top: 82px;
 }
 .line-skills {
-  height: 10px;
-  top: 99px;
+  top: 87px;
 }
-.line-projects {
-  height: 12px;
+.line-inbetween {
+  display: block;
+  background-color: $old-yellow;
+  height: 2px;
+  width: 100%;
 }
 .next-arrow {
   display: flex;
@@ -77,7 +118,7 @@ p {
   justify-content: flex-end;
   h2 {
     text-transform: uppercase;
-    color: $orange;
+    color: $old-pink;
   }
   img {
     width: 20px;

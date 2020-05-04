@@ -4,16 +4,7 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
-  h1 {
-    color: $blue-green;
-
-    span {
-      color: $green;
-    }
-  }
-  h1::first-letter {
-    color: $green;
-  }
+  
   .the-skills {
     display: flex;
     flex-flow: column wrap;
@@ -22,7 +13,7 @@
     justify-content: space-evenly;
 
     h2 {
-      color: $blue-green;
+      color: $old-blue;
     }
   }
 }

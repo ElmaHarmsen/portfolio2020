@@ -35,9 +35,13 @@ function Navigation() { //Navigation is the name of the component. //Between () 
 
       <div className={isNavigationOpen ? "nav-items open" : "nav-items"}>
         <h1>Home</h1>
+        <span className="line-inbetween"></span>
         <h1>About</h1>
+        <span className="line-inbetween"></span>
         <h1>Skills</h1>
+        <span className="line-inbetween"></span>
         <h1>Projects</h1>
+        <span className="line-inbetween"></span>
         <h1>Contact</h1>
       </div>
           
