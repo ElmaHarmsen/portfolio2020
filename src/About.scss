@@ -8,13 +8,8 @@
       width: 50%;
     }
     .paragraph-border {
-      border: 2px solid $old-green;
-      border-top: 2px solid transparent;
       p {
-        padding: 3rem 2rem;
         color: $old-blue;
-        margin: 1rem;
-        border: 2px solid $old-green
       }
       p::first-letter{
         color: $old-orange;

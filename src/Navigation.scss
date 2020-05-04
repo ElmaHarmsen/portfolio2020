@@ -19,7 +19,6 @@
       display: block;
       background-color: $old-yellow;
       width: 100%;
-      margin: 0px 0px 3px 0px;
       height: 2px;
     }
   }
@@ -113,6 +112,7 @@
     color: $old-green;
     padding: 1.5rem;
     text-transform: capitalize;
+    text-align: right;
   }
   &.open {
     bottom: 0;

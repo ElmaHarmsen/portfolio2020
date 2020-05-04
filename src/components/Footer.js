@@ -13,9 +13,9 @@ function Footer() {
         <h2>click here for</h2>
         <h1>contact<span>!</span></h1>
       </div>
-      <Contact isContactOpen={isContactOpen} />
+      <Contact closeContact={() => toggleContact(false)} isContactOpen={isContactOpen} />
     </section>
   );
 }
 
-export default Footer
+export default Footer;

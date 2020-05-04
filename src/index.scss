@@ -63,6 +63,7 @@ $green4: #3f7d54;
 }
 body {
   margin: 0;
+  margin-top: 67px;
 }
 h1 {
   font-family: "old-news";
@@ -91,21 +92,25 @@ p {
 .Skills, .Projects {
   height: 100vh;
 }
-.line {
+.section-line, .line-footer {
   background-color: $old-yellow;
   width: 100%;
   position: sticky;
   height: 2px;
 }
 .line-header {
-  top: 77px;
+  top: 73px;
 }
 .line-about {
-  top: 82px;
+  top: 79px;
 }
 .line-skills {
-  top: 87px;
+  top: 85px;
 }
+.line-projects {
+  top: 91px;
+}
+
 .line-inbetween {
   display: block;
   background-color: $old-yellow;

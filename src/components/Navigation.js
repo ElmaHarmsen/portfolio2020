@@ -5,13 +5,58 @@ import '../Navigation.scss'; //Use .. for one level back.
 import '../index.scss';
 
 //This is a functional components, not a class component.
-function Navigation() { //Navigation is the name of the component. //Between () are the props that can be used within the HTML.
+function Navigation(props) { //Navigation is the name of the component. //Between () are the props that can be used within the HTML.
 
-  //This is the place where the HOOKS will be located.c'
+  //This is the place where the HOOKS will be located.
   const [isNavigationOpen, toggleNavigation] = useState(false); 
   //useState declares a state variable. Before it was this.state. Between ( ) can be anything: number, string, object, boolean (hopefuly).
   //useState returns 2 values: the current state 'banana' and an updated one 'setBanana'.
 
+  function navigateToSection(id) {
+    const position = navItems[id].position;
+    console.log(position);
+    toggleNavigation(false);
+    if (position !== null) { //null is a falsey value, so if the position is not null.
+      window.scrollTo({
+        top: position,
+        behavior: 'smooth'
+      })
+    }
+  }
+
+  const navItems = [
+    {
+      name: "Home",
+      position: props.sectionPositions[0]
+    },
+    {
+      name: "About",
+      position: props.sectionPositions[1]
+    },
+    {
+      name: "Skills",
+      position: props.sectionPositions[2]
+    },
+    {
+      name: "Projects",
+      position: props.sectionPositions[3]
+    },
+    {
+      name: "Contact",
+      position: props.sectionPositions[4]
+    }
+  ]//This generates 4 navitems which know to wich position to scroll to when you click it.
+  //The [numbers] refer to the sections in order of the Homepage.
+  //Contact does not have this because that's an overlay thingy.
+
+  const theNavItems = navItems.map((item, index) => {
+    return (
+      <div>
+        <h1 onClick={() => navigateToSection(index)} key={item.name}>{item.name}</h1>
+        <span className="line-inbetween"></span>
+      </div>
+    )
+  }); //This generates a header with the 5 navItems names. 
 
   //This is the HTML.
   return (
@@ -29,20 +74,20 @@ function Navigation() { //Navigation is the name of the component. //Between () 
         </div>
         <div className="nav-lines">
           <span></span>
-          <span></span>
-          </div>
+        </div>
       </div>
 
       <div className={isNavigationOpen ? "nav-items open" : "nav-items"}>
-        <h1>Home</h1>
+        {theNavItems}
+        {/* <h1>Home</h1>
         <span className="line-inbetween"></span>
         <h1>About</h1>
         <span className="line-inbetween"></span>
         <h1>Skills</h1>
         <span className="line-inbetween"></span>
         <h1>Projects</h1>
-        <span className="line-inbetween"></span>
-        <h1>Contact</h1>
+        <span className="line-inbetween"></span> */}
+        {/* <h1 onClick={() => props.openContact}>Contact</h1> */}
       </div>
           
     </section>
