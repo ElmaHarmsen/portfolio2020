@@ -4,16 +4,21 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
-  
-  .the-skills {
-    display: flex;
-    flex-flow: column wrap;
-    text-align: left;
-    height: 500px;
-    justify-content: space-evenly;
 
-    h2 {
-      color: $old-blue;
-    }
+  .the-skills {
+    margin: 3rem 0px;
+  }
+  .the-skills > * {
+    background-color: $old-orange;
+    color: $old-blue;
+    padding: 1rem;
+    width: calc(55% - 2rem);
+  }
+  .skills-two {
+    background-color: #2a3141cc;
+    color: $old-orange;
+    transform: translateX(calc(100% - 2rem));
+    text-align: right;
+    margin: -2rem 0px;
   }
 }

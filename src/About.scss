@@ -7,19 +7,37 @@
       height: auto;
       width: 50%;
     }
-    .paragraph-border {
-      p {
-        color: $old-blue;
-      }
-      p::first-letter{
-        color: $old-orange;
-        float: left;
-        font-family: "old-news";
-        font-size: 85px;
-        padding-right: 10px;
-        padding-left: 3px;
+    .the-paragraphs {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      width: 100%;
+
+
+      .paragraphs-slider {
+        background-color: $old-green;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-flow: row nowrap;
+        transition: 0.5s ease;
+        p {
+          color: $old-yellow;
+          width: 300px;
+          padding: 0px 1rem;
+        }
+        p::first-letter{
+          color: $old-yellow;
+          float: left;
+          font-family: "old-news";
+          font-size: 85px;
+          padding-right: 10px;
+          padding-left: 3px;
+        }
       }
     }
+    
   }
   .arrow {
     width: 50px;

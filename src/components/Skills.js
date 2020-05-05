@@ -7,37 +7,47 @@ function Skills() {
   const skills = [
     {
       one: "HTML",
-      two: "SCSS",
-      three: "Git"
+      two: "JavaScript",
+      three: "Vue"
     },
     {
-      four: "JavaScript",
-      five: "JSON",
-      six: "Fetch Api"
+      one: "SCSS",
+      two: "JSON",
+      three: "React"
     },
     {
-      seven: "Vue",
-      eight: "React",
-      nine: "SQL"
+      one: "Git",
+      two: "Fetch Api",
+      three: "SQL"
     }
   ]
-const skillsItemsFirst = skills.map((smth) => 
-  <h2 key={smth.one, smth.two, smth.three}>
-    {smth.one} {smth.two} {smth.three}
-  </h2>
-)
+  const skillsOne = skills.map((item) =>
+    <h2 key={item.one}>{item.one} </h2>
+  )
+  const skillsTwo = skills.map((item) =>
+    <h2 key={item.two}>{item.two} </h2>
+  )
+  const skillsThree = skills.map((item) =>
+    <h2 key={item.three}>{item.three} </h2>
+  )
   
   return (
     <section className="Skills">
       <h1>let me tell you what i can do<span>.</span></h1>
       <div className="the-skills">
-        <h2 className="skills-first">{skillsItemsFirst}</h2> {/* HTML & SCSS & Git */}
-        <h2 className="skills-second">JavaScript</h2> {/* JavaScript & JSON & Fetch Api */}
-        <h2 className="skills-third">Vue</h2> {/* Vue & React & SQL*/}
+        <div>
+          {skillsOne}
+        </div>
+        <div className="skills-two">
+          {skillsTwo}
+        </div>
+        <div>
+          {skillsThree}
+        </div>
       </div>
       <NextArrow />
     </section>
   );
 }
 
-export default Skills
+export default Skills;

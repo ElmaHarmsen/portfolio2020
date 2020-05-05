@@ -4,4 +4,22 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
+
+  .the-projects {
+    padding: 2rem 0px;
+    .project {
+      padding: 1rem 0px;
+
+      h2 {
+        color: $old-orange;
+        font-size: 30px;
+        padding: 0.5rem 0px;    
+        text-decoration: underline 2px #2a3141 !important;  
+      }
+      p {
+        color: $old-green;
+        padding: 0px 0px 0.5rem 0px;
+      }
+    }
+  }
 }

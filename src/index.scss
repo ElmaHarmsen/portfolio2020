@@ -79,6 +79,9 @@ p {
   font-size: 16px;
   line-height: 1.4rem;
 }
+a {
+  text-decoration: none;
+}
 .Header, .About, .Skills, .Projects {
   padding: 1rem;
   h1 {
@@ -88,9 +91,6 @@ p {
       color: $old-orange;
     }
   }
-}
-.Skills, .Projects {
-  height: 100vh;
 }
 .section-line, .line-footer {
   background-color: $old-yellow;
