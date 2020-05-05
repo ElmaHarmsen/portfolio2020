@@ -7,6 +7,25 @@
 
   .the-skills {
     margin: 3rem 0px;
+
+    .skills-slides {
+      position: relative;
+      height: calc(107px - 2rem);
+      padding: auto 0px;
+      margin: 0px;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+
+      .slide {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .skills-showing {
+        opacity: 1;
+      }
+    }
   }
   .the-skills > * {
     background-color: $old-orange;
@@ -18,7 +37,6 @@
     background-color: #2a3141cc;
     color: $old-orange;
     transform: translateX(calc(100% - 2rem));
-    text-align: right;
     margin: -2rem 0px;
   }
 }

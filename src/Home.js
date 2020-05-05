@@ -23,7 +23,7 @@ function Home() {
     //getBoundingClientRect is a JS thingy, it returns he size of an element and its position relative to the viewport.
     //.Y is the position on the y axes, because thats the only one that matters.
 
-  }, [window.scrollY]); //End.
+  }, []); //End.
 
   function openContact() {
     console.log("hehe:)");

@@ -82,6 +82,13 @@ p {
 a {
   text-decoration: none;
 }
+ul {
+  list-style-type: none;
+  li {
+    font-family: "old-news";
+    font-size: 40px;
+  }
+}
 .Header, .About, .Skills, .Projects {
   padding: 1rem;
   h1 {
