@@ -8,6 +8,22 @@
   .the-skills {
     margin: 3rem 0px;
 
+    .all-skills-stuff {
+      display: flex;
+      flex-flow: row nowrap;
+      width: 100%;
+
+      .skills-description {
+        width: calc(50% - 0.5rem);
+        margin: auto 0.5rem auto 0px;
+        border-bottom: 2px solid $old-blue;
+
+        p {
+          color: $old-green;
+        }
+      }
+    }
+
     .skills-slides {
       position: relative;
       height: calc(107px - 2rem);
@@ -16,6 +32,7 @@
       display: flex;
       flex-flow: column;
       justify-content: center;
+      width: 50%;
 
       .slide {
         position: absolute;
@@ -28,15 +45,8 @@
     }
   }
   .the-skills > * {
-    background-color: $old-orange;
     color: $old-blue;
-    padding: 1rem;
+    padding: 1rem 0px;
     width: calc(55% - 2rem);
-  }
-  .skills-two {
-    background-color: #2a3141cc;
-    color: $old-orange;
-    transform: translateX(calc(100% - 2rem));
-    margin: -2rem 0px;
   }
 }

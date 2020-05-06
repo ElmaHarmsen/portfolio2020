@@ -9,7 +9,7 @@ function Skills() {
   const skills = [
     {
       one: "HTML",
-      two: "JavaScript",
+      two: "Git",
       three: "Vue"
     },
     {
@@ -18,8 +18,8 @@ function Skills() {
       three: "React"
     },
     {
-      one: "Git",
-      two: "Fetch Api",
+      one: "JavaScript",
+      two: "Api",
       three: "SQL"
     }
   ] //The three sections with the skills.
@@ -55,19 +55,28 @@ function Skills() {
   
   return (
     <section className="Skills">
-      <h1>let me tell you what i can do<span>.</span></h1>
+      <h1>let me tell you what i can do<span>:</span></h1>
       <div className="the-skills">
-        <div>
+        <div className="all-skills-stuff">
+          <div className="skills-description">
+            <p>The ones needed</p>
+          </div>
           <ul className="skills-slides">
             {skillsOne}
           </ul>
         </div>
-        <div className="skills-two">
+        <div className="all-skills-stuff">
+          <div className="skills-description">
+            <p>The ones used</p>
+          </div>
           <ul className="skills-slides">
             {skillsTwo}
           </ul>
         </div>
-        <div>
+        <div className="all-skills-stuff">
+          <div className="skills-description">
+            <p>The ones usefull</p>
+          </div>
           <ul className="skills-slides">
             {skillsThree}
           </ul>
