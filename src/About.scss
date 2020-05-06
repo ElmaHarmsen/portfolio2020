@@ -1,45 +1,86 @@
 @import "./index.scss";
 
 .About {
+  h1 {
+    padding: 1rem;
+
+    span {
+      color: $old-orange;
+    }
+  }
   .the-about {
-    margin: 2rem 0px;
+    margin: 2rem 0px 0px 0px;
     img {
       height: auto;
       width: 50%;
     }
     .the-paragraphs {
+      background-color: $old-orange;
       display: flex;
-      flex-flow: row;
-      justify-content: center;
+      flex-flow: row nowrap;
       align-items: center;
-      overflow-x: hidden;
-      width: 100%;
+      padding: 1rem;
 
+      .paragraphs-slides {
+        position: relative;
+        min-height: 120px;
+  
+        .slide {
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          left: 0;
+          transition: opacity 0.3s;
+          height: 100px;
+          width: calc(100vw - 2rem - 50px);
+          color: $old-blue;
 
-      .paragraphs-slider {
-        background-color: $old-green;
-        padding: 2rem 1rem;
-        display: flex;
-        flex-flow: row nowrap;
-        transition: 0.5s ease;
-        p {
-          color: $old-yellow;
-          width: 300px;
-          padding: 0px 1rem;
+          .tiny-paragraph-image {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            float: left;
+            margin-right: 5px;
+          }
+          h2 {
+            color: $old-blue;
+            text-decoration: underline 2px $old-blue;
+            padding-bottom: 0.5rem;
+          }
         }
-        p::first-letter{
-          color: $old-yellow;
-          float: left;
-          font-family: "old-news";
-          font-size: 85px;
-          padding-right: 10px;
-          padding-left: 3px;
+        .skills-showing, .visible {
+          opacity: 1;
         }
+
       }
+      .arrow {
+        width: 40px;
+        position: absolute;
+        right: 1rem;
+      }
+
+
+      // .paragraphs-slider {
+      //   background-color: $old-green;
+      //   padding: 2rem 1rem;
+      //   display: flex;
+      //   flex-flow: row nowrap;
+      //   transition: 0.5s ease;
+      //   p {
+      //     color: $old-yellow;
+      //     width: 300px;
+      //     padding: 0px 1rem;
+      //   }
+      //   p::first-letter{
+      //     color: $old-yellow;
+      //     float: left;
+      //     font-family: "old-news";
+      //     font-size: 85px;
+      //     padding-right: 10px;
+      //     padding-left: 3px;
+      //   }
+      // }
     }
     
-  }
-  .arrow {
-    width: 50px;
   }
 }

@@ -59,7 +59,7 @@ function Skills() {
       <div className="the-skills">
         <div className="all-skills-stuff">
           <div className="skills-description">
-            <p>The ones needed</p>
+            <p>The basic ones</p>
           </div>
           <ul className="skills-slides">
             {skillsOne}
@@ -67,7 +67,7 @@ function Skills() {
         </div>
         <div className="all-skills-stuff">
           <div className="skills-description">
-            <p>The ones used</p>
+            <p>The usefull ones</p>
           </div>
           <ul className="skills-slides">
             {skillsTwo}
@@ -75,7 +75,7 @@ function Skills() {
         </div>
         <div className="all-skills-stuff">
           <div className="skills-description">
-            <p>The ones usefull</p>
+            <p>The frameworks</p>
           </div>
           <ul className="skills-slides">
             {skillsThree}

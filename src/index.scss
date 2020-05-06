@@ -89,7 +89,7 @@ ul {
     font-size: 40px;
   }
 }
-.Header, .About, .Skills, .Projects {
+.Header, .Skills, .Projects {
   padding: 1rem;
   h1 {
     color: $old-blue;
@@ -125,7 +125,7 @@ ul {
   width: 100%;
 }
 .next-arrow {
-  display: flex;
+  display: none;
   flex-flow: row nowrap;
   justify-content: flex-end;
   h2 {
