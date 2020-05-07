@@ -14,7 +14,6 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
 
   function navigateToSection(id) {
     const position = navItems[id].position;
-    console.log(position);
     toggleNavigation(false);
     if (position !== null) { //null is a falsey value, so if the position is not null.
       window.scrollTo({

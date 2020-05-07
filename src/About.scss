@@ -9,7 +9,7 @@
     }
   }
   .the-about {
-    margin: 2rem 0px 0px 0px;
+    margin: 2rem 1rem 0px 1rem;
     img {
       height: auto;
       width: 50%;
@@ -32,8 +32,9 @@
           left: 0;
           transition: opacity 0.3s;
           height: 100px;
-          width: calc(100vw - 2rem - 50px);
+          width: calc(100vw - 2.5rem - 50px);
           color: $old-blue;
+          padding-right: 0.5rem;
 
           .tiny-paragraph-image {
             width: 25px;
@@ -44,11 +45,10 @@
           }
           h2 {
             color: $old-blue;
-            text-decoration: underline 2px $old-blue;
             padding-bottom: 0.5rem;
           }
         }
-        .skills-showing, .visible {
+        .skills-showing {
           opacity: 1;
         }
 

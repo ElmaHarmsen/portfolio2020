@@ -15,7 +15,7 @@ function About() {
     {
       title: "21.08.2019",
       img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQIAAADDCAMAAABeUu/HAAAALVBMVEXGDDD////EACLfkZrFACbYdIDotLrDABzDABXWbnznsbfBAAPejpjy1NfdjJX1293UAAABYklEQVR4nO3ay01DQRREwdM2mD/5hwsJ4I0fEhZ1EuhRbe/U4T087ucuT8cP/r0QIEAQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQh6A4JTof3/HKF4PXt+MEb63x475crBB+fxw/eWFee+09CgADBEAzBEAzBEAzBEAzBEAzBEAzBEAzBEAzBEAzBEAzBEAzBEHznpnh2WT79wrn+7v4XHB8CBAhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAE3R/BF+GGRIscpa+NAAAAAElFTkSuQmCC",
-      paragraph: "Here, I joined the inspiring autumn semester Web Development in at the Business Academy Aarhus, in Denmark."
+      paragraph: "Here, I joined the autumn semester Web Development at the Business Academy Aarhus, in Denmark."
     },
     {
       title: "12.02.2020",
@@ -34,24 +34,19 @@ function About() {
 
   function nextSlide() {
     const slides = document.querySelectorAll(".paragraphs-slides .slide"); 
-
-    // if (slides[currentSlide] < 1) {
-    //   slides[currentSlide].classList.add("visible");
-    // }
-    // slides[currentSlide] < 1 ? slides[currentSlide].classList.add("skills-showing") : console.log("hi");
-
-    slides[currentSlide].classList.add("skills-showing");
     slides.forEach(slide => slide.classList.remove("skills-showing"));
     slides[currentSlide].classList.add("skills-showing");
-    // slides[currentSlide] === 0 ? slides.forEach(slide => slide.classList.remove("skills-showing")) : slides[currentSlide].classList.add("skills-showing");
-
+    // if (!(currentSlide == 0) || (currentSlide == 1) || (currentSlide == 2)) {
+    //   changeSlide(0);
+    //   console.log("do smth!");
+    // }
     if (currentSlide < slides.length - 1) { 
       changeSlide(currentSlide +1);
     }
     else {
       changeSlide(0);
     }
-
+    console.log(currentSlide);
   }
 
   return (

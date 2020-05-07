@@ -26,10 +26,10 @@ function Skills() {
 
   const skillsOne = skills.map((item) =>
     <li className="slide" key={item.one}>{item.one} </li>
-  )//HTML, SCSS, Git
+  )//HTML, SCSS, JavaScript
   const skillsTwo = skills.map((item) =>
     <li className="slide" key={item.two}>{item.two} </li>
-  )//JavaScript, JSON, Fetch Api
+  )//Git, JSON, Fetch Api
   const skillsThree = skills.map((item) =>
     <li className="slide" key={item.three}>{item.three} </li>
   )//Vue, React, SQL

@@ -80,7 +80,8 @@ p {
   line-height: 1.4rem;
 }
 a {
-  text-decoration: none;
+  text-decoration: underline 2px;
+  text-decoration-color: #2a3141;
 }
 ul {
   list-style-type: none;
@@ -117,7 +118,6 @@ ul {
 .line-projects {
   top: 91px;
 }
-
 .line-inbetween {
   display: block;
   background-color: $old-yellow;
