@@ -19,6 +19,7 @@ function Projects() {
     {
       title: "Super Mario Minigame",
       stack: "HTML, CSS, Vanilla JavaScript",
+      link: "https://formidablemusicstore.netlify.app/"
     },
     {
       title: "Fantasy Movie Website",

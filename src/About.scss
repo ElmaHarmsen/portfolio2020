@@ -1,21 +1,14 @@
 @import "./index.scss";
 
 .About {
-  h1 {
-    padding: 1rem;
-
-    span {
-      color: $old-orange;
-    }
-  }
   .the-about {
-    margin: 2rem 1rem 0px 1rem;
+    margin: 2rem 0px 0px 0px;
     img {
       height: auto;
       width: 50%;
     }
     .the-paragraphs {
-      background-color: $old-orange;
+      background-color: $old-yellow;
       display: flex;
       flex-flow: row nowrap;
       align-items: center;

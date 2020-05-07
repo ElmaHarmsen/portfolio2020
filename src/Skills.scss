@@ -16,7 +16,7 @@
       .skills-description {
         width: calc(50% - 0.5rem);
         margin: auto 0.5rem auto 0px;
-        border-bottom: 2px solid $old-blue;
+        border-bottom: 2px solid $old-green;
 
         p {
           color: $old-green;
@@ -45,7 +45,7 @@
     }
   }
   .the-skills > * {
-    color: $old-blue;
+    color: $old-yellow;
     padding: 1rem 0px;
     width: calc(55% - 2rem);
   }
