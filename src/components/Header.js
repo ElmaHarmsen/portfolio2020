@@ -8,8 +8,8 @@ function Header() {
       <div className="Header">
         <div className="section-top">
           <h1>Hii<span>!</span></h1>
-          <h1>my name is <br></br>
-          Elma Harmsen</h1>
+          <h1>my name is</h1>
+          <h1>Elma Harmsen</h1>
         </div>
         <NextArrow />
       </div>

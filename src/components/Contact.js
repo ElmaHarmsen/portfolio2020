@@ -9,7 +9,7 @@ function Contact(props) {
           <span></span>
           <span></span>
         </div>
-        <h2 className="contact-header">Hey there, please use one of these and let's have a talk<span>!</span></h2>
+        <h2 className="contact-header">Hey there, please use one of these and let's have a talk!</h2>
         <div className="contact-info">
           <h2><span>(+31)</span> 06 23957767</h2>
           {/* <span className="line-inbetween"></span> */}

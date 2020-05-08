@@ -11,47 +11,20 @@
 //   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 //     monospace;
 // }
-$blue-green: #155457;
-$orange: #f69a0b;
-$red-orange: #9b0800;
 
-$yellow: #e0ae05;
-$pink: #8b023c;
-$terquoise:#03525c;
-$purple: #520d48;
-$red-purple: #410521;
-
-$red: #b80025;
-$old-red: #8c4949;
-$greenish: #826c2a;
-$green: #578a3f;
-$light-terquoise: #00b386;
-
-//1
-$bright-black: #05161f;
-$bright-orange: #fa4904;
-$bright-light-yellow: #f6f2a9;
-$bright-yellow: #dfc608;
-$bright-green: #36ab8a;
-
-//2
 $old-blue: #2a3141;
 $old-orange: #ff9928;
 $old-pink: #f8333c;
 $old-yellow: #f8f4b7;
 $old-green: #468374;
 
-$blue3: #1c2130;
-$green3: #028f76;
-$light-green3: #b3e099;
-$yellow3: #ffeaad;
-$red3: #d14334;
+$grey: #3e3548;
+$light-green: #b9d74c;
+$apple-green: #72a108;
+$white: #fcf8eb;
+$red: #ea5330;
 
-$black4: #0c0c0b;
-$light-green4: #8bba78;
-$orange4: #e68e28;
-$red4: #e12222;
-$green4: #3f7d54;
+
 
 @font-face {
   font-family: "old-news";
@@ -69,7 +42,6 @@ h1 {
   font-family: "old-news";
   font-size: 45px;
   text-transform: uppercase;
-  font-weight: bold;    
 
 }
 h2 {
@@ -83,8 +55,9 @@ p {
   line-height: 1.4rem;
 }
 a {
-  text-decoration: underline 2px;
-  text-decoration-color: #468374;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: $light-green;
 }
 ul {
   list-style-type: none;
@@ -96,15 +69,16 @@ ul {
 .Header, .About, .Skills, .Projects {
   padding: 1rem;
   h1 {
-    color: $old-orange;
+    color: $light-green;
+    font-weight: bold;
 
     span {
-      color: $old-yellow;
+      color: $apple-green;
     }
   }
 }
 .section-line, .line-footer {
-  background-color: $old-yellow;
+  background-color: $red;
   width: 100%;
   position: sticky;
   height: 2px;
@@ -123,7 +97,7 @@ ul {
 }
 .line-inbetween {
   display: block;
-  background-color: $old-yellow;
+  background-color: $white;
   height: 2px;
   width: 100%;
 }
