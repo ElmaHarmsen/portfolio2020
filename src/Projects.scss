@@ -10,6 +10,20 @@
     .project {
       padding: 1rem 0px;
 
+      a::after {
+        content: "";
+        display: block;
+        position: relative;
+        top: -4px;
+        width: 50%;
+        height: 2px;
+        background-color: #b9d74c;
+        transition: .2s ease;
+      }
+      a:hover::after {
+        width: 100%;
+      }
+
       h2 {
         color: $white;
         font-weight: bold;

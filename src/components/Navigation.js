@@ -51,7 +51,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
   const theNavItems = navItems.map((item, index) => {
     return (
       <div>
-        <a href=""><h1 onClick={() => navigateToSection(index)} key={item.name}>{item.name}</h1></a>
+        <a><h1 onClick={() => navigateToSection(index)} key={item.name}>{item.name}</h1></a>
         {/* <span className="line-inbetween"></span> */}
       </div>
     )

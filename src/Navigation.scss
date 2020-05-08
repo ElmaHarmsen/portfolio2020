@@ -100,7 +100,6 @@
   flex-flow: column nowrap;
   width: 100%;
   justify-content: flex-end;
-  align-items: flex-end;
   height: 100vh;
   position: fixed;
   z-index: 2;
@@ -108,15 +107,31 @@
   transition: bottom 0.5s ease-out;
   transition-delay: 0.2s;
   background-color: $red;
+  padding: 1rem;
 
-  h1 {
-    color: $grey;
-    text-decoration: underline 2px;
-    text-decoration-color: $white;
-    cursor: pointer;
-    padding: 1.5rem;
-    text-transform: capitalize;
-    text-align: right;
+  a::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -4px;
+    width: calc(50% - 1rem); //for bigger screens this will be different
+    height: 2px;
+    background-color: #b9d74c;
+    transition: .2s ease;
+  }
+  a:hover::after {
+    width: calc(100% - 2rem);
+  }
+
+  div {
+    margin: 1rem 0px;
+    h1 {
+      color: $grey;
+      padding: 0px 1rem 0.5rem 0px;
+      text-transform: capitalize;
+      width: 80%;
+    }
+  
   }
   &.open {
     bottom: 0;
