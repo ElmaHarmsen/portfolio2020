@@ -36,6 +36,10 @@ function Skills() {
   //These map each of the three sections into list items.
 
   useEffect(() => {
+    nextSlide();
+  }, []); //Runs once
+
+  useEffect(() => {
     setTimeout(nextSlide, 2500);
   }, [currentSlide]); //This uses useEffect to set a timeout (interval) for how long the slides appear. 
   //Inbetween [] currentslide means ...

@@ -5,5 +5,56 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  height: calc(100vh - 81.5px - 2rem);
+
+  .hii, .value {
+    text-align: center;
+  }
+
+  .hii {
+    padding-bottom: 1rem;
+  }
+
+  .stand, .value {
+    color: $white;
+  }
+  .values-slides {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    .value {
+      display: none;
+      transition: display 0.3s;
+      margin: 1rem 0px;
+      margin: 0px auto;
+    }
+    .values-showing {
+      display: block;
+    }
+  }
+
+  img {
+    height: 256px;
+    margin: 2rem 0px 0.5rem 0px;
+    // animation: "figure" 2s ease;
+    //2694:2157
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+}
+@keyframes figure {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  80% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: auto;
+  }
 }

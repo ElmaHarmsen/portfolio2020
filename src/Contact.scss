@@ -30,7 +30,7 @@
         display: block;
         width: 35px;
         height: 2px;
-        background-color: $apple-green;
+        background-color: $grey;
       }
       span:first-of-type {
         transform: rotate(-45deg) translate(-6px, 6px);
@@ -56,15 +56,33 @@
       justify-content: space-between;
       align-items: flex-end;
 
-       h2 {
+      h2, h3 {
         color: $grey;
         padding: 2rem 1rem;
         font-size: 35px;
         width: 100%;
         text-decoration: none;
       }
+      h3:hover {
+        color: $white;
+        transition: .2s ease;
+      }
       span {
         color: $white;
+      }
+      h3::after {
+        content: "";
+        display: block;
+        position: relative;
+        top: 2px;
+        width: 202px;
+        height: 2px;
+        background-color: $light-green;
+        transition: .2s ease;
+      }
+      h3:hover::after {
+        width: calc(100vw - 2rem);
+        background-color: $white;
       }
     }
   }

@@ -15,8 +15,10 @@ function Contact(props) {
           {/* <span className="line-inbetween"></span> */}
           <h2>elmaharmsen<span>01</span> @gmail.com</h2>
           {/* <span className="line-inbetween"></span> */}
-          <a href="https://www.linkedin.com/in/elma-harmsen-087872181/" target="blank"><h2>Elma Harmsen <br></br>
-            <span>at</span> LinkedIn</h2></a>
+          <a href="https://www.linkedin.com/in/elma-harmsen-087872181/" target="blank">
+            <h3>Elma Harmsen <br></br>
+            <span>at</span> LinkedIn</h3>
+          </a>
         </div>
       </div>
     </section>

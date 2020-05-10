@@ -55,7 +55,7 @@
           display: block;
           width: 35px;
           height: 2px;
-          background-color: $apple-green;
+          background-color: $grey;
         }
       }
       &.open {
@@ -116,11 +116,12 @@
     top: -4px;
     width: calc(50% - 1rem); //for bigger screens this will be different
     height: 2px;
-    background-color: #b9d74c;
+    background-color: $light-green;
     transition: .2s ease;
   }
   a:hover::after {
     width: calc(100% - 2rem);
+    background-color: $white;
   }
 
   div {
@@ -130,6 +131,10 @@
       padding: 0px 1rem 0.5rem 0px;
       text-transform: capitalize;
       width: 80%;
+    }
+    h1:hover {
+      color: $white;
+      transition: .2s ease;
     }
   
   }

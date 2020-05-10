@@ -32,6 +32,10 @@ function About() {
     </div>
   )
 
+  useEffect(() => {
+    nextSlide();
+  }, []); //Runs once
+
   function nextSlide() {
     const slides = document.querySelectorAll(".paragraphs-slides .slide"); 
     slides.forEach(slide => slide.classList.remove("skills-showing"));
@@ -53,8 +57,10 @@ function About() {
     <section className="About">
       <h1>who am i exactly<span>?</span></h1>
       <div className="the-about">
-        <img src={require("../assets/me-right.jpg")}/>
-        <img src={require("../assets/me-left.jpg")}/>
+        <div className="the-images">
+          <img src={require("../assets/me-right.jpg")}/>
+          {/* <img src={require("../assets/me-left.jpg")}/> */}
+        </div>
         <div className="the-paragraphs">
           <div className="paragraphs-slides">
             {paragraphs}

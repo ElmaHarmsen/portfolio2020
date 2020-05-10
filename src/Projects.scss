@@ -17,11 +17,12 @@
         top: -4px;
         width: 50%;
         height: 2px;
-        background-color: #b9d74c;
+        background-color: $light-green;
         transition: .2s ease;
       }
       a:hover::after {
         width: 100%;
+        background-color: $white;
       }
 
       h2 {

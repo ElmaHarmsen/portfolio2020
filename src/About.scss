@@ -3,10 +3,15 @@
 .About {
   .the-about {
     margin: 2rem 0px 0px 0px;
-    img {
-      height: auto;
-      width: 50%;
+
+    .the-images {
+      img {
+        height: auto;
+        width: 40%;
+        padding: 1rem 0px 2rem;
+      }
     }
+
     .the-paragraphs {
       background-color: $white;
       display: flex;
@@ -40,6 +45,14 @@
             color: $grey;
             padding-bottom: 0.5rem;
           }
+          p::first-letter{
+            color: $apple-green;
+            float: left;
+            font-family: "old-news";
+            font-size: 45px;
+            padding-top: 0.5rem;
+            padding-right: 0.5rem;
+          }
         }
         .skills-showing {
           opacity: 1;
@@ -51,29 +64,6 @@
         position: absolute;
         right: 1rem;
       }
-
-
-      // .paragraphs-slider {
-      //   background-color: $old-green;
-      //   padding: 2rem 1rem;
-      //   display: flex;
-      //   flex-flow: row nowrap;
-      //   transition: 0.5s ease;
-      //   p {
-      //     color: $old-yellow;
-      //     width: 300px;
-      //     padding: 0px 1rem;
-      //   }
-      //   p::first-letter{
-      //     color: $old-yellow;
-      //     float: left;
-      //     font-family: "old-news";
-      //     font-size: 85px;
-      //     padding-right: 10px;
-      //     padding-left: 3px;
-      //   }
-      // }
-    }
-    
+    }   
   }
 }
