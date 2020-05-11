@@ -10,7 +10,7 @@ function Header() {
   const values = [
     {
       value: "hi",
-      img: "FigureStandingSmallerEyeless"
+      img: "FigureStandingNewEyeless"
     },
     {
       value: "efficient web development",
@@ -22,7 +22,7 @@ function Header() {
     },
     {
       value: "enjoying the work",
-      img: "FigureStandingSmallerEyeless"
+      img: "FigureStandingNewEyeless"
     },
     {
       value: "good speakers for music",
@@ -69,9 +69,7 @@ function Header() {
   return (
     <section>
       <div className="Header">
-        <h1 className="hii">Hii<span>!</span></h1>
         <h1>My name is<br></br><span>Elma Harmsen</span><br></br>and I <span className="stand">stand</span> for</h1>
-        <div className="container-figure-values">
           <div className="values-slides">
             {portfolioValues}
           </div>
@@ -79,7 +77,6 @@ function Header() {
             <span></span>
             <span></span>
           </div>
-        </div>
         <NextArrow />
       </div>
     </section>
