@@ -9,28 +9,32 @@ function Header() {
 
   const values = [
     {
+      value: "hi",
+      img: "FigureStandingSmallerEyeless"
+    },
+    {
       value: "efficient web development",
-      img: "FigureStandingNew"
+      img: "FigureWebDevSmallerEyeless"
     },
     {
       value: "a good bike trip",
-      img: "FigureBikeNew"
+      img: "FigureBikeSmallerEyeless"
     },
     {
-      value: "just having fun",
-      img: "FigureStandingNew"
+      value: "enjoying the work",
+      img: "FigureStandingSmallerEyeless"
     },
     {
       value: "good speakers for music",
-      img: "FigureSpeakerNew"
+      img: "FigureSpeakerSmallerEyeless"
     },
     {
-      value: "keeping the motivation",
-      img: "FigureStandingNew"
+      value: "learning new technologies",
+      img: "FigureLearningSmallerEyeless"
     },
     {
       value: "having plants",
-      img: "FigureStandingNew"
+      img: "FigurePlantsSmallerEyeless"
     }
   ]
 
@@ -67,11 +71,15 @@ function Header() {
       <div className="Header">
         <h1 className="hii">Hii<span>!</span></h1>
         <h1>My name is<br></br><span>Elma Harmsen</span><br></br>and I <span className="stand">stand</span> for</h1>
-        <div className="values-slides">
-          {portfolioValues}
+        <div className="container-figure-values">
+          <div className="values-slides">
+            {portfolioValues}
+          </div>
+          <div className="figure-eyes">
+            <span></span>
+            <span></span>
+          </div>
         </div>
-        {/* <img src={require("../assets/FigureStanding.png")}/>
-        <div className="values-slides">{portfolioValues}</div> */}
         <NextArrow />
       </div>
     </section>

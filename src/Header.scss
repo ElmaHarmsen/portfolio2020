@@ -17,27 +17,52 @@
   .stand, .value {
     color: $white;
   }
-  .values-slides {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-
-    .value {
-      display: none;
-      transition: display 0.3s;
-      margin: 1rem 0px;
-      margin: 0px auto;
+  .container-figure-values {
+    width: 340px;
+    height: 318px;
+    
+    .values-slides {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+  
+      .value {
+        display: none;
+        transition: display 0.3s;
+        margin: 1rem 0px;
+        margin: 0px auto;
+      }
+      .values-showing {
+        display: block;
+      }
     }
-    .values-showing {
-      display: block;
+    .figure-eyes {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      width: calc(100% - 2rem);
+      position: relative;
+      bottom: 260px;
+  
+      span {
+        display: block;
+        background-color: $white;
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        animation: "eye-blinking" 6s infinite;
+        animation-delay: 2s;
+      }
+      span:first-of-type {
+        margin: 0px 1rem 0px 1.5rem;
+      }
     }
   }
 
   img {
     height: 256px;
     margin: 2rem 0px 0.5rem 0px;
-    // animation: "figure" 2s ease;
-    //2694:2157
+    //457:350
   }
 
   h2 {
@@ -56,5 +81,19 @@
   100% {
     opacity: 1;
     width: auto;
+  }
+}
+@keyframes eye-blinking {
+  0% {
+    transform: scale(1, .05);
+  }
+  5% {
+    transform: scale(1, 1);
+  }
+  95% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, .05);
   }
 }

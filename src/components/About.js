@@ -40,17 +40,12 @@ function About() {
     const slides = document.querySelectorAll(".paragraphs-slides .slide"); 
     slides.forEach(slide => slide.classList.remove("skills-showing"));
     slides[currentSlide].classList.add("skills-showing");
-    // if (!(currentSlide == 0) || (currentSlide == 1) || (currentSlide == 2)) {
-    //   changeSlide(0);
-    //   console.log("do smth!");
-    // }
     if (currentSlide < slides.length - 1) { 
       changeSlide(currentSlide +1);
     }
     else {
       changeSlide(0);
     }
-    console.log(currentSlide);
   }
 
   return (
@@ -59,7 +54,8 @@ function About() {
       <div className="the-about">
         <div className="the-images">
           <img src={require("../assets/me-right.jpg")}/>
-          {/* <img src={require("../assets/me-left.jpg")}/> */}
+          <span></span>
+          <img src={require("../assets/me-left.jpg")}/>
         </div>
         <div className="the-paragraphs">
           <div className="paragraphs-slides">

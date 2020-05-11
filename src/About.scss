@@ -5,11 +5,22 @@
     margin: 2rem 0px 0px 0px;
 
     .the-images {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+
       img {
         height: auto;
         width: 40%;
         padding: 1rem 0px 2rem;
       }
+      // span {
+      //   display: block;
+      //   width: 2px;
+      //   height: 183px;
+      //   background-color: $white;
+      //   margin-top: 1rem;
+      // }
     }
 
     .the-paragraphs {
@@ -46,7 +57,7 @@
             padding-bottom: 0.5rem;
           }
           p::first-letter{
-            color: $apple-green;
+            color: $red;
             float: left;
             font-family: "old-news";
             font-size: 45px;
