@@ -4,7 +4,20 @@ import NextArrow from '../components/NextArrow.js';
 
 function About() {
 
-  const [currentSlide, changeSlide] = useState(0); 
+  const [currentSlide, changeSlide] = useState(0);
+
+  const aboutImages = [
+    {
+      img: "me-right"
+    },
+    {
+      img: "me-left"
+    }
+  ]
+
+  const images = aboutImages.map((item) => 
+    <img key={item.img} src={require(`../assets/${item.img}.jpg`)}/>
+  )
 
   const aboutParagraphs = [
     {
@@ -52,11 +65,9 @@ function About() {
     <section className="About">
       <h1>who am i exactly<span>?</span></h1>
       <div className="the-about">
-        <div className="the-images">
-          <img src={require("../assets/me-right.jpg")}/>
-          <span></span>
-          <img src={require("../assets/me-left.jpg")}/>
-        </div>
+        {/* <div className="the-images">
+          {images}
+        </div> */}
         <div className="the-paragraphs">
           <div className="paragraphs-slides">
             {paragraphs}
