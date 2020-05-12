@@ -22,7 +22,7 @@ function Header() {
     },
     {
       value: "enjoying the work",
-      img: "2000x1800-Standing"
+      img: "2000x1800-Enjoy"
     },
     {
       value: "good speakers for music",
@@ -30,11 +30,11 @@ function Header() {
     },
     {
       value: "learning new technologies",
-      img: "2000x1800-Standing"
+      img: "2000x1800-Learning"
     },
     {
       value: "having plants",
-      img: "FigurePlantsSmallerEyeless"
+      img: "2000x1800-Plants"
     }
   ]
 
