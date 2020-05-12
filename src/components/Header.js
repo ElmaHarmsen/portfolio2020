@@ -10,27 +10,27 @@ function Header() {
   const values = [
     {
       value: "hi",
-      img: "FigureStandingNewEyeless"
+      img: "2000x1800-Standing"
     },
     {
       value: "efficient web development",
-      img: "FigureWebDevSmallerEyeless"
+      img: "2000x1800-WebDev"
     },
     {
       value: "a good bike trip",
-      img: "FigureBikeSmallerEyeless"
+      img: "2000x1800-Bike"
     },
     {
       value: "enjoying the work",
-      img: "FigureStandingNewEyeless"
+      img: "2000x1800-Standing"
     },
     {
       value: "good speakers for music",
-      img: "FigureSpeakerSmallerEyeless"
+      img: "2000x1800-Speaker"
     },
     {
       value: "learning new technologies",
-      img: "FigureLearningSmallerEyeless"
+      img: "2000x1800-Standing"
     },
     {
       value: "having plants",
