@@ -9,23 +9,66 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
 
   useEffect(() => {
     const scrollObserver = new IntersectionObserver(sectionChange, {
-      threshold: [.25, .5, .75, 1] //70%
+      threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] //Every tenth //Maybe change this a bit more so it doen't trigger tooooo often
     });
     document.querySelectorAll(".section").forEach(section => scrollObserver.observe(section));
   }, []);
 
   //This is the place where the HOOKS will be located.
-  const [isNavigationOpen, toggleNavigation] = useState(false); 
+  const [navigationState, changeState] = useState({ //inside of object
+    isNavigationOpen: false, //nav is closed by default
+    sectionVisibilities: [ //structure of what you see in the navigstion and what is visible
+      {
+        name: "Hii",
+        visitility: 0 //0
+      },
+      {
+        name: "About",
+        visitility: 0 //1
+      },
+      {
+        name: "Skills",
+        visitility: 0 //2
+      },
+      {
+        name: "Projects",
+        visitility: 0 //3
+      },
+      {
+        name: "Contact", //Good to know is that these names don't have a function; what is visible in the screen is the id's on the home.js but they need to match to this id
+        visitility: 0 //4
+      }
+    ],
+    activeSection: null //the section who is most visible and whose name will be in the nav
+  }); 
   //useState declares a state variable. Before it was this.state. Between ( ) can be anything: number, string, object, boolean (hopefuly).
   //useState returns 2 values: the current state 'banana' and an updated one 'setBanana'.
 
-  function sectionChange(entries) {
-    console.log(entries[0].target.id, entries[0].intersectionRatio);
+  function sectionChange(entries) { //entries is smth that has to do with intersection observer, when it calls the sectionChange method, it provides the changed entries
+    const updatedSection = entries[0].target.id; //0 is the first one (Header), it gets the information from the id of the home.js elements
+    const indexOfUpdatedSection = navigationState.sectionVisibilities.indexOf(navigationState.sectionVisibilities.find(section => section.name === updatedSection)); //gets the index of the items in sectionVisibilities
+    //--> when the observer triggers, it sends the section that triggered it as the entries into this method
+    let updatedState = navigationState.sectionVisibilities; //replace the state of the triggered section with the new visibility percentage --> happens at next line below
+    updatedState.splice(indexOfUpdatedSection, 1, { //indexOfUpdatedSection is where in the array it points, 1 is how many elements it deletes, the {} in this case is what it inserts what will become the index
+      name: updatedSection,
+      visitility: entries[0].intersectionRatio
+    });
+    changeState({...navigationState, //(...), it takes the contents of the navigation state, which is the old state
+      sectionVisibilities: updatedState // --> and this is where sectionVisibilities gets replaced with the new state that is generated in this function
+    }); //this happens often
   }
+
+  useEffect(() => { //This is where the text actually changes, so when smth on line 68 changes, this useEffect get fired
+    const currentHighestValue = Math.max(...navigationState.sectionVisibilities.map(section => section.visitility)); //highest value of stuff in (), and from this it only takes the numbers
+    const currentHighestVisibilitySection = navigationState.sectionVisibilities.find(section => section.visitility === currentHighestValue); //In the state it finds the section who has this highest value
+    changeState({...navigationState, //from the navigationState we take name of the one that has the highest visibility, we save it into activeSection
+      activeSection: currentHighestVisibilitySection.name //activeSection is the one that goes into the h2 at the top of the screen
+    });
+  }, [navigationState.sectionVisibilities[0], navigationState.sectionVisibilities[1], navigationState.sectionVisibilities[2], navigationState.sectionVisibilities[3], navigationState.sectionVisibilities[4]]); //Trigger 5 times for all 5 elements in the array
 
   function navigateToSection(id) {
     const position = navItems[id].position;
-    toggleNavigation(false);
+    changeState({...navigationState, isNavigationOpen: false})
     if (position !== null) { //null is a falsey value, so if the position is not null.
       window.scrollTo({
         top: position,
@@ -68,21 +111,14 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
     )
   }); //This generates a header with the 5 navItems names. 
 
-  const activeNavItem = navItems.map((item, index) => {
-    return (
-      <h2 key={item.name}>{item.name}</h2>
-    )
-  });
-
   //This is the HTML.
   return (
     <section>
       <div className="nav-menu-bar">
         <div className="nav-content">
-          {activeNavItem}
-          {/* <h2>home</h2> Dynamically changes to the current visited page. */}
-          <div onClick={() => toggleNavigation(!isNavigationOpen)}>
-            <div className={isNavigationOpen ? "nav-menu close" : "nav-menu open"} >
+          <h2>{navigationState.activeSection}</h2> {/* the curren visible section name */}
+          <div onClick={() => changeState({...navigationState, isNavigationOpen: !navigationState.isNavigationOpen})}>
+            <div className={navigationState.isNavigationOpen ? "nav-menu close" : "nav-menu open"} >
               <span></span>
               <span></span>
               <span></span>
@@ -94,17 +130,8 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
         </div>
       </div>
 
-      <div className={isNavigationOpen ? "nav-items open" : "nav-items"}>
+      <div className={navigationState.isNavigationOpen ? "nav-items open" : "nav-items"}>
         {theNavItems}
-        {/* <h1>Home</h1>
-        <span className="line-inbetween"></span>
-        <h1>About</h1>
-        <span className="line-inbetween"></span>
-        <h1>Skills</h1>
-        <span className="line-inbetween"></span>
-        <h1>Projects</h1>
-        <span className="line-inbetween"></span> */}
-        {/* <h1 onClick={() => props.openContact}>Contact</h1> */}
       </div>
           
     </section>
