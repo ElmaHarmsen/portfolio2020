@@ -65,8 +65,10 @@ ul {
     font-size: 40px;
   }
 }
-.Header, .About, .Skills, .Projects {
+.section {
   padding: 1rem;
+}
+.Header, .About, .Skills, .Projects {
   h1 {
     color: $light-green;
     font-weight: bold;
