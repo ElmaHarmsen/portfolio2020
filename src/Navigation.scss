@@ -91,6 +91,35 @@
       }
     }
   }
+  img {
+    width: auto;
+    height: 60px;
+    position: absolute;
+    right: 1rem;
+    top: 7px; //Navbar has a fixed height of 67px, img also has a fixed heigth of 60px, so from the top 7px.
+  }
+  .tiny-eyes {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 51.8px; //Same as the never changing img
+    position: absolute;
+    right: 1rem;
+    top: 21px;
+
+    span {
+      display: block;
+      background-color: $white;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      animation: "eye-blinking" 6s infinite;
+      animation-delay: 2s;
+    }
+    span:first-of-type {
+      margin: 0px 0.5rem 0px 0px;
+    }
+  }
 }
 .nav-items {
   display: flex;

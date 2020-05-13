@@ -124,6 +124,11 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
               <span></span>
             </div>
           </div>
+          <img src={require("../assets/1500x1200-HeadTopOfPage.png")} alt=""/>
+          <div className="tiny-eyes">
+            <span></span>
+            <span></span>
+          </div>
         </div>
         <div className="nav-lines">
           <span></span>

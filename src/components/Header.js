@@ -69,7 +69,7 @@ function Header() {
   return (
     <section>
       <div className="Header">
-        <h1>My name is<br></br><span>Elma Harmsen</span><br></br>and I <span className="stand">stand</span> for</h1>
+        <h1>My name is<br></br><span>Elma Harmsen</span><br></br>and I <span className="stand">stand</span> for<span>:</span></h1>
           <div className="values-slides">
             {portfolioValues}
           </div>
