@@ -130,9 +130,9 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
             <span></span>
           </div>
         </div>
-        <div className="nav-lines">
+        {/* <div className="nav-lines">
           <span></span>
-        </div>
+        </div> */}
       </div>
 
       <div className={navigationState.isNavigationOpen ? "nav-items open" : "nav-items"}>

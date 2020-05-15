@@ -83,18 +83,19 @@ ul {
   width: 100%;
   position: sticky;
   height: 2px;
+  z-index: 5;
 }
 .line-header {
-  top: 73px;
+  top: 71px;
 }
 .line-about {
-  top: 79px;
+  top: 77px;
 }
 .line-skills {
-  top: 85px;
+  top: 83px;
 }
 .line-projects {
-  top: 91px;
+  top: 89px;
 }
 .line-inbetween {
   display: block;

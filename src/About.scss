@@ -50,12 +50,21 @@
             padding-bottom: 0.5rem;
           }
           p::first-letter{
-            color: $red;
+            color: $grey;
             float: left;
             font-family: "old-news";
             font-size: 45px;
             padding-top: 0.5rem;
             padding-right: 0.5rem;
+          }
+        }
+        .slide:first-of-type {
+          display: flex;
+          flex-flow: row nowrap;
+          .about-me-image {
+            width: auto;
+            height: calc(100% + 1rem);
+            padding: 0px 0px 0px 2rem;
           }
         }
         .skills-showing {
