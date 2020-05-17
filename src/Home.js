@@ -35,7 +35,7 @@ function Home() {
       <Navigation openContact={() => openContact} sectionPositions = {sectionPositions} /> {/* Top bar with current page tekst and nav menu. About 200px*/}
       {/* navigateToSection is a prop, which when called from Navigation, returns a name, and calls a method. */}
       <div className="section-line line-header"></div>
-      <div className="section" id="Hii"><Header /></div> {/* First page after animation */}
+      <div className="section" id="Home"><Header /></div> {/* First page after animation */}
       <div className="section-line line-about"></div>
       <div className="section" id="About"><About /></div> {/* About me page with the sliding paragraphs and an image. */} 
       <div className="section-line line-skills"></div>

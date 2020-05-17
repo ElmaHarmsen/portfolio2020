@@ -1,17 +1,4 @@
-// body {
-//   margin: 0;
-//   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-//     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-//     sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-// }
-
-// code {
-//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-//     monospace;
-// }
-
+// Colors
 $old-blue: #2a3141;
 $old-orange: #ff9928;
 $old-pink: #f8333c;
@@ -24,7 +11,19 @@ $apple-green: #72a108;
 $white: #fcf8eb;
 $red: #ea5330;
 
+//Screen widths
+$breakpoints: (
+  "sm": 0, //Phone
+  "md": 768px, //Tablet
+  "lg": 1280px, //Laptop
+  "xl": 1920px //Monitor
+);
 
+@mixin screen-is($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
 
 @font-face {
   font-family: "old-news";
@@ -37,13 +36,21 @@ $red: #ea5330;
 body {
   margin: 0;
   margin-top: 67px;
+
+  @include screen-is(lg) {
+    margin-top: 0px;
+  }
 }
 h1 {
   font-family: "old-news";
   font-size: 45px;
   text-transform: uppercase;
 
+  @include screen-is(lg) {
+    font-size: 60px;
+  }
 }
+
 h2, h3 {
   font-family: "old-news";
   font-size: 25px;
@@ -53,6 +60,10 @@ p {
   font-family: "ibm";
   font-size: 16px;
   line-height: 1.4rem;
+
+  @include screen-is(lg) {
+    font-size: 20px;
+  }
 }
 a {
   text-decoration: none;
@@ -63,15 +74,27 @@ ul {
   li {
     font-family: "old-news";
     font-size: 40px;
+    
+    @include screen-is(lg) {
+      font-size: 55px;
+    }
   }
 }
 .section {
   padding: 1rem;
+
+  @include screen-is(lg) {
+    padding: 3rem 1rem;
+  }
 }
 .Header, .About, .Skills, .Projects {
   h1 {
     color: $light-green;
     font-weight: bold;
+
+    @include screen-is(lg) {
+     text-align: center;
+    }
 
     span {
       color: $apple-green;
@@ -84,18 +107,35 @@ ul {
   position: sticky;
   height: 2px;
   z-index: 5;
+
+  // @include screen-is(lg) {
+  //   width: 80%;
+  //   margin: 0px auto;
+  // }
 }
 .line-header {
   top: 71px;
+  @include screen-is(lg) {
+    top: 167px;
+  }
 }
 .line-about {
   top: 77px;
+  @include screen-is(lg) {
+    top: 173px;
+  }
 }
 .line-skills {
   top: 83px;
+  @include screen-is(lg) {
+    top: 179px;
+  }
 }
 .line-projects {
   top: 89px;
+  @include screen-is(lg) {
+    top: 185px;
+  }
 }
 .line-inbetween {
   display: block;

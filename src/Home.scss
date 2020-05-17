@@ -5,4 +5,11 @@
   flex-flow: column wrap;
   width: 100vw;
   background-color: $grey;
+
+  @include screen-is(lg) {
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: 167px 1fr;
+    justify-content: center;
+  }
 }

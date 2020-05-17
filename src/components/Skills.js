@@ -9,7 +9,7 @@ function Skills() {
   const skills = [
     {
       title: "the basic ones",
-      technologies: ["HTML", "SCSS", "JavaScript"]
+      technologies: ["HTML", "(S)CSS", "JavaScript"]
     },
     {
       title: "the useful ones",

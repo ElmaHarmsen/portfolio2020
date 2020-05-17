@@ -8,14 +8,32 @@
   .the-skills {
     margin: 3rem 0px;
 
+    @include screen-is(lg) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 100%;
+      margin: 5rem 0px;
+    }
+
     .all-skills-stuff {
       display: flex;
       flex-flow: row nowrap;
       width: 100%;
 
+      @include screen-is(lg) {
+        flex-flow: column wrap;
+        align-items: center;
+      }
+
+
       .skills-description {
         width: calc(50% - 0.5rem);
         margin: auto 0.5rem auto 0px;
+
+        @include screen-is(lg) {
+          margin: auto;
+          text-align: center;
+        }
 
         p {
           color: $light-green;
@@ -34,10 +52,16 @@
       justify-content: center;
       width: 50%;
 
+      @include screen-is(lg) {
+        width: 100%;
+        align-items: center;
+      }
+
       .slide {
         position: absolute;
         opacity: 0;
         transition: opacity 0.3s;
+  
       }
       .skills-showing {
         opacity: 1;

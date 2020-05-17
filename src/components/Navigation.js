@@ -19,7 +19,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
     isNavigationOpen: false, //nav is closed by default
     sectionVisibilities: [ //structure of what you see in the navigstion and what is visible
       {
-        name: "Hii",
+        name: "Home",
         visitility: 0 //0
       },
       {
@@ -116,7 +116,8 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
     <section>
       <div className="nav-menu-bar">
         <div className="nav-content">
-          <h2>{navigationState.activeSection}</h2> {/* the curren visible section name */}
+          <h2 className="visible-section">{navigationState.activeSection}</h2> {/* the curren visible section name */}
+          {/* <h2 className="visible-section-lg">Welcome in {navigationState.activeSection}</h2> the curren visible section name */}
           <div onClick={() => changeState({...navigationState, isNavigationOpen: !navigationState.isNavigationOpen})}>
             <div className={navigationState.isNavigationOpen ? "nav-menu close" : "nav-menu open"} >
               <span></span>
@@ -138,7 +139,10 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
       <div className={navigationState.isNavigationOpen ? "nav-items open" : "nav-items"}>
         {theNavItems}
       </div>
-          
+
+      <div className="nav-items-lg">
+        {theNavItems}
+      </div>        
     </section>
   );
 }

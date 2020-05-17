@@ -12,6 +12,12 @@
   // box-shadow: 0px 2px 2px 1px rgba(21, 84, 87, .3);
   z-index: 4;
 
+  @include screen-is(lg) {
+    top: 100px;
+    background-color: $grey;
+    width: 80%;
+  }
+
   .nav-lines {
     width: 100vw;
 
@@ -28,12 +34,22 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     width: calc(50% + 33.5px); //Half of the screen width + half of the nav-menu so it's in the middle.
+    height: 67px;
+
+    @include screen-is(lg) {
+      width: 100%;
+      justify-content: center;
+    }
+
     h2 {
-      text-align: left;
       color: $white;
       text-transform: capitalize;
       font-size: 35px;
       margin: auto 0px auto 1rem;
+
+      @include screen-is(lg) {
+        font-size: 40px;
+      }
     }
     div {
       .nav-menu {
@@ -54,6 +70,9 @@
           height: 2px;
           background-color: $grey;
         }
+      }
+      @include screen-is(lg) {
+        display: none;
       }
       &.open {
         span:first-of-type {
@@ -97,6 +116,10 @@
     position: absolute;
     right: 1rem;
     top: 7px; //Navbar has a fixed height of 67px, img also has a fixed heigth of 60px, so from the top 7px.
+    
+    @include screen-is(lg) {
+      display: none;
+    }
   }
   .tiny-eyes {
     display: flex;
@@ -167,4 +190,53 @@
   &.open {
     bottom: 0;
   } //Use the same for the contact overlay.
+}
+@include screen-is(sm) {
+  .nav-items-lg {
+    display: none;
+  }
+}
+@include screen-is(lg) {
+  .nav-items-lg {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+    width: 80vw;
+    position: fixed;
+    z-index: 4;
+    top: 0px;
+    left: 10vw;
+    background-color: $red;
+
+    a::after {
+      content: "";
+      display: block;
+      position: relative;
+      top: 4px;
+      width: 60%;
+      height: 2px;
+      background-color: $light-green;
+      transition: .2s ease;
+    }
+    a:hover::after {
+      width: 100%;
+      background-color: $white;
+    }
+
+    div {
+      width: calc(100% / 5);
+      padding: 0px 1rem;
+      h1 {
+        color: $grey;
+        font-size: 45px;
+        text-transform: capitalize;
+      }
+      h1:hover {
+        color: $white;
+        transition: .2s ease;
+      }
+    }
+  }
 }
