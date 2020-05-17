@@ -5,8 +5,40 @@
   flex-flow: column wrap;
   justify-content: space-between;
 
+  @include screen-is(lg) {
+    .all-the-projects-lg {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+  }
+
+  @include screen-is(sm) {
+    .the-projects-images {
+      display: none;
+    }
+  }
+  
+  @include screen-is(lg) {
+    .the-projects-images {
+      display: block;
+      width: calc(50% - 5rem);
+      height: 602px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
   .the-projects {
     padding: 2rem 0px;
+
+    @include screen-is(lg) {
+      padding: 5rem 0px 5rem 5rem;
+      width: 50%;
+    }
     .project {
       padding: 1rem 0px;
 
@@ -19,6 +51,10 @@
         height: 2px;
         background-color: $light-green;
         transition: .2s ease;
+        
+        @include screen-is(lg) {
+          width: 60%;
+        }
       }
       a:hover::after {
         width: 100%;
@@ -29,7 +65,11 @@
         color: $white;
         font-weight: bold;
         font-size: 30px;
-        padding: 0.5rem 0px;    
+        padding: 0.5rem 0px;
+
+        @include screen-is(lg) {
+          font-size: 40px;
+        }
       }
       p {
         color: $light-green;
