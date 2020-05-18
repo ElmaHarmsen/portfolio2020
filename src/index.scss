@@ -55,6 +55,10 @@ h2, h3 {
   font-family: "old-news";
   font-size: 25px;
   font-weight: bold;
+
+  @include screen-is(lg) {
+    font-size: 45px;
+  }
 }
 p {
   font-family: "ibm";

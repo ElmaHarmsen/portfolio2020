@@ -3,6 +3,10 @@
 .Footer {
   text-align: left;
 
+  @include screen-is(lg) {
+    text-align: center;
+  }
+
   h2, h1 {
     text-transform: uppercase;
     padding: 0px;
@@ -10,9 +14,17 @@
   }
   h2 {
     font-size: 35px;
+
+    @include screen-is(lg) {
+      font-size: 60px;
+    }
   }
   h1 {
-    font-size: 60px;
+    font-size: 63px;
+
+    @include screen-is(lg) {
+      font-size: 110px;
+    }
 
     span {
       color: $apple-green;

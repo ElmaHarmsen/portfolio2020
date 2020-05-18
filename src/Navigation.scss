@@ -36,7 +36,7 @@
     width: calc(50% + 33.5px); //Half of the screen width + half of the nav-menu so it's in the middle.
     height: 67px;
 
-    @include screen-is(lg) {
+    @include screen-is(lg) { //the current visible section
       width: 100%;
       justify-content: center;
     }
@@ -200,7 +200,6 @@
   .nav-items-lg {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
     align-items: center;
     height: 100px;
     width: 80vw;
@@ -215,10 +214,11 @@
       display: block;
       position: relative;
       top: 4px;
-      width: 60%;
+      width: 20%;
       height: 2px;
       background-color: $light-green;
       transition: .2s ease;
+      margin: 0px auto; //So its in the center underneath the word
     }
     a:hover::after {
       width: 100%;
@@ -228,6 +228,7 @@
     div {
       width: calc(100% / 5);
       padding: 0px 1rem;
+      text-align: center;
       h1 {
         color: $grey;
         font-size: 45px;

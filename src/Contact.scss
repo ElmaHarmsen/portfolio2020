@@ -3,18 +3,28 @@
 .Contact {
   background-color: $red;
   height: 100%;
-  z-index: 4;
+  z-index: 6;
   display: flex;
   position: fixed;
   top: calc(110vh + 3rem);
   transition: top 0.5s ease-out;
   margin-left: -1rem; //Weird overflow
+  width: 100%;
+
+  @include screen-is(lg) {
+    width: calc(80% + 0.6rem); //Weird space on the right...
+  }
 
   .contact-content {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     height: 100%;
+
+    @include screen-is(lg) {
+      flex-flow: column nowrap;
+      width: 100%;
+    }
 
     .contact-close {
       width: 35px;
@@ -43,11 +53,35 @@
         transition-delay: 0.2s;
       }
     }
+    // .contact-close:hover {
+    //   span:first-of-type {
+    //     transform: rotate(-225deg) translate(-3px, -9px);
+    //     transition: 2s ease-out;
+    //     transition-delay: 0.1s;
+    //   }
+    //   // span:last-of-type {
+    //   //   transform: rotate(225deg) translate(-6px, 4px);
+    //   //   transition: 0.1s ease-out ;
+    //   //   transition-delay: 0.2s;
+    //   // }
+    // }
 
     .contact-header {
-      text-align: left;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: space-between;
       padding: 0px 1rem;
       color: $white;
+
+      h2 {
+        text-align: left;
+      }
+
+      @include screen-is(lg) {
+        height: 20%;
+        text-align: center;
+      }
     }
 
     .contact-info {
@@ -56,11 +90,23 @@
       justify-content: space-between;
       align-items: flex-end;
 
-      h2, h3 {
+      @include screen-is(lg) {
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 80%;
+      }
+
+      h3 {
         color: $grey;
         padding: 2rem 1rem;
         font-size: 35px;
         text-decoration: none;
+
+        @include screen-is(lg) {
+          font-size: 60px;
+          text-align: center;
+        }
       }
       h3:hover {
         color: $white;
@@ -69,19 +115,42 @@
       span {
         color: $white;
       }
-      h3::after {
+      h3::after{
         content: "";
         display: block;
         position: relative;
-        top: 2px;
+        top: 4px;
         width: 202px;
         height: 2px;
         background-color: $light-green;
         transition: .2s ease;
+
+        @include screen-is(lg) {
+          width: 20%;
+          margin: 0px auto; //So its in the center underneath the word
+        }
       }
       h3:hover::after {
         width: calc(100vw - 2rem);
         background-color: $white;
+
+        @include screen-is(lg) {
+          width: 100%;
+        }
+      }
+      .email-sm {
+        display: block;
+
+        @include screen-is(lg) {
+          display: none;
+        }
+      }
+      .email-lg {
+        display: none;
+
+        @include screen-is(lg) {
+          display: block;
+        }
       }
     }
   }
