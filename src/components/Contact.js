@@ -13,7 +13,7 @@ function Contact(props) {
           <h2>Hey there, please use one of these and let's have a talk!</h2>
         </div>
         <div className="contact-info">
-          <a href="https://drive.google.com/file/d/15qDJ20KCGCKTYGOEcFyto52qiqb0NFcB/view?usp=sharing" target="blank">
+          <a href="https://drive.google.com/file/d/1QGVlxMZXYzb1tUSXOL-F3f0m-MWMxGKP/view?usp=sharing" target="blank">
             <h3>My Resume/Cv</h3>
           </a>
           <h3 className="email-sm">elmaharmsen<span>01</span><br></br>@gmail.com</h3>
