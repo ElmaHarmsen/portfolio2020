@@ -5,13 +5,15 @@
   flex-flow: column nowrap;
   justify-content: space-between;
   width: calc(100vw - 2rem);
+  // height: calc(100vh - 67px);
 
-  .hii, .value {
-    text-align: center;
+  @include screen-is(lg) {
+    width: 100%;
+    height: auto;
   }
 
-  .hii {
-    padding-bottom: 1rem;
+  .value {
+    text-align: center;
   }
 
   .stand, .value {
@@ -25,6 +27,11 @@
     width: 325px;
     height: 318px;
     margin: 0px auto;
+
+    @include screen-is(lg) {
+      width: 80%;
+      height: 563px;
+    }
 
     .value {
       display: none;
@@ -45,6 +52,10 @@
     bottom: 260px;
     margin: 0px auto;
 
+    @include screen-is(lg) {
+      bottom: 485px;
+    }
+
     span {
       display: block;
       background-color: $white;
@@ -53,9 +64,18 @@
       border-radius: 50%;
       animation: "eye-blinking" 6s infinite;
       animation-delay: 2s;
+
+      @include screen-is(lg) {
+        width: 34px;
+        height: 34px;
+      }
     }
     span:first-of-type {
       margin: 0px 1rem 0px -0.5rem;
+
+      @include screen-is(lg) {
+        margin: 0px 2rem 0px -1rem;
+      }
     }
   }
 
@@ -63,10 +83,18 @@
     height: 256px;
     margin: 2rem 0px 0.5rem 0px;
     //457:350
+
+    @include screen-is(lg) {
+      height: 456px;
+    }
   }
 
   h2 {
     text-transform: uppercase;
+
+    // @include screen-is(lg) {
+    //   padding: 1rem 0px;
+    // }
   }
 }
 @keyframes figure {

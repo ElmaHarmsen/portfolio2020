@@ -39,6 +39,7 @@ body {
 
   @include screen-is(lg) {
     margin-top: 0px;
+    overflow-x: hidden;
   }
 }
 h1 {
@@ -111,11 +112,6 @@ ul {
   position: sticky;
   height: 2px;
   z-index: 5;
-
-  // @include screen-is(lg) {
-  //   width: 80%;
-  //   margin: 0px auto;
-  // }
 }
 .line-header {
   top: 71px;
@@ -147,17 +143,18 @@ ul {
   height: 2px;
   width: 100%;
 }
-.next-arrow {
-  display: none;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  h2 {
-    text-transform: uppercase;
-    color: $old-pink;
+.sm-visible {
+  display: block;
+
+  @include screen-is(lg) {
+    display: none;
   }
-  img {
-    width: 20px;
-    height: auto;
+}
+.lg-visible {
+  display: none;
+
+  @include screen-is(lg) {
+    display: block;
   }
 }
 

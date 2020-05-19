@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../About.scss';
-import NextArrow from '../components/NextArrow.js';
 
 function About() {
 
@@ -65,7 +64,6 @@ function About() {
           <img className="arrow" onClick={nextSlide}  src={require("../assets/arrow-right.svg")}/>
         </div>
       </div>
-      <NextArrow />
     </section>
   );
 }

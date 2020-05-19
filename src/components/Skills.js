@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import NextArrow from '../components/NextArrow.js';
 import '../Skills.scss';
 
 function Skills() {
@@ -64,7 +63,6 @@ function Skills() {
       <div className="the-skills">
         {skillsList}
       </div>
-      <NextArrow />
     </section>
   );
 }

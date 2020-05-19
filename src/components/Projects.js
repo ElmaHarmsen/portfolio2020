@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Projects.scss';
-import NextArrow from '../components/NextArrow.js';
-
 
 function Projects() {
+
+  const [currentProject, changeProject] = useState("nl");
 
   const projects = [
     {
@@ -16,7 +16,7 @@ function Projects() {
       title: "Lego Universe Website",
       stack: "HTML, SCSS, JavaScript, Vue, MongoDB, ExpressJs Api",
       link: "https://lego-universe.netlify.app/",
-      image: "formidable"
+      image: "legostore"
     },
     {
       title: "Super Mario Minigame",
@@ -28,25 +28,21 @@ function Projects() {
       title: "Fantasy Movie Website",
       stack: "HTML, CSS, JavaScript, JSON, Fetch Api",
       link: "https://fantasy-movies-elma.netlify.app",
-      image: "formidable"
+      image: "fantasymovies"
     },
     {
       title: "JavaScript Portfolio",
       stack: "HTML, CSS, Vanilla JavaScript",
       link: "https://elmaharmsen.nl/",
-      image: "formidable"
+      image: "previousportfolio"
     },
   ]
 
   const portfolioProjects = projects.map((item) =>
-    <div className="project" key={item.title, item.stack, item.link}>
-      <a href={item.link} target="blank"><h2>{item.title}</h2></a>
+    <div className="project" key={item.title}> {/* the key is only 1 unique thing inside the const, not all of them */}
+      <a href={item.link} target="blank" onMouseEnter={() => changeProject(item.image)}><h2>{item.title}</h2></a>
       <p>{item.stack}</p>
     </div>
-  )
-
-  const portfolioProjectsImages = projects.map((item) =>
-    <img key={item.image} src={require(`../assets/${item.image}.png`)}/>
   )
 
   return (
@@ -54,7 +50,7 @@ function Projects() {
       <h1>what have i been up to<span>?</span></h1>
       <div className="all-the-projects-lg">
         <div className="the-projects-images">
-          {portfolioProjectsImages}
+          <img src={require(`../assets/${currentProject}.png`)}/>
         </div>
         <div className="the-projects">
           <div>{portfolioProjects}</div>

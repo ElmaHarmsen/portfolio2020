@@ -10,6 +10,7 @@
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
+      padding: 5rem 0px;
     }
   }
 
@@ -21,13 +22,17 @@
   
   @include screen-is(lg) {
     .the-projects-images {
-      display: block;
-      width: calc(50% - 5rem);
-      height: 342px;
-      overflow: hidden;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      width: calc(60% - 5rem);
+      height: calc(624.4px - 3rem);
+      border: 2px solid $light-green;
 
       img {
         width: 100%;
+        // border-bottom: 2px solid $light-green;
+        // border-top: 2px solid $light-green;
       }
     }
   }
@@ -36,8 +41,8 @@
     padding: 2rem 0px;
 
     @include screen-is(lg) {
-      padding: 5rem 0px 5rem 5rem;
-      width: 50%;
+      padding: 0px 0px 0px 5rem;
+      width: 40%;
     }
     .project {
       padding: 1rem 0px;
@@ -53,7 +58,7 @@
         transition: .2s ease;
         
         @include screen-is(lg) {
-          width: 20%;
+          width: 40%;
           // margin: 0px auto;
         }
       }

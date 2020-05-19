@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../Header.scss';
-import NextArrow from '../components/NextArrow.js';
 
 function Header() {
 
@@ -50,7 +49,7 @@ function Header() {
   }, []); //Runs once
 
   useEffect(() => {
-    setTimeout(nextValue, 5000);
+    setTimeout(nextValue, 6000);
   }, [currentValue]); //Runs when currentValue changes
 
 
@@ -69,7 +68,8 @@ function Header() {
   return (
     <section>
       <div className="Header">
-        <h1>My name is<br></br><span>Elma Harmsen</span><br></br>and I stand for<span>:</span></h1>
+        <h1 className="sm-visible">My name is<br></br><span>Elma Harmsen</span><br></br>and I stand for<span>:</span></h1>
+        <h1 className="lg-visible">My name is <span>Elma Harmsen</span><br></br>and I stand for<span>:</span></h1>
           <div className="values-slides">
             {portfolioValues}
           </div>
@@ -77,7 +77,6 @@ function Header() {
             <span></span>
             <span></span>
           </div>
-        <NextArrow />
       </div>
     </section>
   )
