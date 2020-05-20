@@ -10,6 +10,7 @@ function About() {
       title: "This is me",
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1200px-Flag_of_the_Netherlands.svg.png",
       image: "https://elmaharmsen.nl/images/me-right.jpg",
+      imageLG: "https://elmaharmsen.nl/images/me-left.jpg"
     },
     {
       title: "01.09.2017",
@@ -26,11 +27,12 @@ function About() {
   ] //The three paragraphs with stuff about me.
 
   const paragraphs = aboutParagraphs.map((item) =>
-    <div className="slide" key={item.title, item.img, item.paragraph, item.image}>
+    <div className="slide" key={item.title}>
       <img className="tiny-paragraph-image" src={item.img}/>
       <h2>{item.title}</h2>
       <p>{item.paragraph}</p>
       <img className="about-me-image" src={item.image}/>
+      <img className="about-me-image lg-visible"src={item.imageLG}/>
     </div>
   )
 

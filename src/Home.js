@@ -9,6 +9,9 @@ import Footer from './components/Footer.js';
 
 function Home() {
 
+  // const vh = window.innerHeight;
+  // document.querySelector("#Home").style.setProperty('--vh', vh + 'px');
+
   const [sectionPositions, setSectionPositions] = useState([]); //Empty array because it is YET unknown where the lines are.
   //Is for the position of the About, Skills, Projects sections so it is possible to scroll there, and I use the lines for that.
   useEffect(() => { //This useEffect is similar to the mounted hook in vue. With the empty array [] it runs only once, otherwise it would run everytime the component (Home.js) updates. 

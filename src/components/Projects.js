@@ -3,7 +3,7 @@ import '../Projects.scss';
 
 function Projects() {
 
-  const [currentProject, changeProject] = useState("nl");
+  const [currentProject, changeProject] = useState("noproject");
 
   const projects = [
     {
