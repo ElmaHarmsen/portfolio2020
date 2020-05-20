@@ -26,45 +26,50 @@
       width: 100%;
     }
 
-    .contact-close {
-      width: 35px;
-      height: 35px;
+    .contact-close{
+      width: calc(35px + 2rem);
+      height: calc(35px + 2rem);
       display: flex;
       flex-flow: row wrap;
+      justify-content: center;
       align-items: center;
       cursor: pointer;
       background-color: $white;
-      padding: 1rem;
 
       span {
         display: block;
+        position: relative;
+        z-index: 7;
         width: 35px;
         height: 2px;
         background-color: $grey;
       }
       span:first-of-type {
-        transform: rotate(-45deg) translate(-6px, 6px);
+        transform: rotate(-45deg) translate(-11px, 11px);
         transition: 0.1s ease-out;
         transition-delay: 0.1s;
       }
       span:last-of-type {
-        transform: rotate(45deg) translate(-6px, -6px);
+        transform: rotate(45deg) translate(-12px, -12px);
         transition: 0.1s ease-out;
         transition-delay: 0.2s;
       }
     }
-    // .contact-close:hover {
-    //   span:first-of-type {
-    //     transform: rotate(-225deg) translate(-3px, -9px);
-    //     transition: 2s ease-out;
-    //     transition-delay: 0.1s;
-    //   }
-    //   // span:last-of-type {
-    //   //   transform: rotate(225deg) translate(-6px, 4px);
-    //   //   transition: 0.1s ease-out ;
-    //   //   transition-delay: 0.2s;
-    //   // }
-    // }
+
+    .contact-close::after{
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 6;
+      margin: 0px auto;
+      width: 0px;
+      height: calc(35px + 2rem);
+      background-color: $light-green;
+      transition: 0.2s ease;
+    }
+    .contact-close:hover::after {
+      width: calc(35px + 2rem);
+    }
 
     .contact-header {
       display: flex;

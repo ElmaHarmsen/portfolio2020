@@ -2,14 +2,11 @@
 
 .nav-menu-bar {
   width: 100vw;
-  // display: flex;
-  // flex-flow: column wrap;
   justify-content: space-between;
   position: fixed;
   top: 0;
   height: 67px;
   background-color: $red;
-  // box-shadow: 0px 2px 2px 1px rgba(21, 84, 87, .3);
   z-index: 4;
 
   @include screen-is(lg) {
