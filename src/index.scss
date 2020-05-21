@@ -55,7 +55,7 @@ h1 {
 h2, h3 {
   font-family: "old-news";
   font-size: 25px;
-  font-weight: bold;
+  font-weight: normal;
 
   @include screen-is(lg) {
     font-size: 45px;
@@ -96,7 +96,7 @@ ul {
 .Header, .About, .Skills, .Projects {
   h1 {
     color: $light-green;
-    font-weight: bold;
+    font-weight: normal;
 
     @include screen-is(lg) {
      text-align: center;
