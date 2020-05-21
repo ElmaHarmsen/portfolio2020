@@ -7,12 +7,14 @@
   display: flex;
   position: fixed;
   top: calc(110vh + 3rem);
+  left: 0;
   transition: top 0.5s ease-out;
-  margin-left: -1rem; //Weird overflow
-  width: 100%;
+  width: 100vw;
 
   @include screen-is(lg) {
-    width: calc(80% + 0.6rem); //Weird space on the right...
+    width: 80vw;
+    left: auto;
+    margin-left: -1rem;
   }
 
   .contact-content {
@@ -55,20 +57,21 @@
         transition-delay: 0.2s;
       }
     }
-
-    .contact-close::after{
-      content: "";
-      display: block;
-      position: absolute;
-      z-index: 6;
-      margin: 0px auto;
-      width: 0px;
-      height: calc(35px + 2rem);
-      background-color: $light-green;
-      transition: 0.2s ease;
-    }
-    .contact-close:hover::after {
-      width: calc(35px + 2rem);
+    @include screen-is(lg) {
+      .contact-close::after{
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 6;
+        margin: 0px auto;
+        width: 0px;
+        height: calc(35px + 2rem);
+        background-color: $light-green;
+        transition: 0.2s ease;
+      }
+      .contact-close:hover::after {
+        width: calc(35px + 2rem);
+      }
     }
 
     .contact-header {
