@@ -84,15 +84,21 @@
         }
         .slide:first-of-type {
           display: flex;
-          flex-flow: row nowrap;
+          flex-flow: row nowrap; 
+          justify-content: space-between;
+          .tiny-paragraph-image {
+            display: none;
+          }
           .about-me-image {
             width: auto;
             height: 120px;
-            padding: 0px 0px 0px 2rem;
+            padding: 0px 2rem 0px 0px;
 
             @include screen-is(lg) {
               height: 170px;
-              padding: 0px 0px 0px 1rem;
+              padding: 0px;
+              position: relative;
+              right: 0;
             }
           }
         }

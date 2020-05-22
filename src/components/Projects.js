@@ -14,7 +14,7 @@ function Projects() {
     },
     {
       title: "Lego Universe Website",
-      stack: "HTML, SCSS, JavaScript, Vue, MongoDB, ExpressJs Api",
+      stack: "HTML, SCSS, JavaScript, Vue, MongoDB, ExpressJs Api, Vuex",
       link: "https://lego-universe.netlify.app/",
       image: "legostore"
     },

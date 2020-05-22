@@ -7,24 +7,32 @@ function About() {
 
   const aboutParagraphs = [
     {
-      title: "This is me",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1200px-Flag_of_the_Netherlands.svg.png",
+      title: "This is me:",
+      // img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1200px-Flag_of_the_Netherlands.svg.png",
       image: "https://elmaharmsen.nl/images/me-right.jpg",
       imageLG: "https://elmaharmsen.nl/images/me-left.jpg"
     },
     {
+      title: "17.08.2000",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1200px-Flag_of_the_Netherlands.svg.png",
+      paragraph: "I first set foot on this world in the village of Haren, in summer of 2000. Soon I had great interest in reading, bikes, and the act of building from Lego."    
+    },
+    {
       title: "01.09.2017",
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1200px-Flag_of_the_Netherlands.svg.png",
-      paragraph: "This is when I started the study program Communication & Multimedia Design at the Hanzehogeschool, in Groningen."    },
+      paragraph: "This is when I started the study program Communication & Multimedia Design at the Hanzehogeschool, in Groningen."    
+    },
     {
       title: "21.08.2019",
-      img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQIAAADDCAMAAABeUu/HAAAALVBMVEXGDDD////EACLfkZrFACbYdIDotLrDABzDABXWbnznsbfBAAPejpjy1NfdjJX1293UAAABYklEQVR4nO3ay01DQRREwdM2mD/5hwsJ4I0fEhZ1EuhRbe/U4T087ucuT8cP/r0QIEAQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQh6A4JTof3/HKF4PXt+MEb63x475crBB+fxw/eWFee+09CgADBEAzBEAzBEAzBEAzBEAzBEAzBEAzBEAzBEAzBEAzBEAzBEHznpnh2WT79wrn+7v4XHB8CBAhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAE3R/BF+GGRIscpa+NAAAAAElFTkSuQmCC",
-      paragraph: "Here, I joined the autumn semester Web Development at the Business Academy Aarhus, in Denmark."    },
+      img: "https://cdn.webshopapp.com/shops/94414/files/52379582/flag-of-denmark.jpg",
+      paragraph: "Here, I joined the autumn semester Web Development at the Business Academy Aarhus, in Denmark."    
+    },
     {
       title: "12.02.2020",
-      img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQIAAADDCAMAAABeUu/HAAAALVBMVEXGDDD////EACLfkZrFACbYdIDotLrDABzDABXWbnznsbfBAAPejpjy1NfdjJX1293UAAABYklEQVR4nO3ay01DQRREwdM2mD/5hwsJ4I0fEhZ1EuhRbe/U4T087ucuT8cP/r0QIEAQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQh6A4JTof3/HKF4PXt+MEb63x475crBB+fxw/eWFee+09CgADBEAzBEAzBEAzBEAzBEAzBEAzBEAzBEAzBEAzBEAzBEAzBEHznpnh2WT79wrn+7v4XHB8CBAhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAEIQhBCEIQghCEIAQhCEEIQhCCEIQgBCEIQQhCEIIQhCAE3R/BF+GGRIscpa+NAAAAAElFTkSuQmCC",
-      paragraph: "So far, I've spent my free time in 2020 wisely by learning Vue & React, along with playing Old School Runescape and Exploding Kittens."    }
-  ] //The three paragraphs with stuff about me.
+      img: "https://cdn.webshopapp.com/shops/94414/files/52379582/flag-of-denmark.jpg",
+      paragraph: "So far, I've spent my free time in 2020 wisely by learning Vue & React, along with playing Old School Runescape and Exploding Kittens."    
+    }
+  ] //The paragraphs with stuff about me.
 
   const paragraphs = aboutParagraphs.map((item) =>
     <div className="slide" key={item.title}>

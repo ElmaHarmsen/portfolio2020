@@ -4,6 +4,9 @@
   text-align: left;
 
   @include screen-is(lg) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     text-align: center;
   }
 
