@@ -16,7 +16,7 @@
     animation-iteration-count: 1;
   }
   .lastname {
-    animation: "name" 0.9s ease-in;
+    animation: "name" 0.3s ease-in;
     animation-iteration-count: 1;
 
   }
@@ -50,7 +50,7 @@
       margin: 0px auto;
     }
     .value:first-of-type {
-      transition-delay: 2s;
+      transition-delay: 1s;
     }
     .values-showing {
       opacity: 1;

@@ -49,7 +49,7 @@ function Header() {
   }, []); //Runs once
 
   useEffect(() => {
-    setTimeout(nextValue, 6000);
+    setTimeout(nextValue, 5000);
   }, [currentValue]); //Runs when currentValue changes
 
 

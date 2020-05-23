@@ -7,16 +7,16 @@ function Projects() {
 
   const projects = [
     {
-      title: "Formidable Music Store",
-      stack: "HTML, SCSS, JavaScript, Vue, Spotify Api",
-      link: "https://formidablemusicstore.netlify.app/",
-      image: "formidable"
-    },
-    {
       title: "Lego Universe Website",
       stack: "HTML, SCSS, JavaScript, Vue, MongoDB, ExpressJs Api, Vuex",
       link: "https://lego-universe.netlify.app/",
       image: "legostore"
+    },
+    {
+      title: "Formidable Music Store",
+      stack: "HTML, SCSS, JavaScript, Vue, Spotify Api",
+      link: "https://formidablemusicstore.netlify.app/",
+      image: "formidable"
     },
     {
       title: "Super Mario Minigame",

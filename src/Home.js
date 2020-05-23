@@ -54,12 +54,3 @@ function Home() {
 export default Home;
 
 //Navigation has special thanks to Vít Brykner.
-
-//STRUCTURE:
-//Navigation, accessible from anywhere.
-//Header.
-//About component.
-//Skills component.
-//Projects component.
-//Maybe some nice footer which displays some contact stuff.
-//Contact component is always an overlay on the current component that's been visited.

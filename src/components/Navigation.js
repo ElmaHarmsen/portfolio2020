@@ -9,7 +9,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
 
   useEffect(() => {
     const scrollObserver = new IntersectionObserver(sectionChange, {
-      threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] //Every tenth //Maybe change this a bit more so it doen't trigger tooooo often
+      threshold: [0.2, 0.4, 0.6, 0.8, 1]
     });
     document.querySelectorAll(".section").forEach(section => scrollObserver.observe(section));
   }, []);
@@ -67,7 +67,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
   }, [navigationState.sectionVisibilities[0], navigationState.sectionVisibilities[1], navigationState.sectionVisibilities[2], navigationState.sectionVisibilities[3], navigationState.sectionVisibilities[4]]); //Trigger 5 times for all 5 elements in the array
 
   function navigateToSection(id) {
-    const position = navItems[id].position;
+    const position = navItems[id].position - 100;
     changeState({...navigationState, isNavigationOpen: false})
     if (position !== null) { //null is a falsey value, so if the position is not null.
       window.scrollTo({
@@ -106,7 +106,6 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
     return (
       <div>
         <a><h1 onClick={() => navigateToSection(index)} key={item.name}>{item.name}</h1></a>
-        {/* <span className="line-inbetween"></span> */}
       </div>
     )
   }); //This generates a header with the 5 navItems names. 
@@ -117,7 +116,6 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
       <div className="nav-menu-bar">
         <div className="nav-content">
           <h2 className="visible-section">{navigationState.activeSection}</h2> {/* the curren visible section name */}
-          {/* <h2 className="visible-section-lg">Welcome in {navigationState.activeSection}</h2> the curren visible section name */}
           <div onClick={() => changeState({...navigationState, isNavigationOpen: !navigationState.isNavigationOpen})}>
             <div className={navigationState.isNavigationOpen ? "nav-menu close" : "nav-menu open"} >
               <span></span>
@@ -131,9 +129,6 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
             <span></span>
           </div>
         </div>
-        {/* <div className="nav-lines">
-          <span></span>
-        </div> */}
       </div>
 
       <div className={navigationState.isNavigationOpen ? "nav-items open" : "nav-items"}>
