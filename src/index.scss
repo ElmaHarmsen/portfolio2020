@@ -35,10 +35,8 @@ $breakpoints: (
 }
 body {
   margin: 0;
-  margin-top: 67px;
 
   @include screen-is(lg) {
-    margin-top: 0px;
     overflow-x: hidden;
   }
 }
@@ -112,7 +110,7 @@ ul {
   width: 100%;
   position: sticky;
   height: 2px;
-  z-index: 5;
+  z-index: 3;
 }
 .line-header {
   top: 71px;

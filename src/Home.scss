@@ -1,9 +1,9 @@
 @import "./index.scss";
 
 .App {
-  display: flex;
-  flex-flow: column wrap;
-  width: 100vw;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 69px 1fr;
   background-color: $grey;
 
   @include screen-is(lg) {

@@ -67,7 +67,14 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
   }, [navigationState.sectionVisibilities[0], navigationState.sectionVisibilities[1], navigationState.sectionVisibilities[2], navigationState.sectionVisibilities[3], navigationState.sectionVisibilities[4]]); //Trigger 5 times for all 5 elements in the array
 
   function navigateToSection(id) {
-    const position = navItems[id].position - 100;
+    let sizeScreen = window.matchMedia('(min-width: 768px)');
+    let position = 0;
+    if (sizeScreen.matches) {
+      position = navItems[id].position - 100; //No const in if-else.
+    }
+    else {
+      position = navItems[id].position - 87;
+    }
     changeState({...navigationState, isNavigationOpen: false})
     if (position !== null) { //null is a falsey value, so if the position is not null.
       window.scrollTo({

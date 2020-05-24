@@ -7,7 +7,7 @@
   top: 0;
   height: 67px;
   background-color: $red;
-  z-index: 4;
+  z-index: 5;
 
   @include screen-is(lg) {
     top: 100px;
@@ -148,7 +148,7 @@
   justify-content: flex-end;
   height: 100vh;
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   bottom: calc(-100vh - 60px - 4rem);
   transition: bottom 0.5s ease-out;
   transition-delay: 0.2s;
@@ -199,7 +199,7 @@
     flex-flow: row nowrap;
     align-items: center;
     height: 100px;
-    width: 80vw;
+    width: 80%;
     position: fixed;
     z-index: 4;
     top: 0px;

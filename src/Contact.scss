@@ -9,12 +9,11 @@
   top: calc(110vh + 3rem);
   left: 0;
   transition: top 0.5s ease-out;
-  width: 100vw;
+  width: 100%;
 
   @include screen-is(lg) {
-    width: 80vw;
-    left: auto;
-    margin-left: -1rem;
+    width: calc(80% + 1px);
+    left: 10%;
   }
 
   .contact-content {

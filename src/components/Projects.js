@@ -33,7 +33,7 @@ function Projects() {
     {
       title: "JavaScript Portfolio",
       stack: "HTML, CSS, Vanilla JavaScript",
-      link: "https://elmaharmsen.nl/",
+      link: "https://elmaharmsen01.netlify.app/",
       image: "previousportfolio"
     },
   ]

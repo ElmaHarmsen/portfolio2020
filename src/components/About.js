@@ -9,8 +9,8 @@ function About() {
     {
       title: "This is me:",
       // img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1200px-Flag_of_the_Netherlands.svg.png",
-      image: "https://elmaharmsen.nl/images/me-right.jpg",
-      imageLG: "https://elmaharmsen.nl/images/me-left.jpg"
+      image: "https://elmaharmsen01.netlify.app/images/me-right.jpg",
+      imageLG: "https://elmaharmsen01.netlify.app/images/me-left.jpg"
     },
     {
       title: "17.08.2000",
