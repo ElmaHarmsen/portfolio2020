@@ -35,11 +35,16 @@
   }
 
   .the-projects {
-    padding: 2rem 0px;
+    margin: 2rem 0px;
+
+    @include screen-is(md) {
+      text-align: center;
+    }
 
     @include screen-is(lg) {
       padding: 0px 0px 0px 5rem;
       width: 40%;
+      text-align: left;
     }
     .project {
       padding: 1rem 0px;
@@ -54,9 +59,14 @@
         background-color: $light-green;
         transition: .2s ease;
         
+        @include screen-is(md) {
+          width: 20%;
+          margin: 0px auto;
+        }
+        
         @include screen-is(lg) {
           width: 40%;
-          // margin: 0px auto;
+          margin: 0px;
         }
       }
       a:hover::after {
@@ -69,6 +79,10 @@
         font-weight: normal;
         font-size: 30px;
         padding: 0.5rem 0px;
+
+        @include screen-is(md) {
+          font-size: 35px;
+        }
 
         @include screen-is(lg) {
           font-size: 40px;

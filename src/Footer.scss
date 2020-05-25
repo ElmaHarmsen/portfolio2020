@@ -3,6 +3,10 @@
 .Footer {
   text-align: left;
 
+  @include screen-is(md) {
+    text-align: center;
+  }
+
   @include screen-is(lg) {
     display: flex;
     flex-flow: row nowrap;
@@ -18,12 +22,20 @@
   h2 {
     font-size: 35px;
 
+    @include screen-is(md) {
+      font-size: 45px;
+    }
+
     @include screen-is(lg) {
       font-size: 60px;
     }
   }
   h1 {
     font-size: 61px;
+
+    @include screen-is(md) {
+      font-size: 79px;
+    }
 
     @include screen-is(lg) {
       font-size: 105px;

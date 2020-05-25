@@ -69,6 +69,7 @@ function Header() {
     <section>
       <div className="Header">
         <h1 className="sm-visible">My name is<br></br><span className="firstname">Elma</span><span className="lastname"> Harmsen</span><br></br>and I stand for<span>:</span></h1>
+        <h1 className="md-visible">My name is <span className="firstname">Elma</span><span className="lastname"> Harmsen</span><br></br>and I stand for<span>:</span></h1>
         <h1 className="lg-visible">My name is <span className="firstname">Elma</span><span className="lastname"> Harmsen</span><br></br>and I stand for<span>:</span></h1>
           <div className="values-slides">
             {portfolioValues}

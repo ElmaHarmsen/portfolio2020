@@ -37,6 +37,10 @@
     height: 318px;
     margin: 0px auto;
 
+    @include screen-is(md) {
+      height: 450px;
+    }
+
     @include screen-is(lg) {
       width: 80%;
       height: 563px;
@@ -65,6 +69,10 @@
     bottom: 260px;
     margin: 0px auto;
 
+    @include screen-is(md) {
+      bottom: 380px;
+    }
+
     @include screen-is(lg) {
       bottom: 485px;
     }
@@ -77,6 +85,11 @@
       border-radius: 50%;
       animation: "eye-blinking" 6s infinite;
 
+      @include screen-is(md) {
+        width: 26px;
+        height: 26px;
+      }
+
       @include screen-is(lg) {
         width: 34px;
         height: 34px;
@@ -84,6 +97,10 @@
     }
     span:first-of-type {
       margin: 0px 1rem 0px -0.5rem;
+
+      @include screen-is(md) {
+        margin: 0px 1.5rem 0px -0.75rem;
+      }
 
       @include screen-is(lg) {
         margin: 0px 2rem 0px -1rem;
@@ -94,7 +111,10 @@
   img {
     height: 256px;
     margin: 2rem 0px 0.5rem 0px;
-    //457:350
+
+    @include screen-is(md) {
+      height: 356px;
+    }
 
     @include screen-is(lg) {
       height: 456px;
@@ -103,9 +123,5 @@
 
   h2 {
     text-transform: uppercase;
-
-    // @include screen-is(lg) {
-    //   padding: 1rem 0px;
-    // }
   }
 }

@@ -8,6 +8,13 @@
   .the-skills {
     margin: 2rem 0px;
 
+    @include screen-is(md) {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(3, 1fr);
+      margin: 3rem 0px;
+    }
+
     @include screen-is(lg) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -20,15 +27,24 @@
       flex-flow: row nowrap;
       width: 100%;
 
+      @include screen-is(md) {
+        flex-flow: column wrap;
+        align-items: center;
+      }
+
       @include screen-is(lg) {
         flex-flow: column wrap;
         align-items: center;
       }
 
-
       .skills-description {
         width: calc(50% - 0.5rem);
         margin: auto 0.5rem auto 0px;
+
+        @include screen-is(md) {
+          margin: auto;
+          text-align: center;
+        }
 
         @include screen-is(lg) {
           margin: auto;
@@ -51,6 +67,11 @@
       flex-flow: column;
       justify-content: center;
       width: 50%;
+
+      @include screen-is(md) {
+        width: 100%;
+        align-items: center;
+      }
 
       @include screen-is(lg) {
         width: 100%;

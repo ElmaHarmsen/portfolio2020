@@ -8,7 +8,6 @@ function About() {
   const aboutParagraphs = [
     {
       title: "This is me:",
-      // img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1200px-Flag_of_the_Netherlands.svg.png",
       image: "https://elmaharmsen01.netlify.app/images/me-right.jpg",
       imageLG: "https://elmaharmsen01.netlify.app/images/me-left.jpg"
     },
@@ -40,6 +39,7 @@ function About() {
       <h2>{item.title}</h2>
       <p>{item.paragraph}</p>
       <img className="about-me-image" src={item.image}/>
+      <img className="about-me-image md-visible"src={item.imageLG}/>
       <img className="about-me-image lg-visible"src={item.imageLG}/>
     </div>
   )

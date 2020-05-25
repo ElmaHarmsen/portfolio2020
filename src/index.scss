@@ -45,6 +45,10 @@ h1 {
   font-size: 45px;
   text-transform: uppercase;
 
+  @include screen-is(md) {
+    font-size: 50px;
+  }
+
   @include screen-is(lg) {
     font-size: 60px;
   }
@@ -54,6 +58,10 @@ h2, h3 {
   font-family: "old-news";
   font-size: 25px;
   font-weight: normal;
+
+  @include screen-is(md) {
+    font-size: 35px;
+  }
 
   @include screen-is(lg) {
     font-size: 45px;
@@ -87,6 +95,10 @@ ul {
 .section {
   padding: 1rem;
 
+  @include screen-is(md) {
+    padding: 3rem 1rem;
+  }
+
   @include screen-is(lg) {
     padding: 3rem 1rem;
   }
@@ -95,6 +107,10 @@ ul {
   h1 {
     color: $light-green;
     font-weight: normal;
+
+    @include screen-is(md) {
+      text-align: center;
+     }
 
     @include screen-is(lg) {
      text-align: center;
@@ -145,12 +161,31 @@ ul {
 .sm-visible {
   display: block;
 
+  @include screen-is(md) {
+    display: none;
+  }
+
+  @include screen-is(lg) {
+    display: none;
+  }
+}
+.md-visible {
+  display: none;
+
+  @include screen-is(md) {
+    display: block;
+  }
+
   @include screen-is(lg) {
     display: none;
   }
 }
 .lg-visible {
   display: none;
+
+  @include screen-is(md) {
+    display: none;
+  }
 
   @include screen-is(lg) {
     display: block;

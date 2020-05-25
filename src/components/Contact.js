@@ -17,6 +17,7 @@ function Contact(props) {
             <h3>My Resume/Cv</h3>
           </a>
           <h3 className="sm-visible">elmaharmsen01<br></br>@gmail.com</h3>
+          <h3 className="md-visible">elmaharmsen01@gmail.com</h3>
           <h3 className="lg-visible">elmaharmsen01@gmail.com</h3>
           <a href="https://www.linkedin.com/in/elma-harmsen-087872181/" target="blank">
             <h3>LinkedIn</h3>
