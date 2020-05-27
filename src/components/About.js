@@ -15,41 +15,41 @@ function About() {
       title: "17.08.2000",
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1200px-Flag_of_the_Netherlands.svg.png",
       paragraph: "I first set foot on this world in the village of Haren, in summer of 2000. Soon I had great interest in reading, bikes, and the act of building from Lego.",
-      imageR: "https://elmaharmsen01.netlify.app/images/me-right.jpg",
-      imageL: "https://elmaharmsen01.netlify.app/images/me-left.jpg"    
+      // imageR: require("../assets/2000x1800-About-book-LG.png"),
+      // imageL: "https://elmaharmsen01.netlify.app/images/me-left.jpg"    
     },
     {
       title: "01.09.2017",
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1200px-Flag_of_the_Netherlands.svg.png",
       paragraph: "This is when I started the study program Communication & Multimedia Design at the Hanzehogeschool, in Groningen.",
-      imageR: "https://elmaharmsen01.netlify.app/images/me-right.jpg",
-      imageL: "https://elmaharmsen01.netlify.app/images/me-left.jpg"
+      // imageR: "https://elmaharmsen01.netlify.app/images/me-right.jpg",
+      // imageL: require("../assets/2000x1800-About-book-LG.png")
     },
     {
       title: "21.08.2019",
       img: "https://cdn.webshopapp.com/shops/94414/files/52379582/flag-of-denmark.jpg",
       paragraph: "Here, I joined the autumn semester Web Development at the Business Academy Aarhus, in Denmark.",
-      imageR: "https://elmaharmsen01.netlify.app/images/me-right.jpg",
-      imageL: "https://elmaharmsen01.netlify.app/images/me-left.jpg"  
+      // imageR: require("../assets/2000x1800-About-denmark-LG.png"),
+      // imageL: "https://elmaharmsen01.netlify.app/images/me-left.jpg"  
     },
     {
       title: "12.02.2020",
       img: "https://cdn.webshopapp.com/shops/94414/files/52379582/flag-of-denmark.jpg",
-      paragraph: "So far, I've spent my free time in 2020 wisely by learning Vue & React, along with playing Old School Runescape and Exploding Kittens.",
-      imageR: "https://elmaharmsen01.netlify.app/images/me-right.jpg",
-      imageL: "https://elmaharmsen01.netlify.app/images/me-left.jpg"
+      paragraph: "So far, I've spent my free time in 2020 wisely by learning Vue & React, along with playing Old School Runescape and the cardgame Exploding Kittens.",
+      // imageR: "https://elmaharmsen01.netlify.app/images/me-right.jpg",
+      // imageL: require("../assets/2000x1800-About-kittens-LG.png")
     }
   ] //The paragraphs with stuff about me.
 
   const paragraphs = aboutParagraphs.map((item) =>
     <div className="slide">
-      <img className="lg-visible" src={item.imageL} alt=""/>
+      <img className="lg-visible lg-figure-L" src={item.imageL} alt=""/>
       <div className="paragraph-text">
         <img className="tiny-paragraph-image" src={item.img}/>
         <h2>{item.title}</h2>
         <p>{item.paragraph}</p>
       </div>
-      <img className="lg-visible" src={item.imageR} alt=""/>
+      <img className="lg-visible lg-figure-R" src={item.imageR} alt=""/>
     </div>
     // <div className="slide" key={item.title}>
     //   <div className="the-images">
@@ -90,7 +90,7 @@ function About() {
       <h1>who am i exactly<span>?</span></h1>
       <div className="the-about">
         <div className="the-images img-R">
-        <img className="sm-figure sm-visible" src={require("../assets/2000x1800-About-SM.png")}/>
+          <img className="sm-figure sm-visible" src={require("../assets/2000x1800-About-SM.png")}/>
           <img className="md-visible" src="https://elmaharmsen01.netlify.app/images/me-left.jpg" alt=""/>
           <img className="md-visible" src={require("../assets/2000x1800-About-MD.png")}/>
           <img src="https://elmaharmsen01.netlify.app/images/me-right.jpg" alt=""/>
