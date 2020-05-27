@@ -12,10 +12,50 @@
     }
 
     @include screen-is(lg) {
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
+      // display: flex;
+      // flex-flow: column nowrap;
+      // align-items: center;
       margin: 5rem 0px;
+    }
+    .the-images {
+      display: flex;
+      flex-flow: row nowrap;
+      width: 100%;
+        img {
+          width: 40%;
+          margin-right: 8px;
+          margin-bottom: -5px;
+          transform: rotate(-5deg);
+          position: relative;
+          z-index: 0;
+        }
+        img.sm-figure {
+          margin-right: -1px;
+        }
+        &.img-R {
+          justify-content: flex-end;
+        }
+      @include screen-is(md) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100%;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        width: calc(80% + 2rem);
+        img {
+          width: 100%;
+          height: auto;
+          margin: 0;
+          transform: rotate(0deg);
+        }
+        &.img-R {
+          justify-content: space-between;
+        }
+      }
+
+      @include screen-is(lg) {
+        display: none;
+      }
     }
 
     .the-paragraphs {
@@ -24,13 +64,17 @@
       flex-flow: row nowrap;
       align-items: center;
       padding: 1rem;
+      position: relative;
+      z-index: 1;
 
       @include screen-is(md) {
         width: 80%;
       }
 
       @include screen-is(lg) {
-        width: 40%;
+        width: 100%;
+        background-color: transparent;
+        padding: 0px;
       }
 
       .paragraphs-slides {
@@ -43,20 +87,17 @@
         }
 
         @include screen-is(lg) {
-          min-height: 170px;
-          width: 100%;
+          min-height: 230px;
+          padding: 1rem;
         }
   
         .slide {
           position: absolute;
           opacity: 0;
-          top: 0;
-          left: 0;
-          transition: opacity 0.3s;
+          transition: opacity 0.3s ease;
           height: auto;
           width: calc(100vw - 2.5rem - 50px);
           color: $grey;
-          padding-right: 0.5rem;
 
           @include screen-is(md) {
             height: 145px;
@@ -64,8 +105,24 @@
           }
 
           @include screen-is(lg) {
-           height: 170px;
-           width: calc(30vw - 2rem - 36px);
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            height: calc(230px + 2rem);
+            width: 100%;
+            
+            img {
+              height: calc(230px + 2rem);
+           }
+          }
+          @include screen-is(lg) {
+            .paragraph-text {
+              width: 100%;
+              height: 230px;
+              background-color: $white;
+              margin: 0px 3rem;
+              padding: 1rem;
+            }
           }
 
           .tiny-paragraph-image {
@@ -134,12 +191,12 @@
               right: 0;
             }
 
-            @include screen-is(lg) {
-              height: 170px;
-              padding: 0px;
-              position: relative;
-              right: 0;
-            }
+            // @include screen-is(lg) {
+            //   height: 170px;
+            //   padding: 0px;
+            //   position: relative;
+            //   right: 0;
+            // }
           }
         }
         .skills-showing {
@@ -158,6 +215,7 @@
 
         @include screen-is(lg) {
           position: relative;
+          right: calc(151px + 3rem + 100px);
         }
       }
     }   
