@@ -16,6 +16,11 @@
     left: 10%;
   }
 
+  @include screen-is(xl) {
+    width: calc(70% + 2px);
+    left: 15%;
+  }
+
   .contact-content {
     display: flex;
     flex-flow: row wrap;
@@ -86,11 +91,6 @@
         height: 20%;
         text-align: center;
       }
-
-      @include screen-is(lg) {
-        height: 20%;
-        text-align: center;
-      }
     }
 
     .contact-info {
@@ -100,13 +100,6 @@
       align-items: flex-end;
 
       @include screen-is(md) {
-        flex-flow: column nowrap;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 80%;
-      }
-
-      @include screen-is(lg) {
         flex-flow: column nowrap;
         align-items: center;
         justify-content: space-evenly;
@@ -126,7 +119,6 @@
 
         @include screen-is(lg) {
           font-size: 60px;
-          text-align: center;
         }
       }
       h3:hover {
@@ -161,10 +153,6 @@
         background-color: $white;
 
         @include screen-is(md) {
-          width: 100%;
-        }
-
-        @include screen-is(lg) {
           width: 100%;
         }
       }

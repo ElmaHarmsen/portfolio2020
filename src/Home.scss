@@ -12,4 +12,8 @@
     grid-template-rows: 167px 1fr;
     justify-content: center;
   }
+
+  @include screen-is(xl) {
+    grid-template-columns: 70%;
+  }
 }

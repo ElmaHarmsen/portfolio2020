@@ -12,9 +12,6 @@
     }
 
     @include screen-is(lg) {
-      // display: flex;
-      // flex-flow: column nowrap;
-      // align-items: center;
       margin: 5rem 0px;
     }
     .the-images {
@@ -101,7 +98,7 @@
 
           @include screen-is(md) {
             height: 145px;
-            width: calc(80%);
+            width: 80%;
           }
 
           @include screen-is(lg) {

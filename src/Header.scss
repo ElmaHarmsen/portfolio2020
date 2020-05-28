@@ -11,14 +11,9 @@
     width: 100%;
   }
 
-  .firstname {
+  .firstname, .lastname {
     animation: "name" 0.3s ease-in;
     animation-iteration-count: 1;
-  }
-  .lastname {
-    animation: "name" 0.3s ease-in;
-    animation-iteration-count: 1;
-
   }
 
   .value {
@@ -44,6 +39,10 @@
     @include screen-is(lg) {
       width: 80%;
       height: 563px;
+    }
+
+    @include screen-is(xl) {
+      margin: 5rem auto 0px auto;
     }
 
     .value {

@@ -1,10 +1,4 @@
 // Colors
-$old-blue: #2a3141;
-$old-orange: #ff9928;
-$old-pink: #f8333c;
-$old-yellow: #f8f4b7;
-$old-green: #468374;
-
 $grey: #3e3548;
 $light-green: #b9d74c;
 $apple-green: #72a108;
@@ -19,12 +13,14 @@ $breakpoints: (
   "xl": 1920px //Monitor
 );
 
+//Formula for breakpoint
 @mixin screen-is($breakpoint) {
   @media (min-width: map-get($breakpoints, $breakpoint)) {
     @content;
   }
 }
 
+//Fonts
 @font-face {
   font-family: "old-news";
   src: url('./assets/Oranienbaum-Regular.ttf');
@@ -33,6 +29,8 @@ $breakpoints: (
   font-family: "ibm";
   src: url('./assets/IBMPlexSans-Regular.ttf');
 }
+
+//Styles
 body {
   margin: 0;
 
@@ -52,11 +50,15 @@ h1 {
   @include screen-is(lg) {
     font-size: 60px;
   }
+
+  @include screen-is(xl) {
+    font-size: 75px;
+  }
 }
 
 h2, h3 {
   font-family: "old-news";
-  font-size: 25px;
+  font-size: 30px;
   font-weight: normal;
 
   @include screen-is(md) {
@@ -65,6 +67,10 @@ h2, h3 {
 
   @include screen-is(lg) {
     font-size: 45px;
+  }
+
+  @include screen-is(xl) {
+    font-size: 55px;
   }
 }
 p {
@@ -75,6 +81,10 @@ p {
   @include screen-is(lg) {
     font-size: 20px;
     line-height: 1.6rem;
+  }
+
+  @include screen-is(xl) {
+    font-size: 24px;
   }
 }
 a {
@@ -102,6 +112,10 @@ ul {
   @include screen-is(lg) {
     padding: 3rem 1rem;
   }
+
+  @include screen-is(xl) {
+    padding: 5rem 1rem;
+  }
 }
 .Header, .About, .Skills, .Projects {
   h1 {
@@ -110,10 +124,6 @@ ul {
 
     @include screen-is(md) {
       text-align: center;
-     }
-
-    @include screen-is(lg) {
-     text-align: center;
     }
 
     span {
@@ -130,24 +140,28 @@ ul {
 }
 .line-header {
   top: 71px;
+
   @include screen-is(lg) {
     top: 167px;
   }
 }
 .line-about {
   top: 77px;
+
   @include screen-is(lg) {
     top: 173px;
   }
 }
 .line-skills {
   top: 83px;
+
   @include screen-is(lg) {
     top: 179px;
   }
 }
 .line-projects {
   top: 89px;
+
   @include screen-is(lg) {
     top: 185px;
   }
@@ -158,6 +172,8 @@ ul {
   height: 2px;
   width: 100%;
 }
+
+//Visibilities for the different breakpoints
 .sm-visible {
   display: block;
 

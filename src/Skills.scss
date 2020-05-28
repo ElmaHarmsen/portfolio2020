@@ -22,6 +22,10 @@
       margin: 5rem 0px;
     }
 
+    @include screen-is(xl) {
+      margin: 7rem 0px;
+    }
+
     .all-skills-stuff {
       display: flex;
       flex-flow: row nowrap;
@@ -32,21 +36,11 @@
         align-items: center;
       }
 
-      @include screen-is(lg) {
-        flex-flow: column wrap;
-        align-items: center;
-      }
-
       .skills-description {
         width: calc(50% - 0.5rem);
         margin: auto 0.5rem auto 0px;
 
         @include screen-is(md) {
-          margin: auto;
-          text-align: center;
-        }
-
-        @include screen-is(lg) {
           margin: auto;
           text-align: center;
         }
@@ -72,12 +66,7 @@
         width: 100%;
         align-items: center;
       }
-
-      @include screen-is(lg) {
-        width: 100%;
-        align-items: center;
-      }
-
+      
       .slide {
         position: absolute;
         opacity: 0;

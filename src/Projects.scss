@@ -77,16 +77,7 @@
       h2 {
         color: $white;
         font-weight: normal;
-        font-size: 30px;
         padding: 0.5rem 0px;
-
-        @include screen-is(md) {
-          font-size: 35px;
-        }
-
-        @include screen-is(lg) {
-          font-size: 40px;
-        }
       }
       p {
         color: $light-green;

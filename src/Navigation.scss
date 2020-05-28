@@ -15,6 +15,10 @@
     width: 80%;
   }
 
+  @include screen-is(xl) {
+    width: 70%;
+  }
+
   .nav-lines {
     width: 100vw;
 
@@ -161,21 +165,22 @@
     align-items: center;
   }
 
-  a::after {
+  h1::after {
     content: "";
     display: block;
     position: relative;
-    top: -4px;
+    top: 4px;
     width: calc(50% - 1rem); //for bigger screens this will be different
     height: 2px;
     background-color: $light-green;
     transition: .2s ease;
 
     @include screen-is(md) {
+      width: 50%;
       margin: 0px auto;
     }
   }
-  a:hover::after {
+  h1:hover::after {
     width: calc(100% - 2rem);
     background-color: $white;
   }
@@ -225,6 +230,11 @@
     left: 10vw;
     background-color: $red;
 
+    @include screen-is(xl) {
+      width: 70%;
+      left: 15vw;
+    }
+
     a::after {
       content: "";
       display: block;
@@ -250,6 +260,10 @@
         font-size: 45px;
         text-transform: capitalize;
         font-weight: normal;
+
+        @include screen-is(xl) {
+          font-size: 50px;
+        }
       }
       h1:hover {
         color: $white;
