@@ -12,7 +12,7 @@
     }
 
     @include screen-is(lg) {
-      margin: 5rem 0px;
+      margin: 10rem 0px 5rem 0px;
     }
     .the-images {
       display: flex;
@@ -36,7 +36,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 100%;
-        flex-flow: row nowrap;
         align-items: flex-end;
         width: calc(80% + 2rem);
         img {
@@ -104,26 +103,29 @@
           @include screen-is(lg) {
             display: grid;
             grid-template-columns: 20% 1fr 20%;
-            grid-template-rows: 100%;
             gap: 3rem;
-            // display: flex;
-            // flex-flow: row nowrap;
-            // justify-content: space-between;
+            grid-template-rows: 100%;
             height: 100%;
             width: 100%;
-            // border-bottom: 2px solid $white;
-            
-            img {
-              // width: 100%;
-              height: calc(230px + 2rem);
-           }
           }
           @include screen-is(lg) {
-            .lg-figure-R {
-              justify-self: flex-start;
-            }
             .lg-figure-L {
+              height: 130%;
               justify-self: flex-end;
+              align-self: end;
+
+              @include screen-is(xl) {
+                height: 150%;
+              }
+            }
+            .lg-figure-R {
+              height: 130%;
+              justify-self: flex-start;
+              align-self: end;
+
+              @include screen-is(xl) {
+                height: 150%;
+              }
             }
           }
           @include screen-is(lg) {
@@ -131,6 +133,7 @@
               height: 230px;
               background-color: $white;
               padding: 1rem;
+              grid-column: 2/3;
             }
           }
 
@@ -218,16 +221,15 @@
         width: 40px;
         position: absolute;
         right: 1rem;
-        background-color: $red;
 
         @include screen-is(md) {
           position: relative;
         }
 
         @include screen-is(lg) {
-          background-color: $red;
           position: relative;
           right: calc(20% + 5rem);
+          top: 0.5rem;
         }
       }
     }   
