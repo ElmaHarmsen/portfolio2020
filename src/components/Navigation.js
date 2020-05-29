@@ -12,7 +12,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
       threshold: [0.2, 0.4, 0.6, 0.8, 1]
     });
     document.querySelectorAll(".section").forEach(section => scrollObserver.observe(section));
-  }, []);
+    }, []);
 
   //This is the place where the HOOKS will be located.
   const [navigationState, changeState] = useState({ //inside of object
@@ -73,7 +73,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
       position = navItems[id].position - 100; //No const in if-else.
     }
     else {
-      position = navItems[id].position - 87;
+      position = navItems[id].position;
     }
     changeState({...navigationState, isNavigationOpen: false})
     if (position !== null) { //null is a falsey value, so if the position is not null.
@@ -111,8 +111,8 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
 
   const theNavItems = navItems.map((item, index) => {
     return (
-      <div>
-        <a><h1 onClick={() => navigateToSection(index)} key={item.name}>{item.name}</h1></a>
+      <div key={item.name}>
+        <a><h1 onClick={() => navigateToSection(index)}>{item.name}</h1></a>
       </div>
     )
   }); //This generates a header with the 5 navItems names. 

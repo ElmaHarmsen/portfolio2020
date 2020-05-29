@@ -176,19 +176,22 @@
     transition: .2s ease;
 
     @include screen-is(md) {
-      width: 50%;
+      width: 10%;
       margin: 0px auto;
     }
   }
   h1:hover::after {
     width: calc(100% - 2rem);
     background-color: $white;
+
+    @include screen-is(md) {
+      width: 50%;
+    }
   }
   div {
     margin: 1rem 0px;
 
     @include screen-is(md) {
-      // width: calc(100% - 1rem);
       width: calc(100% - 2rem);
       margin-right: 1rem;
       text-align: center;
@@ -210,7 +213,7 @@
   }
   &.open {
     bottom: 0;
-  } //Use the same for the contact overlay.
+  }
 }
 @include screen-is(sm) {
   .nav-items-lg {

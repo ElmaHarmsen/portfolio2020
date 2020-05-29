@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../Projects.scss';
 
 function Projects() {
@@ -50,7 +50,7 @@ function Projects() {
       <h1>what have i been up to<span>?</span></h1>
       <div className="all-the-projects-lg">
         <div className="the-projects-images">
-          <img src={require(`../assets/${currentProject}.png`)}/>
+          <img src={require(`../assets/${currentProject}.png`)} alt=""/>
         </div>
         <div className="the-projects">
           <div>{portfolioProjects}</div>

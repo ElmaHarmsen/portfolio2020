@@ -26,7 +26,7 @@ function Skills() {
 
   const skillsList = skills.map((technologySet) => {
     return ( //Here we define and return the html slider with the title and the technologies
-      <div className="all-skills-stuff">
+      <div className="all-skills-stuff" key={technologySet.title}>
         <div className="skills-description">
         <p>{technologySet.title}</p>
         </div>

@@ -33,7 +33,7 @@ function About() {
   ] //The paragraphs with stuff about me.
 
   const paragraphs = aboutParagraphs.map((item) =>
-    <div className="slide">
+    <div className="slide" key={item.title}>
       <img className="lg-visible lg-figure-L" src={item.imageL} alt=""/>
       <div className="paragraph-text">
         <h2>{item.title}</h2>

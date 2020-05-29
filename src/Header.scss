@@ -5,15 +5,9 @@
   flex-flow: column nowrap;
   justify-content: space-between;
   width: calc(100vw - 2rem);
-  // height: calc(100vh - 67px);
 
   @include screen-is(lg) {
     width: 100%;
-  }
-
-  .firstname, .lastname {
-    animation: "name" 0.3s ease-in;
-    animation-iteration-count: 1;
   }
 
   .value {
@@ -53,7 +47,7 @@
       margin: 0px auto;
     }
     .value:first-of-type {
-      transition-delay: 1s;
+      transition-delay: 0.5s;
     }
     .values-showing {
       opacity: 1;
