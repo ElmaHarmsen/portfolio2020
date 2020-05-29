@@ -12,7 +12,8 @@
     }
 
     @include screen-is(lg) {
-      margin: 10rem 0px 5rem 0px;
+      width: 100%;
+      margin: 10rem auto 5rem auto;
     }
     .the-images {
       display: flex;
@@ -75,7 +76,7 @@
 
       .paragraphs-slides {
         position: relative;
-        min-height: 120px;
+        min-height: 130px;
 
         @include screen-is(md) {
           min-height: 145px;
@@ -102,7 +103,7 @@
 
           @include screen-is(lg) {
             display: grid;
-            grid-template-columns: 20% 1fr 20%;
+            grid-template-columns: 30% 1fr 30%;
             gap: 3rem;
             grid-template-rows: 100%;
             height: 100%;
@@ -136,25 +137,6 @@
               grid-column: 2/3;
             }
           }
-
-          .tiny-paragraph-image {
-            display: none;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            float: left;
-            margin-right: 5px;
-
-            @include screen-is(md) {
-              width: 33px;
-              height: 33px;
-            }
-
-            @include screen-is(lg) {
-              width: 40px;
-              height: 40px;
-            }
-          }
           h2 {
             color: $grey;
             padding-bottom: 0.5rem;
@@ -162,6 +144,7 @@
 
           p {
             padding: 0px;
+            width: 90%;
 
             @include screen-is(md) {
               padding: 1rem 0px;
@@ -169,6 +152,7 @@
 
             @include screen-is(lg) {
               padding: 1.5rem 0px;
+              width: 80%;
             }
           }
           p::first-letter{
@@ -184,34 +168,6 @@
             }
           }
         }
-        // .slide:first-of-type {
-        //   display: flex;
-        //   flex-flow: row nowrap; 
-        //   justify-content: space-between;
-          
-        //   .tiny-paragraph-image {
-        //     display: none;
-        //   }
-        //   .about-me-image {
-        //     width: auto;
-        //     height: 120px;
-        //     padding: 0px 2rem 0px 0px;
-
-        //     @include screen-is(md) {
-        //       height: 145px;
-        //       padding: 0px;
-        //       position: relative;
-        //       right: 0;
-        //     }
-
-        //     // @include screen-is(lg) {
-        //     //   height: 170px;
-        //     //   padding: 0px;
-        //     //   position: relative;
-        //     //   right: 0;
-        //     // }
-        //   }
-        // }
         .skills-showing {
           opacity: 1;
         }
@@ -228,7 +184,7 @@
 
         @include screen-is(lg) {
           position: relative;
-          right: calc(20% + 5rem);
+          right: calc(30% + 3rem + 1rem);
           top: 0.5rem;
         }
       }
