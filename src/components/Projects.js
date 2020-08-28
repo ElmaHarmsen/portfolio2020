@@ -31,10 +31,10 @@ function Projects() {
       image: "fantasymovies"
     },
     {
-      title: "JavaScript Portfolio",
-      stack: "HTML, CSS, Vanilla JavaScript",
-      link: "https://elmaharmsen01.netlify.app/",
-      image: "previousportfolio"
+      title: "FEUM Days Event",
+      stack: "Cooperative project in 72 hours, HTML, CSS, Vanilla JavaScript, MongoDB",
+      link: "https://feum-ticketing.dk/",
+      image: "feum-days"
     },
   ]
 
