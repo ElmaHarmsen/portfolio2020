@@ -57,7 +57,7 @@ h1 {
 
 h2, h3 {
   font-family: "old-news";
-  font-size: 30px;
+  font-size: 25px;
   font-weight: normal;
 
   @include screen-is(md) {
@@ -94,10 +94,10 @@ ul {
   list-style-type: none;
   li {
     font-family: "old-news";
-    font-size: 30px;
+    font-size: 25px;
     
     @include screen-is(lg) {
-      font-size: 45px;
+      font-size: 30px;
     }
   }
 }
