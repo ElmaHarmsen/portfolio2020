@@ -8,33 +8,33 @@ function Projects() {
   const projects = [
     {
       title: "Lego Universe Website",
-      stack: "HTML, SCSS, JavaScript, Vue, MongoDB, ExpressJs Api, Vuex",
+      stack: "2020 | HTML, SCSS, JavaScript, Vue, Vuex, ExpressJs Api, MongoDB",
       link: "https://lego-universe.netlify.app/",
       image: "legostore"
     },
     {
       title: "Formidable Music Store",
-      stack: "HTML, SCSS, JavaScript, Vue, Spotify Api",
+      stack: "2020 | HTML, SCSS, JavaScript, Vue, Spotify Api",
       link: "https://formidablemusicstore.netlify.app/",
       image: "formidable"
     },
     {
       title: "Super Mario Minigame",
-      stack: "HTML, CSS, Vanilla JavaScript",
+      stack: "2018 | HTML, CSS, Vanilla JavaScript",
       link: "https://mario-minigame.netlify.app/",
-      image: "mariominigame"
+      image: "mario"
     },
     {
-      title: "Fantasy Movie Website",
-      stack: "HTML, CSS, JavaScript, JSON, Fetch Api",
-      link: "https://fantasy-movies-elma.netlify.app",
-      image: "fantasymovies"
+      title: "Ducky Dictionary web app",
+      stack: "2020 | HTML, SCSS, JavaScript, Vue, Vuex, Fetch Api, MongoDB",
+      link: "https://duckydictionary.netlify.app/",
+      image: "ducky"
     },
     {
-      title: "FEUM Days Event",
-      stack: "Cooperative project in 72 hours, HTML, CSS, Vanilla JavaScript, MongoDB",
-      link: "https://feum-ticketing.dk/",
-      image: "feum-days"
+      title: "FEUM Event > Snake Game",
+      stack: "2020 | Limited cooperative project, HTML, CSS, Vanilla JavaScript, Phaser.io",
+      link: "https://feum-game.netlify.app/",
+      image: "snake"
     },
   ]
 
@@ -47,7 +47,7 @@ function Projects() {
 
   return (
     <section className="Projects">
-      <h1>what have i been up to<span>?</span></h1>
+      <h1><span>What </span> did I achieve as of yet?</h1>
       <div className="all-the-projects-lg">
         <div className="the-projects-images">
           <img src={require(`../assets/${currentProject}.png`)} alt=""/>

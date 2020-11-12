@@ -12,11 +12,11 @@ function Skills() {
     },
     {
       title: "the useful ones",
-      technologies: ["Git", "JSON", "Api"]
+      technologies: ["Git", "Vuex", "Api"]
     },
     {
       title: "the frameworks",
-      technologies: ["Vue", "React", ":)"]
+      technologies: ["VueJs", "React", ":)"]
     }
   ] //The three sections with the skills.
 
@@ -59,7 +59,7 @@ function Skills() {
   
   return (
     <section className="Skills">
-      <h1>let me tell you what i can do<span>:</span></h1>
+      <h1><span>How </span>can I be of strong value?</h1>
       <div className="the-skills">
         {skillsList}
       </div>

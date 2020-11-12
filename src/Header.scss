@@ -24,15 +24,17 @@
     justify-content: center;
     width: 325px;
     height: 318px;
-    margin: 0px auto;
+    margin: 0px auto 2rem auto;
 
     @include screen-is(md) {
       height: 450px;
+      margin: 0px auto 0rem auto;
     }
 
     @include screen-is(lg) {
       width: 80%;
       height: 563px;
+      margin: 2rem auto 0rem auto;
     }
 
     @include screen-is(xl) {
@@ -59,7 +61,7 @@
     justify-content: center;
     width: auto;
     position: relative;
-    bottom: 260px;
+    bottom: 292px;
     margin: 0px auto;
 
     @include screen-is(md) {
@@ -112,9 +114,5 @@
     @include screen-is(lg) {
       height: 456px;
     }
-  }
-
-  h2 {
-    text-transform: uppercase;
   }
 }

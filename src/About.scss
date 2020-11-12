@@ -155,18 +155,18 @@
               width: 80%;
             }
           }
-          p::first-letter{
-            color: $grey;
-            float: left;
-            font-family: "old-news";
-            font-size: 45px;
-            padding-top: 0.5rem;
-            padding-right: 0.5rem;
+          // p::first-letter{
+          //   color: $grey;
+          //   float: left;
+          //   font-family: "old-news";
+          //   font-size: 45px;
+          //   padding-top: 0.5rem;
+          //   padding-right: 0.5rem;
 
-            @include screen-is(lg) {
-              font-size: 50px;
-            }
-          }
+          //   @include screen-is(lg) {
+          //     font-size: 50px;
+          //   }
+          // }
         }
         .skills-showing {
           opacity: 1;

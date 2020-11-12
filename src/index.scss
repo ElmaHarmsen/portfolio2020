@@ -23,7 +23,7 @@ $breakpoints: (
 //Fonts
 @font-face {
   font-family: "old-news";
-  src: url('./assets/Oranienbaum-Regular.ttf');
+  src: url('./assets/Mono-Medium.ttf');
 }
 @font-face {
   font-family: "ibm";
@@ -40,19 +40,18 @@ body {
 }
 h1 {
   font-family: "old-news";
-  font-size: 45px;
-  text-transform: uppercase;
+  font-size: 35px;
 
   @include screen-is(md) {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   @include screen-is(lg) {
-    font-size: 60px;
+    font-size: 45px;
   }
 
   @include screen-is(xl) {
-    font-size: 75px;
+    font-size: 65px;
   }
 }
 
@@ -62,15 +61,15 @@ h2, h3 {
   font-weight: normal;
 
   @include screen-is(md) {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   @include screen-is(lg) {
-    font-size: 45px;
+    font-size: 30px;
   }
 
   @include screen-is(xl) {
-    font-size: 55px;
+    font-size: 45px;
   }
 }
 p {
@@ -95,10 +94,10 @@ ul {
   list-style-type: none;
   li {
     font-family: "old-news";
-    font-size: 40px;
+    font-size: 30px;
     
     @include screen-is(lg) {
-      font-size: 55px;
+      font-size: 45px;
     }
   }
 }

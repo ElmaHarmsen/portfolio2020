@@ -15,34 +15,33 @@
   }
 
   h2, h1 {
-    text-transform: uppercase;
+    // text-transform: uppercase;
     padding: 0px;
     color: $light-green;
   }
-  h2 {
+  h2, span {
     font-size: 35px;
 
     @include screen-is(md) {
-      font-size: 45px;
+      font-size: 35px;
     }
 
     @include screen-is(lg) {
-      font-size: 60px;
+      font-size: 40px;
     }
   }
+  span {
+    color: $apple-green;
+  }
   h1 {
-    font-size: 61px;
+    font-size: 35px;
 
     @include screen-is(md) {
-      font-size: 79px;
+      font-size: 65px;
     }
 
     @include screen-is(lg) {
-      font-size: 105px;
-    }
-
-    span {
-      color: $apple-green;
+      font-size: 70px;
     }
   }
 }

@@ -44,12 +44,12 @@
 
     h2 {
       color: $white;
-      text-transform: capitalize;
-      font-size: 35px;
+      font-size: 30px;
       margin: auto 0px auto 1rem;
 
       @include screen-is(lg) {
-        font-size: 40px;
+        font-size: 30px;
+        margin: auto;
       }
     }
     div {
@@ -199,7 +199,7 @@
     h1 {
       color: $grey;
       padding: 0px 1rem 0.5rem 0px;
-      text-transform: capitalize;
+      // text-transform: capitalize;
 
       @include screen-is(md) {
         padding: 0.5rem 0px;
@@ -260,7 +260,7 @@
       text-align: center;
       h1 {
         color: $grey;
-        font-size: 45px;
+        font-size: 40px;
         text-transform: capitalize;
         font-weight: normal;
 

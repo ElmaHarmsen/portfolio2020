@@ -12,7 +12,7 @@
   width: 100%;
 
   @include screen-is(lg) {
-    width: calc(80% + 1px);
+    width: calc(80% + 2px);
     left: 10%;
   }
 
@@ -113,17 +113,17 @@
         text-decoration: none;
 
         @include screen-is(md) {
-          font-size: 45px;
+          font-size: 35px;
           text-align: center;
         }
 
         @include screen-is(lg) {
-          font-size: 60px;
+          font-size: 35px;
         }
       }
       h3:hover {
         color: $white;
-        transition: .2s ease;
+        transition: all .2s ease;
       }
       span {
         color: $white;

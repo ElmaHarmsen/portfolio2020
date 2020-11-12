@@ -8,7 +8,7 @@ function About() {
   const aboutParagraphs = [
     {
       title: "Hii.",
-      paragraph: "I am a young Web Developer. I am on my way to find a company for my internship, planned in the upcoming semester.",
+      paragraph: "Upcoming changing content on it's way!",
       imageR: require("../assets/me-right.jpg"),
       imageL: require("../assets/me-left.jpg")
     },
@@ -61,7 +61,7 @@ function About() {
 
   return (
     <section className="About">
-      <h1>who am i exactly<span>?</span></h1>
+      <h1><span>Why </span>did I join development?</h1>
       <div className="the-about">
         <div className="the-images img-R">
           <img className="sm-figure sm-visible" src={require("../assets/2000x1800-About-SM.png")}/>
