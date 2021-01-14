@@ -14,11 +14,11 @@ function Home() {
 
   const [sectionPositions, setSectionPositions] = useState([]); //Empty array because it is YET unknown where the lines are.
   //Is for the position of the About, Skills, Projects sections so it is possible to scroll there, and I use the lines for that.
-  useEffect(() => { //This useEffect is similar to the mounted hook in vue. With the empty array [] it runs only once, otherwise it would run everytime the component (Home.js) updates. 
+  useEffect(() => { //This useEffect is similar to the mounted hook in vue. With the empty array [] it runs only once, otherwise it would run everytime the component (Home.js) updates.
     setSectionPositions([])
     document.querySelectorAll(".section").forEach(section => setSectionPositions(previousStateVersion => [...previousStateVersion, window.pageYOffset + section.getBoundingClientRect().top - 69]));
     //Loops over the section-lines, and adds Y-Coördinates and "pushes" it in the sectionPositions array.
-    //setSectionsPositions updates the state. 
+    //setSectionsPositions updates the state.
     //previousStateVersion is what it (the state) was before.
     //Returns the updated state.
     //... means it will not push a new array into the previous array, but only take the values of the previous array and combine it with the new value, outputs a single array.
@@ -32,21 +32,36 @@ function Home() {
     console.log("hehe:)");
   } //It is wise to restructure the states so that they are all here on the Home.js
 
+  const stars = [];
+  for (let starId = 0; starId < 301; starId++) {
+    stars.push({
+      id: starId,
+      positionX: Math.random() * window.innerWidth - 20,
+      positionY: Math.random() * window.innerHeight - 3,
+    })
+  }
 
   return (
     <div className="App">
+      {/* <div className="section-line line-header"></div> */}
+      <div className="section" id="Home"><Header /></div> {/* First page after animation */}
       <Navigation openContact={() => openContact} sectionPositions = {sectionPositions} /> {/* Top bar with current page tekst and nav menu. About 200px*/}
       {/* navigateToSection is a prop, which when called from Navigation, returns a name, and calls a method. */}
-      <div className="section-line line-header"></div>
-      <div className="section" id="Home"><Header /></div> {/* First page after animation */}
-      <div className="section-line line-about"></div>
-      <div className="section" id="About"><About /></div> {/* About me page with the sliding paragraphs and an image. */} 
-      <div className="section-line line-skills"></div>
-      <div className="section" id="Skills"><Skills /></div> {/* Skills page with 3 items and these are switching content. */}
-      <div className="section-line line-projects"></div>
+      {/* <div className="section-line line-projects"></div> */}
       <div className="section" id="Projects"><Projects /></div> {/* Projects page with 5 projects and a changing image, with the stack underneath the project link. */}
+      {/* <div className="section-line line-about"></div> */}
+      <div className="section" id="About"><About /></div> {/* About me page with the sliding paragraphs and an image. */}
+      {/* <div className="section-line line-skills"></div> */}
+      {/* <div className="section" id="Skills"><Skills /></div> Skills page with 3 items and these are switching content. */}
       <div className="line-footer"></div>
       <div className="section" id="Contact"><Footer /></div> {/* Small, like 15% height section with contact info, is a link that links to the contact component. About 150px */}
+      <div 
+        className="star-container"
+      >
+        {stars.map(star => {
+          return <span key={star.id} className="star" style={{top: star.positionY, left: star.positionX}}></span>
+        })}
+      </div>
     </div>
   );
 }

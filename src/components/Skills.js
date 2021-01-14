@@ -7,15 +7,18 @@ function Skills() {
 
   const skills = [
     {
-      title: "the basic ones",
+      title: "Programming",
+      img: require("../assets/coding.svg"),
       technologies: ["HTML", "(S)CSS", "JavaScript"]
     },
     {
-      title: "the useful ones",
+      title: "Smth",
+      img: require("../assets/coding.svg"),
       technologies: ["Git", "Vuex", "Api"]
     },
     {
-      title: "the frameworks",
+      title: "Frameworks",
+      img: require("../assets/coding.svg"),
       technologies: ["VueJs", "React", ":)"]
     }
   ] //The three sections with the skills.
@@ -28,7 +31,7 @@ function Skills() {
     return ( //Here we define and return the html slider with the title and the technologies
       <div className="all-skills-stuff" key={technologySet.title}>
         <div className="skills-description">
-        <p>{technologySet.title}</p>
+          <img src={technologySet.img} />
         </div>
         <ul className="skills-slides">
           {skillsIteration(technologySet.technologies)} 
@@ -42,7 +45,7 @@ function Skills() {
   }, []); //Runs once
 
   useEffect(() => {
-    setTimeout(nextSlide, 3000);
+    setTimeout(nextSlide, 9000);
   }, [currentSlide]); //This uses useEffect to set a timeout (interval) for how long the slides appear- Inbetween [] currentslide is in the state
 
   function nextSlide() {
@@ -59,7 +62,8 @@ function Skills() {
   
   return (
     <section className="Skills">
-      <h1><span>How </span>can I be of strong value?</h1>
+      {/* <h1>How can I be of strong value?</h1> */}
+      <h1>Title</h1>
       <div className="the-skills">
         {skillsList}
       </div>

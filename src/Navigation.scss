@@ -10,6 +10,7 @@
   z-index: 5;
 
   @include screen-is(lg) {
+    display: none;
     top: 100px;
     background-color: $grey;
     width: 80%;
@@ -172,7 +173,7 @@
     top: 4px;
     width: calc(50% - 1rem); //for bigger screens this will be different
     height: 2px;
-    background-color: $light-green;
+    background-color: $white;
     transition: .2s ease;
 
     @include screen-is(md) {
@@ -223,44 +224,21 @@
 @include screen-is(lg) {
   .nav-items-lg {
     display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    height: 100px;
-    width: 80%;
+    flex-flow: column nowrap;
+    width: 10%;
     position: fixed;
     z-index: 4;
-    top: 0px;
-    left: 10vw;
-    background-color: $red;
-
-    @include screen-is(xl) {
-      width: 70%;
-      left: 15vw;
-    }
-
-    a::after {
-      content: "";
-      display: block;
-      position: relative;
-      top: 4px;
-      width: 20%;
-      height: 2px;
-      background-color: $light-green;
-      transition: .2s ease;
-      margin: 0px auto; //So its in the center underneath the word
-    }
-    a:hover::after {
-      width: 100%;
-      background-color: $white;
-    }
+    top: 1rem;
+    right: 0rem;
+    background-color: transparent;
 
     div {
-      width: calc(100% / 5);
-      padding: 0px 1rem;
-      text-align: center;
+      transition: 0.3s ease;
+      padding: 2px 0rem;
+      
       h1 {
-        color: $grey;
-        font-size: 40px;
+        color: $light-red;
+        font-size: 30px;
         text-transform: capitalize;
         font-weight: normal;
 
@@ -272,6 +250,51 @@
         color: $white;
         transition: .2s ease;
       }
+      h1::after {
+        content: "";
+        display: block;
+        position: relative;
+        top: 4px;
+        width: 0%;
+        height: 2px;
+        background-color: $white;
+        transition: .2s ease;
+      }
+      h1:hover::after {
+        width: 100%;
+      }
     }
+  }
+}
+
+.color-themes-switch, .language-switch {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  margin: 1rem 0rem;
+
+  div {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    padding: 0rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  .theme-one {
+    background-color: $dark-green;
+  }
+  .theme-two {
+    background-color: $poison-green;
+  }
+}
+.language-switch {
+  margin: 0rem;
+
+  h1 {
+    padding-right: 0.5rem;
+    color: $white !important;
+    cursor: pointer;
   }
 }

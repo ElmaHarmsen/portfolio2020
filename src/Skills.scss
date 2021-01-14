@@ -30,10 +30,18 @@
       display: flex;
       flex-flow: row nowrap;
       width: 100%;
+      background-color: #31EBA8;
 
       @include screen-is(md) {
         flex-flow: column wrap;
         align-items: center;
+        padding: 2.5rem 0rem;
+      }
+      
+      @include screen-is(lg) {
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 2.5rem 0rem;
       }
 
       .skills-description {
@@ -45,11 +53,19 @@
           text-align: center;
         }
 
-        p {
-          color: $light-green;
-          text-transform: capitalize;
+        img {
+          background-color: #029E66;
+          border-radius: 50%;
+          width: 50%;
+          padding: 1rem;
         }
       }
+    }
+    .all-skills-stuff:nth-of-type(2){
+      border-left: 4px solid #029E66;
+    }
+    .all-skills-stuff:last-of-type {
+      border-left: 4px solid #029E66;
     }
 
     .skills-slides {

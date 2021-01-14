@@ -12,6 +12,16 @@
 
   .value {
     text-align: center;
+
+    .value-text {
+      // background-color: $poison-green;
+      padding: 1.25rem;
+      color: $white;
+
+      @include screen-is(md) {
+        padding: 2.5rem;
+      }
+    }
   }
 
   .stand, .value {
@@ -44,7 +54,7 @@
     .value {
       position: absolute;
       opacity: 0;
-      transition: opacity 0.3s;
+      transition: opacity 1.2s;
       margin: 1rem 0px;
       margin: 0px auto;
     }

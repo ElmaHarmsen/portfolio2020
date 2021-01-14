@@ -4,16 +4,32 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 69px 1fr;
-  background-color: $grey;
+  background-color: $blue;
 
   @include screen-is(lg) {
     display: grid;
-    grid-template-columns: 80%;
-    grid-template-rows: 167px 1fr;
+    grid-template-columns: 75%;
+    grid-template-rows: 100vh 1fr;
     justify-content: center;
   }
 
   @include screen-is(xl) {
     grid-template-columns: 70%;
   }
+}
+.App > * {
+  position: relative;
+  z-index: 1;
+}
+.star-container {
+  position: fixed;
+  z-index: 0;
+}
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: $white;
+  filter: blur(.5px);
 }

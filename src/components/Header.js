@@ -8,7 +8,7 @@ function Header() {
 
   const values = [
     {
-      value: "",
+      value: "I stand for...",
       img: "2000x1800-Standing"
     },
     {
@@ -40,7 +40,7 @@ function Header() {
   const portfolioValues = values.map((item) => 
     <div className="value" key={item.img}>
       <img className="value-figure" src={require(`../assets/${item.img}.png`)} alt=""/>
-      <h2>{item.value}</h2>
+      <h2 className="value-text">{item.value}</h2>
     </div>
   )
 
@@ -68,9 +68,9 @@ function Header() {
   return (
     <section>
       <div className="Header">
-        <h1 className="sm-visible">My name is<br></br><span className="firstname">Elma</span><span className="lastname"> Harmsen</span>.<br></br>This is where I stand for:</h1>
-        <h1 className="md-visible">My name is <span className="firstname">Elma</span><span className="lastname"> Harmsen</span>.<br></br>This is where I stand for:</h1>
-        <h1 className="lg-visible">My name is <span className="firstname">Elma</span><span className="lastname"> Harmsen</span>.<br></br>This is where I stand for:</h1>
+        <h1 className="sm-visible">I am <br></br><span className="firstname">Elma</span><span className="lastname"> Harmsen</span></h1>
+        <h1 className="md-visible">I am <span className="firstname">Elma</span><span className="lastname"> Harmsen</span></h1>
+        <h1 className="lg-visible">I am <span className="firstname">Elma</span><span className="lastname"> Harmsen</span></h1>
           <div className="values-slides">
             {portfolioValues}
           </div>

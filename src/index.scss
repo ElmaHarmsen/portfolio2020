@@ -1,9 +1,14 @@
 // Colors
 $grey: #3e3548;
-$light-green: #b9d74c;
-$apple-green: #72a108;
+$dark-grey: #2C2633;
+// $poison-green: #b9d74c;
+// $poison-green: #72a108;
 $white: #fcf8eb;
 $red: #ea5330;
+$light-red: #FF6F4F;
+$poison-green: #31EBA8;
+$dark-green: #029E66;
+$blue: #2E54B3;
 
 //Screen widths
 $breakpoints: (
@@ -102,23 +107,23 @@ ul {
   }
 }
 .section {
-  padding: 1rem;
+  padding: 1rem 1rem;
 
   @include screen-is(md) {
-    padding: 3rem 1rem;
+    padding: 3rem 0rem;
   }
 
   @include screen-is(lg) {
-    padding: 3rem 1rem;
+    padding: 3rem 0rem;
   }
 
   @include screen-is(xl) {
-    padding: 5rem 1rem;
+    padding: 5rem 0rem;
   }
 }
 .Header, .About, .Skills, .Projects {
   h1 {
-    color: $light-green;
+    color: $poison-green;
     font-weight: normal;
 
     @include screen-is(md) {
@@ -126,7 +131,7 @@ ul {
     }
 
     span {
-      color: $apple-green;
+      color: $poison-green;
     }
   }
 }
@@ -141,14 +146,15 @@ ul {
   top: 71px;
 
   @include screen-is(lg) {
-    top: 167px;
+    top: 100px;
+    // top: 167px;
   }
 }
 .line-about {
-  top: 77px;
+  top: 89px;
 
   @include screen-is(lg) {
-    top: 173px;
+    top: 185px;
   }
 }
 .line-skills {
@@ -159,10 +165,10 @@ ul {
   }
 }
 .line-projects {
-  top: 89px;
+  top: 77px;
 
   @include screen-is(lg) {
-    top: 185px;
+    top: 173px;
   }
 }
 .line-inbetween {
