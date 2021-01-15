@@ -126,7 +126,7 @@ ul {
 .Header, .About, .Skills, .Projects {
 
   h1 {
-    color: $poison-green;
+    color: $light-red;
     font-weight: normal;
 
     @include screen-is(md) {
