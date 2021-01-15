@@ -2,13 +2,15 @@
 
 .About {
   .the-about {
+    display: none;
     margin: 2rem 0px;
 
     @include screen-is(md) {
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-      margin: 3rem 0px;
+      display: none;
+      // display: flex;
+      // flex-flow: column nowrap;
+      // align-items: center;
+      // margin: 3rem 0px;
     }
 
     @include screen-is(lg) {

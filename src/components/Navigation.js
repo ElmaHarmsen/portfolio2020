@@ -70,7 +70,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
     let sizeScreen = window.matchMedia('(min-width: 768px)');
     let position = 0;
     if (sizeScreen.matches) {
-      position = navItems[id].position - 100; //No const in if-else.
+      position = navItems[id].position + 69; //No const in if-else.
     }
     else {
       position = navItems[id].position;
@@ -97,13 +97,13 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
       name: "About",
       position: props.sectionPositions[2]
     },
-    {
-      name: "Skills",
-      position: props.sectionPositions[3]
-    },
+    // {
+    //   name: "Skills",
+    //   position: props.sectionPositions[3]
+    // },
     {
       name: "Contact",
-      position: props.sectionPositions[4]
+      position: props.sectionPositions[3]
     }
   ]//This generates 4 navitems which know to wich position to scroll to when you click it.
   //The [numbers] refer to the sections in order of the Homepage.

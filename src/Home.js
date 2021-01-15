@@ -37,7 +37,7 @@ function Home() {
     stars.push({
       id: starId,
       positionX: Math.random() * window.innerWidth - 20,
-      positionY: Math.random() * window.innerHeight - 3,
+      positionY: Math.random() * window.innerHeight - 20,
     })
   }
 
@@ -53,7 +53,7 @@ function Home() {
       <div className="section" id="About"><About /></div> {/* About me page with the sliding paragraphs and an image. */}
       {/* <div className="section-line line-skills"></div> */}
       {/* <div className="section" id="Skills"><Skills /></div> Skills page with 3 items and these are switching content. */}
-      <div className="line-footer"></div>
+      {/* <div className="line-footer"></div> */}
       <div className="section" id="Contact"><Footer /></div> {/* Small, like 15% height section with contact info, is a link that links to the contact component. About 150px */}
       <div 
         className="star-container"

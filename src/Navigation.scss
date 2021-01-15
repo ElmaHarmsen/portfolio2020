@@ -4,10 +4,10 @@
   width: 100vw;
   justify-content: space-between;
   position: fixed;
+  z-index: 10;
   top: 0;
   height: 67px;
   background-color: $red;
-  z-index: 5;
 
   @include screen-is(lg) {
     display: none;
@@ -227,10 +227,12 @@
     flex-flow: column nowrap;
     width: 10%;
     position: fixed;
-    z-index: 4;
-    top: 1rem;
+    z-index: 10;
+    top: 0rem;
     right: 0rem;
-    background-color: transparent;
+    padding: 1rem;
+    // border-bottom: 4px solid #000;
+    // border-left: 4px solid #000;
 
     div {
       transition: 0.3s ease;

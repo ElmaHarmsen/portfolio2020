@@ -3,12 +3,7 @@
 .Header {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
-  width: calc(100vw - 2rem);
-
-  @include screen-is(lg) {
-    width: 100%;
-  }
+  justify-content: center;
 
   .value {
     text-align: center;

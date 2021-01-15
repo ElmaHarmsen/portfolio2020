@@ -84,7 +84,7 @@ function Projects() {
       <ul className="projects-list">
         <li onClick={() => changeProject(projects.find(project => project.id === 1))}>Internship Project</li>
         <li onClick={() => changeProject(projects.find(project => project.id === 2))}>Ducky Dictionary</li>
-        <li onClick={() => changeProject(projects.find(project => project.id === 3))}>FEUM <br></br> Snake Game</li>
+        <li onClick={() => changeProject(projects.find(project => project.id === 3))}>FEUM Snake Game</li>
       </ul>
     </section>
   );

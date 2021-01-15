@@ -1,68 +1,60 @@
 @import "./index.scss";
 
 .Projects {
-  width: calc(100% - 1px);
-  margin-left: 1px;
   display: flex;
   flex-flow: column-reverse nowrap;
+  justify-content: flex-end;
 
   @include screen-is(md) {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column-reverse nowrap;
   }
 
   .project {
-    width: 100%;
-
-    @include screen-is(md) {
-      width: 75%;
-    }
+    width: 70%;
+    margin: 0rem auto;
   }
 
   .projects-list {
-    width: 100%;
-    text-align: left;
-
-    @include screen-is(md) {
-      width: 20%;
-      text-align: center;
-      margin-left: 5%;
-    }
+    width: 70%;
+    margin: 0rem auto 2rem auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 
     li::after {
       content: "";
       display: block;
       position: relative;
       top: 4px;
-      width: 20%;
+      width: 0%;
+      margin: 0rem auto;
       height: 2px;
       background-color: $white;
       transition: .2s ease;
 
-      @include screen-is(md) {
-        margin: 0px auto;
-      }
+      // @include screen-is(md) {
+      //   margin: 0px auto;
+      // }
     }
     li:hover::after {
       width: 100%;
     }
   }
   .projects-list > * {
-    background-color: $light-red;
-    margin: 0rem 0rem 1.25rem 0rem;
-    padding: 1.25rem;
-    color: $grey;
+    margin: 2rem 0rem;
+    color: $white;
+    text-align: left;
     cursor: pointer;
     transition: all 0.2s ease;
 
-    @include screen-is(md) {
-      margin: 0rem 0rem 2.5rem 0rem;
-      padding: 2.5rem;
-    }
+    // @include screen-is(md) {
+    //   padding: 2.5rem;
+    // }
   }
-  .projects-list > *:hover {
-    background-color: $red;
-  }
+  // .projects-list > *:hover {
+  //   background-color: $red;
+  // }
 
   .projects-about {
     padding: 5rem 0rem;
@@ -90,15 +82,14 @@
     }
   }
   .projects-technologies > * {
-    background-color: $poison-green;
     width: auto;
-    padding: 1.25rem;
-    color: $grey;
+    margin: 1.25rem;
+    color: $white;
 
-    @include screen-is(md) {
-      margin: 0rem;
-      padding: 2.5rem;
-    }
+    // @include screen-is(md) {
+    //   margin: 0rem;
+    //   padding: 2.5rem;
+    // }
   }
   .projects-technologies > h2:nth-of-type(3), h2:last-of-type {
     grid-column: span 2;
