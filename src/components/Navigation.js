@@ -121,17 +121,9 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
   return (
     <section>
       <div className="nav-menu-bar">
-        <div className="nav-content">
-          <h2 className="visible-section">{navigationState.activeSection}</h2>
-          <div onClick={() => changeState({...navigationState, isNavigationOpen: !navigationState.isNavigationOpen})}>
-            <div className={navigationState.isNavigationOpen ? "nav-menu close" : "nav-menu open"} >
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-          <img src={require("../assets/1500x1200-HeadTopOfPage.png")} alt=""/>
-          <div className="tiny-eyes">
+        <div className="nav-button" onClick={() => changeState({...navigationState, isNavigationOpen: !navigationState.isNavigationOpen})}>
+          <div className={navigationState.isNavigationOpen ? "nav-menu close" : "nav-menu open"} >
+            <span></span>
             <span></span>
             <span></span>
           </div>
@@ -142,7 +134,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
         {theNavItems}
       </div>
 
-      <div className="nav-items-lg">
+      {/* <div className="nav-items-lg">
         {theNavItems}
         <div className="color-themes-switch">
           <div className="theme-one"></div> 
@@ -153,7 +145,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
           <h1>-</h1>
           <h1>NL</h1>
         </div> 
-      </div>
+      </div> */}
     </section>
   );
 }

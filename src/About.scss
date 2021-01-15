@@ -7,19 +7,18 @@
   justify-content: space-between;
 
   .the-about {
-    display: none;
     margin: 2rem 0px;
 
     @include screen-is(md) {
-      display: none;
-      // display: flex;
-      // flex-flow: column nowrap;
-      // align-items: center;
-      // margin: 3rem 0px;
+      width: 70%;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      margin: 3rem 0px;
     }
 
     @include screen-is(lg) {
-      width: 100%;
+      width: 70%;
       margin: 10rem auto 5rem auto;
     }
     .the-images {
@@ -63,7 +62,6 @@
     }
 
     .the-paragraphs {
-      background-color: $white;
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
@@ -101,7 +99,7 @@
           transition: opacity 0.3s ease;
           height: auto;
           width: calc(100vw - 2.5rem - 50px);
-          color: $grey;
+          color: $light-red;
 
           @include screen-is(md) {
             height: 145px;
@@ -139,7 +137,6 @@
           @include screen-is(lg) {
             .paragraph-text {
               height: 230px;
-              background-color: $white;
               padding: 1rem;
               grid-column: 2/3;
             }
@@ -203,26 +200,22 @@
     justify-content: space-between;
     margin: 2rem 0rem;
 
-    svg {
+    img {
       padding: 1rem;
       width: 12%;
       height: auto;
-      border: 4px solid transparent;
-      transition: all 0.1s ease;
+      transition: all 0.2s ease;
       cursor: pointer;
       animation: spaceship infinite;
     }
-    svg:hover {
-      fill: $light-red;
-    }
-    svg:first-of-type {
+    img:first-of-type {
       animation-duration: 0.8s;
     }
-    svg:nth-of-type(2) {
+    img:nth-of-type(2) {
       animation-delay: 0.2;
       animation-duration: 1s;
     }
-    svg:last-of-type {
+    img:last-of-type {
       animation-delay: 0.4s;
       animation-duration: 0.9s;
     }
