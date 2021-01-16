@@ -1,47 +1,48 @@
 @import "./index.scss";
 
 .Footer {
-  text-align: left;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
 
-  @include screen-is(md) {
-    text-align: center;
-  }
-
-  @include screen-is(lg) {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    text-align: center;
-  }
-
-  h2, h1 {
-    // text-transform: uppercase;
-    padding: 0px;
-    color: $poison-green;
-  }
-  h2, span {
-    font-size: 35px;
-
-    @include screen-is(md) {
-      font-size: 35px;
-    }
-
+  .contact-title {
+    color: $light-red;
+    margin: 2rem 0rem;
+    
     @include screen-is(lg) {
-      font-size: 45px;
-    }
-  }
-  span {
-    color: $poison-green;
-  }
-  h1 {
-    font-size: 35px;
-
-    @include screen-is(md) {
       font-size: 65px;
     }
+  }
 
-    @include screen-is(lg) {
-      font-size: 70px;
+  .contact-info {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 2rem auto;
+
+    @include screen-is(md) {
+      width: 70%;
+    }
+
+    a {
+      color: $white;
+      padding: 1rem 0rem;
+    }
+
+    a::after {
+      content: "";
+      display: block;
+      position: relative;
+      top: 4px;
+      width: 0%;
+      margin: 0rem auto;
+      height: 2px;
+      background-color: $white;
+      transition: .2s ease;
+    }
+    a:hover::after {
+      width: 100%;
     }
   }
 }

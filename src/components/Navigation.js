@@ -67,7 +67,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
   }, [navigationState.sectionVisibilities[0], navigationState.sectionVisibilities[1], navigationState.sectionVisibilities[2], navigationState.sectionVisibilities[3], navigationState.sectionVisibilities[4]]); //Trigger 5 times for all 5 elements in the array
 
   function navigateToSection(id) {
-    let sizeScreen = window.matchMedia('(min-width: 768px)');
+    let sizeScreen = window.matchMedia('(min-width: 0px)');
     let position = 0;
     if (sizeScreen.matches) {
       position = navItems[id].position + 69; //No const in if-else.

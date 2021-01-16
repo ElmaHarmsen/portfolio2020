@@ -68,6 +68,7 @@ function Header() {
   return (
     <section>
       <div className="Header">
+        <h1>Hello Hoi Hej Ahoj</h1>
         <h1>I am Elma</h1>
         {/* <h1 className="sm-visible">I am <br></br><span className="firstname">Elma</span><span className="lastname"> Harmsen</span></h1>
         <h1 className="md-visible">I am <span className="firstname">Elma</span><span className="lastname"> Harmsen</span></h1>

@@ -5,25 +5,20 @@ import '../Contact.scss';
 
 function Footer() {
 
-  const [isContactOpen, toggleContact] = useState(false);
-
   return (
     <section>
-      <div className="Footer" onClick={() => toggleContact(!isContactOpen)}>
-        <div className="lg-visible">
-          <h2>So, want to</h2>
-          <h2><span>meet</span>?</h2>
+      <div className="Footer">
+          <h1 className="contact-title">Contact</h1>
+          <div className="contact-info">
+            <a href="https://drive.google.com/file/d/12nMt10qPcNYyFJ9FUwosLf1GufMhQjxD/view?usp=sharing" target="blank">
+              <h2>My Resume/Cv</h2>
+            </a>
+            <a href="mailto:elmaharmsen01@gmail.com"><h2>elmaharmsen01@gmail.com</h2></a>
+            <a href="https://www.linkedin.com/in/elma-harmsen-087872181/" target="blank">
+              <h2>LinkedIn</h2>
+            </a>
+          </div>
         </div>
-        <div>
-          <h2>Click here for</h2>
-          <h2><span>contact</span>!</h2>
-        </div>
-        <div className="lg-visible">
-          <h2>Then let's</h2>
-          <h2><span>talk</span>:</h2>
-        </div>
-      </div>
-      <Contact closeContact={() => toggleContact(false)} isContactOpen={isContactOpen} />
     </section>
   );
 }

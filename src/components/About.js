@@ -3,20 +3,25 @@ import '../About.scss';
 
 function About() {
 
-  const [currentSlide, changeSlide] = useState(0);
+  const [currentSlide, changeSlide] = useState({
+    id: 2,
+    description1: "The past. At the moment. Future plans.",
+  });
 
   const aboutParagraphs = [
     {
       id: 1,
-      description: "Netherlands Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.",
+      description1: "01.09.17. Netherlands, Groningen. Bachelor Communication & Multimedia Design.",
+      description2: "21.08.19 - 31.01.20. Denmark, Aarhus. Minor Web Development.",
+      description3: "07.09.20 - 15.01.21. Netherlands, Groningen. Internship at Appademic."
     },
     {
       id: 2,
-      description: "Denmark Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.",
+      description1: "Somethime. Somewhere. Something.",
     },
     {
       id: 3,
-      description: "Somewhere Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.",
+      description1: "Somethime. Somewhere. Something.",
     }
   ] //The paragraphs with stuff about me.
 
@@ -46,14 +51,20 @@ function About() {
 
   return (
     <section className="About">
-      <h1>a Journey</h1>
+      <h1 className="about-title">a Professional Journey</h1>
       <div className="the-about">
-        <h2>{currentSlide.description}</h2>
+        <h2>{currentSlide.description1}</h2>
+        <h2>{currentSlide.description2}</h2>
+        <h2>{currentSlide.description3}</h2>
       </div>
       <div className="the-timeline">
-        <img onClick={() => changeSlide(aboutParagraphs.find(slide => slide.id === 1))} src={require("../assets/ufo.svg")} />
-        <img onClick={() => changeSlide(aboutParagraphs.find(slide => slide.id === 2))} src={require("../assets/ufo.svg")} />
-        <img onClick={() => changeSlide(aboutParagraphs.find(slide => slide.id === 3))} src={require("../assets/ufo.svg")} />
+        <div>
+          <img onClick={() => changeSlide(aboutParagraphs.find(slide => slide.id === 1))} src={require("../assets/ufo.svg")} />
+          <span></span>
+          <img onClick={() => changeSlide(aboutParagraphs.find(slide => slide.id === 2))} src={require("../assets/ufo.svg")} />
+          <span></span>
+          <img onClick={() => changeSlide(aboutParagraphs.find(slide => slide.id === 3))} src={require("../assets/ufo.svg")} />
+        </div>
       </div>
     </section>
   );

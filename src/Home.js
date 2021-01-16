@@ -3,7 +3,6 @@ import './Home.scss';
 import Navigation from './components/Navigation.js';
 import Header from './components/Header.js';
 import About from './components/About.js';
-import Skills from './components/Skills.js';
 import Projects from './components/Projects.js';
 import Footer from './components/Footer.js';
 

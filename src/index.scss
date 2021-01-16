@@ -62,9 +62,9 @@ h1 {
   }
 }
 
-h2, h3 {
+h2 {
   font-family: "old-news";
-  font-size: 25px;
+  font-size: 20px;
   font-weight: normal;
 
   @include screen-is(md) {
@@ -109,10 +109,10 @@ ul {
   }
 }
 .section {
-  padding: 1rem 1rem;
+  padding: .8rem;
 
-  @include screen-is(md) {
-    padding: 0rem 0rem;
+  @include screen-is(lg) {
+    padding: 0rem;
   }
 
   // @include screen-is(lg) {
@@ -141,64 +141,65 @@ ul {
 .Header, .About, .Projects {
   height: calc(100vh - 5rem);
 }
-.Projects {
-  margin: 2.5rem;
-  background-color: #102966;
+.Projects, .About, .Footer {
   border: 4px solid #000;
+
+  @include screen-is(lg) {
+    margin: 2.5rem;
+  }
+}
+.Projects {
+  background-color: #102966;
 }
 .About {
-  margin: 2.5rem;
   background-color: #2760F2;
-  border: 4px solid #000;
 }
 .Footer {
-  margin: 2.5rem;
-  height: 50vh;
+  height: calc(100vh - 5rem - 8px);
   background-color: #427DFF;
-  border: 4px solid #000;
 }
-.section-line, .line-footer {
-  background-color: $red;
-  width: 100%;
-  position: sticky;
-  height: 2px;
-  z-index: 3;
-}
-.line-header {
-  top: 71px;
+// .section-line, .line-footer {
+//   background-color: $red;
+//   width: 100%;
+//   position: sticky;
+//   height: 2px;
+//   z-index: 3;
+// }
+// .line-header {
+//   top: 71px;
 
-  @include screen-is(lg) {
-    top: 100px;
-    // top: 167px;
-  }
-}
-.line-about {
-  top: 89px;
+//   @include screen-is(lg) {
+//     top: 100px;
+//     // top: 167px;
+//   }
+// }
+// .line-about {
+//   top: 89px;
 
-  @include screen-is(lg) {
-    top: 185px;
-  }
-}
-.line-skills {
-  top: 83px;
+//   @include screen-is(lg) {
+//     top: 185px;
+//   }
+// }
+// .line-skills {
+//   top: 83px;
 
-  @include screen-is(lg) {
-    top: 179px;
-  }
-}
-.line-projects {
-  top: 77px;
+//   @include screen-is(lg) {
+//     top: 179px;
+//   }
+// }
+// .line-projects {
+//   top: 77px;
 
-  @include screen-is(lg) {
-    top: 173px;
-  }
-}
-.line-inbetween {
-  display: block;
-  background-color: $white;
-  height: 2px;
-  width: 100%;
-}
+//   @include screen-is(lg) {
+//     top: 173px;
+//   }
+// }
+// .line-inbetween {
+//   display: block;
+//   background-color: $white;
+//   height: 2px;
+//   width: 100%;
+// }
 
 //Visibilities for the different breakpoints
 .sm-visible {
