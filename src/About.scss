@@ -40,12 +40,30 @@
       justify-content: space-between;
 
       img {
+        opacity: 0;
         padding: 1rem;
         width: 12%;
         height: auto;
         transition: all 0.2s ease;
         cursor: pointer;
-        animation: spaceship infinite;
+        // animation: spaceship infinite;
+      }
+      div {
+        height: 11rem;
+        margin-top: -3rem;
+        flex-basis: 33%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      div:first-of-type {
+        background-image: url(../src/assets/netherlands.svg);
+      }
+      div:nth-of-type(2) {
+        background-image: url(../src/assets/denmark.svg);
+      }
+      div:last-of-type {
+        background-image: url(../src/assets/netherlands.svg);
       }
       img:first-of-type {
         animation-duration: 0.8s;
@@ -65,6 +83,56 @@
       }
     }
   }
+}
+
+.swiper-container {
+  width: 70%;
+  margin: 0rem auto 10rem auto;
+  overflow: hidden;
+  position: relative;
+
+  .swiper-wrapper {
+    display: flex;
+
+    .swiper-slide {
+      flex-shrink: 0;
+      height: 50vh;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        color: $white;
+      }
+
+      img {
+        width: 10rem;
+      }
+    }
+  }
+  .swiper-navigation {
+    width: 100%;
+    position: absolute;
+    bottom: calc(50% - 2rem);
+    display: flex;
+    justify-content: space-between;
+
+    & > div {
+      cursor: pointer;
+
+      img {
+        width: 2rem;
+        padding: 1rem 0rem;
+      }
+    }
+  }
+}
+
+.about-globe {
+  position: absolute;
+  bottom: -25%;
+  width: 25%;
 }
 
 @keyframes spaceship {
