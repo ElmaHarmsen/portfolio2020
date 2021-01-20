@@ -36,6 +36,10 @@ $breakpoints: (
   font-family: "ibm";
   src: url('./assets/IBMPlexSans-Regular.ttf');
 }
+@font-face {
+  font-family: "bangers";
+  src: url('./assets/Bangers-Regular.ttf');
+}
 
 //Styles
 body {
@@ -46,12 +50,8 @@ body {
   }
 }
 h1 {
-  font-family: "old-news";
-  font-size: 35px;
-
-  @include screen-is(md) {
-    font-size: 40px;
-  }
+  font-family: "bangers";
+  font-size: 50px;
 
   @include screen-is(lg) {
     font-size: 45px;
@@ -109,19 +109,7 @@ ul {
   }
 }
 .section {
-  padding: .8rem;
-
-  @include screen-is(lg) {
-    padding: 0rem;
-  }
-
-  // @include screen-is(lg) {
-  //   padding: 3rem 0rem;
-  // }
-
-  // @include screen-is(xl) {
-  //   padding: 5rem 0rem;
-  // }
+  padding: 0rem;
 }
 .Header, .About, .Skills, .Projects {
 
@@ -132,19 +120,22 @@ ul {
     @include screen-is(md) {
       text-align: center;
     }
-
-    span {
-      color: $poison-green;
-    }
   }
 }
-.Header, .About, .Projects {
-  height: calc(100vh - 5rem);
-}
-.Projects, .About, .Footer {
-  border: 4px solid #000;
+.Header, .About, .Projects, .Footer {
+  height: calc(100vh - 2rem - 4px);
 
   @include screen-is(lg) {
+    height: calc(100vh - 5rem);
+  }
+}
+.Projects, .About, .Footer {
+  padding: 1rem;
+  border-top: 4px solid #000;
+
+  @include screen-is(lg) {
+    padding: 0rem;
+    border: 4px solid #000;
     margin: 2.5rem;
   }
 }
@@ -155,8 +146,12 @@ ul {
   background-color: #2760F2;
 }
 .Footer {
-  height: calc(100vh - 5rem - 8px);
   background-color: #427DFF;
+
+  @include screen-is(lg) {
+    height: calc(100vh - 5rem - 8px);
+    text-align: center;
+  }
 }
 // .section-line, .line-footer {
 //   background-color: $red;

@@ -31,13 +31,25 @@ function Home() {
     console.log("hehe:)");
   } //It is wise to restructure the states so that they are all here on the Home.js
 
+  let sizeScreen = window.matchMedia('(min-width: 1280px)');
   const stars = [];
-  for (let starId = 0; starId < 301; starId++) {
-    stars.push({
-      id: starId,
-      positionX: Math.random() * window.innerWidth - 20,
-      positionY: Math.random() * window.innerHeight - 20,
-    })
+  if (sizeScreen.matches) {
+    for (let starId = 0; starId < 301; starId++) {
+      stars.push({
+        id: starId,
+        positionX: Math.random() * window.innerWidth - 20,
+        positionY: Math.random() * window.innerHeight - 20,
+      })
+    }
+  }
+  else {
+    for (let starId = 0; starId < 71; starId++) {
+      stars.push({
+        id: starId,
+        positionX: Math.random() * window.innerWidth - 5,
+        positionY: Math.random() * window.innerHeight - 5,
+      })
+    }
   }
 
   return (

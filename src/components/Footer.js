@@ -8,7 +8,7 @@ function Footer() {
   return (
     <section>
       <div className="Footer">
-          <h1 className="contact-title">Contact</h1>
+          <h1 className="contact-title">Explore new Worlds</h1>
           <div className="contact-info">
             <a href="https://drive.google.com/file/d/12nMt10qPcNYyFJ9FUwosLf1GufMhQjxD/view?usp=sharing" target="blank">
               <h2>My Resume/Cv</h2>

@@ -54,7 +54,7 @@ function About() {
 
   return (
     <section className="About">
-      <h1 className="about-title">a Professional Journey</h1>
+      <h1 className="about-title">a Journey</h1>
       <Swiper
         spaceBetween={50}
         onSwiper={swiper => setTimeout(() => swiper.update())}
@@ -66,19 +66,19 @@ function About() {
       >
         <SwiperSlide>
           <div className="swiper-slide">
-            <h2>01.09.17. Netherlands, Groningen. Bachelor Communication & Multimedia Design.</h2>
+            <h2>01.09.17. Groningen, the Netherlands. Bachelor Communication & Multimedia Design.</h2>
             <img src={require("../assets/netherlands.svg")} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-slide">
-            <h2>21.08.19 - 31.01.20. Denmark, Aarhus. Minor Web Development.</h2>
+            <h2>21.08.19 - 31.01.20. Aarhus, Denmark. Minor Web Development.</h2>
             <img src={require("../assets/denmark.svg")} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-slide">
-            <h2>07.09.20 - 15.01.21. Netherlands, Groningen. Internship at Appademic.</h2>
+            <h2>07.09.20 - 15.01.21. Groningen, the Netherlands. Internship at Appademic.</h2>
             <img src={require("../assets/netherlands.svg")} />
           </div>
         </SwiperSlide>
@@ -88,7 +88,7 @@ function About() {
           <div className="swiper-next"><img src={require("../assets/right-arrow.svg")} /></div>
         </div>
       </Swiper>
-      {/* <img className="about-globe" src={require("../assets/globe.svg")} /> */}
+      {/* <img className="about-globe" src={require("../assets/europe.svg")} /> */}
       {/* <div className="the-about">
         <h2>{currentSlide.description1}</h2>
         <h2>{currentSlide.description2}</h2>

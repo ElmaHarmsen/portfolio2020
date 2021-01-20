@@ -3,12 +3,12 @@
 .About {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  // justify-content: space-between;
 
   .about-title {
     @include screen-is(lg) {
       margin: 2rem 0rem;
-      font-size: 65px;
+      font-size: 85px;
     }
   }
 
@@ -86,24 +86,37 @@
 }
 
 .swiper-container {
-  width: 70%;
-  margin: 0rem auto 10rem auto;
+  width: 100%;
   overflow: hidden;
   position: relative;
+
+  @include screen-is(lg) {
+    width: 70%;
+    margin: 0rem auto 10rem auto;
+  }
 
   .swiper-wrapper {
     display: flex;
 
     .swiper-slide {
+      height: 100%;
       flex-shrink: 0;
-      height: 50vh;
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-between;
       align-items: center;
 
+      @include screen-is(lg) {
+        height: 50vh;
+      }
+
       h2 {
         color: $white;
+        padding: 1rem 0rem;
+
+        @include screen-is(lg) {
+          padding: 0rem;
+        }
       }
 
       img {
@@ -113,10 +126,15 @@
   }
   .swiper-navigation {
     width: 100%;
-    position: absolute;
-    bottom: calc(50% - 2rem);
+    position: relative;
+    bottom: 0;
     display: flex;
     justify-content: space-between;
+
+    @include screen-is(lg) {
+      position: absolute;
+      bottom: calc(50% - 2rem);  
+    }
 
     & > div {
       cursor: pointer;
@@ -127,12 +145,6 @@
       }
     }
   }
-}
-
-.about-globe {
-  position: absolute;
-  bottom: -25%;
-  width: 25%;
 }
 
 @keyframes spaceship {

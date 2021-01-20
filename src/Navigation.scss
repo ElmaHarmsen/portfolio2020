@@ -8,9 +8,8 @@
     border: 4px solid #000;
     position: fixed;
     z-index: 11;
-    top: calc(.8rem);
-    right: calc(.8rem);
-    // padding: 1rem;
+    top: 0;
+    right: 0;
 
     @include screen-is(lg) {
       width: 5rem;
@@ -70,20 +69,21 @@
 }
 
 .nav-items {
-  width: calc(100% - 4rem);
+  width: calc(100% - 2rem - 8px);
   height: auto;
-  padding: 2.5rem 1rem;
+  padding: 1.5rem 1rem;
   position: fixed;
   z-index: -1;
   opacity: 0;
-  top: calc(.8rem);
-  right: calc(.8rem);
+  top: 0;
+  right: 0;
   background-color: $yellow;
   border: 4px solid #000;
   transition: all .2s ease-out;
   transform: none;
 
   @include screen-is(lg) {
+    padding: 2rem 5.5rem 2rem 1rem;
     width: auto;
     top: calc(2rem + 8px);
     right: calc(2rem + 8px);
@@ -97,12 +97,17 @@
       transform: rotate(360deg);
     }
   }
-
+  h1 {
+    font-size: 40px;
+    @include screen-is(lg) {
+      padding: 0.25rem 0rem;
+    }
+  }
   h1::after {
     content: "";
     display: block;
     position: relative;
-    top: 4px;
+    top: 0px;
     width: 0%;
     margin: 0rem auto;
     height: 4px;
