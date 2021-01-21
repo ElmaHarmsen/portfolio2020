@@ -1,16 +1,36 @@
 // Colors
-$grey: #3e3548;
-$dark-grey: #2C2633;
+// $grey: #3e3548;
+// $dark-grey: #2C2633;
 // $poison-green: #b9d74c;
 // $poison-green: #72a108;
-$white: #fcf8eb;
-$red: #ea5330;
-$poison-green: #31EBA8;
-$dark-green: #029E66;
+// $white: #fcf8eb;
+// $red: #ea5330;
+// $poison-green: #31EBA8;
+// $dark-green: #029E66;
 
-$light-red: #FF6F4F;
-$blue: #2E54B3; //#2760F2; 
-$yellow: #FFD449;
+// $light-red: #FF6F4F;
+// $blue: #2E54B3; //#2760F2; 
+// $yellow: #FFD449;
+
+* {
+  transition: background-color .08s ease;
+}
+
+:root {
+  --background-color: #2E54B3;
+  --highlight-color: #FFD449;
+  --heading-color: #FF6F4F;
+  --text-color: #fcf8eb;
+  --border-color: #000;
+}
+//data is part of the attribute
+[data-theme="dark"] {
+  --background-color: #B33836;
+  --highlight-color: #732422;
+  --heading-color: #F24C49;
+  --text-color: #FF4F4D;
+  --border-color: #D94441;
+}
 
 //Screen widths
 $breakpoints: (
@@ -114,7 +134,7 @@ ul {
 .Header, .About, .Skills, .Projects {
 
   h1 {
-    color: $light-red;
+    color: var(--heading-color);
     font-weight: normal;
 
     @include screen-is(md) {
@@ -131,11 +151,11 @@ ul {
 }
 .Projects, .About, .Footer {
   padding: 1rem;
-  border-top: 4px solid #000;
+  border-top: 4px solid var(--border-color);
 
   @include screen-is(lg) {
     padding: 0rem;
-    border: 4px solid #000;
+    border: 4px solid var(--border-color);
     margin: 2.5rem;
   }
 }
@@ -191,7 +211,7 @@ ul {
 // }
 // .line-inbetween {
 //   display: block;
-//   background-color: $white;
+//   background-color: var(--text-color);
 //   height: 2px;
 //   width: 100%;
 // }

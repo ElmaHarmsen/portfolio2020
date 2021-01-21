@@ -5,6 +5,44 @@
   flex-flow: column nowrap;
   justify-content: center;
 
+  .theme-switch {
+    position: fixed;
+    top: 0rem;
+    right: 0rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @include screen-is(lg) {
+      top: calc(8rem + 8px);
+      right: calc(2rem + 8px)
+    }
+
+    h2 {
+      color: #000;
+    }
+
+    span {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      margin-left: .5rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &.to-light {
+        background-color: #2E54B3;
+        background-image: url("./assets/light-theme.svg");
+      }
+      &.to-dark {
+        background-color: #B33836;
+        background-image: url("./assets/dark-theme.svg");
+      }
+    }
+  }
+
   h1 {
     text-align: center;
   }
@@ -15,7 +53,7 @@
     .value-text {
       // background-color: $poison-green;
       padding: 1.25rem;
-      color: $white;
+      color: var(--text-color);
 
       @include screen-is(md) {
         padding: 2.5rem;
@@ -24,7 +62,7 @@
   }
 
   .stand, .value {
-    color: $white;
+    color: var(--text-color);
   }
    
   .values-slides {
@@ -83,7 +121,7 @@
 
     span {
       display: block;
-      background-color: $white;
+      background-color: #fff;
       width: 19px;
       height: 19px;
       border-radius: 50%;

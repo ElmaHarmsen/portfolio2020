@@ -48,7 +48,7 @@
       width: 100%;
       height: 5rem;
       margin-bottom: 2rem;
-      border-bottom: 4px solid #000;      
+      border-bottom: 4px solid var(--border-color);      
     }
 
     ul {
@@ -63,7 +63,7 @@
         display: block;
         height: 5rem;
         width: 4px;
-        background-color: #000;
+        background-color: var(--border-color);
       }
     }
 
@@ -75,7 +75,7 @@
       width: 0%;
       margin: 0rem auto;
       height: 2px;
-      background-color: $white;
+      background-color: var(--text-color);
       transition: .2s ease;
     }
     li:hover::after {
@@ -83,7 +83,7 @@
     }
   }
   .projects-list > * {
-    color: $white;
+    color: var(--text-color);
     cursor: pointer;
     transition: all 0.2s ease;
   }
@@ -97,7 +97,7 @@
       margin: 5rem 0rem;
     }
     h2 {
-      color: $white;
+      color: var(--text-color);
     }
   }
 
@@ -111,7 +111,7 @@
     }
   }
   .projects-about > h2, a {
-    color: $white;
+    color: var(--text-color);
   }
 
   .project-sm {
@@ -143,12 +143,12 @@
             padding: 1rem 0rem;
           }
           h2 {
-            color: $white;
+            color: var(--text-color);
           }
     
           ul {
             li {
-              color: $white;
+              color: var(--text-color);
               font-size: 20px;
             }
           }

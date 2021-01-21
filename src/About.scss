@@ -14,7 +14,7 @@
 
   .the-about {
     margin: 2rem auto;
-    color: $white;
+    color: var(--text-color);
 
     @include screen-is(md) {
       width: 70%;
@@ -30,7 +30,7 @@
   }
 
   .the-timeline {
-    border-top: 4px solid #000;
+    border-top: 4px solid var(--border-color);
 
     div {
       width: 70%;
@@ -79,7 +79,7 @@
       span {
         display: block;
         width: 4px;
-        background-color: #000;
+        background-color: var(--border-color);
       }
     }
   }
@@ -111,7 +111,7 @@
       }
 
       h2 {
-        color: $white;
+        color: var(--text-color);
         padding: 1rem 0rem;
 
         @include screen-is(lg) {
