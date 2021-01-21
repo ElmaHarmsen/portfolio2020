@@ -78,14 +78,18 @@ function Header() {
     }
   }
 
+  var array = Array("Hello", "Hoi", "Hej", "Ahoj");
+  var item = array[Math.floor(Math.random() * array.length)];
+  // Math.floor(Math.random() * (100 - 1) + 1);
+
   return (
     <section>
       <div className="Header">
         <div className="theme-switch" onClick={() => setDarkTheme(!darkTheme)}>
-          <h2>To</h2><span className={darkTheme ? "to-light" : "to-dark"}></span>
+          <span className={darkTheme ? "to-light" : "to-dark"}></span>
           {/* <h2>{darkTheme ? "to light theme" : "to dark theme"}</h2> */}
         </div>
-        <h1>Hello Hoi Hej Ahoj</h1>
+        <h1 className="header-greet">Hello</h1>
         <h1>I am Elma</h1>
         {/* <h1 className="sm-visible">I am <br></br><span className="firstname">Elma</span><span className="lastname"> Harmsen</span></h1>
         <h1 className="md-visible">I am <span className="firstname">Elma</span><span className="lastname"> Harmsen</span></h1>

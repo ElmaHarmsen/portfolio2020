@@ -22,14 +22,22 @@
   --heading-color: #FF6F4F;
   --text-color: #fcf8eb;
   --border-color: #000;
+  --section-top: #102966;
+  --section-middle: #2760F2;
+  --section-bottom: #427DFF;
+  --stars: #FFD449;
 }
 //data is part of the attribute
 [data-theme="dark"] {
-  --background-color: #B33836;
-  --highlight-color: #732422;
-  --heading-color: #F24C49;
-  --text-color: #FF4F4D;
-  --border-color: #D94441;
+  --background-color: #020408;
+  --highlight-color: #102966;
+  --heading-color: #2760F2;
+  --text-color: #fcf8eb;
+  --border-color: #fcf8eb;
+  --section-top: #333333;
+  --section-middle: #4d4d4d;
+  --section-bottom: #666666;
+  --stars: #fcf8eb;
 }
 
 //Screen widths
@@ -160,13 +168,13 @@ ul {
   }
 }
 .Projects {
-  background-color: #102966;
+  background-color: var(--section-top);
 }
 .About {
-  background-color: #2760F2;
+  background-color: var(--section-middle);
 }
 .Footer {
-  background-color: #427DFF;
+  background-color: var(--section-bottom);
 
   @include screen-is(lg) {
     height: calc(100vh - 5rem - 8px);

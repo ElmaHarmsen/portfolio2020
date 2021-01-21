@@ -14,7 +14,7 @@
     cursor: pointer;
 
     @include screen-is(lg) {
-      top: calc(8rem + 8px);
+      top: calc(8.5rem + 8px);
       right: calc(2rem + 8px)
     }
 
@@ -37,9 +37,16 @@
         background-image: url("./assets/light-theme.svg");
       }
       &.to-dark {
-        background-color: #B33836;
+        background-color: #020408;
         background-image: url("./assets/dark-theme.svg");
       }
+    }
+  }
+
+  .header-greet {
+    @include screen-is(lg) {
+      margin: 2rem 0rem;
+      font-size: 85px;
     }
   }
 
@@ -53,7 +60,8 @@
     .value-text {
       // background-color: $poison-green;
       padding: 1.25rem;
-      color: var(--text-color);
+      // color: var(--text-color);
+      color: #fff;
 
       @include screen-is(md) {
         padding: 2.5rem;
