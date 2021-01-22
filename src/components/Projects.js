@@ -75,7 +75,7 @@ function Projects() {
   return (
     <section className="Projects">
       <div className="project-lg"> {/* the key is only 1 unique thing inside the const, not all of them */}
-        <h1 className="project-title">{currentProject.title}</h1>
+        <h1 className="project-title">Elma's {currentProject.title}</h1>
         <div className="project-details">
           <div className="projects-about">
             <h2 className="project-link"><a href={currentProject.url} target="blank">{currentProject.link}</a></h2>
@@ -147,8 +147,8 @@ function Projects() {
             </div>
           </SwiperSlide>
           <div className="swiper-navigation">
-            <div className="swiper-prev"><img src={require("../assets/left-arrow.svg")} /></div>
-            <div className="swiper-next"><img src={require("../assets/right-arrow.svg")} /></div>
+          <div className="swiper-prev"><svg height="50" viewBox="0 0 24 24" width="50"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z"/></svg></div>
+          <div className="swiper-next"><svg height="50" viewBox="0 0 24 24" width="50"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M6.49 20.13l1.77 1.77 9.9-9.9-9.9-9.9-1.77 1.77L14.62 12l-8.13 8.13z"/></svg></div>
           </div>
         </Swiper>
       </div>

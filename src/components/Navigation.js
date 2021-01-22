@@ -12,7 +12,23 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
       threshold: [0.2, 0.4, 0.6, 0.8, 1]
     });
     document.querySelectorAll(".section").forEach(section => scrollObserver.observe(section));
-    }, []);
+
+    if (window.localStorage.getItem("darkTheme")) {
+      //Checks if there is a value of the data property darkTheme available to use
+      JSON.parse(window.localStorage.getItem("darkTheme")) ? setDarkTheme(true) : setDarkTheme(false);
+      //The localStorage string gets parsed back here as its original type (boolean) & gets the boolean value of darkTheme data property
+    }
+  }, []);
+
+  const [darkTheme, setDarkTheme] = useState(false);
+  //darkTheme is a data property & setDarkTheme changes this data value, by default this boolean is false
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', darkTheme ? "dark" : "light");
+    //Using the 'dark-theme' attribute in css, the data property darkTheme gets either dark or light ('light' is default)
+    window.localStorage.setItem("darkTheme", JSON.stringify(darkTheme));
+    //In the localStorage we name 'darkTheme' with the value from the data property darkTheme, we make it into a string as this is how localstorage works
+  }, [darkTheme]); //Runs when darkTheme changes
 
   //This is the place where the HOOKS will be located.
   const [navigationState, changeState] = useState({ //inside of object
@@ -97,10 +113,6 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
       name: "About",
       position: props.sectionPositions[2]
     },
-    // {
-    //   name: "Skills",
-    //   position: props.sectionPositions[3]
-    // },
     {
       name: "Contact",
       position: props.sectionPositions[3]
@@ -115,7 +127,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
         <a><h1 onClick={() => navigateToSection(index)}>{item.name}</h1></a>
       </div>
     )
-  }); //This generates a header with the 5 navItems names. 
+  }); //This generates a header with the 4 navItems names. 
 
   //This is the HTML.
   return (
@@ -132,6 +144,16 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
 
       <div className={navigationState.isNavigationOpen ? "nav-items open" : "nav-items"}>
         {theNavItems}
+      </div>
+
+      <div className="switch-wrapper">
+        <div className="language-switch">
+          <h1>NL</h1>
+        </div>
+        <div className="theme-switch" onClick={() => setDarkTheme(!darkTheme)}>
+          <span className={darkTheme ? "to-light" : "to-dark"}></span>
+          {/* <h2>{darkTheme ? "to light theme" : "to dark theme"}</h2> */}
+        </div>
       </div>
 
       {/* <div className="nav-items-lg">

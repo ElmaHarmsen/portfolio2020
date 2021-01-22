@@ -1,42 +1,21 @@
-// Colors
-// $grey: #3e3548;
-// $dark-grey: #2C2633;
-// $poison-green: #b9d74c;
-// $poison-green: #72a108;
-// $white: #fcf8eb;
-// $red: #ea5330;
-// $poison-green: #31EBA8;
-// $dark-green: #029E66;
-
-// $light-red: #FF6F4F;
-// $blue: #2E54B3; //#2760F2; 
-// $yellow: #FFD449;
-
-* {
-  transition: background-color .08s ease;
-}
-
+//Light theme
 :root {
-  --background-color: #2E54B3;
-  --highlight-color: #FFD449;
-  --heading-color: #FF6F4F;
-  --text-color: #fcf8eb;
-  --border-color: #000;
-  --section-top: #102966;
-  --section-middle: #2760F2;
-  --section-bottom: #427DFF;
-  --stars: #FFD449;
+  --background-color: #4A62FF;
+  --highlight-color: #FFCF30;
+  --heading-color: #FF6371;
+  --text-color: #010205; //#fcf8eb;
+  --border-color: #010205;
+  --section-color: #fff; //#3B4ECC;
+  --stars: #FFCF30;
 }
-//data is part of the attribute
+//Dark theme, data is part of the attribute
 [data-theme="dark"] {
-  --background-color: #020408;
-  --highlight-color: #102966;
-  --heading-color: #2760F2;
+  --background-color: #010205;
+  --highlight-color: #010205;
+  --heading-color: #E65A65;
   --text-color: #fcf8eb;
   --border-color: #fcf8eb;
-  --section-top: #333333;
-  --section-middle: #4d4d4d;
-  --section-bottom: #666666;
+  --section-color: #010205;
   --stars: #fcf8eb;
 }
 
@@ -68,6 +47,10 @@ $breakpoints: (
   font-family: "bangers";
   src: url('./assets/Bangers-Regular.ttf');
 }
+@font-face {
+  font-family: "open-sans";
+  src: url('./assets/OpenSans-Regular.ttf');
+}
 
 //Styles
 body {
@@ -91,9 +74,10 @@ h1 {
 }
 
 h2 {
-  font-family: "old-news";
+  font-family: "open-sans";
   font-size: 20px;
-  font-weight: normal;
+  font-weight: bold;
+  line-height: 1.2;
 
   @include screen-is(md) {
     font-size: 30px;
@@ -128,12 +112,18 @@ a {
 ul {
   list-style-type: none;
   li {
-    font-family: "old-news";
+    font-family: "open-sans";
+    font-weight: bold;
     font-size: 25px;
     
     @include screen-is(lg) {
       font-size: 30px;
     }
+  }
+}
+.sm-only {
+  @include screen-is(lg) {
+    display: none;
   }
 }
 .section {
@@ -168,13 +158,13 @@ ul {
   }
 }
 .Projects {
-  background-color: var(--section-top);
+  background-color: var(--section-color);
 }
 .About {
-  background-color: var(--section-middle);
+  background-color: var(--section-color);
 }
 .Footer {
-  background-color: var(--section-bottom);
+  background-color: var(--section-color);
 
   @include screen-is(lg) {
     height: calc(100vh - 5rem - 8px);

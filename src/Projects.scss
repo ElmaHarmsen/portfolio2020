@@ -74,7 +74,7 @@
       top: 4px;
       width: 0%;
       margin: 0rem auto;
-      height: 2px;
+      height: 4px;
       background-color: var(--text-color);
       transition: .2s ease;
     }
@@ -103,7 +103,7 @@
 
   .projects-about {
     .project-link {
-      text-decoration: underline;
+      text-decoration: underline 4px;
       padding: 0rem 0rem 2.5rem 0rem;
     }
     h2 {
@@ -164,9 +164,8 @@
         & > div {
           cursor: pointer;
     
-          img {
-            width: 2rem;
-            padding: 1rem 0rem;
+          svg {
+            fill: var(--stars);
           }
         }
       }

@@ -139,9 +139,8 @@
     & > div {
       cursor: pointer;
 
-      img {
-        width: 2rem;
-        padding: 1rem 0rem;
+      svg {
+        fill: var(--stars);
       }
     }
   }

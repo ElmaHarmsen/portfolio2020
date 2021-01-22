@@ -5,49 +5,20 @@
   flex-flow: column nowrap;
   justify-content: center;
 
-  .theme-switch {
-    position: fixed;
-    top: 0rem;
-    right: 0rem;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-
-    @include screen-is(lg) {
-      top: calc(8.5rem + 8px);
-      right: calc(2rem + 8px)
-    }
-
-    h2 {
-      color: #000;
-    }
-
-    span {
-      display: block;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 50%;
-      margin-left: .5rem;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      &.to-light {
-        background-color: #2E54B3;
-        background-image: url("./assets/light-theme.svg");
-      }
-      &.to-dark {
-        background-color: #020408;
-        background-image: url("./assets/dark-theme.svg");
-      }
-    }
-  }
-
   .header-greet {
+    font-size: 50px;
+
     @include screen-is(lg) {
       margin: 2rem 0rem;
       font-size: 85px;
     }
+  }
+
+  .header-name {
+    display: none;
+    position: relative;
+    top: 25vh;
+    left: -25vw;
   }
 
   h1 {

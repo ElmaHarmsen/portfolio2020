@@ -17,11 +17,11 @@
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 2rem auto;
 
     @include screen-is(md) {
-      width: 70%;
+      // width: 70%;
     }
 
     a {
@@ -29,19 +29,19 @@
       padding: 1rem 0rem;
     }
 
-    // a::after {
-    //   content: "";
-    //   display: block;
-    //   position: relative;
-    //   top: 4px;
-    //   width: 0%;
-    //   margin: 0rem auto;
-    //   height: 2px;
-    //   background-color: var(--text-color);
-    //   transition: .2s ease;
-    // }
-    // a:hover::after {
-    //   width: 100%;
-    // }
+    a::after {
+      content: "";
+      display: block;
+      position: relative;
+      top: 4px;
+      width: 0%;
+      margin: 0rem auto;
+      height: 4px;
+      background-color: var(--text-color);
+      transition: .2s ease;
+    }
+    a:hover::after {
+      width: 100%;
+    }
   }
 }
