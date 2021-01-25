@@ -87,12 +87,15 @@
 
 .swiper-container {
   width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-flow: column nowrap;
 
   @include screen-is(lg) {
     width: 70%;
-    margin: 0rem auto 10rem auto;
+    margin: 0rem auto 0rem auto;
   }
 
   .swiper-wrapper {
@@ -106,10 +109,6 @@
       justify-content: space-between;
       align-items: center;
 
-      @include screen-is(lg) {
-        height: 50vh;
-      }
-
       h2 {
         color: var(--text-color);
         padding: 1rem 0rem;
@@ -120,7 +119,14 @@
       }
 
       img {
-        width: 10rem;
+        display: none;
+
+        @include screen-is(lg) {
+          display: block;
+          width: 10rem;
+          transform: translateX(35%) rotate(-15deg);
+          margin: 6rem 0rem 2rem 0rem;
+        }
       }
     }
   }
@@ -132,8 +138,11 @@
     justify-content: space-between;
 
     @include screen-is(lg) {
-      position: absolute;
-      bottom: calc(50% - 2rem);  
+      width: calc(2 * 50px + 2rem);
+      position: relative;
+      bottom: 0rem;
+      margin-left: 50%;
+      transform: translateX(-50%);
     }
 
     & > div {

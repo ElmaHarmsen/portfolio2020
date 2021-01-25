@@ -12,7 +12,7 @@ function Projects() {
   const [currentProject, changeProject] = useState({
     id: 1,
     title: "Internship Project",
-    description: "07.09.20 - 15.01.21 During my internship at Appademic in Groningen I was in charge of the Infant Motor Profile project. A web app running on a cooperation between frontend and backend, api's, various frameworks and evaluation.",
+    description: "07.09.20 - 15.01.21 During my internship at Appademic I developed the frontend for the Infant Motor Profile app. This included transferring data with the use of a state management system, a database connection, and the finalization of my design with the help of various Usability tests. Though what I developed stayed to be merely a temporarily concept.",
     url: "https://test.infantmotorprofile.com/",
     link: "infantmotorprofile.com",
     stack1: "VueJs framework",
@@ -25,7 +25,7 @@ function Projects() {
     {
       id: 1,
       title: "Internship Project",
-      description: "07.09.20 - 15.01.21 During my internship at Appademic in Groningen I was in charge of the Infant Motor Profile project. A web app running on a cooperation between frontend and backend, api's, various frameworks and evaluation.",
+      description: "07.09.20 - 15.01.21 During my internship at Appademic I developed the frontend for the Infant Motor Profile app. This included transferring data with the use of a state management system, a database connection, and the finalization of my design with the help of various Usability tests. Though what I developed stayed to be merely a temporarily concept.",
       url: "https://test.infantmotorprofile.com/",
       link: "infantmotorprofile.com",
       stack1: "VueJs framework",
@@ -36,7 +36,7 @@ function Projects() {
     {
       id: 2,
       title: "Snake Game",
-      description: "2020 Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.",
+      description: "01.09.2020 - 13.09-2020 For the Danish organization FEUM I developed a minigame in addition to their ticketing selling platform. Complete with timer countdown, score counter, increasement of the player speed, including a fitting theme and music, it served well to its purpose and is easily reusable for future events.",
       url: "https://feum-game.netlify.app/",
       link: "snakegame.app",
       stack1: "HTML",
@@ -47,35 +47,20 @@ function Projects() {
     {
       id: 3,
       title: "Ducky Dictionary",
-      description: "2020 Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.",
+      description: "2020 - 2021 For the purpose of learning VueJs I developed a dictionary platform. Though it is protected with a login functionality which is using ExpressJs api connected to a database in MongoDB. The website serves various functionalities, like adding, editing and removing words, searching for words and many more are on its way.",
       url: "https://duckydictionary.netlify.app/login",
       link: "duckydictionary.app",
       stack1: "VueJs framework",
       stack2: "Vuex state management",
-      stack3: "JavaScript",
-      stack4: "SCSS"
+      stack3: "JavaScript, SCSS",
+      stack4: "ExpressJs"
       }
   ]
-
-  // const portfolioProjects = projects.map((item) =>
-  //   <div className="project" key={item.title}> {/* the key is only 1 unique thing inside the const, not all of them */}
-  //     <a href={item.link} target="blank"><h1>{item.title}</h1></a>
-  //     <div className="projects-about">
-  //       <h2>{item.description}</h2>
-  //     </div>
-  //     <div className="projects-technologies">
-  //       <h2>{item.stack1}</h2>
-  //       <h2>{item.stack2}</h2>
-  //       <h2>{item.stack3}</h2>
-  //       <h2>{item.stack4}</h2>
-  //     </div>
-  //   </div>
-  // )
 
   return (
     <section className="Projects">
       <div className="project-lg"> {/* the key is only 1 unique thing inside the const, not all of them */}
-        <h1 className="project-title">Elma's {currentProject.title}</h1>
+        <h1 className="project-title">{currentProject.title}</h1>
         <div className="project-details">
           <div className="projects-about">
             <h2 className="project-link"><a href={currentProject.url} target="blank">{currentProject.link}</a></h2>
@@ -117,7 +102,7 @@ function Projects() {
                 <li>JavaScript</li>
                 <li>TailwindCSS framework</li>
               </ul>
-              <h2 className="project-description">07.09.20 - 15.01.21 During my internship at Appademic in Groningen I was in charge of the Infant Motor Profile project. A web app running on a cooperation between frontend and backend, api's, various frameworks and evaluation.</h2>
+              <h2 className="project-description">07.09.20 - 15.01.21 During my internship at Appademic I developed the frontend for the Infant Motor Profile app. This included transferring data with the use of a state management system, a database connection, and the finalization of my design with the help of various Usability tests. Though what I developed stayed to be merely a concept.</h2>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -130,7 +115,7 @@ function Projects() {
                 <li>JavaScript</li>
                 <li>Phaser.io</li>
               </ul>
-              <h2 className="project-description">07.09.20 - 15.01.21 During my internship at Appademic in Groningen I was in charge of the Infant Motor Profile project. A web app running on a cooperation between frontend and backend, api's, various frameworks and evaluation.</h2>
+              <h2 className="project-description">01.09.2020 - 13.09-2020 For the Danish organization FEUM I developed a minigame in addition to their ticketing selling platform. Complete with timer countdown, score counter, increasement of the player speed, including a fitting theme and music, it served well to its purpose and is easily reusable for future events.</h2>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -140,10 +125,10 @@ function Projects() {
               <ul>
                 <li>VueJs framework</li>
                 <li>Vuex state management</li>
-                <li>JavaScript</li>
-                <li>SCSS</li>
+                <li>JavaScript, SCSS</li>
+                <li>ExpressJs</li>
               </ul>
-              <h2 className="project-description">07.09.20 - 15.01.21 During my internship at Appademic in Groningen I was in charge of the Infant Motor Profile project. A web app running on a cooperation between frontend and backend, api's, various frameworks and evaluation.</h2>
+              <h2 className="project-description">2020 - 2021 For the purpose of learning VueJs I developed a dictionary platform. Though it is protected with a login functionality which is using ExpressJs api connected to a database in MongoDB. The website serves various functionalities, like adding, editing and removing words, searching for words and many more are on its way.</h2>
             </div>
           </SwiperSlide>
           <div className="swiper-navigation">

@@ -14,7 +14,7 @@ function Contact(props) {
         </div>
         <div className="contact-info">
           <a href="https://drive.google.com/file/d/12nMt10qPcNYyFJ9FUwosLf1GufMhQjxD/view?usp=sharing" target="blank">
-            <h3>My Resume/Cv</h3>
+            <h3>My Resume/CV</h3>
           </a>
           <h3 className="sm-visible">elmaharmsen01<br></br>@gmail.com</h3>
           <a href="mailto:elmaharmsen01@gmail.com"><h3 className="md-visible">elmaharmsen01@gmail.com</h3></a>
