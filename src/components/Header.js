@@ -8,7 +8,7 @@ function Header() {
 
   const values = [
     {
-      value: "I stand for...",
+      value: "",
       img: "2000x1800-Standing"
     },
     {
@@ -69,8 +69,8 @@ function Header() {
   return (
     <section>
       <div className="Header">
-        <h1 className="header-greet">{currentGreet}!</h1>
-        <h1 className="header-name">Elma</h1>
+        <h1 className="header-greet">{currentGreet}, <br className="sm-only"></br> from Elma!</h1>
+        <h2 className="header-subgreet">I stand for...</h2>
         <div className="values-slides">
           {portfolioValues}
         </div>

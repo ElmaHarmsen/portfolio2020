@@ -51,6 +51,10 @@ $breakpoints: (
   font-family: "source";
   src: url('./assets/SourceSansPro-Regular.ttf');
 }
+@font-face {
+  font-family: "dancing";
+  src: url('./assets/dancing.ttf');
+}
 
 //Styles
 body {
@@ -91,6 +95,14 @@ h2 {
     font-size: 45px;
   }
 }
+h3 {
+  font-family: "dancing";
+  font-size: 30px;
+
+  @include screen-is(lg) {
+    font-size: 45px;
+  }
+}
 p {
   font-family: "ibm";
   font-size: 16px;
@@ -126,11 +138,10 @@ ul {
     display: none;
   }
 }
-.section {
-  padding: 0rem;
-}
+// .section {
+//   padding: 0rem;
+// }
 .Header, .About, .Skills, .Projects {
-
   h1 {
     color: var(--heading-color);
     font-weight: normal;
@@ -140,7 +151,11 @@ ul {
     }
   }
 }
-.Header, .About, .Projects, .Footer {
+.Header {
+  height: 100vh;
+  padding: 1rem;
+}
+.About, .Projects, .Footer {
   height: calc(100vh - 2rem - 4px);
 
   @include screen-is(lg) {
@@ -150,6 +165,7 @@ ul {
 .Projects, .About, .Footer {
   padding: 1rem;
   border-top: 4px solid var(--border-color);
+  background-color: var(--section-color);
 
   @include screen-is(lg) {
     padding: 0rem;
@@ -157,96 +173,14 @@ ul {
     margin: 2.5rem;
   }
 }
-.Projects {
-  background-color: var(--section-color);
-}
-.About {
-  background-color: var(--section-color);
-}
 .Footer {
-  background-color: var(--section-color);
-
   @include screen-is(lg) {
     height: calc(100vh - 5rem - 8px);
     text-align: center;
   }
 }
-// .section-line, .line-footer {
-//   background-color: $red;
-//   width: 100%;
-//   position: sticky;
-//   height: 2px;
-//   z-index: 3;
-// }
-// .line-header {
-//   top: 71px;
-
-//   @include screen-is(lg) {
-//     top: 100px;
-//     // top: 167px;
-//   }
-// }
-// .line-about {
-//   top: 89px;
-
-//   @include screen-is(lg) {
-//     top: 185px;
-//   }
-// }
-// .line-skills {
-//   top: 83px;
-
-//   @include screen-is(lg) {
-//     top: 179px;
-//   }
-// }
-// .line-projects {
-//   top: 77px;
-
-//   @include screen-is(lg) {
-//     top: 173px;
-//   }
-// }
-// .line-inbetween {
-//   display: block;
-//   background-color: var(--text-color);
-//   height: 2px;
-//   width: 100%;
-// }
-
-//Visibilities for the different breakpoints
-.sm-visible {
-  display: block;
-
-  @include screen-is(md) {
-    display: none;
-  }
-
-  @include screen-is(lg) {
-    display: none;
-  }
-}
-.md-visible {
-  display: none;
-
-  @include screen-is(md) {
-    display: block;
-  }
-
-  @include screen-is(lg) {
-    display: none;
-  }
-}
-.lg-visible {
-  display: none;
-
-  @include screen-is(md) {
-    display: none;
-  }
-
-  @include screen-is(lg) {
-    display: block;
-  }
+.swiper-container {
+  cursor: grab;
 }
 
 //Animations
@@ -262,13 +196,5 @@ ul {
   }
   100% {
     transform: scale(1, .05);
-  }
-}
-@keyframes name {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }

@@ -14,7 +14,7 @@ function Footer() {
         </h2>
         <div className="contact-info">
           <a className="footer-link" onMouseEnter={() => setColor("transparent")} href="https://drive.google.com/file/d/12nMt10qPcNYyFJ9FUwosLf1GufMhQjxD/view?usp=sharing" target="blank">
-            <h2>My Resume/CV</h2>
+            <h2>Resume/CV</h2>
           </a>
           <a className="footer-link" onMouseEnter={() => setColor("transparent")} href="mailto:elmaharmsen01@gmail.com"><h2>elmaharmsen01@gmail.com</h2></a>
           <a className="footer-link" onMouseEnter={() => setColor("transparent")} href="https://www.linkedin.com/in/elma-harmsen-087872181/" target="blank">

@@ -3,35 +3,32 @@
 .Header {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-end;
+
+  @include screen-is(lg) {
+    justify-content: center;
+    text-align: center;
+  }
 
   .header-greet {
     font-size: 50px;
+    text-align: left;
 
     @include screen-is(lg) {
       margin: 2rem 0rem;
       font-size: 85px;
+      text-align: center;
     }
   }
-
-  .header-name {
-    display: none;
-    position: relative;
-    top: 25vh;
-    left: -25vw;
-  }
-
-  h1 {
-    text-align: center;
+  .header-subgreet {
+    color: #fff;
   }
 
   .value {
     text-align: center;
 
     .value-text {
-      // background-color: $poison-green;
       padding: 1.25rem;
-      // color: var(--text-color);
       color: #fff;
 
       @include screen-is(md) {

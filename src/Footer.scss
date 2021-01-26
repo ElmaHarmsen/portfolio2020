@@ -15,18 +15,25 @@
   }
 
   h2 {
+    padding: 1rem 0rem;
     color: var(--text-color);
+
+    @include screen-is(lg) {
+      padding: 0rem;
+    }
   }
 
   .contact-info {
-    height: 100%;
+    width: 70%;
+    // height: 60%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
     margin: 2rem auto;
 
     @include screen-is(md) {
-      // width: 70%;
+      flex-flow: row nowrap;
+      margin: 0rem auto;
     }
 
     a {
@@ -56,9 +63,9 @@
    
   @include screen-is(lg) {
     display: block;
-    height: 60%;
+    height: 55%;
     position: absolute;
-    bottom: 7.5%;
+    bottom: 5%;
     z-index: -1;
     margin-left: 50%;
     transform: translateX(-50%);
