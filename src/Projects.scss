@@ -51,63 +51,58 @@
       border-bottom: 4px solid var(--border-color);      
     }
 
-    ul {
-      width: 70%;
+    div {
+      width: 100%;
+      height: 100%;
       margin: 0rem auto;
       display: flex;
       flex-flow: row nowrap;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
+      cursor: pointer;
+
+      div {
+        transition: .15s ease;
+      }
+      div:hover {
+        background-color: var(--stars);
+        color: var(--both-black);
+      }
 
       span {
         display: block;
         height: 5rem;
-        width: 4px;
+        width: 12px;
         background-color: var(--border-color);
       }
     }
-
-    li::after {
-      content: "";
-      display: block;
-      position: relative;
-      top: 4px;
-      width: 0%;
-      margin: 0rem auto;
-      height: 4px;
-      background-color: var(--text-color);
-      transition: .2s ease;
-    }
-    li:hover::after {
-      width: 100%;
-    }
   }
+  
   .projects-list > * {
     color: var(--text-color);
-    cursor: pointer;
     transition: all 0.2s ease;
   }
 
   .project-details {
+    color: var(--text-color);
+
     @include screen-is(md) {
       display: grid;
-      grid-template-columns: 50% 50%;
+      grid-template-columns: 40% 1fr;
       grid-template-rows: 1fr;
-      gap: 2.5rem;
+      gap: 2rem;
       margin: 5rem 0rem;
-    }
-    h2 {
-      color: var(--text-color);
     }
   }
 
   .projects-about {
-    .project-link {
-      text-decoration: underline 4px;
-      padding: 0rem 0rem 2.5rem 0rem;
+
+    .project-link > a {
+      text-decoration: underline 4px var(--border-color);
+      transition: .2s ease;
     }
-    h2 {
-      padding: 1rem 0rem;
+    .project-link:hover > a {
+      color: var(--stars);
     }
   }
   .projects-about > h2, a {
@@ -156,8 +151,10 @@
       }
       .swiper-navigation {
         width: 100%;
-        position: relative;
-        bottom: 0;
+        position: absolute;
+        bottom: unset;
+        top: 50%;
+        transform: translateY(-50%);
         display: flex;
         justify-content: space-between;
     
@@ -166,6 +163,11 @@
     
           svg {
             fill: var(--stars);
+            // opacity: .4;
+    
+            @include screen-is(lg) {
+              fill: var(--text-color);
+            }
           }
         }
       }

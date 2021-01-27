@@ -21,35 +21,35 @@ function About() {
       >
         <SwiperSlide>
           <div className="swiper-slide">
+            <h2>01.09.17 - 2021 | Hanzehogeschool in Groningen, the Netherlands. Bachelor Communication & Multimedia Design.</h2>
             <h2>
-              01.09.17 - 2021 Hanzehogeschool in Groningen, the Netherlands. Bachelor Communication & Multimedia Design. <br></br>
               Starting my design and development journey in my hometown located in the very north of the Netherlands, I joined the Hanze for my bachelor program. 
               After surviving through various courses related to designing, I started appreciating the ones in development much more, and as such I adjusted my education program.
-            </h2>
-            <img src={require("../assets/netherlands.svg")} />
+            </h2>              
           </div>
+          <img src={require("../assets/netherlands.svg")} />
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-slide">
+            <h2>21.08.19 - 31.01.20 | Business Academy in Aarhus, Denmark. Minor Web Development.</h2>
             <h2>
-              21.08.19 - 31.01.20 Business Academy in Aarhus, Denmark. Minor Web Development.<br></br>
               Following up to my interests I chose for a minor outside of the Dutch borders. 
               The courses varied from frontend development to backend development, and from basic databases to interaction & experience design.
               Now having an incredible amount of experience, having met many friendly people, and having seen the marvelous city of Aarhus merged with the stunning landscapes of Denmark, 
               made me cherish this country as something having shaped my future.
             </h2>
-            <img src={require("../assets/denmark.svg")} />
           </div>
+          <img src={require("../assets/denmark.svg")} />
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-slide">
+            <h2>07.09.20 - 15.01.21 | Appademic in Groningen, the Netherlands. Frontend development internship.</h2>
             <h2>
-              07.09.20 - 15.01.21 Appademic in Groningen, the Netherlands. Frontend development internship.<br></br>
               Continuing my bachelor program with an internship back in the Netherlands, I supported the Appademic team with my frontend and design skills. 
               I learned a good deal about the framework Vue and the state management system Vuex, so I was able to put knowledge and experience into real life purposes.
             </h2>
-            <img src={require("../assets/netherlands.svg")} />
           </div>
+          <img src={require("../assets/netherlands.svg")} />
         </SwiperSlide>
         <SwiperSlide><div className="swiper-slide"><h2>The future is an unshaped path which this professional journey will follow.</h2></div></SwiperSlide>
         <div className="swiper-navigation">

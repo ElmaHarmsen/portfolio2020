@@ -90,8 +90,6 @@
   height: 100%;
   overflow: hidden;
   position: relative;
-  display: flex;
-  flex-flow: column nowrap;
 
   @include screen-is(lg) {
     width: 70%;
@@ -99,16 +97,19 @@
   }
 
   .swiper-wrapper {
+    height: 100%;
     display: flex;
 
     .swiper-slide {
-      height: 100%;
+      height: auto;
       flex-shrink: 0;
       display: flex;
       flex-flow: column nowrap;
-      justify-content: space-between;
-      align-items: center;
 
+      @include screen-is(lg) {
+        justify-content: space-between;
+        align-items: center;
+      }
       h2 {
         color: var(--text-color);
         padding: 1rem 0rem;
@@ -123,26 +124,32 @@
 
         @include screen-is(lg) {
           display: block;
+          position: relative;
+          bottom: calc(1rem + 8px + 52px); //padding, border and height of swiper navigation
           width: 10rem;
           transform: translateX(35%) rotate(-15deg);
-          margin: 6rem 0rem 2rem 0rem;
         }
       }
     }
   }
   .swiper-navigation {
     width: 100%;
-    position: relative;
-    bottom: 0;
+    position: absolute;
+    bottom: unset;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     justify-content: space-between;
 
     @include screen-is(lg) {
-      width: calc(2 * 50px + 2rem);
-      position: relative;
-      bottom: 0rem;
+      width: calc(2 * 50px);
+      bottom: -4px;
+      top: unset;
       margin-left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-50%);    
+      border: 4px solid var(--border-color);
+      background-color: var(--highlight-color);
+      padding: .5rem .75rem;
     }
 
     & > div {
@@ -150,6 +157,11 @@
 
       svg {
         fill: var(--stars);
+        // opacity: .4;
+
+        @include screen-is(lg) {
+          fill: var(--text-color);
+        }
       }
     }
   }

@@ -7,16 +7,18 @@
   --border-color: #010205;
   --section-color: #fff; //#3B4ECC;
   --stars: #FFCF30;
+  --both-black: #010205;
 }
 //Dark theme, data is part of the attribute
 [data-theme="dark"] {
   --background-color: #010205;
   --highlight-color: #010205;
-  --heading-color: #E65A65;
+  --heading-color: #FF6371;
   --text-color: #fcf8eb;
   --border-color: #fcf8eb;
   --section-color: #010205;
   --stars: #fcf8eb;
+  --both-black: #010205;
 }
 
 //Screen widths
