@@ -140,9 +140,6 @@ ul {
     display: none;
   }
 }
-// .section {
-//   padding: 0rem;
-// }
 .Header, .About, .Skills, .Projects {
   h1 {
     color: var(--heading-color);
@@ -164,7 +161,7 @@ ul {
     height: calc(100vh - 5rem);
   }
 }
-.Projects, .About, .Footer {
+.Projects, .About {
   padding: 1rem;
   border-top: 4px solid var(--border-color);
   background-color: var(--section-color);
@@ -176,9 +173,15 @@ ul {
   }
 }
 .Footer {
+  padding: 1rem;
+  height: calc(100vh - 2rem + 4px);
+
   @include screen-is(lg) {
-    height: calc(100vh - 5rem - 8px);
+    background-color: transparent;
+    height: calc(100vh - 5rem);
     text-align: center;
+    padding: 0rem;
+    margin: 2.5rem;
   }
 }
 .swiper-container {
