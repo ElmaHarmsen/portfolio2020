@@ -1,26 +1,33 @@
 @import "./index.scss";
 
 .Header {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
 
-  @include screen-is(lg) {
-    text-align: center;
-  }
-
+  // + 35px to increase font-size by next breakpoint
   .header-greet {
-    font-size: 50px;
     text-align: left;
+    margin-bottom: 2rem;
+    transform: rotate(-5deg);
+
+    .current-greet {
+      font-size: 85px;
+
+      @include screen-is(lg) {
+        font-size: 120px;
+      }
+      @include screen-is(xl) {
+        font-size: 155px;
+      }
+    }
 
     @include screen-is(lg) {
       margin: 2rem 0rem;
-      font-size: 85px;
       text-align: center;
+      transform: none
     }
   }
   .header-subgreet {
     color: #fff;
+    text-align: center;
   }
 
   .value {
@@ -30,7 +37,7 @@
       padding: 1.25rem;
       color: #fff;
 
-      @include screen-is(md) {
+      @include screen-is(lg) {
         padding: 2.5rem;
       }
     }
@@ -48,7 +55,7 @@
     height: 318px;
     margin: 0px auto 2rem auto;
 
-    @include screen-is(md) {
+    @include screen-is(lg) {
       height: 450px;
       margin: 0px auto 0rem auto;
     }
@@ -83,15 +90,11 @@
     justify-content: center;
     width: auto;
     position: relative;
-    bottom: 292px;
+    bottom: 276px;
     margin: 0px auto;
 
-    @include screen-is(md) {
-      bottom: 380px;
-    }
-
     @include screen-is(lg) {
-      bottom: 485px;
+      bottom: 469px;
     }
 
     span {
@@ -102,7 +105,7 @@
       border-radius: 50%;
       animation: "eye-blinking" 6s infinite;
 
-      @include screen-is(md) {
+      @include screen-is(lg) {
         width: 26px;
         height: 26px;
       }
@@ -115,7 +118,7 @@
     span:first-of-type {
       margin: 0px 1rem 0px -0.5rem;
 
-      @include screen-is(md) {
+      @include screen-is(lg) {
         margin: 0px 1.5rem 0px -0.75rem;
       }
 
@@ -127,9 +130,9 @@
 
   img {
     height: 256px;
-    margin: 2rem 0px 0.5rem 0px;
+    margin: 3rem 0px 0.5rem 0px;
 
-    @include screen-is(md) {
+    @include screen-is(lg) {
       height: 356px;
     }
 

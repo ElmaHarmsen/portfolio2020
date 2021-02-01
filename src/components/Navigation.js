@@ -35,7 +35,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
     isNavigationOpen: false, //nav is closed by default
     sectionVisibilities: [ //structure of what you see in the navigstion and what is visible
       {
-        name: "Home",
+        name: "Hello",
         visitility: 0 //0
       },
       {
@@ -43,16 +43,12 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
         visitility: 0 //1
       },
       {
-        name: "Skills",
+        name: "Projects",
         visitility: 0 //2
       },
       {
-        name: "Projects",
-        visitility: 0 //3
-      },
-      {
         name: "Contact", //Good to know is that these names don't have a function; what is visible in the screen is the id's on the home.js but they need to match to this id
-        visitility: 0 //4
+        visitility: 0 //3
       }
     ],
     activeSection: null //the section who is most visible and whose name will be in the nav
@@ -102,7 +98,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
 
   const navItems = [
     {
-      name: "Home",
+      name: "Hello",
       position: props.sectionPositions[0]
     },
     {
@@ -147,27 +143,13 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
       </div>
 
       <div className="switch-wrapper">
-        <div className="language-switch">
+        {/* <div className="language-switch">
           <h1>NL</h1>
-        </div>
+        </div> */}
         <div className="theme-switch" onClick={() => setDarkTheme(!darkTheme)}>
           <span className={darkTheme ? "to-light" : "to-dark"}></span>
-          {/* <h2>{darkTheme ? "to light theme" : "to dark theme"}</h2> */}
         </div>
       </div>
-
-      {/* <div className="nav-items-lg">
-        {theNavItems}
-        <div className="color-themes-switch">
-          <div className="theme-one"></div> 
-          <div className="theme-two"></div>
-        </div>  
-        <div className="language-switch">
-          <h1>EN</h1>
-          <h1>-</h1>
-          <h1>NL</h1>
-        </div> 
-      </div> */}
     </section>
   );
 }

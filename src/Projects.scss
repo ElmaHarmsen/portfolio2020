@@ -1,26 +1,12 @@
 @import "./index.scss";
 
 .Projects {
-  display: flex;
-  flex-flow: column-reverse nowrap;
-  justify-content: flex-end;
-
-  @include screen-is(md) {
-    display: flex;
-    flex-flow: column-reverse nowrap;
-  }
 
   .project-sm {
     margin: 0rem auto;
 
     @include screen-is(lg) {
       display: none;
-    }
-
-    .project-title {
-      @include screen-is(lg) {
-        font-size: 85px;
-      }
     }
   }
 
@@ -31,12 +17,6 @@
       display: block;
       width: 70%;
       margin: 0rem auto;
-    }
-
-    .project-title {
-      @include screen-is(lg) {
-        font-size: 85px;
-      }
     }
   }
 
@@ -86,7 +66,7 @@
   .project-details {
     color: var(--text-color);
 
-    @include screen-is(md) {
+    @include screen-is(lg) {
       display: grid;
       grid-template-columns: 40% 1fr;
       grid-template-rows: 1fr;
@@ -102,7 +82,7 @@
       transition: .2s ease;
     }
     .project-link:hover > a {
-      color: var(--stars);
+      color: #FF6371;
     }
   }
   .projects-about > h2, a {
@@ -111,26 +91,27 @@
 
   .project-sm {
     max-width: 100%;
+    height: 100%;
 
     .swiper-container {
       width: 100%;
-      margin: 0rem auto 10rem auto;
+      height: 100%;
       overflow: hidden;
       position: relative;
     
       .swiper-wrapper {
+        height: 100%;
         display: flex;
     
         .swiper-slide {
-          height: 100%;
+          height: auto;
           flex-shrink: 0;
           display: flex;
           flex-flow: column nowrap;
-          justify-content: space-between;
-          align-items: flex-start;
 
           .project-title {
-            text-decoration: underline;
+            font-weight: bolder;
+            text-decoration: underline 2px;
             padding: 1rem 0rem;
           }
     
@@ -150,20 +131,20 @@
         }
       }
       .swiper-navigation {
-        width: 100%;
+        width: calc(2 * 50px);
         position: absolute;
-        bottom: unset;
-        top: 50%;
-        transform: translateY(-50%);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
         display: flex;
         justify-content: space-between;
-    
+        padding: .5rem .75rem;
+
         & > div {
           cursor: pointer;
     
           svg {
-            fill: var(--stars);
-            // opacity: .4;
+            fill: var(--border-color);
     
             @include screen-is(lg) {
               fill: var(--text-color);

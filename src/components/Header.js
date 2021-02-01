@@ -69,9 +69,9 @@ function Header() {
   return (
     <section>
       <div className="Header">
-        <h1 className="header-greet">{currentGreet}, <br className="sm-only"></br> from Elma!</h1>
-        <h2 className="header-subgreet">I stand for...</h2>
+        <h1 className="header-greet"><span className="current-greet">{currentGreet}</span> <br></br> from Elma!</h1>
         <div className="values-slides">
+          <h2 className="header-subgreet">I stand for...</h2>
           {portfolioValues}
         </div>
         <div className="figure-eyes">

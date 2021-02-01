@@ -3,12 +3,13 @@
   --background-color: #4A62FF;
   --highlight-color: #FFCF30;
   --heading-color: #FF6371;
-  --text-color: #010205; //#fcf8eb;
+  --text-color: #010205;
   --border-color: #010205;
-  --section-color: #fff; //#3B4ECC;
+  --section-color: #fff;
   --stars: #FFCF30;
   --both-black: #010205;
 }
+
 //Dark theme, data is part of the attribute
 [data-theme="dark"] {
   --background-color: #010205;
@@ -24,7 +25,7 @@
 //Screen widths
 $breakpoints: (
   "sm": 0, //Phone
-  "md": 768px, //Tablet
+  //md": 768px, //Tablet
   "lg": 1280px, //Laptop
   "xl": 2020px //Monitor
 );
@@ -38,24 +39,12 @@ $breakpoints: (
 
 //Fonts
 @font-face {
-  font-family: "old-news";
-  src: url('./assets/Mono-Medium.ttf');
-}
-@font-face {
-  font-family: "ibm";
-  src: url('./assets/IBMPlexSans-Regular.ttf');
-}
-@font-face {
   font-family: "bangers";
   src: url('./assets/Bangers-Regular.ttf');
 }
 @font-face {
   font-family: "source";
   src: url('./assets/SourceSansPro-Regular.ttf');
-}
-@font-face {
-  font-family: "dancing";
-  src: url('./assets/dancing.ttf');
 }
 
 //Styles
@@ -71,81 +60,35 @@ h1 {
   font-size: 50px;
 
   @include screen-is(lg) {
-    font-size: 45px;
-  }
-
+    font-size: 85px;
+  } 
   @include screen-is(xl) {
-    font-size: 65px;
+    font-size: 120px;
   }
 }
 
-h2 {
+h2, li {
   font-family: "source";
   font-size: 20px;
   font-weight: bold;
   line-height: 1.2;
 
-  @include screen-is(md) {
-    font-size: 30px;
-  }
-
   @include screen-is(lg) {
     font-size: 30px;
-  }
-
-  @include screen-is(xl) {
-    font-size: 45px;
-  }
-}
-h3 {
-  font-family: "dancing";
-  font-size: 30px;
-
-  @include screen-is(lg) {
-    font-size: 45px;
-  }
-}
-p {
-  font-family: "ibm";
-  font-size: 16px;
-  line-height: 1.4rem;
-
-  @include screen-is(lg) {
-    font-size: 20px;
-    line-height: 1.6rem;
-  }
-
-  @include screen-is(xl) {
-    font-size: 24px;
   }
 }
 a {
   text-decoration: none;
   cursor: pointer;
 }
-ul {
-  list-style-type: none;
-  li {
-    font-family: "source";
-    font-weight: bold;
-    font-size: 25px;
-    
-    @include screen-is(lg) {
-      font-size: 30px;
-    }
-  }
-}
-.sm-only {
-  @include screen-is(lg) {
-    display: none;
-  }
-}
-.Header, .About, .Skills, .Projects {
+.Header, .Projects, .About, .Footer {
+  display: flex;
+  flex-flow: column nowrap;
+
   h1 {
     color: var(--heading-color);
-    font-weight: normal;
 
-    @include screen-is(md) {
+    @include screen-is(lg) {
       text-align: center;
     }
   }
@@ -153,8 +96,13 @@ ul {
 .Header {
   height: 100vh;
   padding: 1rem;
+  justify-content: center;
+
+  @include screen-is(lg) {
+    padding: 0rem;
+  }
 }
-.About, .Projects, .Footer {
+.Projects, .About, .Footer {
   height: calc(100vh - 2rem - 4px);
 
   @include screen-is(lg) {
@@ -178,15 +126,19 @@ ul {
 
   @include screen-is(lg) {
     background-color: transparent;
-    height: calc(100vh - 5rem);
-    text-align: center;
-    padding: 0rem;
+    height: calc(100vh - 5rem - 8px);
     margin: 2.5rem;
     border: 4px solid transparent;
+    text-align: center;
   }
 }
 .swiper-container {
   cursor: grab;
+}
+.sm-only {
+  @include screen-is(lg) {
+    display: none;
+  }
 }
 
 //Animations

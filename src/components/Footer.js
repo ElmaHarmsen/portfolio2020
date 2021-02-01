@@ -9,7 +9,7 @@ function Footer() {
     <section>
       <div className="Footer">
         <div className="contact-header">
-          <h1 className="contact-title">Explore new Worlds</h1>
+          <h1 className="contact-title">Explore <br className="sm-only"></br> new Worlds</h1>
           <h2>
             ...is the best course to find new opportunities! <br></br>
             Feel like reaching out? Please use one of these.

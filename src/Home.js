@@ -8,9 +8,6 @@ import Footer from './components/Footer.js';
 
 function Home() {
 
-  // const vh = window.innerHeight;
-  // document.querySelector("#Home").style.setProperty('--vh', vh + 'px');
-
   const [sectionPositions, setSectionPositions] = useState([]); //Empty array because it is YET unknown where the lines are.
   //Is for the position of the About, Skills, Projects sections so it is possible to scroll there, and I use the lines for that.
   useEffect(() => { //This useEffect is similar to the mounted hook in vue. With the empty array [] it runs only once, otherwise it would run everytime the component (Home.js) updates.
@@ -26,10 +23,6 @@ function Home() {
     //.Y is the position on the y axes, because thats the only one that matters.
 
   }, []); //End.
-
-  function openContact() {
-    console.log("hehe:)");
-  } //It is wise to restructure the states so that they are all here on the Home.js
 
   let sizeScreen = window.matchMedia('(min-width: 1280px)');
   const stars = [];
@@ -54,18 +47,11 @@ function Home() {
 
   return (
     <div className="App">
-      {/* <div className="section-line line-header"></div> */}
-      <div className="section" id="Home"><Header /></div> {/* First page after animation */}
-      <Navigation openContact={() => openContact} sectionPositions = {sectionPositions} /> {/* Top bar with current page tekst and nav menu. About 200px*/}
-      {/* navigateToSection is a prop, which when called from Navigation, returns a name, and calls a method. */}
-      {/* <div className="section-line line-projects"></div> */}
-      <div className="section" id="Projects"><Projects /></div> {/* Projects page with 5 projects and a changing image, with the stack underneath the project link. */}
-      {/* <div className="section-line line-about"></div> */}
-      <div className="section" id="About"><About /></div> {/* About me page with the sliding paragraphs and an image. */}
-      {/* <div className="section-line line-skills"></div> */}
-      {/* <div className="section" id="Skills"><Skills /></div> Skills page with 3 items and these are switching content. */}
-      {/* <div className="line-footer"></div> */}
-      <div className="section" id="Contact"><Footer /></div> {/* Small, like 15% height section with contact info, is a link that links to the contact component. About 150px */}
+      <div className="section" id="Home"><Header /></div>
+      <Navigation sectionPositions = {sectionPositions} />
+      <div className="section" id="Projects"><Projects /></div>
+      <div className="section" id="About"><About /></div> 
+      <div className="section" id="Contact"><Footer /></div> 
       <div 
         className="star-container"
       >

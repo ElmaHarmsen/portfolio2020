@@ -1,14 +1,10 @@
 @import "./index.scss";
 
 .About {
-  display: flex;
-  flex-flow: column nowrap;
-  // justify-content: space-between;
 
   .about-title {
     @include screen-is(lg) {
       margin: 2rem 0rem;
-      font-size: 85px;
     }
   }
 
@@ -16,71 +12,12 @@
     margin: 2rem auto;
     color: var(--text-color);
 
-    @include screen-is(md) {
-      width: 70%;
-    }
-
     @include screen-is(lg) {
       width: 70%;
     }
 
     h2 {
       padding: 1rem 0rem;
-    }
-  }
-
-  .the-timeline {
-    border-top: 4px solid var(--border-color);
-
-    div {
-      width: 70%;
-      margin: 0rem auto;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
-
-      img {
-        opacity: 0;
-        padding: 1rem;
-        width: 12%;
-        height: auto;
-        transition: all 0.2s ease;
-        cursor: pointer;
-        // animation: spaceship infinite;
-      }
-      div {
-        height: 11rem;
-        margin-top: -3rem;
-        flex-basis: 33%;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-      }
-      div:first-of-type {
-        background-image: url(../src/assets/netherlands.svg);
-      }
-      div:nth-of-type(2) {
-        background-image: url(../src/assets/denmark.svg);
-      }
-      div:last-of-type {
-        background-image: url(../src/assets/netherlands.svg);
-      }
-      img:first-of-type {
-        animation-duration: 0.8s;
-      }
-      img:nth-of-type(2) {
-        animation-delay: 0.2;
-        animation-duration: 1s;
-      }
-      img:last-of-type {
-        animation-delay: 0.4s;
-        animation-duration: 0.9s;
-      }
-      span {
-        display: block;
-        width: 4px;
-        background-color: var(--border-color);
-      }
     }
   }
 }
@@ -108,7 +45,6 @@
 
       @include screen-is(lg) {
         justify-content: space-between;
-        align-items: center;
       }
       h2 {
         color: var(--text-color);
@@ -128,36 +64,32 @@
           bottom: calc(1rem + 8px + 52px); //padding, border and height of swiper navigation
           width: 10rem;
           transform: translateX(35%) rotate(-15deg);
+          margin: 0rem auto;
         }
       }
     }
   }
   .swiper-navigation {
-    width: 100%;
+    width: calc(2 * 50px);
     position: absolute;
-    bottom: unset;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
+    padding: .5rem .75rem;
 
     @include screen-is(lg) {
-      width: calc(2 * 50px);
       bottom: -4px;
-      top: unset;
-      margin-left: 50%;
-      transform: translateX(-50%);    
       border: 4px solid var(--border-color);
       background-color: var(--highlight-color);
-      padding: .5rem .75rem;
     }
 
     & > div {
       cursor: pointer;
 
       svg {
-        fill: var(--stars);
-        // opacity: .4;
+        fill: var(--border-color);
 
         @include screen-is(lg) {
           fill: var(--text-color);
