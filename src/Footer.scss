@@ -6,6 +6,8 @@
     padding: 1rem 1rem 0rem 1rem;
 
     .contact-title {
+      color: #FFC95E;
+
       @include screen-is(lg) {
         margin: 2rem 0rem;
       }
@@ -93,9 +95,9 @@
           a:first-of-type {
             img {
               clip-path: polygon(50% 0%, 64% 30%, 98% 35%, 74% 56%, 79% 91%, 50% 73%, 21% 91%, 26% 57%, 2% 35%, 35% 29%);            
-              background-color: var(--stars);
+              background-color: #FFC95E;
               padding: 8rem;
-              transition: .2s ease-out;
+              transition: 0.2s ease-out;
             }
           }
         }
@@ -106,9 +108,9 @@
           a:nth-of-type(2) {
             img {
               clip-path: polygon(50% 0%, 64% 30%, 98% 35%, 74% 56%, 79% 91%, 50% 73%, 21% 91%, 26% 57%, 2% 35%, 35% 29%);            
-              background-color: var(--stars);
+              background-color: #FFC95E;
               padding: 8rem;
-              transition: .2s ease-out;
+              transition: 0.2s ease-out;
             }
           }
         }
@@ -119,9 +121,9 @@
           a:last-of-type {
             img {
               clip-path: polygon(50% 0%, 64% 30%, 98% 35%, 74% 56%, 79% 91%, 50% 73%, 21% 91%, 26% 57%, 2% 35%, 35% 29%);            
-              background-color: var(--stars);
+              background-color: #FFC95E;
               padding: 8rem;
-              transition: .2s ease-out;
+              transition: 0.2s ease-out;
             }
           }
         }

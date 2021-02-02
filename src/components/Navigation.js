@@ -120,7 +120,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
   const theNavItems = navItems.map((item, index) => {
     return (
       <div key={item.name}>
-        <a><h1 onClick={() => navigateToSection(index)}>{item.name}</h1></a>
+        <a><h3 onClick={() => navigateToSection(index)}>{item.name}</h3></a>
       </div>
     )
   }); //This generates a header with the 4 navItems names. 

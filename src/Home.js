@@ -24,7 +24,7 @@ function Home() {
 
   }, []); //End.
 
-  let sizeScreen = window.matchMedia('(min-width: 1280px)');
+  let sizeScreen = window.matchMedia('(min-width: 768px)');
   const stars = [];
   if (sizeScreen.matches) {
     for (let starId = 0; starId < 301; starId++) {
@@ -32,6 +32,7 @@ function Home() {
         id: starId,
         positionX: Math.random() * window.innerWidth - 20,
         positionY: Math.random() * window.innerHeight - 20,
+        size: starId % 2 === 0 ? "4px" : "2px",
       })
     }
   }
@@ -56,7 +57,7 @@ function Home() {
         className="star-container"
       >
         {stars.map(star => {
-          return <span key={star.id} className="star" style={{top: star.positionY, left: star.positionX}}></span>
+          return <span key={star.id} className="star" style={{top: star.positionY, left: star.positionX, width: star.size, height: star.size}}></span>
         })}
       </div>
     </div>

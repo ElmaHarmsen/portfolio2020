@@ -7,6 +7,7 @@
     text-align: left;
     margin-bottom: 2rem;
     transform: rotate(-5deg);
+    color: #FFC95E;
 
     .current-greet {
       font-size: 85px;
@@ -25,21 +26,12 @@
       transform: none
     }
   }
-  .header-subgreet {
-    color: #fff;
-    text-align: center;
-  }
 
   .value {
     text-align: center;
 
     .value-text {
-      padding: 1.25rem;
       color: #fff;
-
-      @include screen-is(lg) {
-        padding: 2.5rem;
-      }
     }
   }
 
@@ -54,6 +46,7 @@
     width: 325px;
     height: 318px;
     margin: 0px auto 2rem auto;
+    position: relative;
 
     @include screen-is(lg) {
       height: 450px;
@@ -63,12 +56,12 @@
     @include screen-is(lg) {
       width: 80%;
       height: 563px;
-      margin: 2rem auto 0rem auto;
+      margin: 0rem auto;
     }
 
-    @include screen-is(xl) {
-      margin: 5rem auto 0px auto;
-    }
+    // @include screen-is(xl) {
+    //   margin: 0rem auto;
+    // }
 
     .value {
       position: absolute;
@@ -83,57 +76,71 @@
     .values-showing {
       opacity: 1;
     }
-  }
-  .figure-eyes {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    width: auto;
-    position: relative;
-    bottom: 276px;
-    margin: 0px auto;
 
-    @include screen-is(lg) {
-      bottom: 469px;
+    // Eyeballz start here
+    .figure-eyes {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      position: absolute;
+      top: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include screen-is(lg) {
+        top: 2.5rem;
+      }
+
+      span {
+        display: block;
+        background-color: #fff;
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        animation: "eye-blinking" 6s infinite;
+
+        @include screen-is(lg) {
+          width: 26px;
+          height: 26px;
+        }
+
+        @include screen-is(lg) {
+          width: 34px;
+          height: 34px;
+        }
+      }
+      span:first-of-type {
+        margin: 0px 1rem 0px -0.5rem;
+
+        @include screen-is(lg) {
+          margin: 0px 1.5rem 0px -0.75rem;
+        }
+
+        @include screen-is(lg) {
+          margin: 0px 2rem 0px -1rem;
+        }
+      }
     }
 
-    span {
-      display: block;
-      background-color: #fff;
-      width: 19px;
-      height: 19px;
-      border-radius: 50%;
-      animation: "eye-blinking" 6s infinite;
+    .header-subgreet {
+      position: absolute;
+      bottom: 40px; //2 * h2 font-size
+      color: #fff;
+      text-align: center;
 
       @include screen-is(lg) {
-        width: 26px;
-        height: 26px;
+        bottom: 60px;
       }
-
-      @include screen-is(lg) {
-        width: 34px;
-        height: 34px;
-      }
-    }
-    span:first-of-type {
-      margin: 0px 1rem 0px -0.5rem;
-
-      @include screen-is(lg) {
-        margin: 0px 1.5rem 0px -0.75rem;
-      }
-
-      @include screen-is(lg) {
-        margin: 0px 2rem 0px -1rem;
-      }
-    }
+    }  
   }
 
   img {
     height: 256px;
-    margin: 3rem 0px 0.5rem 0px;
+    margin: 0rem 0px 1.5rem 0px;
 
     @include screen-is(lg) {
       height: 356px;
+      margin: 0rem 0px 2rem 0px;
     }
 
     @include screen-is(lg) {

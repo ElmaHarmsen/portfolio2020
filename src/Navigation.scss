@@ -43,21 +43,21 @@
       &.open {
         span:first-of-type {
           transform: rotate(0deg);
-          transition: 0.1s ease-out;
+          transition: 0.2s ease-out;
         }
         span:nth-of-type(2) {
           opacity: 1;
-          transition: 0.1s ease-out;
+          transition: 0.2s ease-out;
         }
         span:last-of-type {
           transform: rotate(0deg);
-          transition: 0.1s ease-out ;
+          transition: 0.2s ease-out ;
         }
       }
       &.close {
         span:first-of-type {
           transform: rotate(-45deg) translate(-14px, 12px); 
-          transition: 0.1s ease-out;
+          transition: 0.2s ease-out;
 
           @include screen-is(lg) {
             transform: rotate(-45deg) translate(-17px, 15px);
@@ -65,11 +65,11 @@
         }
         span:nth-of-type(2) {
           opacity: 0;
-          transition: 0.1s ease-out;
+          transition: 0.2s ease-out;
         }
         span:last-of-type {
           transform: rotate(45deg) translate(-12px, -9px);
-          transition: 0.1s ease-out;
+          transition: 0.2s ease-out;
 
           @include screen-is(lg) {
             transform: rotate(45deg) translate(-15px, -13px);
@@ -91,7 +91,7 @@
   right: 0;
   background-color: var(--highlight-color);
   border-bottom: 4px solid var(--border-color);
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   transform: none;
 
   @include screen-is(lg) {
@@ -113,17 +113,16 @@
       transform: rotate(360deg);
     }
   }
-  h1 {
-    font-size: 40px;
-    color: var(--border-color);
-    transition: .2s ease;
+  h3 {
+    transition: 0.2s ease;
 
     @include screen-is(lg) {
       padding: 0.25rem 0rem;
     }
   }
-  h1:hover {
-    color: #FF6371;
+  h3:hover {
+    color: #FFC95E;
+    -webkit-text-stroke: 2px var(--black-transparent);
   }
 }
 
@@ -139,11 +138,11 @@
 
   @include screen-is(lg) {
     width: 5rem;
-    top: calc(5rem + 2.5rem + 1rem);
-    right: calc(5% + 2.5rem + 4px);
+    top: 2.5rem;
+    right: calc(5% - 5rem + 1.5rem);
   }
   @include screen-is(xl) {
-    right: calc(15% + 2.5rem + 4px);
+    right: calc(15% - 5rem + 1.5rem);
   }
 }
 
@@ -164,7 +163,7 @@
 
   @include screen-is(lg) {
     top: calc(8.5rem - 4px);
-    right: calc(2.5rem + 4px);
+    right: calc(2.5rem);
   }
 
   h2 {
@@ -180,8 +179,14 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    @include screen-is(lg) {
+      width: 5rem;
+      height: 5rem;
+      border: 4px solid #fcf8eb;
+    }
+
     &.to-light {
-      background-color: #4A62FF;
+      background-color: #1F3DFF;
       background-image: url("./assets/light-theme.svg");
     }
     &.to-dark {

@@ -42,10 +42,10 @@
       cursor: pointer;
 
       div {
-        transition: .15s ease;
+        transition: 0.2s ease;
       }
       div:hover {
-        background-color: var(--stars);
+        background-color: var(--heading-color);
         color: var(--both-black);
       }
 
@@ -79,10 +79,10 @@
 
     .project-link > a {
       text-decoration: underline 4px var(--border-color);
-      transition: .2s ease;
+      transition: 0.2s ease;
     }
     .project-link:hover > a {
-      color: #FF6371;
+      text-decoration-color: var(--heading-color);
     }
   }
   .projects-about > h2, a {
