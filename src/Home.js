@@ -42,6 +42,7 @@ function Home() {
         id: starId,
         positionX: Math.random() * window.innerWidth - 5,
         positionY: Math.random() * window.innerHeight - 5,
+        size: starId % 2 === 0 ? "4px" : "2px",
       })
     }
   }

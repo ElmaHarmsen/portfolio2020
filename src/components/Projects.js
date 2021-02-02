@@ -102,7 +102,7 @@ function Projects() {
           <SwiperSlide>
             <div className="swiper-slide">
               <h1>Internship<br></br>Project</h1>
-              <h2 className="project-title"><a href="https://test.infantmotorprofile.com/">infantmotorprofile.com</a></h2>
+              <h2 className="project-link"><a href="https://test.infantmotorprofile.com/">infantmotorprofile.com</a></h2>
               <ul>
                 <li>VueJs framework</li>
                 <li>Vuex state management</li>

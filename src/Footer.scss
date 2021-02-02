@@ -3,20 +3,21 @@
 .Footer {
 
   .contact-header {
-    padding: 1rem 1rem 0rem 1rem;
+    padding: 1rem;
 
     .contact-title {
+      width: auto;
       color: #FFC95E;
+      padding-bottom: 1rem;
 
       @include screen-is(lg) {
         margin: 2rem 0rem;
       }
     }
   
-    h2 {
-      padding: 1rem 0rem;
+    h2 {  
       color: #fcf8eb;
-  
+
       @include screen-is(lg) {
         padding: 0rem;
       }
@@ -25,10 +26,11 @@
 
   .contact-links-wrapper {
     position: relative;
+    bottom: 0;
     width: 100%;
     height: 100%;
     background-color: var(--border-color);
-    clip-path: polygon(0 10.5%, 100% 3.9%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 11%, 100% 3%, 100% 100%, 0% 100%);
 
     @include screen-is(lg) {
       background: none;
@@ -37,11 +39,11 @@
     .contact-links {
       display: flex;
       flex-flow: column;
-      justify-content: space-evenly;
+      justify-content: center;
       width: auto;
       height: calc(100% - 4px);
       background-color: var(--section-color);
-      clip-path: polygon(0 10.5%, 100% 3.9%, 100% 100%, 0% 100%);
+      clip-path: polygon(0 11%, 100% 3%, 100% 100%, 0% 100%);
       position: absolute;
       top: 4px;
       left: 0;
@@ -49,6 +51,8 @@
       bottom: 0;
   
       a {
+        margin: 1rem 0rem;
+
         img {
           width: 20%;
           margin: 0rem auto 0rem 50%;
@@ -59,22 +63,6 @@
             transform: none;
           }
         }
-      }
-  
-      .sm-line-divider {
-        display: block;
-        width: 100%;
-        height: 4px;
-        background-color: var(--border-color);
-        transform: rotate(-5deg);
-  
-        @include screen-is(lg) {
-          display: none;
-        }
-      }
-  
-      .sm-line-divider:first-of-type {
-        background-color: transparent;
       }
   
       @include screen-is(lg) {
