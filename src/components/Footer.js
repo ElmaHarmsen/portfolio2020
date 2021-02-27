@@ -9,7 +9,7 @@ function Footer() {
     <section>
       <div className="Footer">
         <div className="contact-header">
-          <h1 className="contact-title">Explore <br className="sm-only"></br> new Worlds</h1>
+          <h1 className="contact-title">Exploring <br className="sm-only"></br> new Worlds</h1>
           <h2>
             ...is the best course to find new opportunities! <br></br>
             Feel like reaching out? Please use one of these.
@@ -17,9 +17,9 @@ function Footer() {
         </div>
         <div className="contact-links-wrapper">
           <div className={cc(["contact-links", currentColumn && "highlight--" + currentColumn ])}>
-            <a onMouseEnter={() => setColumn(1)} onMouseLeave={() => setColumn(null)} href="https://drive.google.com/file/d/12nMt10qPcNYyFJ9FUwosLf1GufMhQjxD/view?usp=sharing" target="blank"><img src={require("../assets/cv.svg")} /></a>
+            <a onMouseEnter={() => setColumn(1)} onMouseLeave={() => setColumn(null)} href="https://drive.google.com/file/d/1nfJM1PvPeCaF-epkzyHT4DNn3pVM6MvL/view?usp=sharing" target="blank"><img src={require("../assets/cv.svg")} /></a>
             <a onMouseEnter={() => setColumn(2)} onMouseLeave={() => setColumn(null)} href="mailto:elmaharmsen01@gmail.com"><img src={require("../assets/gmail.svg")} /></a>
-            <a onMouseEnter={() => setColumn(3)} onMouseLeave={() => setColumn(null)} href="https://www.linkedin.com/in/elma-harmsen-087872181/" target="blank"><img src={require("../assets/linkedin.svg")} /></a>
+            <a onMouseEnter={() => setColumn(3)} onMouseLeave={() => setColumn(null)} href="https://github.com/ElmaHarmsen" target="blank"><img src={require("../assets/github-logo.svg")} /></a>
           </div>
         </div>
       </div>

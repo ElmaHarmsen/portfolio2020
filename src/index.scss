@@ -27,7 +27,7 @@ $breakpoints: (
   "sm": 0, //Phone
   "md": 768px, //Tablet
   "lg": 1440px, //Small Laptop
-  "xl": 2560px //Big Screen
+  "xl": 2060px //Big Screen
 );
 
 //Formula for breakpoint
@@ -63,6 +63,7 @@ h1 {
   @include screen-is(lg) {
     font-size: 85px;
     -webkit-text-stroke: 3px var(--black-transparent);
+    letter-spacing: 4px;
   } 
   @include screen-is(xl) {
     font-size: 120px;
