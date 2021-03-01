@@ -18,18 +18,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
       JSON.parse(window.localStorage.getItem("darkTheme")) ? setDarkTheme(true) : setDarkTheme(false);
       //The localStorage string gets parsed back here as its original type (boolean) & gets the boolean value of darkTheme data property
     }
-
-    const localStorageResult = window.localStorage.getItem("languageSetting") ? window.localStorage.getItem("languageSetting") : null;
-    localStorageResult ? setLanguage(localStorageResult) : setLanguage("nl");
   }, []);
-
-  const [languageSetting, setLanguage] = useState(null);
-
-  useEffect(() => {
-    if (languageSetting) {
-      window.localStorage.setItem("languageSetting", languageSetting);
-    }
-  }, [languageSetting]);
 
   const [darkTheme, setDarkTheme] = useState(false);
   //darkTheme is a data property & setDarkTheme changes this data value, by default this boolean is false
@@ -157,8 +146,8 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
         <div className="theme-switch" onClick={() => setDarkTheme(!darkTheme)}>
           <span className={darkTheme ? "to-light" : "to-dark"}></span>
         </div>
-        <div className="language-switch" onClick={() => setLanguage(languageSetting === "nl" ? "en" : "nl")}>
-          <h1>{languageSetting}</h1>
+        <div className="language-switch" onClick={() => props.onLanguageChange(props.languageSetting === "nl" ? "en" : "nl")}>
+          <h1>{props.languageSetting === "nl" ? "en" : "nl"}</h1>
         </div>
       </div>
     </section>

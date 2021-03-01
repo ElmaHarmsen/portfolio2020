@@ -21,8 +21,17 @@ function Home() {
     //window.pageYOffset means in counts in the amount of px the person already scrolled.
     //getBoundingClientRect is a JS thingy, it returns he size of an element and its position relative to the viewport.
     //.Y is the position on the y axes, because thats the only one that matters.
-
+    const localStorageResult = window.localStorage.getItem("languageSetting") ?? "nl";
+    setLanguage(localStorageResult);
   }, []); //End.
+
+  const [languageSetting, setLanguage] = useState(null);
+
+  useEffect(() => {
+    if (languageSetting) {
+      window.localStorage.setItem("languageSetting", languageSetting);
+    }
+  }, [languageSetting]);
 
   let sizeScreen = window.matchMedia('(min-width: 768px)');
   const stars = [];
@@ -49,11 +58,11 @@ function Home() {
 
   return (
     <div className="App">
-      <div className="section" id="Home"><Header /></div>
-      <Navigation sectionPositions = {sectionPositions} />
-      <div className="section" id="Projects"><Projects /></div>
-      <div className="section" id="About"><About /></div> 
-      <div className="section" id="Contact"><Footer /></div> 
+      <div className="section" id="Home"><Header languageSetting = {languageSetting} /></div>
+      <Navigation sectionPositions = {sectionPositions} languageSetting = {languageSetting} onLanguageChange = {(value => setLanguage(value))} />
+      <div className="section" id="Projects"><Projects languageSetting = {languageSetting} /></div>
+      <div className="section" id="About"><About languageSetting = {languageSetting} /></div> 
+      <div className="section" id="Contact"><Footer languageSetting = {languageSetting} /></div> 
       <div 
         className="star-container"
       >

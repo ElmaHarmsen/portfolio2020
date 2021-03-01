@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import dictionary from "../languages";
 import '../Header.scss';
 
-function Header() {
+function Header(props) {
 
   const [currentValue, changeValue] = useState(0);
   const [currentGreet, changeGreet] = useState("");
@@ -13,27 +13,27 @@ function Header() {
       img: "2000x1800-Standing"
     },
     {
-      value: "efficient web development",
+      value: "header_figure_value_dev",
       img: "2000x1800-WebDev"
     },
     {
-      value: "a good bike trip",
+      value: "header_figure_value_bike",
       img: "2000x1800-Bike"
     },
     {
-      value: "enjoying the work",
+      value: "header_figure_value_work",
       img: "2000x1800-Enjoy"
     },
     {
-      value: "good speakers for music",
+      value: "header_figure_value_speakers",
       img: "2000x1800-Speaker"
     },
     {
-      value: "learning new technologies",
+      value: "header_figure_value_technologies",
       img: "2000x1800-Learning"
     },
     {
-      value: "having plants",
+      value: "header_figure_value_plants",
       img: "2000x1800-Plants"
     }
   ];
@@ -41,7 +41,7 @@ function Header() {
   const portfolioValues = values.map((item) => 
     <div className="value" key={item.img}>
       <img className="value-figure" src={require(`../assets/${item.img}.png`)} alt=""/>
-      <h2 className="value-text">{item.value}</h2>
+      <h2 className="value-text">{dictionary(item.value, props.languageSetting)}</h2>
     </div>
   );
 
@@ -70,14 +70,14 @@ function Header() {
   return (
     <section>
       <div className="Header">
-        <h1 className="header-greet"><span className="current-greet">{currentGreet}</span> <br></br>{dictionary("header_greet")}!</h1>
+        <h1 className="header-greet"><span className="current-greet">{currentGreet}</span> <br></br>{dictionary("header_greet", props.languageSetting)}!</h1>
         <div className="values-slides">
           <div className="figure-eyes">
             <span></span>
             <span></span>
           </div>
           {portfolioValues}
-          <h2 className="header-subgreet">{dictionary("header_figure_text")}</h2>
+          <h2 className="header-subgreet">{dictionary("header_figure_text", props.languageSetting)}</h2>
         </div>
       </div>
     </section>

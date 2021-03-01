@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../Projects.scss';
 
 import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import dictionary from '../languages';
 SwiperCore.use(Navigation);
 
-function Projects() {
-  useEffect(() => {
-    console.log("hi");
-  }, []);
+function Projects(props) {
   const [currentProject, changeProject] = useState({
     id: 1,
-    title: "Internship Project",
-    description: "07.09.20 - 15.01.21 | During my internship at Appademic I developed the frontend for the Infant Motor Profile app. This included transferring data with the use of a state management system, a database connection, and the finalization of my design with the help of various Usability tests. Though what I had developed stayed to be merely a temporarily concept.",
+    title: "projects_internship_title",
+    description: "projects_internship",
     url: "https://test.infantmotorprofile.com/",
     link: "infantmotorprofile.com",
     stack1: "VueJs framework",
@@ -24,8 +22,8 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Internship Project",
-      description: "07.09.20 - 15.01.21 | During my internship at Appademic I developed the frontend for the Infant Motor Profile app. This included transferring data with the use of a state management system, a database connection, and the finalization of my design with the help of various Usability tests. Though what I had developed stayed to be merely a temporarily concept.",
+      title: "projects_internship_title",
+      description: "projects_internship",
       url: "https://test.infantmotorprofile.com/",
       link: "infantmotorprofile.com",
       stack1: "VueJs framework",
@@ -35,8 +33,8 @@ function Projects() {
       },
     {
       id: 2,
-      title: "Snake Game",
-      description: "01.09.2020 - 13.09.2020 | For the Danish organization FEUM I developed a minigame in addition to their ticketing selling platform. Complete with timer countdown, score counter, increasement of the player speed, including a fitting theme and music, it served well to its purpose and is easily reusable for future events.",
+      title: "projects_game_title",
+      description: "projects_game",
       url: "https://feum-game.netlify.app/",
       link: "snakegame.app",
       stack1: "HTML",
@@ -46,8 +44,8 @@ function Projects() {
     },
     {
       id: 3,
-      title: "Ducky Dictionary",
-      description: "2020 - 2021 | For the purpose of learning VueJs I developed a dictionary platform. Though it is protected with a login functionality which is using ExpressJs api connected to a database in MongoDB. The website serves various functionalities, like adding, editing and removing words, searching for words and many more are on its way.",
+      title: "projects_ducky_title",
+      description: "projects_ducky",
       url: "https://duckydictionary.netlify.app/login",
       link: "duckydictionary.app",
       stack1: "VueJs framework",
@@ -62,20 +60,20 @@ function Projects() {
       <div className="projects-list">
         <div>
           <div onClick={() => changeProject(projects.find(project => project.id === 1))}>
-            <h2>Internship Project</h2>
+            <h2>{dictionary("projects_internship_title", props.languageSetting)}</h2>
           </div>
           <span></span>
           <div onClick={() => changeProject(projects.find(project => project.id === 2))}>
-            <h2>Snake Game</h2>
+            <h2>{dictionary("projects_game_title", props.languageSetting)}</h2>
           </div>
           <span></span>
           <div onClick={() => changeProject(projects.find(project => project.id === 3))}>
-            <h2>Ducky Dictionary</h2>
+            <h2>{dictionary("projects_ducky_title", props.languageSetting)}</h2>
           </div>          
         </div>
       </div>
       <div className="project-lg"> {/* the key is only 1 unique thing inside the const, not all of them */}
-        <h1 className="project-title">{currentProject.title}</h1>
+        <h1 className="project-title">{dictionary(currentProject.title, props.languageSetting)}</h1>
         <div className="project-details">
           <div className="projects-about">
             <h2 className="project-link"><a href={currentProject.url} target="blank">{currentProject.link}</a></h2>
@@ -85,7 +83,7 @@ function Projects() {
             <h2>{currentProject.stack3}</h2>
             <h2>{currentProject.stack4}</h2>
           </div>
-          <h2>{currentProject.description}</h2>
+          <h2>{dictionary(currentProject.description, props.languageSetting)}</h2>
         </div>
       </div>
       <div className="project-sm">
@@ -109,7 +107,7 @@ function Projects() {
                 <li>JavaScript</li>
                 <li>TailwindCSS framework</li>
               </ul>
-              <h2 className="project-description">07.09.20 - 15.01.21 During my internship at Appademic I developed the frontend for the Infant Motor Profile app. This included transferring data with the use of a state management system, a database connection, and the finalization of my design with the help of various Usability tests. Though what I had developed stayed to be merely a concept.</h2>
+              <h2 className="project-description">{dictionary("projects_internship", props.languageSetting)}</h2>
             </div>
           </SwiperSlide>
           <SwiperSlide>
