@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import dictionary from "../languages";
 import '../Header.scss';
 
 function Header() {
@@ -69,14 +70,14 @@ function Header() {
   return (
     <section>
       <div className="Header">
-        <h1 className="header-greet"><span className="current-greet">{currentGreet}</span> <br></br> from Elma!</h1>
+        <h1 className="header-greet"><span className="current-greet">{currentGreet}</span> <br></br>{dictionary("header_greet")}!</h1>
         <div className="values-slides">
           <div className="figure-eyes">
             <span></span>
             <span></span>
           </div>
           {portfolioValues}
-          <h2 className="header-subgreet">I stand for...</h2>
+          <h2 className="header-subgreet">{dictionary("header_figure_text")}</h2>
         </div>
       </div>
     </section>

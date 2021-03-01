@@ -133,6 +133,7 @@
   top: 5rem;
   right: 4px;
   display: flex;
+  flex-flow: column;
   justify-content: flex-end;
   align-items: center;
 
@@ -147,12 +148,33 @@
 }
 
 .language-switch {
-  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;  
+  margin-top: .2rem;
+
+  @include screen-is(lg) {
+    width: 5rem;
+    height: 5rem;
+    border: 4px solid #fcf8eb;
+    background-color: #010205;
+    margin-top: 1rem;
+  }
 
   h1 {
-    font-size: 35px;
-    color: var(--text-color);
+    text-align: center;
+    color: #fcf8eb;
+    letter-spacing: .2rem;
+    font-size: 25px;
+    -webkit-text-stroke: 0px var(--black-transparent);
+
+    @include screen-is(lg) {
+      font-size: 65px;
+    }
   }
 }
 
@@ -164,10 +186,6 @@
   @include screen-is(lg) {
     top: calc(8.5rem - 4px);
     right: calc(2.5rem);
-  }
-
-  h2 {
-    color: #000;
   }
 
   span {
