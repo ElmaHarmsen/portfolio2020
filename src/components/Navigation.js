@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import '../Navigation.scss'; //Use .. for one level back. 
 import '../index.scss';
+import dictionary from '../languages';
 
 //This is a functional components, not a class component.
 function Navigation(props) { //Navigation is the name of the component. //Between () are the props that can be used within the HTML.
@@ -98,19 +99,19 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
 
   const navItems = [
     {
-      name: "Hello",
+      name: "nav_header",
       position: props.sectionPositions[0]
     },
     {
-      name: "Projects",
+      name: "nav_projects",
       position: props.sectionPositions[1]
     },
     {
-      name: "About",
+      name: "nav_about",
       position: props.sectionPositions[2]
     },
     {
-      name: "Contact",
+      name: "nav_contact",
       position: props.sectionPositions[3]
     }
   ]//This generates 4 navitems which know to wich position to scroll to when you click it.
@@ -120,7 +121,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
   const theNavItems = navItems.map((item, index) => {
     return (
       <div key={item.name}>
-        <a><h3 onClick={() => navigateToSection(index)}>{item.name}</h3></a>
+        <a><h3 onClick={() => navigateToSection(index)}>{dictionary(item.name, props.languageSetting)}</h3></a>
       </div>
     )
   }); //This generates a header with the 4 navItems names. 

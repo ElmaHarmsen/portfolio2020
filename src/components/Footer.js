@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import cc from "classcat";
+import dictionary from "../languages";
 import '../Footer.scss';
 
-function Footer() {
+function Footer(props) {
   const [currentColumn, setColumn] = useState(null);
 
   return (
     <section>
       <div className="Footer">
         <div className="contact-header">
-          <h1 className="contact-title">Exploring <br className="sm-only"></br> new Worlds</h1>
+          <h1 className="contact-title">{dictionary("footer_title_first_word", props.languageSetting)} <br className="sm-only"></br> {dictionary("footer_title", props.languageSetting)}</h1>
           <h2>
-            ...is the best course to find new opportunities! <br></br>
-            Feel like reaching out? Please use one of these.
+            {dictionary("footer_subgreet_1", props.languageSetting)}<br></br>
+            {dictionary("footer_subgreet_2", props.languageSetting)}
           </h2>
         </div>
         <div className="contact-links-wrapper">
