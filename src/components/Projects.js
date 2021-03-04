@@ -120,7 +120,7 @@ function Projects(props) {
                 <li>JavaScript</li>
                 <li>Phaser.io</li>
               </ul>
-              <h2 className="project-description">01.09.2020 - 13.09-2020 For the Danish organization FEUM I developed a minigame in addition to their ticketing selling platform. Complete with timer countdown, score counter, increasement of the player speed, including a fitting theme and music, it served well to its purpose and is easily reusable for future events.</h2>
+              <h2 className="project-description">{dictionary("projects_game", props.languageSetting)}</h2>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -133,7 +133,7 @@ function Projects(props) {
                 <li>JavaScript, SCSS</li>
                 <li>ExpressJs</li>
               </ul>
-              <h2 className="project-description">2020 - 2021 For the purpose of learning VueJs I developed a dictionary platform. Though it is protected with a login functionality which is using ExpressJs api connected to a database in MongoDB. The website serves various functionalities, like adding, editing and removing words, searching for words and many more are on its way.</h2>
+              <h2 className="project-description">{dictionary("projects_ducky", props.languageSetting)}</h2>
             </div>
           </SwiperSlide>
           <div className="swiper-navigation">
