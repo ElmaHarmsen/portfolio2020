@@ -48,7 +48,7 @@ const languageToContent = {
     nl: "het hebben van planten"
   },
   projects_internship_title: {
-    en: "Intenship Project",
+    en: "Internship Project",
     nl: "Stageopdracht"
   },
   projects_game_title: {
@@ -75,6 +75,10 @@ const languageToContent = {
     en: "Journey",
     nl: "Toer"
   },
+  about_me_intro: {
+    en: "Hi, this is me.",
+    nl: "Hi, dit ben ik."
+  },
   about_hanze_intro: {
     en: "01.09.17 ~ 2021 | Hanzehogeschool in Groningen, the Netherlands. Bachelor Communication & Multimedia Design.",
     nl: "01.09.17 ~ 2021 | Hanzehogeschool in Groningen, Nederland. Bachelor Communication & Multimedia Design."
@@ -90,6 +94,14 @@ const languageToContent = {
   about_future_intro: {
     en: "01.09.21 ~ 2022 | In this time I will be attending ~a company~ for my Communication & Multimedia Design bachelor project.",
     nl: "01.09.21 ~ 2022 | In deze periode ga ik bij ~een bedrijf~ mijn bachelor project in Communicatie & Multimedia Design uitvoeren."
+  },
+  about_me_summary: {
+    en: "I am an Imaginative thinker, Code writer, and Creative developer.",
+    nl: "Ik ben een Fantasierijke denker, Codeschrijver, en Creatief ontwikkelaar."
+  },
+  about_me_readmore: {
+    en: "Swipe right to read the key moments of my professional journey!",
+    nl: "Swipe naar rechts, en lees de belangrijkste momenten van mijn professionele reis."
   },
   about_hanze_story: {
     en: "Starting my design and development journey in my hometown located in the very north of the Netherlands, I joined the Hanze for my bachelor program. After surviving through various courses related to designing, I started appreciating the ones in development much more, and as such I adjusted my education program.",
