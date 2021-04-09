@@ -64,8 +64,8 @@ const languageToContent = {
     nl: "07.09.20 ~ 15.01.21 | Tijdens mijn stage bij Appademic heb ik de frontend code ontwikkeld voor de Infant Motor Profile app. Dit omvatte taken als het overdragen van gegevens met behulp van een state management systeem, een databaseverbinding, en het afronden van mijn ontwerp met behulp van verschillende Usability tests. Echter, wat ik had ontwikkeld, bleef slechts een tijdelijk concept."
   },
   projects_game: {
-    en: "01.09.2020 ~ 13.09.2020 | For the Danish non-profit organization FEUM I developed a minigame in addition to their ticketing selling platform. Complete with timer countdown, score counter, increasement of the player speed, including a fitting theme and music, it served well to its purpose and is easily reusable for future events.",
-    nl: "01.09.2020 ~ 13.09.2020 | Voor de Deense non-profit organisatie FEUM heb ik een minigame ontwikkeld voor hun ticketverkoop platform. Het is compleet met een timer, scoreteller, verhoging van de spelersnelheid, inclusief een passend thema en muziek. De minigame het werkte goed voor zijn doel en is gemakkelijk herbruikbaar voor toekomstige evenementen."
+    en: "01.09.2020 ~ 13.09.2020 | For the Danish non-profit organization FEUM I developed a minigame in addition to their ticketing selling platform. Complete with timer countdown, score counter, increasement of the player speed, including a fitting theme and music, it served well to its purpose and is easily reusable for future events. Play the game!",
+    nl: "01.09.2020 ~ 13.09.2020 | Voor de Deense non-profit organisatie FEUM heb ik een minigame ontwikkeld voor hun ticketverkoop platform. Het is compleet met een timer, scoreteller, verhoging van de spelersnelheid, inclusief een passend thema en muziek. De minigame het werkte goed voor zijn doel en is gemakkelijk herbruikbaar voor toekomstige evenementen. Speel de game!"
   },
   projects_ducky: {
     en: "2020 ~ 2021 | For the purpose of learning VueJs I developed a dictionary platform. It is protected with a login functionality which is using ExpressJs api connected to a database in MongoDB. Besides, the website serves various functionalities, like adding, editing and removing words, searching for words, and many more are on its way.",
@@ -96,12 +96,8 @@ const languageToContent = {
     nl: "01.09.21 ~ 2022 | In deze periode ga ik bij ~een bedrijf~ mijn bachelor project in Communicatie & Multimedia Design uitvoeren."
   },
   about_me_summary: {
-    en: "I am an Imaginative thinker, Code writer, and Creative developer.",
-    nl: "Ik ben een Fantasierijke denker, Codeschrijver, en Creatief ontwikkelaar."
-  },
-  about_me_readmore: {
-    en: "Swipe right to read the key moments of my professional journey!",
-    nl: "Swipe naar rechts, en lees de belangrijkste momenten van mijn professionele reis."
+    en: "I like developing for the web. Doing so, I am an Imaginative thinker, Code writer, and Creative developer. I am ambitious to create something inspiring and beautiful. Swipe right to read more about the key moments!",
+    nl: "Mijn passie ligt bij web ontwikkeling. Daarbij ben ik een Fantasierijke denker, Codeschrijver, en Creatief ontwikkelaar. Ik ben ambitieus om iets inspirerend en moois te creëren. Swipe naar rechts om meer te lezen over de belangrijkste momenten!"
   },
   about_hanze_story: {
     en: "Starting my design and development journey in my hometown located in the very north of the Netherlands, I joined the Hanze for my bachelor program. After surviving through various courses related to designing, I started appreciating the ones in development much more, and as such I adjusted my education program.",

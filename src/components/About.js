@@ -26,35 +26,34 @@ function About(props) {
               <img className="slide-me" src={require("../assets/me.jpg")} />
               <h2 className="about-me-intro">{dictionary("about_me_intro", props.languageSetting)}</h2>
             </div>
-            <h2>{dictionary("about_me_summary", props.languageSetting)}</h2>
-            <h2>{dictionary("about_me_readmore", props.languageSetting)}</h2>
+            <p>{dictionary("about_me_summary", props.languageSetting)}</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-slide">
             <h2>{dictionary("about_hanze_intro", props.languageSetting)}</h2>
-            <h2>{dictionary("about_hanze_story", props.languageSetting)}</h2>              
+            <p>{dictionary("about_hanze_story", props.languageSetting)}</p>              
           </div>
           <img className="slide-flag" src={require("../assets/hanze.png")} />
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-slide">
             <h2>{dictionary("about_aarhus_intro", props.languageSetting)}</h2>
-            <h2>{dictionary("about_aarhus_story", props.languageSetting)}</h2>
+            <p>{dictionary("about_aarhus_story", props.languageSetting)}</p>
           </div>
           <img className="slide-flag" src={require("../assets/denmark.svg")} />
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-slide">
             <h2>{dictionary("about_appademic_intro", props.languageSetting)}</h2>
-            <h2>{dictionary("about_appademic_story", props.languageSetting)}</h2>
+            <p>{dictionary("about_appademic_story", props.languageSetting)}</p>
           </div>
           <img className="slide-flag" src={require("../assets/netherlands.svg")} />
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-slide">
             <h2>{dictionary("about_future_intro", props.languageSetting)}</h2>
-            <h2>{dictionary("about_future_story", props.languageSetting)}</h2>
+            <p>{dictionary("about_future_story", props.languageSetting)}</p>
           </div>
           <img className="slide-flag" src={require("../assets/european-union.svg")} />
         </SwiperSlide>

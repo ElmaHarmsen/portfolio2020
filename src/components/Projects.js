@@ -11,8 +11,8 @@ function Projects(props) {
     id: 1,
     title: "projects_internship_title",
     description: "projects_internship",
-    url: "https://test.infantmotorprofile.com/",
-    link: "infantmotorprofile.com",
+    // url: "https://test.infantmotorprofile.com/",
+    // link: "infantmotorprofile.com",
     stack1: "VueJs framework",
     stack2: "Vuex state management",
     stack3: "JavaScript",
@@ -24,8 +24,8 @@ function Projects(props) {
       id: 1,
       title: "projects_internship_title",
       description: "projects_internship",
-      url: "https://test.infantmotorprofile.com/",
-      link: "infantmotorprofile.com",
+      // url: "https://test.infantmotorprofile.com/",
+      // link: "infantmotorprofile.com",
       stack1: "VueJs framework",
       stack2: "Vuex state management",
       stack3: "JavaScript",
@@ -46,8 +46,8 @@ function Projects(props) {
       id: 3,
       title: "projects_ducky_title",
       description: "projects_ducky",
-      url: "https://duckydictionary.netlify.app/login",
-      link: "duckydictionary.app",
+      // url: "https://duckydictionary.netlify.app/login",
+      // link: "duckydictionary.app",
       stack1: "VueJs framework",
       stack2: "Vuex state management",
       stack3: "JavaScript, SCSS",
@@ -77,13 +77,14 @@ function Projects(props) {
         <div className="project-details">
           <div className="projects-about">
             <h2 className="project-link"><a href={currentProject.url} target="blank">{currentProject.link}</a></h2>
-            <br></br>
+            {/* <img className="project-picture" src={require("../assets/ducky.png")} alt=""/> */}
+            {/* <br></br> */}
             <h2>{currentProject.stack1}</h2>
             <h2>{currentProject.stack2}</h2>
             <h2>{currentProject.stack3}</h2>
             <h2>{currentProject.stack4}</h2>
           </div>
-          <h2>{dictionary(currentProject.description, props.languageSetting)}</h2>
+          <p>{dictionary(currentProject.description, props.languageSetting)}</p>
         </div>
       </div>
       <div className="project-sm">
@@ -100,6 +101,7 @@ function Projects(props) {
           <SwiperSlide>
             <div className="swiper-slide">
               <h1>Internship<br></br>Project</h1>
+              <br></br>
               <h2 className="project-link"><a href="https://test.infantmotorprofile.com/">infantmotorprofile.com</a></h2>
               <ul>
                 <li>VueJs framework</li>
@@ -107,12 +109,13 @@ function Projects(props) {
                 <li>JavaScript</li>
                 <li>TailwindCSS framework</li>
               </ul>
-              <h2 className="project-description">{dictionary("projects_internship", props.languageSetting)}</h2>
+              <p className="project-description">{dictionary("projects_internship", props.languageSetting)}</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="swiper-slide">
-            <h1>Snake<br></br>Game</h1>
+              <h1>Snake<br></br>Game</h1>
+              <br></br>
               <h2 className="project-title"><a href="https://feum-game.netlify.app/">snakegame.app</a></h2>
               <ul>
                 <li>HTML</li>
@@ -120,12 +123,13 @@ function Projects(props) {
                 <li>JavaScript</li>
                 <li>Phaser.io</li>
               </ul>
-              <h2 className="project-description">{dictionary("projects_game", props.languageSetting)}</h2>
+              <p className="project-description">{dictionary("projects_game", props.languageSetting)}</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="swiper-slide">
-            <h1>Ducky<br></br>Dictionary</h1>
+              <h1>Ducky<br></br>Dictionary</h1>
+              <br></br>
               <h2 className="project-title"><a href="https://duckydictionary.netlify.app/login">duckydictionary.app</a></h2>
               <ul>
                 <li>VueJs framework</li>
@@ -133,7 +137,7 @@ function Projects(props) {
                 <li>JavaScript, SCSS</li>
                 <li>ExpressJs</li>
               </ul>
-              <h2 className="project-description">{dictionary("projects_ducky", props.languageSetting)}</h2>
+              <p className="project-description">{dictionary("projects_ducky", props.languageSetting)}</p>
             </div>
           </SwiperSlide>
           <div className="swiper-navigation">
