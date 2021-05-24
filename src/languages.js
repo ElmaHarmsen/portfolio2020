@@ -47,9 +47,9 @@ const languageToContent = {
     en: "having plants",
     nl: "het hebben van planten"
   },
-  projects_internship_title: {
-    en: "Internship Project",
-    nl: "Stageopdracht"
+  projects_events_title: {
+    en: "Random Events",
+    nl: "Random Events"
   },
   projects_game_title: {
     en: "Snake Game",
@@ -59,9 +59,9 @@ const languageToContent = {
     en: "Ducky Dictionary",
     nl: "Ducky Dictionary"
   },
-  projects_internship: {
-    en: "07.09.20 ~ 15.01.21 | During my internship at Appademic I developed the frontend for the Infant Motor Profile app. This included transferring data with the use of a state management system, a database connection, and the finalization of my design with the help of various Usability tests. Though what I had developed stayed to be merely a temporarily concept.",
-    nl: "07.09.20 ~ 15.01.21 | Tijdens mijn stage bij Appademic heb ik de frontend code ontwikkeld voor de Infant Motor Profile app. Dit omvatte taken als het overdragen van gegevens met behulp van een state management systeem, een databaseverbinding, en het afronden van mijn ontwerp met behulp van verschillende Usability tests. Echter, wat ik had ontwikkeld, bleef slechts een tijdelijk concept."
+  projects_events: {
+    en: "06.02.21 | Since the beginning of this year I decided to create a project with connecting a CMS, simply because I hadn't done it yet. I got inspired by 'State of JS 2020' to find technologies fitting my project in mind; a website for hosting of events.",
+    nl: "06.02.21 | Sinds begin dit jaar dacht ik erover een project met CMS verbinding te maken, simpelweg omdat ik het nog niet had gedaan en ik het wilde leren. 'State of JS 2020' inspireerde mij om de juiste technologieën te vinden die bij dit project passen; een website voor het hosten van evenementen."
   },
   projects_game: {
     en: "01.09.2020 ~ 13.09.2020 | For the Danish non-profit organization FEUM I developed a minigame in addition to their ticketing selling platform. Complete with timer countdown, score counter, increasement of the player speed, including a fitting theme and music, it served well to its purpose and is easily reusable for future events. Play the game!",
@@ -92,8 +92,8 @@ const languageToContent = {
     nl: "07.09.20 ~ 15.01.21 | Appademic in Groningen, Nederland. Frontend development stage."
   },
   about_future_intro: {
-    en: "01.09.21 ~ 2022 | In this time I will be attending ~a company~ for my Communication & Multimedia Design bachelor project.",
-    nl: "01.09.21 ~ 2022 | In deze periode ga ik bij ~een bedrijf~ mijn bachelor project in Communicatie & Multimedia Design uitvoeren."
+    en: "01.09.21 ~ 2022 | In this time I will be attending 'Blue Flamingos' for my Communication & Multimedia Design bachelor project.",
+    nl: "01.09.21 ~ 2022 | In deze periode ga ik bij 'Blue Flamingos' mijn bachelor project in Communicatie & Multimedia Design uitvoeren."
   },
   about_me_summary: {
     en: "I like developing for the web. Doing so, I am an Imaginative thinker, Code writer, and Creative developer. I am ambitious to create something inspiring and beautiful. Swipe right to read more about the key moments!",

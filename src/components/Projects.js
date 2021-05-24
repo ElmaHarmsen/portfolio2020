@@ -9,27 +9,29 @@ SwiperCore.use(Navigation);
 function Projects(props) {
   const [currentProject, changeProject] = useState({
     id: 1,
-    title: "projects_internship_title",
-    description: "projects_internship",
-    // url: "https://test.infantmotorprofile.com/",
-    // link: "infantmotorprofile.com",
+    title: "projects_events_title",
+    description: "projects_events",
+    url: "https://randomevents.netlify.app/events",
+    link: "randomevents.app",
     stack1: "VueJs framework",
-    stack2: "Vuex state management",
-    stack3: "JavaScript",
-    stack4: "TailwindCSS framework"
+    stack2: "NuxtJs framework",
+    stack3: "JavaScript, TypeScript",
+    stack4: "Strapi CMS",
+    stack5: "MongoDB"
   });
 
   const projects = [
     {
       id: 1,
-      title: "projects_internship_title",
-      description: "projects_internship",
-      // url: "https://test.infantmotorprofile.com/",
-      // link: "infantmotorprofile.com",
+      title: "projects_events_title",
+      description: "projects_events",
+      url: "https://randomevents.netlify.app/events",
+      link: "randomevents.app",
       stack1: "VueJs framework",
-      stack2: "Vuex state management",
-      stack3: "JavaScript",
-      stack4: "TailwindCSS framework"
+      stack2: "NuxtJs framework",
+      stack3: "JavaScript, TypeScript",
+      stack4: "Strapi CMS",
+      stack5: "MongoDB"
       },
     {
       id: 2,
@@ -40,18 +42,20 @@ function Projects(props) {
       stack1: "HTML",
       stack2: "CSS",
       stack3: "JavaScript",
-      stack4: "Phaser.io"
+      stack4: "Phaser.io",
+      stack5: ""
     },
     {
       id: 3,
       title: "projects_ducky_title",
       description: "projects_ducky",
-      // url: "https://duckydictionary.netlify.app/login",
-      // link: "duckydictionary.app",
+      url: "https://duckydictionary.netlify.app/",
+      link: "duckydictionary.app",
       stack1: "VueJs framework",
       stack2: "Vuex state management",
       stack3: "JavaScript, SCSS",
-      stack4: "ExpressJs"
+      stack4: "ExpressJs",
+      stack5: "MongoDB"
       }
   ]
 
@@ -60,7 +64,7 @@ function Projects(props) {
       <div className="projects-list">
         <div>
           <div onClick={() => changeProject(projects.find(project => project.id === 1))}>
-            <h2>{dictionary("projects_internship_title", props.languageSetting)}</h2>
+            <h2>{dictionary("projects_events_title", props.languageSetting)}</h2>
           </div>
           <span></span>
           <div onClick={() => changeProject(projects.find(project => project.id === 2))}>
@@ -78,11 +82,13 @@ function Projects(props) {
           <div className="projects-about">
             <h2 className="project-link"><a href={currentProject.url} target="blank">{currentProject.link}</a></h2>
             {/* <img className="project-picture" src={require("../assets/ducky.png")} alt=""/> */}
-            {/* <br></br> */}
+            <br></br>
+            <h2>Stack:</h2>
             <h2>{currentProject.stack1}</h2>
             <h2>{currentProject.stack2}</h2>
             <h2>{currentProject.stack3}</h2>
             <h2>{currentProject.stack4}</h2>
+            <h2>{currentProject.stack5}</h2>
           </div>
           <p>{dictionary(currentProject.description, props.languageSetting)}</p>
         </div>
@@ -100,24 +106,26 @@ function Projects(props) {
         >
           <SwiperSlide>
             <div className="swiper-slide">
-              <h1>Internship<br></br>Project</h1>
+              <h1>Random<br></br>Events</h1>
               <br></br>
-              <h2 className="project-link"><a href="https://test.infantmotorprofile.com/">infantmotorprofile.com</a></h2>
+              <h2 className="project-link"><a target="blank" href="https://randomevents.netlify.app/events">randomevents.app</a></h2>
               <ul>
+                <li>Stack:</li>
                 <li>VueJs framework</li>
-                <li>Vuex state management</li>
+                <li>NuxtJs framework</li>
                 <li>JavaScript</li>
-                <li>TailwindCSS framework</li>
+                <li>TypeScript</li>
               </ul>
-              <p className="project-description">{dictionary("projects_internship", props.languageSetting)}</p>
+              <p className="project-description">{dictionary("projects_events", props.languageSetting)}</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="swiper-slide">
               <h1>Snake<br></br>Game</h1>
               <br></br>
-              <h2 className="project-title"><a href="https://feum-game.netlify.app/">snakegame.app</a></h2>
+              <h2 className="project-link"><a target="blank" href="https://feum-game.netlify.app/">snakegame.app</a></h2>
               <ul>
+                <li>Stack:</li>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
@@ -130,8 +138,9 @@ function Projects(props) {
             <div className="swiper-slide">
               <h1>Ducky<br></br>Dictionary</h1>
               <br></br>
-              <h2 className="project-title"><a href="https://duckydictionary.netlify.app/login">duckydictionary.app</a></h2>
+              <h2 className="project-link"><a target="blank" href="https://duckydictionary.netlify.app/">duckydictionary.app</a></h2>
               <ul>
+                <li>Stack:</li>
                 <li>VueJs framework</li>
                 <li>Vuex state management</li>
                 <li>JavaScript, SCSS</li>

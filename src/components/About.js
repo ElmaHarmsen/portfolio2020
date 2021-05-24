@@ -55,7 +55,7 @@ function About(props) {
             <h2>{dictionary("about_future_intro", props.languageSetting)}</h2>
             <p>{dictionary("about_future_story", props.languageSetting)}</p>
           </div>
-          <img className="slide-flag" src={require("../assets/european-union.svg")} />
+          <img className="slide-flag" src={require("../assets/blue-flamingos.png")} />
         </SwiperSlide>
         <div className="swiper-navigation">
           <div className="swiper-prev"><svg height="50" viewBox="0 0 24 24" width="50"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z"/></svg></div>
