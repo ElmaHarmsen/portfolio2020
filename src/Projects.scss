@@ -68,6 +68,14 @@
     }
   }
 
+  .project-link > a {
+    text-decoration: underline 4px var(--border-color);
+    transition: 0.2s ease;
+  }
+  .project-link:hover > a {
+    text-decoration-color: var(--heading-color);
+  }
+
   .project-details {
     color: var(--text-color);
 
@@ -80,22 +88,6 @@
     }
   }
 
-  .projects-about {
-
-    .project-link > a {
-      text-decoration: underline 4px var(--border-color);
-      transition: 0.2s ease;
-    }
-    .project-link:hover > a {
-      text-decoration-color: var(--heading-color);
-    }
-
-    // .project-picture {
-    //   width: 100%;
-    //   height: auto;
-    //   border: 4px solid var(--border-color);
-    // }
-  }
   .projects-about > h2, a {
     color: var(--text-color);
   }

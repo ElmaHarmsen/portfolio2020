@@ -44,13 +44,13 @@ $breakpoints: (
   font-family: "bangers";
   src: url('./assets/Bangers-Regular.ttf');
 }
-// @font-face {
-//   font-family: "source";
-//   src: url('./assets/SourceSansPro-Regular.ttf');
-// }
 @font-face {
   font-family: "roboto";
   src: url('./assets/Roboto-Light.ttf');
+}
+@font-face {
+  font-family: "roboto-med";
+  src: url('./assets/Roboto-Medium.ttf');
 }
 
 //Styles
@@ -109,6 +109,9 @@ p {
 a {
   text-decoration: none;
   cursor: pointer;
+}
+.style-bold {
+  font-family: 'roboto-med';
 }
 .Header, .Projects, .About, .Footer {
   display: flex;

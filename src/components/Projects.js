@@ -10,6 +10,7 @@ function Projects(props) {
   const [currentProject, changeProject] = useState({
     id: 1,
     title: "projects_events_title",
+    job: "Frontend & Backend",
     description: "projects_events",
     url: "https://randomevents.netlify.app/events",
     link: "randomevents.app",
@@ -24,6 +25,7 @@ function Projects(props) {
     {
       id: 1,
       title: "projects_events_title",
+      job: "Frontend & Backend",
       description: "projects_events",
       url: "https://randomevents.netlify.app/events",
       link: "randomevents.app",
@@ -36,6 +38,7 @@ function Projects(props) {
     {
       id: 2,
       title: "projects_game_title",
+      job: "Frontend",
       description: "projects_game",
       url: "https://feum-game.netlify.app/",
       link: "snakegame.app",
@@ -48,6 +51,7 @@ function Projects(props) {
     {
       id: 3,
       title: "projects_ducky_title",
+      job: "Frontend, Backend & UI Design",
       description: "projects_ducky",
       url: "https://duckydictionary.netlify.app/",
       link: "duckydictionary.app",
@@ -78,19 +82,20 @@ function Projects(props) {
       </div>
       <div className="project-lg"> {/* the key is only 1 unique thing inside the const, not all of them */}
         <h1 className="project-title">{dictionary(currentProject.title, props.languageSetting)}</h1>
+        <h2 className="project-link"><a href={currentProject.url} target="blank">{currentProject.link}</a></h2>
         <div className="project-details">
           <div className="projects-about">
-            <h2 className="project-link"><a href={currentProject.url} target="blank">{currentProject.link}</a></h2>
-            {/* <img className="project-picture" src={require("../assets/ducky.png")} alt=""/> */}
-            <br></br>
-            <h2>Stack:</h2>
+            <p className="style-bold">{dictionary("projects_stack", props.languageSetting)}</p>
             <h2>{currentProject.stack1}</h2>
             <h2>{currentProject.stack2}</h2>
             <h2>{currentProject.stack3}</h2>
             <h2>{currentProject.stack4}</h2>
             <h2>{currentProject.stack5}</h2>
           </div>
-          <p>{dictionary(currentProject.description, props.languageSetting)}</p>
+          <div>
+            <p className="style-bold">{currentProject.job}</p>
+            <p>{dictionary(currentProject.description, props.languageSetting)}</p>            
+          </div>
         </div>
       </div>
       <div className="project-sm">
@@ -110,13 +115,17 @@ function Projects(props) {
               <br></br>
               <h2 className="project-link"><a target="blank" href="https://randomevents.netlify.app/events">randomevents.app</a></h2>
               <ul>
-                <li>Stack:</li>
+                <li className="style-bold">{dictionary("projects_stack", props.languageSetting)}</li>
                 <li>VueJs framework</li>
                 <li>NuxtJs framework</li>
                 <li>JavaScript</li>
                 <li>TypeScript</li>
               </ul>
-              <p className="project-description">{dictionary("projects_events", props.languageSetting)}</p>
+              <div>
+                <br></br>
+                <p className="style-bold">Frontend & Backend</p>
+                <p className="project-description">{dictionary("projects_events", props.languageSetting)}</p>
+              </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -125,13 +134,17 @@ function Projects(props) {
               <br></br>
               <h2 className="project-link"><a target="blank" href="https://feum-game.netlify.app/">snakegame.app</a></h2>
               <ul>
-                <li>Stack:</li>
+                <li className="style-bold">{dictionary("projects_stack", props.languageSetting)}</li>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
                 <li>Phaser.io</li>
               </ul>
-              <p className="project-description">{dictionary("projects_game", props.languageSetting)}</p>
+              <div>
+                <br></br>
+                <p className="style-bold">Frontend</p>
+                <p className="project-description">{dictionary("projects_game", props.languageSetting)}</p>
+              </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -140,13 +153,17 @@ function Projects(props) {
               <br></br>
               <h2 className="project-link"><a target="blank" href="https://duckydictionary.netlify.app/">duckydictionary.app</a></h2>
               <ul>
-                <li>Stack:</li>
+                <li className="style-bold">{dictionary("projects_stack", props.languageSetting)}</li>
                 <li>VueJs framework</li>
                 <li>Vuex state management</li>
                 <li>JavaScript, SCSS</li>
                 <li>ExpressJs</li>
               </ul>
-              <p className="project-description">{dictionary("projects_ducky", props.languageSetting)}</p>
+              <div>
+                <br></br>
+                <p className="style-bold">Frontend, Backend & UI Design</p>
+                <p className="project-description">{dictionary("projects_ducky", props.languageSetting)}</p>
+              </div>
             </div>
           </SwiperSlide>
           <div className="swiper-navigation">

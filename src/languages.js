@@ -59,6 +59,10 @@ const languageToContent = {
     en: "Ducky Dictionary",
     nl: "Ducky Dictionary"
   },
+  projects_stack: {
+    en: "Tools:",
+    nl: "Technieken:"
+  },
   projects_events: {
     en: "06.02.21 | Since the beginning of this year I decided to create a project with connecting a CMS, simply because I hadn't done it yet. I got inspired by 'State of JS 2020' to find technologies fitting my project in mind; a website for hosting of events.",
     nl: "06.02.21 | Sinds begin dit jaar dacht ik erover een project met CMS verbinding te maken, simpelweg omdat ik het nog niet had gedaan en ik het wilde leren. 'State of JS 2020' inspireerde mij om de juiste technologieën te vinden die bij dit project passen; een website voor het hosten van evenementen."
