@@ -36,7 +36,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
     isNavigationOpen: false, //nav is closed by default
     sectionVisibilities: [ //structure of what you see in the navigstion and what is visible
       {
-        name: "Hello",
+        name: "Intro",
         visitility: 0 //0
       },
       {
@@ -100,18 +100,22 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
   const navItems = [
     {
       name: "nav_header",
+      img:  "intro-1",
       position: props.sectionPositions[0]
     },
     {
       name: "nav_projects",
+      img:  "projects-1",
       position: props.sectionPositions[1]
     },
     {
       name: "nav_about",
+      img:  "about-1",
       position: props.sectionPositions[2]
     },
     {
       name: "nav_contact",
+      img:  "contact-1",
       position: props.sectionPositions[3]
     }
   ]//This generates 4 navitems which know to wich position to scroll to when you click it.
@@ -121,34 +125,28 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
   const theNavItems = navItems.map((item, index) => {
     return (
       <div key={item.name}>
-        <a><h3 onClick={() => navigateToSection(index)}>{dictionary(item.name, props.languageSetting)}</h3></a>
+        <div className='nav-button' onClick={() => navigateToSection(index)}>
+          <img className='nav-icon' src={require(`../assets/${item.img}.png`)} />
+        </div>
       </div>
     )
   }); //This generates a header with the 4 navItems names. 
 
-  //This is the HTML.
   return (
-    <section>
-      <div className="nav-menu-bar">
-        <div className="nav-button" onClick={() => changeState({...navigationState, isNavigationOpen: !navigationState.isNavigationOpen})}>
-          <div className={navigationState.isNavigationOpen ? "nav-menu close" : "nav-menu open"} >
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div>
-
-      <div className={navigationState.isNavigationOpen ? "nav-items open" : "nav-items"}>
+    <section className='navigation'>
+      <div className='nav-buttons-container'>
         {theNavItems}
       </div>
-
-      <div className="switch-wrapper">
-        <div className="theme-switch" onClick={() => setDarkTheme(!darkTheme)}>
-          <span className={darkTheme ? "to-light" : "to-dark"}></span>
+      <div className="nav-switches-container">
+        <div className="switch-theme" onClick={() => setDarkTheme(!darkTheme)}>
+         {darkTheme ? (
+          <img className='switch-icon' src={require("../assets/dark.png")} alt="" />
+         ) : (
+          <img className='switch-icon' src={require("../assets/light.png")} alt="" />
+         )}
         </div>
-        <div className="language-switch" onClick={() => props.onLanguageChange(props.languageSetting === "nl" ? "en" : "nl")}>
-          <h1>{props.languageSetting === "nl" ? "en" : "nl"}</h1>
+        <div className="switch-language" onClick={() => props.onLanguageChange(props.languageSetting === "nl" ? "en" : "nl")}>
+          <p>{props.languageSetting === "nl" ? "en" : "nl"}</p>
         </div>
       </div>
     </section>

@@ -1,4 +1,55 @@
 const languageToContent = {
+  //new
+  project_nativeapp_info: {
+    en: "As a graduation project for my bachelor programme of Communication and Multimedia Design, I developed a native application for Weflycheap. The app is built with React Native, but remains to be a prototype. It allows users to filter through deals, save favorite deals in the app, and get reminded of new deals matching their interests, while using personalisation techniques throughout the app to make the user feel supported in their search towards the ideal holiday.",
+    nl: "Project beschrijving en link, github link."
+  },
+  project_nativeapp_headline: {
+    en: "Mobile application for Weflycheap, provider for online flight and holiday deals.",
+    nl: "DReact Native and JavaScript development & User Interface design."
+  },
+  project_nativeapp_technologies: {
+    en: "React Native and JavaScript development & User Interface design.",
+    nl: "DReact Native and JavaScript development & User Interface design."
+  },
+  project_nativeapp_link: {
+    en: "Download the native app for your smartphone.",
+    nl: "Download de native app voor je smartphone."
+  },
+  project_dictionary_info: {
+    en: "For the purpose of learning VueJs, I developed a dictionary platform. The website serves various functionalities, such as adding words, as well as editing and removing words, searching for words. Though currently disabled, the website would provide protection of the dictionary with a login functionality.",
+    nl: "Project beschrijving en link, github link."
+  },
+  project_dictionary_headline: {
+    en: "Online platform for my own personal dictionary.",
+    nl: "DReact Native and JavaScript development & User Interface design."
+  },
+  project_dictionary_technologies: {
+    en: "VueJs and JavaScript frontend development, ExpressJs backend development & MongoDB data management.",
+    nl: "VueJs and JavaScript frontend development, ExpressJs backend development & MongoDB data management."
+  },
+  project_dictionary_link: {
+    en: "Get a closer look on the website.",
+    nl: "Bezoek de website hier."
+  },
+  project_dictionary_github: {
+    en: "Visit the codebase on my Github repository.",
+    nl: "Bekijk de codebase in het Github project."
+  },
+  contact_mail: {
+    en: "Send me an email using elmaharmsen01@gmail.com.",
+    nl: "Stuur me een email met elmaharmsen01@gmail.com."
+  },
+  contact_cv: {
+    en: "Directly view my resume online.",
+    nl: "Lees direct mijn resume online."
+  },
+  contact_social: {
+    en: "Browse my profile on LinkedIn.",
+    nl: "Bekijk mijn profiel op LinkedIn."
+  },
+
+  //old
   nav_header: {
     en: "Hello",
     nl: "Hallo"
@@ -119,19 +170,19 @@ const languageToContent = {
     en: "The future is an unshaped path which my professional journey will follow. I'd hope to prove my frontend skills and experience this year. Let's see what the future holds!",
     nl: "De toekomst verbeeld zich als een open weg dat mijn professionele toer zal volgen. Ik hoop dit jaar mijn frontend-vaardigheden en ervaring te bewijzen. Laten we kijken wat de toekomst in petto heeft!"
   },
-  footer_title_first_word: {
+  Contact_title_first_word: {
     en: "Exploring",
     nl: "Nieuwe werelden"
   },
-  footer_title: {
+  Contact_title: {
     en: "New worlds",
     nl: "verkennen"
   },
-  footer_subgreet_1: {
+  Contact_subgreet_1: {
     en: "...is the best course to find new opportunities!",
     nl: "...is de beste weg om nieuwe mogelijkheden te vinden!"
   },
-  footer_subgreet_2: {
+  Contact_subgreet_2: {
     en: "Feel like reaching out? Please use one of these.",
     nl: "Wil je hiernaar uitreiken? Gebruik een van deze."
   }

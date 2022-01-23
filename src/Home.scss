@@ -1,35 +1,35 @@
 @import "./index.scss";
 
-.App {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 100vh 1fr;
-  background-color: var(--background-color);
+// .App {
+//   display: grid;
+//   grid-template-columns: 100%;
+//   grid-template-rows: 100vh 1fr;
+//   background-color: var(--background-color);
 
-  @include screen-is(lg) {
-    grid-template-columns: 90%;
-    justify-content: center;
-  }
+//   @include screen-is(lg) {
+//     grid-template-columns: 90%;
+//     justify-content: center;
+//   }
 
-  @include screen-is(xl) {
-    grid-template-columns: 70%;
-  }
-}
-.App > .section {
-  position: relative;
-  z-index: 1;
-}
-.star-container {
-  position: fixed;
-  z-index: 0;
-}
-.star {
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--stars);
-  filter: blur(.2px);
+//   @include screen-is(xl) {
+//     grid-template-columns: 70%;
+//   }
+// }
+// .App > .section {
+//   position: relative;
+//   z-index: 1;
+// }
+// .star-container {
+//   position: fixed;
+//   z-index: 0;
+// }
+// .star {
+//   position: absolute;
+//   border-radius: 50%;
+//   background-color: var(--stars);
+//   filter: blur(.2px);
 
-  @include screen-is(lg) {
-    filter: blur(.5px);
-  }
-}
+//   @include screen-is(lg) {
+//     filter: blur(.5px);
+//   }
+// }

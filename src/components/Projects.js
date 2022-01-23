@@ -7,65 +7,167 @@ import dictionary from '../languages';
 SwiperCore.use(Navigation);
 
 function Projects(props) {
-  const [currentProject, changeProject] = useState({
-    id: 1,
-    title: "projects_events_title",
-    job: "Frontend & Backend",
-    description: "projects_events",
-    url: "https://randomevents.netlify.app/events",
-    link: "randomevents.app",
-    stack1: "VueJs framework",
-    stack2: "NuxtJs framework",
-    stack3: "JavaScript, TypeScript",
-    stack4: "Strapi CMS",
-    stack5: "MongoDB"
-  });
+  // const [currentProject, changeProject] = useState({
+  //   id: 1,
+  //   title: "projects_events_title",
+  //   job: "Frontend & Backend",
+  //   description: "projects_events",
+  //   url: "https://randomevents.netlify.app/events",
+  //   link: "randomevents.app",
+  //   stack1: "VueJs framework",
+  //   stack2: "NuxtJs framework",
+  //   stack3: "JavaScript, TypeScript",
+  //   stack4: "Strapi CMS",
+  //   stack5: "MongoDB"
+  // });
 
-  const projects = [
-    {
-      id: 1,
-      title: "projects_events_title",
-      job: "Frontend & Backend",
-      description: "projects_events",
-      url: "https://randomevents.netlify.app/events",
-      link: "randomevents.app",
-      stack1: "VueJs framework",
-      stack2: "NuxtJs framework",
-      stack3: "JavaScript, TypeScript",
-      stack4: "Strapi CMS",
-      stack5: "MongoDB"
-      },
-    {
-      id: 2,
-      title: "projects_game_title",
-      job: "Frontend",
-      description: "projects_game",
-      url: "https://feum-game.netlify.app/",
-      link: "snakegame.app",
-      stack1: "HTML",
-      stack2: "CSS",
-      stack3: "JavaScript",
-      stack4: "Phaser.io",
-      stack5: ""
-    },
-    {
-      id: 3,
-      title: "projects_ducky_title",
-      job: "Frontend, Backend & UI Design",
-      description: "projects_ducky",
-      url: "https://duckydictionary.netlify.app/",
-      link: "duckydictionary.app",
-      stack1: "VueJs framework",
-      stack2: "Vuex state management",
-      stack3: "JavaScript, SCSS",
-      stack4: "ExpressJs",
-      stack5: "MongoDB"
-      }
-  ]
+  // const projects = [
+  //   {
+  //     id: 1,
+  //     title: "projects_events_title",
+  //     job: "Frontend & Backend",
+  //     description: "projects_events",
+  //     url: "https://randomevents.netlify.app/events",
+  //     link: "randomevents.app",
+  //     stack1: "VueJs framework",
+  //     stack2: "NuxtJs framework",
+  //     stack3: "JavaScript, TypeScript",
+  //     stack4: "Strapi CMS",
+  //     stack5: "MongoDB"
+  //     },
+  //   {
+  //     id: 2,
+  //     title: "projects_game_title",
+  //     job: "Frontend",
+  //     description: "projects_game",
+  //     url: "https://feum-game.netlify.app/",
+  //     link: "snakegame.app",
+  //     stack1: "HTML",
+  //     stack2: "CSS",
+  //     stack3: "JavaScript",
+  //     stack4: "Phaser.io",
+  //     stack5: ""
+  //   }
+  // ]
 
   return (
-    <section className="Projects">
-      <div className="projects-list">
+    <section className='projects-container'>
+      <section className="projects">
+        <section className="section-top">
+          <h1>project</h1>
+        </section>
+        <section className='section-bottom'>
+          <h2>Native App</h2>
+          <div className='project-info'>
+            <div className="italic-texts">
+              <h4>{dictionary("project_nativeapp_headline", props.languageSetting)}</h4>
+              <h4>{dictionary("project_nativeapp_technologies", props.languageSetting)}</h4>
+            </div>
+            <h3>{dictionary("project_nativeapp_info", props.languageSetting)}</h3>
+            <a className="project-link-container" href="https://drive.google.com/file/d/1nlUUZb94Yh96X_lSVwG-87WHUzMVQ_57/view?usp=sharing" target="blank">
+              <div className="project-link">
+                <img className='project-link-icon' src={require("../assets/link.png")} />
+              </div>
+              <h3>{dictionary("project_nativeapp_link", props.languageSetting)}</h3>
+            </a>
+          </div>
+        </section>
+        <Swiper
+          spaceBetween={5}
+          loop={true}
+          onSwiper={swiper => setTimeout(() => swiper.update())}
+          className="swiper-container-native-app"
+          navigation={{
+            nextEl: ".swiper-next-native-app",
+            prevEl: ".swiper-prev-native-app"
+          }}
+        >
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/native-app-1.jpg")} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/native-app-2.jpg")} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/native-app-3.jpg")} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/native-app-4.jpg")} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/native-app-5.jpg")} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/native-app-6.jpg")} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/native-app-7.jpg")} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/native-app-8.jpg")} alt="" />
+          </SwiperSlide>
+        </Swiper>
+        <div className="swiper-navigation">
+          <div className="swiper-prev-native-app"><img className='swiper-icon' src={require("../assets/prev.png")} /></div>
+          <div className="swiper-next-native-app"><img className='swiper-icon' src={require("../assets/next.png")} /></div>
+        </div>
+      </section>
+
+      <section className="projects">
+        <section className="section-top">
+          <h1>project</h1>
+        </section>
+        <section className='section-bottom'>
+          <h2>Dictionary</h2>
+          <div className='project-info'>
+            <div className="italic-texts">
+              <h4>{dictionary("project_dictionary_headline", props.languageSetting)}</h4>
+              <h4>{dictionary("project_dictionary_technologies", props.languageSetting)}</h4>
+            </div>
+            <h3>{dictionary("project_dictionary_info", props.languageSetting)}</h3>
+            <a className="project-link-container" href="https://duckydictionary.netlify.app/" target="blank">
+              <div className="project-link">
+                <img className='project-link-icon' src={require("../assets/link.png")} />
+              </div>
+              <h3>{dictionary("project_dictionary_link", props.languageSetting)}</h3>
+            </a>
+            <a className="project-link-container" href="https://github.com/ElmaHarmsen/lifeinczech" target="blank">
+              <div className="project-link">
+                <img className='project-link-icon' src={require("../assets/github.png")} />
+              </div>
+              <h3>{dictionary("project_dictionary_github", props.languageSetting)}</h3>
+            </a>
+          </div>
+        </section>
+        <Swiper
+          spaceBetween={5}
+          loop={true}
+          onSwiper={swiper => setTimeout(() => swiper.update())}
+          className="swiper-container-ducky"
+          navigation={{
+            nextEl: ".swiper-next-ducky",
+            prevEl: ".swiper-prev-ducky"
+          }}
+        >
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/ducky-1.jpg")} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/ducky-2.jpg")} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/ducky-3.jpg")} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/ducky-4.jpg")} alt="" />
+          </SwiperSlide>
+        </Swiper>
+        <div className="swiper-navigation">
+          <div className="swiper-prev-ducky"><img className='swiper-icon' src={require("../assets/prev.png")} /></div>
+          <div className="swiper-next-ducky"><img className='swiper-icon' src={require("../assets/next.png")} /></div>
+        </div>
+      </section>
+      {/* <div className="projects-list">
         <div>
           <div onClick={() => changeProject(projects.find(project => project.id === 1))}>
             <h2>{dictionary("projects_events_title", props.languageSetting)}</h2>
@@ -80,7 +182,7 @@ function Projects(props) {
           </div>          
         </div>
       </div>
-      <div className="project-lg"> {/* the key is only 1 unique thing inside the const, not all of them */}
+      <div className="project-lg"> 
         <h1 className="project-title">{dictionary(currentProject.title, props.languageSetting)}</h1>
         <h2 className="project-link"><a href={currentProject.url} target="blank">{currentProject.link}</a></h2>
         <div className="project-details">
@@ -171,7 +273,7 @@ function Projects(props) {
             <div className="swiper-next"><svg height="50" viewBox="0 0 24 24" width="50"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M6.49 20.13l1.77 1.77 9.9-9.9-9.9-9.9-1.77 1.77L14.62 12l-8.13 8.13z"/></svg></div>
           </div>
         </Swiper>
-      </div>
+      </div> */}
     </section>
   );
 }

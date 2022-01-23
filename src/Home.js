@@ -4,7 +4,7 @@ import Navigation from './components/Navigation.js';
 import Header from './components/Header.js';
 import About from './components/About.js';
 import Projects from './components/Projects.js';
-import Footer from './components/Footer.js';
+import Contact from './components/Contact.js';
 
 function Home() {
 
@@ -62,7 +62,7 @@ function Home() {
       <Navigation sectionPositions = {sectionPositions} languageSetting = {languageSetting} onLanguageChange = {(value => setLanguage(value))} />
       <div className="section" id="Projects"><Projects languageSetting = {languageSetting} /></div>
       <div className="section" id="About"><About languageSetting = {languageSetting} /></div> 
-      <div className="section" id="Contact"><Footer languageSetting = {languageSetting} /></div> 
+      <div className="section" id="Contact"><Contact languageSetting = {languageSetting} /></div> 
       <div 
         className="star-container"
       >

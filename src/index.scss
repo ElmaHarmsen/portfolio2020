@@ -1,18 +1,18 @@
 //Light theme
 :root {
-  --background-color: #1F3DFF;
-  --highlight-color: #FE5F55; //#EB5133;
-  --heading-color: #FE5F55;
-  --text-color: #010205;
-  --border-color: #010205;
-  --section-color:#FFC95E; //#EB5133;
-  --stars: #FFC95E;
-  --black-transparent: #010205;
-  --white-black: #fcf8eb;
+  --color1: #000;
+  --color2: #fff;
+  --text-on-color1: #000;
+  --text-on-color2: #fff;
 }
 
 //Dark theme, data is part of the attribute
 [data-theme="dark"] {
+  --color1: #F7B1AB;
+  --color2: #FFC9B5;
+  --text-on-color1: #000;
+  --text-on-color2: #000;
+
   --background-color: #010205;
   --highlight-color: #010205;
   --heading-color: #FFC95E;
@@ -20,9 +20,19 @@
   --border-color: #fcf8eb;
   --section-color: #010205;
   --stars: #fcf8eb;
-  --black-transparent: transparent;
-  --white-black: #010205;
+  --color1-transparent: transparent;
+  --color2-black: #010205;
 }
+
+//possible colors
+/*
+  #9E4770
+  9D8DF1
+  A3C4BC
+
+  --color1: #F7B1AB;
+  --color2: #FFC9B5;
+*/
 
 //Screen widths
 $breakpoints: (
@@ -41,79 +51,190 @@ $breakpoints: (
 
 //Fonts
 @font-face {
-  font-family: "bangers";
-  src: url('./assets/Bangers-Regular.ttf');
+  font-family: "font-light";
+  src: url('./assets/Quicksand-Light.ttf');
 }
 @font-face {
-  font-family: "roboto";
-  src: url('./assets/Roboto-Light.ttf');
+  font-family: "font-regular";
+  src: url('./assets/Quicksand-Regular.ttf');
 }
 @font-face {
-  font-family: "roboto-med";
-  src: url('./assets/Roboto-Medium.ttf');
+  font-family: "font-medium";
+  src: url('./assets/Quicksand-Medium.ttf');
+}
+
+//Animations
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+//2022 styles
+.header, .projects, .about, .contact {
+  height: 100vh;
+  width: 100%;
+
+  .section-top, .section-bottom {
+    display: flex;
+    flex-flow: column;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include screen-is(md) {
+      padding-left: 100px; 
+      padding-right: 100px;
+      width: calc(100% - 200px);
+    }
+    @include screen-is(lg) {
+      padding-left: 100px; 
+      padding-right: 100px;
+    }
+  }
+
+  .section-top {
+    justify-content: flex-end;
+    background-color: var(--color2);
+    height: 30%;
+
+    @include screen-is(md) {
+      height: 38%;
+    }
+  }
+  
+  .section-bottom {
+    justify-content: flex-start;
+    background-color: var(--color1);
+    height: 70%;
+
+    @include screen-is(md) {
+      height: 62%;
+    }
+  }
+}
+
+h1 {
+  font-family: "font-light";
+  font-size: 55px;
+  color: var(--text-on-color1);
+
+  @include screen-is(md) {
+    font-size: 80px;
+  }
+
+  @include screen-is(lg) {
+    font-size: 90px;
+  }
+}
+
+h2 {
+  font-family: "font-regular";
+  font-size: 65px;
+  color: var(--text-on-color2);
+
+  @include screen-is(md) {
+    font-size: 100px;
+  }
+
+  @include screen-is(lg) {
+    font-size: 110px;
+  }
+}
+
+h3, h4 {
+  font-family: "font-regular";
+  color: var(--text-on-color2);
+  font-size: 16px;
+  line-height: 1.2rem;
+
+  @include screen-is(md) {
+    font-size: 22px;
+    line-height: 1.6rem;
+  }
+
+  @include screen-is(lg) {
+    font-size: 24px;
+    line-height: 1.9rem;
+  }
+}
+
+h4 {
+  font-style: italic;
+}
+
+p {
+  font-family: "font-medium";
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
 }
 
 //Styles
-body {
-  margin: 0;
+// body {
+//   margin: 0;
 
-  @include screen-is(lg) {
-    overflow-x: hidden;
-  }
-}
-h1 {
-  font-family: "bangers";
-  font-size: 50px;
-  -webkit-text-stroke: 2px var(--black-transparent);
+//   @include screen-is(lg) {
+//     overflow-x: hidden;
+//   }
+// }
+// h1 {
+//   font-family: "hk-concentrate";
+//   font-size: 50px;
+//   -webkit-text-stroke: 2px var(--color1-transparent);
 
-  @include screen-is(lg) {
-    font-size: 85px;
-    -webkit-text-stroke: 3px var(--black-transparent);
-    letter-spacing: 4px;
-  } 
-  @include screen-is(xl) {
-    font-size: 120px;
-  }
-}
+//   @include screen-is(lg) {
+//     font-size: 85px;
+//     -webkit-text-stroke: 3px var(--color1-transparent);
+//     letter-spacing: 4px;
+//   } 
+//   @include screen-is(xl) {
+//     font-size: 120px;
+//   }
+// }
 
-h2, li {
-  font-family: "roboto";
-  font-size: 22px;
-  font-weight: bold;
-  line-height: 1.3;
+// h2, li {
+//   font-family: "hk-concentrate";
+//   font-size: 22px;
+//   font-weight: bold;
+//   line-height: 1.3;
 
-  @include screen-is(lg) {
-    font-size: 30px;
-    line-height: 1.6;
-  }
-}
+//   @include screen-is(lg) {
+//     font-size: 30px;
+//     line-height: 1.6;
+//   }
+// }
 
-h3 {
-  font-family: "bangers";
-  font-size: 50px;
-  color: var(--text-color);
-  line-height: 1.3;
-}
-p {
-  font-family: "roboto";
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.3;
-  color: var(--text-color);
+// h3 {
+//   font-family: "hk-concentrate";
+//   font-size: 50px;
+//   color: var(--text-color);
+//   line-height: 1.3;
+// }
+// p {
+//   font-family: "hk-concentrate";
+//   font-size: 18px;
+//   font-weight: bold;
+//   line-height: 1.3;
+//   color: var(--text-color);
 
-  @include screen-is(lg) {
-    font-size: 25px;
-    line-height: 1.6;
-  }
-}
-a {
-  text-decoration: none;
-  cursor: pointer;
-}
+//   @include screen-is(lg) {
+//     font-size: 25px;
+//     line-height: 1.6;
+//   }
+// }
+// a {
+//   text-decoration: none;
+//   cursor: pointer;
+// }
 .style-bold {
-  font-family: 'roboto-med';
+  font-family: 'hk-concentrate-med';
 }
-.Header, .Projects, .About, .Footer {
+.Header, .Projects, .About, .Contact {
   display: flex;
   flex-flow: column nowrap;
 
@@ -135,7 +256,7 @@ a {
     padding: 0rem;
   }
 }
-.Projects, .About, .Footer {
+.Projects, .About, .Contact {
   height: calc(100vh - 2rem - 4px);
 
   @include screen-is(lg) {
@@ -153,7 +274,7 @@ a {
     margin: 2.5rem;
   }
 }
-.Footer {
+.Contact {
   height: calc(100vh - 4px);
   border-top: 4px solid var(--border-color);
 
