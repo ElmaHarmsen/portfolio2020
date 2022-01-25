@@ -1,0 +1,117 @@
+@import "./index.scss";
+
+.contact {
+
+  .contact-info {
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include screen-is(md) {
+      width: 60%;
+    }
+    
+    .contact-link-container {
+      display: grid;
+      grid-template-columns: 35px 1fr;
+      gap: 10px;
+      margin-top: 10px;
+      transition: all .2s ease;
+
+      .contact-link {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: var(--color2);
+        transition: all .2s ease;
+
+        @include screen-is(md) {
+          margin-right: 15px;
+        }
+
+        .contact-link-icon {
+          width: 20px;
+        }
+      }
+
+      h3 {
+        align-self: center;
+      }
+    }
+
+    .contact-link-container:hover {
+      .contact-link {
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  .contact-image-container {
+    position: relative;
+
+    .contact-image {
+      position: absolute;
+      z-index: 3;
+      width: 180px;
+      border-radius: 4px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      right: 20px;
+      transform: translateY(calc(-100% - 20px));
+
+      @include screen-is(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  .button-container {
+    position: absolute;
+    z-index: 1;
+    left: 20px;
+    transform: translateY(calc(-100% - 20px));
+    animation: "bounce" 1.5s linear infinite;
+    cursor: pointer;
+
+    @include screen-is(tablet) {
+      left: 70px;
+    }
+
+    @include screen-is(md) {
+      left: 100px;
+    }
+
+    .button-back-to-top {
+      width: 15px;
+      height: 15px;
+      clip-path: polygon(50% 15%,0% 100%,100% 100%);
+      background-color: var(--color2);
+
+      @include screen-is(tablet) {
+        width: 18px;
+        height: 18px;
+      }
+
+      @include screen-is(md) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(calc(-100% - 20px));
+  }
+  50% {
+    transform: translateY(calc(-100% - 28px));
+  }
+  100% {
+    transform: translateY(calc(-100% - 20px));
+  }
+}

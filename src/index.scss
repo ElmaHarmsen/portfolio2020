@@ -26,10 +26,10 @@
 
 //Screen widths
 $breakpoints: (
-  "sm": 0, //Phone
-  "md": 768px, //Tablet
-  "lg": 1440px, //Small Laptop
-  "xl": 1920px //Big Screen
+  "phone": 0, //until 1079px
+  "tablet": 1079px, //until 1199px
+  "md": 1340px, 
+  "lg": 1500px
 );
 
 //Formula for breakpoint
@@ -74,14 +74,16 @@ $breakpoints: (
     padding-left: 10px;
     padding-right: 10px;
 
+    @include screen-is(tablet) {
+      padding-left: 70px; 
+      padding-right: 70px;
+      width: calc(100% - 140px);
+    }
+
     @include screen-is(md) {
       padding-left: 100px; 
       padding-right: 100px;
       width: calc(100% - 200px);
-    }
-    @include screen-is(lg) {
-      padding-left: 100px; 
-      padding-right: 100px;
     }
   }
 
@@ -111,12 +113,12 @@ h1 {
   font-size: 55px;
   color: var(--text-on-color2);
 
-  @include screen-is(md) {
-    font-size: 80px;
+  @include screen-is(tablet) {
+    font-size: 70px;
   }
 
-  @include screen-is(lg) {
-    font-size: 90px;
+  @include screen-is(md) {
+    font-size: 80px;
   }
 }
 
@@ -125,12 +127,12 @@ h2 {
   font-size: 65px;
   color: var(--text-on-color1);
 
-  @include screen-is(md) {
-    font-size: 100px;
+  @include screen-is(tablet) {
+    font-size: 90px;
   }
 
-  @include screen-is(lg) {
-    font-size: 110px;
+  @include screen-is(md) {
+    font-size: 100px;
   }
 }
 
@@ -140,14 +142,14 @@ h3, h4 {
   font-size: 16px;
   line-height: 1.2rem;
 
-  @include screen-is(md) {
-    font-size: 22px;
-    line-height: 1.6rem;
+  @include screen-is(tablet) {
+    font-size: 18px;
+    line-height: 1.4rem;
   }
 
-  @include screen-is(lg) {
-    font-size: 24px;
-    line-height: 1.9rem;
+  @include screen-is(md) {
+    font-size: 22px;
+    line-height: 1.8rem;
   }
 }
 
@@ -157,7 +159,7 @@ h4 {
 
 p {
   font-family: "font-medium";
-  font-size: 16px;
+  font-size: 15px;
 }
 
 a {
@@ -169,11 +171,6 @@ a {
   height: 100%;
   overflow: hidden;
   position: relative;
-
-  @include screen-is(lg) {
-    width: 70%;
-    margin: 0rem auto 0rem auto;
-  }
 
   .swiper-wrapper {
     height: 100%;
@@ -288,4 +285,10 @@ a {
       }
     }
   }
+}
+
+.section-button {
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
 }

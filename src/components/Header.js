@@ -19,6 +19,9 @@ function Header(props) {
           : <div className='map-black'></div>
         }
       </div>
+      {/* <div className="section-button">
+        <h4>NEXT SECTION</h4>
+      </div> */}
     </section>
   )
 }

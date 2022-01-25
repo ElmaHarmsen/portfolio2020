@@ -10,7 +10,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
 
   useEffect(() => {
     const scrollObserver = new IntersectionObserver(sectionChange, {
-      threshold: [0.2, 0.4, 0.6, 0.8, 1]
+      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
     });
     document.querySelectorAll(".section").forEach(section => scrollObserver.observe(section));
   }, []);
@@ -20,7 +20,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
     isNavigationOpen: false, //nav is closed by default
     sectionVisibilities: [ //structure of what you see in the navigstion and what is visible
       {
-        name: "Intro",
+        name: "Home",
         visitility: 0 //0
       },
       {
@@ -35,11 +35,12 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
         name: "Contact", //Good to know is that these names don't have a function; what is visible in the screen is the id's on the home.js but they need to match to this id
         visitility: 0 //3
       }
-    ],
-    activeSection: null //the section who is most visible and whose name will be in the nav
+    ]
   }); 
   //useState declares a state variable. Before it was this.state. Between ( ) can be anything: number, string, object, boolean (hopefuly).
   //useState returns 2 values: the current state 'banana' and an updated one 'setBanana'.
+  //const [activeSection, changeActiveSection] = useState(null); //the section who is most visible and whose name will be in the nav
+  //const [scrollTimeout, setScrollTimeout] = useState(null);
 
   function sectionChange(entries) { //entries is smth that has to do with intersection observer, when it calls the sectionChange method, it provides the changed entries
     const updatedSection = entries[0].target.id; //0 is the first one (Header), it gets the information from the id of the home.js elements
@@ -58,10 +59,16 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
   useEffect(() => { //This is where the text actually changes, so when smth on line 68 changes, this useEffect get fired
     const currentHighestValue = Math.max(...navigationState.sectionVisibilities.map(section => section.visitility)); //highest value of stuff in (), and from this it only takes the numbers
     const currentHighestVisibilitySection = navigationState.sectionVisibilities.find(section => section.visitility === currentHighestValue); //In the state it finds the section who has this highest value
-    changeState({...navigationState, //from the navigationState we take name of the one that has the highest visibility, we save it into activeSection
-      activeSection: currentHighestVisibilitySection.name //activeSection is the one that goes into the h2 at the top of the screen
-    });
-  }, [navigationState.sectionVisibilities[0], navigationState.sectionVisibilities[1], navigationState.sectionVisibilities[2], navigationState.sectionVisibilities[3], navigationState.sectionVisibilities[4]]); //Trigger 5 times for all 5 elements in the array
+    // changeActiveSection(currentHighestVisibilitySection.name);
+    // console.log(activeSection);
+    // window.clearTimeout(scrollTimeout);
+    // setScrollTimeout(null);
+    // setScrollTimeout(setTimeout(() => {
+    //   if (currentHighestVisibilitySection.name) {
+    //     navigateToSection(navItems.indexOf(navItems.find(screen => screen.title === currentHighestVisibilitySection.name)));
+    //   }
+    // }, 750));
+  }, [navigationState.sectionVisibilities[0], navigationState.sectionVisibilities[1], navigationState.sectionVisibilities[2], navigationState.sectionVisibilities[3]]);
 
   function navigateToSection(id) {
     let sizeScreen = window.matchMedia('(min-width: 0px)');
@@ -82,29 +89,32 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
   }
 
   const navItems = [
-    {
-      name: "nav_header",
-      img:  "house",
-      position: props.sectionPositions[0]
-    },
+    // {
+    //   name: "nav_header",
+    //   img:  "house",
+    //   position: props.sectionPositions[0],
+    //   title: "Home"
+    // }, //turned off because the nav is not fixed so you would never press the home btn
     {
       name: "nav_projects",
       img:  "projects",
-      position: props.sectionPositions[1]
+      position: props.sectionPositions[1],
+      title: "Projects"
     },
     {
       name: "nav_about",
       img:  "about",
-      position: props.sectionPositions[2]
+      position: props.sectionPositions[2],
+      title: "About"
     },
     {
       name: "nav_contact",
       img:  "email",
-      position: props.sectionPositions[3]
+      position: props.sectionPositions[3],
+      title: "Contact"
     }
   ]//This generates 4 navitems which know to wich position to scroll to when you click it.
-  //The [numbers] refer to the sections in order of the Homepage.
-  //Contact does not have this because that's an overlay thingy.
+  //the position matches its index in the array
 
   const theNavItems = navItems.map((item, index) => {
     return (
@@ -114,7 +124,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
         </div>
       </div>
     )
-  }); //This generates a header with the 4 navItems names. 
+  });
 
   return (
     <section className='navigation'>
@@ -133,6 +143,9 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
           <p>{props.languageSetting === "nl" ? "en" : "nl"}</p>
         </div>
       </div>
+      {/* <div className="section-button" onClick={() => navigateToSection()}>
+        <h4>NEXT SECTION</h4>
+      </div> */}
     </section>
   );
 }

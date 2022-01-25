@@ -17,7 +17,7 @@ const languageToContent = {
     nl: "Download de native app voor je smartphone."
   },
   project_nativeapp_video: {
-    en: "View a video demonstration of the app.",
+    en: "Experience a video demonstration of the app.",
     nl: "Bekijk een video demonstratie van de app."
   },
   project_dictionary_info: {

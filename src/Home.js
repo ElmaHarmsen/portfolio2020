@@ -32,7 +32,7 @@ function Home() {
   }, []); //End.
 
   const [languageSetting, setLanguage] = useState(null);
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(true);
   //darkTheme is a data property & setDarkTheme changes this data value, by default this boolean is false
 
   useEffect(() => {
@@ -53,7 +53,7 @@ function Home() {
       <div className="section" id="Home"><Header darkTheme = {darkTheme} /></div>
       <Navigation sectionPositions = {sectionPositions} languageSetting = {languageSetting} onLanguageChange = {(value => setLanguage(value))} darkTheme = {darkTheme} onThemeChange = {(value => setDarkTheme(value))} />
       <div className="section" id="Projects"><Projects languageSetting = {languageSetting} /></div>
-      <div className="section" id="About"><About languageSetting = {languageSetting} /></div> 
+      <div className="section" id="About"><About darkTheme = {darkTheme} languageSetting = {languageSetting} /></div> 
       <div className="section" id="Contact"><Contact languageSetting = {languageSetting} /></div> 
     </div>
   );

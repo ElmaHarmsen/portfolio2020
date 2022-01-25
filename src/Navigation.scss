@@ -49,13 +49,23 @@
       }
     }
 
-    .switch-language:hover, .switch-theme:hover {
-      transform: translateY(-10px); 
+    @include screen-is(tablet) {
+      .switch-language:hover, .switch-theme:hover {
+        transform: translateX(-10px); 
+        cursor: pointer;
+      }
+    }
+  
+    @include screen-is(md) {
+      .switch-language:hover, .switch-theme:hover {
+        transform: translateY(-10px); 
+        cursor: pointer;
+      }
     }
 
     .switch-icon {
-      width: 20px;
-      height: 20px;
+      width: 15px;
+      height: 15px;
     }
 
   }
@@ -79,12 +89,23 @@
       height: 45px;
     }
   }
-  .nav-button:hover {
-    transform: translateY(-10px); 
+
+  @include screen-is(tablet) {
+    .nav-button:hover {
+      transform: translateX(-10px); 
+      cursor: pointer;
+    }
+  }
+
+  @include screen-is(md) {
+    .nav-button:hover {
+      transform: translateY(-10px); 
+      cursor: pointer;
+    }
   }
 
   .nav-icon {
-    width: 18px;
+    width: 15px;
 
     @include screen-is(md) {
       width: 20px;

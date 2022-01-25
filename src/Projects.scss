@@ -12,8 +12,12 @@
         padding-left: 10px;
         padding-right: 10px;
 
+        @include screen-is(tablet) {
+          width: 50%;
+        }
+
         @include screen-is(md) {
-          width: 60%;
+          width: 55%;
         }
       }
 
@@ -62,63 +66,98 @@
     }
 
     .swiper-container-native-app {
-      transform: scale(.8);
       position: absolute;
       transform: translateY(-100%);
       display: none;
 
-      @include screen-is(md) {
+      @include screen-is(tablet) {
         display: block;
-        transform: translateY(calc(-100% - 10px));
+        transform: translateY(calc(-100% - 30px));
         position: absolute;
         z-index: 2;
         right: 100px;
-        width: 400px;
-        height: 795px;
+        width: 300px;
+        height: 596.95px;
         overflow: hidden;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         border-radius: 6px;
       }
 
-      .project-image {
+      @include screen-is(md) {
+        transform: translateY(calc(-100% - 10px));
         width: 400px;
-        border-radius: 6px;
+        height: 795px;
+      }
+
+      .project-image {
+
+        @include screen-is(tablet) {
+          width: 300px;
+          border-radius: 6px;
+        }
+
+        @include screen-is(md) {
+          width: 400px;
+          border-radius: 6px;
+        }
       }
     }
 
     .swiper-container-ducky {
+      position: absolute;
+      transform: translateY(-100%);
       display: none;
 
-      @include screen-is(md) {
+      @include screen-is(tablet) {
         display: block;
-        transform: translateY(calc(-100% - 10px));
+        transform: translateY(calc(-100% - 30px));
         position: absolute;
         z-index: 2;
         right: 100px;
-        width: 400px;
-        height: 740px;
+        width: 300px;
+        height: 555px;
         overflow: hidden;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         border-radius: 6px;
       }
 
-      .project-image {
+      @include screen-is(md) {
+        transform: translateY(calc(-100% - 10px));
         width: 400px;
-        border-radius: 6px;
+        height: 740px;
+      }
+
+      .project-image {
+
+        @include screen-is(tablet) {
+          width: 300px;
+          border-radius: 6px;
+        }
+
+        @include screen-is(md) {
+          width: 400px;
+          border-radius: 6px;
+        }
       }
     }
 
     .swiper-navigation {
       display: none;
 
-      @include screen-is(md) {
-        transform: translateY(calc(-357px - 10px - 35px)); //height of the slider / 2
+      @include screen-is(tablet) {
+        transform: translateY(calc(-596.95px / 2 - 10px - 35px)); //height of the slider / 2
         position: absolute;
         right: calc(100px - 35px - 10px);
-        width: calc(400px + 2 * 35px + 2 * 10px);
+        width: calc(300px + 2 * 35px + 2 * 10px);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+      }
+
+      @include screen-is(md) {
+        transform: translateY(calc(-795px / 2 - 10px - 35px)); //height of the slider / 2
+        right: calc(100px - 35px - 10px);
+        width: calc(400px + 2 * 35px + 2 * 10px);
       }
 
       .swiper-icon {

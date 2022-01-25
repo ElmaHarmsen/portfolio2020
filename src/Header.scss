@@ -10,6 +10,11 @@
     overflow-x: hidden;
     overflow-y: hidden;
 
+    @include screen-is(tablet) {
+      width: 60%;
+      height: 70%;
+    }
+
     @include screen-is(md) {
       width: 60%;
       height: 62%;
