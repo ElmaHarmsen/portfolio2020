@@ -3,12 +3,17 @@
 .contact {
 
   .contact-info {
-    padding-top: 30px;
+    padding-top: 20px;
     padding-left: 10px;
     padding-right: 10px;
 
+    @include screen-is(tablet) {
+      padding-top: 30px;
+      width: 45%;
+    }
+
     @include screen-is(md) {
-      width: 60%;
+      width: 55%;
     }
     
     .contact-link-container {
@@ -57,7 +62,7 @@
     .contact-image {
       position: absolute;
       z-index: 3;
-      width: 180px;
+      width: 150px;
       border-radius: 4px;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       right: 20px;
