@@ -13,23 +13,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
       threshold: [0.2, 0.4, 0.6, 0.8, 1]
     });
     document.querySelectorAll(".section").forEach(section => scrollObserver.observe(section));
-
-    if (window.localStorage.getItem("darkTheme")) {
-      //Checks if there is a value of the data property darkTheme available to use
-      JSON.parse(window.localStorage.getItem("darkTheme")) ? setDarkTheme(true) : setDarkTheme(false);
-      //The localStorage string gets parsed back here as its original type (boolean) & gets the boolean value of darkTheme data property
-    }
   }, []);
-
-  const [darkTheme, setDarkTheme] = useState(false);
-  //darkTheme is a data property & setDarkTheme changes this data value, by default this boolean is false
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', darkTheme ? "dark" : "light");
-    //Using the 'dark-theme' attribute in css, the data property darkTheme gets either dark or light ('light' is default)
-    window.localStorage.setItem("darkTheme", JSON.stringify(darkTheme));
-    //In the localStorage we name 'darkTheme' with the value from the data property darkTheme, we make it into a string as this is how localstorage works
-  }, [darkTheme]); //Runs when darkTheme changes
 
   //This is the place where the HOOKS will be located.
   const [navigationState, changeState] = useState({ //inside of object
@@ -100,22 +84,22 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
   const navItems = [
     {
       name: "nav_header",
-      img:  "intro-1",
+      img:  "house",
       position: props.sectionPositions[0]
     },
     {
       name: "nav_projects",
-      img:  "projects-1",
+      img:  "projects",
       position: props.sectionPositions[1]
     },
     {
       name: "nav_about",
-      img:  "about-1",
+      img:  "about",
       position: props.sectionPositions[2]
     },
     {
       name: "nav_contact",
-      img:  "contact-1",
+      img:  "email",
       position: props.sectionPositions[3]
     }
   ]//This generates 4 navitems which know to wich position to scroll to when you click it.
@@ -138,8 +122,8 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
         {theNavItems}
       </div>
       <div className="nav-switches-container">
-        <div className="switch-theme" onClick={() => setDarkTheme(!darkTheme)}>
-         {darkTheme ? (
+        <div className="switch-theme" onClick={() => props.onThemeChange(!props.darkTheme)}>
+         {props.darkTheme ? (
           <img className='switch-icon' src={require("../assets/dark.png")} alt="" />
          ) : (
           <img className='switch-icon' src={require("../assets/light.png")} alt="" />

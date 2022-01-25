@@ -7,48 +7,6 @@ import dictionary from '../languages';
 SwiperCore.use(Navigation);
 
 function Projects(props) {
-  // const [currentProject, changeProject] = useState({
-  //   id: 1,
-  //   title: "projects_events_title",
-  //   job: "Frontend & Backend",
-  //   description: "projects_events",
-  //   url: "https://randomevents.netlify.app/events",
-  //   link: "randomevents.app",
-  //   stack1: "VueJs framework",
-  //   stack2: "NuxtJs framework",
-  //   stack3: "JavaScript, TypeScript",
-  //   stack4: "Strapi CMS",
-  //   stack5: "MongoDB"
-  // });
-
-  // const projects = [
-  //   {
-  //     id: 1,
-  //     title: "projects_events_title",
-  //     job: "Frontend & Backend",
-  //     description: "projects_events",
-  //     url: "https://randomevents.netlify.app/events",
-  //     link: "randomevents.app",
-  //     stack1: "VueJs framework",
-  //     stack2: "NuxtJs framework",
-  //     stack3: "JavaScript, TypeScript",
-  //     stack4: "Strapi CMS",
-  //     stack5: "MongoDB"
-  //     },
-  //   {
-  //     id: 2,
-  //     title: "projects_game_title",
-  //     job: "Frontend",
-  //     description: "projects_game",
-  //     url: "https://feum-game.netlify.app/",
-  //     link: "snakegame.app",
-  //     stack1: "HTML",
-  //     stack2: "CSS",
-  //     stack3: "JavaScript",
-  //     stack4: "Phaser.io",
-  //     stack5: ""
-  //   }
-  // ]
 
   return (
     <section className='projects-container'>
@@ -69,6 +27,12 @@ function Projects(props) {
                 <img className='project-link-icon' src={require("../assets/link.png")} />
               </div>
               <h3>{dictionary("project_nativeapp_link", props.languageSetting)}</h3>
+            </a>
+            <a className="project-link-container" href="https://drive.google.com/file/d/1h4TZikSRReqfUiiH51s2ZEodAqYV47Il/view?usp=sharing" target="blank">
+              <div className="project-link">
+                <img className='project-link-icon' src={require("../assets/video-camera.png")} />
+              </div>
+              <h3>{dictionary("project_nativeapp_video", props.languageSetting)}</h3>
             </a>
           </div>
         </section>

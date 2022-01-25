@@ -23,9 +23,17 @@ function Home() {
     //.Y is the position on the y axes, because thats the only one that matters.
     const localStorageResult = window.localStorage.getItem("languageSetting") ?? "nl";
     setLanguage(localStorageResult);
+
+    if (window.localStorage.getItem("darkTheme")) {
+      //Checks if there is a value of the data property darkTheme available to use
+      JSON.parse(window.localStorage.getItem("darkTheme")) ? setDarkTheme(true) : setDarkTheme(false);
+      //The localStorage string gets parsed back here as its original type (boolean) & gets the boolean value of darkTheme data property
+    }
   }, []); //End.
 
   const [languageSetting, setLanguage] = useState(null);
+  const [darkTheme, setDarkTheme] = useState(false);
+  //darkTheme is a data property & setDarkTheme changes this data value, by default this boolean is false
 
   useEffect(() => {
     if (languageSetting) {
@@ -33,43 +41,20 @@ function Home() {
     }
   }, [languageSetting]);
 
-  let sizeScreen = window.matchMedia('(min-width: 768px)');
-  const stars = [];
-  if (sizeScreen.matches) {
-    for (let starId = 0; starId < 301; starId++) {
-      stars.push({
-        id: starId,
-        positionX: Math.random() * window.innerWidth - 20,
-        positionY: Math.random() * window.innerHeight - 20,
-        size: starId % 2 === 0 ? "4px" : "2px",
-      })
-    }
-  }
-  else {
-    for (let starId = 0; starId < 71; starId++) {
-      stars.push({
-        id: starId,
-        positionX: Math.random() * window.innerWidth - 5,
-        positionY: Math.random() * window.innerHeight - 5,
-        size: starId % 2 === 0 ? "4px" : "2px",
-      })
-    }
-  }
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', darkTheme ? "dark" : "light");
+    //Using the 'dark-theme' attribute in css, the data property darkTheme gets either dark or light ('light' is default)
+    window.localStorage.setItem("darkTheme", JSON.stringify(darkTheme));
+    //In the localStorage we name 'darkTheme' with the value from the data property darkTheme, we make it into a string as this is how localstorage works
+  }, [darkTheme]); //Runs when darkTheme changes
 
   return (
     <div className="App">
-      <div className="section" id="Home"><Header languageSetting = {languageSetting} /></div>
-      <Navigation sectionPositions = {sectionPositions} languageSetting = {languageSetting} onLanguageChange = {(value => setLanguage(value))} />
+      <div className="section" id="Home"><Header darkTheme = {darkTheme} /></div>
+      <Navigation sectionPositions = {sectionPositions} languageSetting = {languageSetting} onLanguageChange = {(value => setLanguage(value))} darkTheme = {darkTheme} onThemeChange = {(value => setDarkTheme(value))} />
       <div className="section" id="Projects"><Projects languageSetting = {languageSetting} /></div>
       <div className="section" id="About"><About languageSetting = {languageSetting} /></div> 
       <div className="section" id="Contact"><Contact languageSetting = {languageSetting} /></div> 
-      <div 
-        className="star-container"
-      >
-        {stars.map(star => {
-          return <span key={star.id} className="star" style={{top: star.positionY, left: star.positionX, width: star.size, height: star.size}}></span>
-        })}
-      </div>
     </div>
   );
 }

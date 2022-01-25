@@ -2,39 +2,51 @@ const languageToContent = {
   //new
   project_nativeapp_info: {
     en: "As a graduation project for my bachelor programme of Communication and Multimedia Design, I developed a native application for Weflycheap. The app is built with React Native, but remains to be a prototype. It allows users to filter through deals, save favorite deals in the app, and get reminded of new deals matching their interests, while using personalisation techniques throughout the app to make the user feel supported in their search towards the ideal holiday.",
-    nl: "Project beschrijving en link, github link."
+    nl: "Als afstudeeropdracht voor mijn bachelor opleiding Communicatie en Multimedia Design heb ik voor Weflycheap een native applicatie ontwikkeld. In de app kunnen gebruiker deals filteren, favorieten deals bewaren in de app en herinneringen opstellen voor nieuwe interessante deals. Door de hele app wordt personalisatie toegepast om de gebruiker te ondersteunen in het proces naar de ideale vakantie."
   },
   project_nativeapp_headline: {
-    en: "Mobile application for Weflycheap, provider for online flight and holiday deals.",
-    nl: "DReact Native and JavaScript development & User Interface design."
+    en: "Mobile application for Weflycheap, online provider for flight and holiday deals.",
+    nl: "Mobiele applicatie voor Weflycheap, online aanbieder van vluchten- en vakantiedeals."
   },
   project_nativeapp_technologies: {
     en: "React Native and JavaScript development & User Interface design.",
-    nl: "DReact Native and JavaScript development & User Interface design."
+    nl: "React Native en JavaScript development & User Interface ontwerp."
   },
   project_nativeapp_link: {
     en: "Download the native app for your smartphone.",
     nl: "Download de native app voor je smartphone."
   },
+  project_nativeapp_video: {
+    en: "View a video demonstration of the app.",
+    nl: "Bekijk een video demonstratie van de app."
+  },
   project_dictionary_info: {
     en: "For the purpose of learning VueJs, I developed a dictionary platform. The website serves various functionalities, such as adding words, as well as editing and removing words, searching for words. Though currently disabled, the website would provide protection of the dictionary with a login functionality.",
-    nl: "Project beschrijving en link, github link."
+    nl: "Om VueJs te leren heb ik een woordenboek platform ontwikkeld. De website heeft verschillende functionaliteiten. Zo kunnen woorden toegevoegd, bewerkt en verwijderd worden en kan er naar woorden gezocht worden. Hoewel momenteel uitgeschakeld zou het platform het woordenboek beschermen met een inlog functie."
   },
   project_dictionary_headline: {
-    en: "Online platform for my own personal dictionary.",
-    nl: "DReact Native and JavaScript development & User Interface design."
+    en: "Online platform for my personal dictionary.",
+    nl: "Online platform voor mijn persoonlijke woordenboek."
   },
   project_dictionary_technologies: {
     en: "VueJs and JavaScript frontend development, ExpressJs backend development & MongoDB data management.",
-    nl: "VueJs and JavaScript frontend development, ExpressJs backend development & MongoDB data management."
+    nl: "VueJs en JavaScript frontend development, ExpressJs backend development & MongoDB data management."
   },
   project_dictionary_link: {
     en: "Get a closer look on the website.",
-    nl: "Bezoek de website hier."
+    nl: "Neem een kijkje op de website."
   },
   project_dictionary_github: {
     en: "Visit the codebase on my Github repository.",
     nl: "Bekijk de codebase in het Github project."
+  },
+  about_info: {
+    en: "I very much love to travel, and whenever I find myself at home in Groningen, I enjoy playing games and reading books just as much. Having just finished my bachelors degree in Communication and Multimedia Design, I am currently preparing for the life abroad where I plan on studying a masters degree. It is yet to be decided what and where exactly that’s gonna be, but I am excited to see where this road will take me.",
+    nl: "Ik houd enorm van reizen, en als ik thuis ben in Groningen geniet ik zet zoveel van games en boeken. Recentelijk heb ik mijn bachelor in Communicatie en Multimedia Design afgerond en nu bereid ik me voor op een leven in het buitenland waar ik van plan ben een master te studeren. De beslissing wat dit gaat zijn en waar dit gaat plaatsvinden ligt nog open, maar ik kijk ernaar uit om te zien waar dit pad me zal brengen."
+  },
+  about_collaboration: {
+    en: "My latest project was with React Native, and I’m currently trying to keep my skills in VueJs and React up to date. I would like to provide service in Web Development, and that’s why I’m looking for a collaboration with you.",
+    nl: "Mijn laatste project was met React Native. Momenteel ben ik bezig mijn vaardigheden in VueJs en React up-to-date te houden. Ik zou graag websites willen ontwikkelen en daarom ben ik op zoek naar een samenwerking met jou."
   },
   contact_mail: {
     en: "Send me an email using elmaharmsen01@gmail.com.",

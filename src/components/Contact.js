@@ -4,7 +4,6 @@ import dictionary from "../languages";
 import '../Footer.scss';
 
 function Footer(props) {
-  const [currentColumn, setColumn] = useState(null);
 
   return (
     <section className='contact'>
@@ -16,13 +15,13 @@ function Footer(props) {
         <div className="contact-info">
           <a className="contact-link-container" href="mailto:elmaharmsen01@gmail.com" target="blank">
             <div className="contact-link">
-              <img className='contact-link-icon' src={require("../assets/contact-2.png")} />
+              <img className='contact-link-icon' src={require("../assets/email-black.png")} />
             </div>
             <h3>{dictionary("contact_mail", props.languageSetting)}</h3>
           </a>
           <a className="contact-link-container" href="https://drive.google.com/file/d/1nfJM1PvPeCaF-epkzyHT4DNn3pVM6MvL/view?usp=sharing" target="blank">
             <div className="contact-link">
-              <img className='contact-link-icon' src={require("../assets/cv.png")} />
+              <img className='contact-link-icon' src={require("../assets/document.png")} />
             </div>
             <h3>{dictionary("contact_cv", props.languageSetting)}</h3>
           </a>

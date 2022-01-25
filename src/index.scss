@@ -2,16 +2,16 @@
 :root {
   --color1: #000;
   --color2: #fff;
-  --text-on-color1: #000;
-  --text-on-color2: #fff;
+  --text-on-color2: #000;
+  --text-on-color1: #fff;
 }
 
 //Dark theme, data is part of the attribute
 [data-theme="dark"] {
-  --color1: #F7B1AB;
-  --color2: #FFC9B5;
-  --text-on-color1: #000;
-  --text-on-color2: #000;
+  --color1: #6B2737; //#0A2239; //#38023B;
+  --color2: #E08E45; //#53A2BE; //#A288E3;
+  --text-on-color2: #6B2737;
+  --text-on-color1: #fff;
 
   --background-color: #010205;
   --highlight-color: #010205;
@@ -24,22 +24,12 @@
   --color2-black: #010205;
 }
 
-//possible colors
-/*
-  #9E4770
-  9D8DF1
-  A3C4BC
-
-  --color1: #F7B1AB;
-  --color2: #FFC9B5;
-*/
-
 //Screen widths
 $breakpoints: (
   "sm": 0, //Phone
   "md": 768px, //Tablet
   "lg": 1440px, //Small Laptop
-  "xl": 2060px //Big Screen
+  "xl": 1920px //Big Screen
 );
 
 //Formula for breakpoint
@@ -119,7 +109,7 @@ $breakpoints: (
 h1 {
   font-family: "font-light";
   font-size: 55px;
-  color: var(--text-on-color1);
+  color: var(--text-on-color2);
 
   @include screen-is(md) {
     font-size: 80px;
@@ -133,7 +123,7 @@ h1 {
 h2 {
   font-family: "font-regular";
   font-size: 65px;
-  color: var(--text-on-color2);
+  color: var(--text-on-color1);
 
   @include screen-is(md) {
     font-size: 100px;
@@ -146,7 +136,7 @@ h2 {
 
 h3, h4 {
   font-family: "font-regular";
-  color: var(--text-on-color2);
+  color: var(--text-on-color1);
   font-size: 16px;
   line-height: 1.2rem;
 
@@ -174,139 +164,128 @@ a {
   text-decoration: none;
 }
 
-//Styles
-// body {
-//   margin: 0;
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 
-//   @include screen-is(lg) {
-//     overflow-x: hidden;
-//   }
-// }
-// h1 {
-//   font-family: "hk-concentrate";
-//   font-size: 50px;
-//   -webkit-text-stroke: 2px var(--color1-transparent);
+  @include screen-is(lg) {
+    width: 70%;
+    margin: 0rem auto 0rem auto;
+  }
 
-//   @include screen-is(lg) {
-//     font-size: 85px;
-//     -webkit-text-stroke: 3px var(--color1-transparent);
-//     letter-spacing: 4px;
-//   } 
-//   @include screen-is(xl) {
-//     font-size: 120px;
-//   }
-// }
+  .swiper-wrapper {
+    height: 100%;
+    display: flex;
 
-// h2, li {
-//   font-family: "hk-concentrate";
-//   font-size: 22px;
-//   font-weight: bold;
-//   line-height: 1.3;
+    .swiper-slide {
+      height: auto;
+      flex-shrink: 0;
+      display: flex;
+      flex-flow: column nowrap;
 
-//   @include screen-is(lg) {
-//     font-size: 30px;
-//     line-height: 1.6;
-//   }
-// }
+      @include screen-is(lg) {
+        justify-content: space-between;
+      }
+      h2 {
+        color: var(--text-color);
+        padding: 1rem 0rem 1.5rem 0rem;
 
-// h3 {
-//   font-family: "hk-concentrate";
-//   font-size: 50px;
-//   color: var(--text-color);
-//   line-height: 1.3;
-// }
-// p {
-//   font-family: "hk-concentrate";
-//   font-size: 18px;
-//   font-weight: bold;
-//   line-height: 1.3;
-//   color: var(--text-color);
+        @include screen-is(lg) {
+          padding: 0rem 0rem 1.5rem 0rem;
+        }
+      }
 
-//   @include screen-is(lg) {
-//     font-size: 25px;
-//     line-height: 1.6;
-//   }
-// }
-// a {
-//   text-decoration: none;
-//   cursor: pointer;
-// }
-.style-bold {
-  font-family: 'hk-concentrate-med';
-}
-.Header, .Projects, .About, .Contact {
-  display: flex;
-  flex-flow: column nowrap;
+      .about-me {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr calc(8rem + 8px);
+        gap: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
 
-  h1 {
-    color: var(--heading-color);
+        @include screen-is(lg) {
+          margin-top: 0;
+          grid-template-rows: 1fr calc(14rem + 8px);
+          gap: 2rem;
+        }
 
-    @include screen-is(lg) {
-      text-align: center;
+        .about-me-intro {
+          clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 54% 75%, 24% 100%, 31% 75%, 0% 75%);
+          background-color: var(--border-color);
+          color: var(--color2-black);
+          padding: 1rem 2rem;
+          grid-column: 2/3;
+          height: 100%;
+          width: max-content;
+          justify-self: end;
+          margin-right: 2rem;
+
+          @include screen-is(lg) {
+            justify-self: unset;
+            padding: 1.5rem 3rem;
+            margin-right: 0;
+          }
+        }
+
+        .slide-me {
+          width: auto;
+          height: 8rem;
+          border-radius: 50%;
+          border: 4px solid var(--border-color);
+          margin-right: 2rem;
+          grid-row: 2/3;
+          grid-column: 1/3;
+          justify-self: left;
+
+          @include screen-is(lg) {
+            height: 14rem;
+            justify-self: center;
+          }
+        }
+      }
+
+      .slide-flag {
+        display: none;
+
+        @include screen-is(lg) {
+          display: block;
+          position: relative;
+          bottom: calc(1rem + 8px + 52px); //padding, border and height of swiper navigation
+          width: 10rem;
+          transform: translateX(35%) rotate(-15deg);
+          margin: 0rem auto;
+        }
+      }
     }
   }
-}
-.Header {
-  height: 100vh;
-  padding: 1rem;
-  justify-content: space-evenly;
-  align-items: center;
+  .swiper-navigation {
+    width: calc(2 * 50px);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem .75rem;
 
-  @include screen-is(lg) {
-    padding: 0rem;
-  }
-}
-.Projects, .About, .Contact {
-  height: calc(100vh - 2rem - 4px);
+    @include screen-is(lg) {
+      bottom: -4px;
+      border: 4px solid var(--border-color);
+      background-color: var(--highlight-color);
+    }
 
-  @include screen-is(lg) {
-    height: calc(100vh - 5rem);
-  }
-}
-.Projects, .About {
-  padding: 1rem;
-  border-top: 4px solid var(--border-color);
-  background-color: var(--section-color);
+    & > div {
+      cursor: pointer;
 
-  @include screen-is(lg) {
-    padding: 0rem;
-    border: 4px solid var(--border-color);
-    margin: 2.5rem;
-  }
-}
-.Contact {
-  height: calc(100vh - 4px);
-  border-top: 4px solid var(--border-color);
+      svg {
+        fill: var(--border-color);
 
-  @include screen-is(lg) {
-    background-color: transparent;
-    height: calc(100vh - 5rem - 8px);
-    margin: 2.5rem;
-    border: 4px solid transparent;
-    text-align: center;
-  }
-}
-.swiper-container {
-  cursor: grab;
-}
-.sm-only {
-  @include screen-is(lg) {
-    display: none;
-  }
-}
-
-//Animations
-@keyframes eye-blinking {
-  0% {
-    transform: scale(1, .05);
-  }
-  5% {
-    transform: scale(1, 1);
-  }
-  95% {
-    transform: scale(1, 1);
-  }
-  100% {
-    transform: scale(1, .05);
+        @include screen-is(lg) {
+          fill: var(--text-color);
+        }
+      }
+    }
   }
 }
