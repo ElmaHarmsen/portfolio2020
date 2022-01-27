@@ -90,7 +90,7 @@ $breakpoints: (
   .section-top {
     justify-content: flex-end;
     background-color: var(--color2);
-    height: 30%;
+    height: 27%;
 
     @include screen-is(md) {
       height: 38%;
@@ -100,7 +100,7 @@ $breakpoints: (
   .section-bottom {
     justify-content: flex-start;
     background-color: var(--color1);
-    height: 70%;
+    height: 73%;
 
     @include screen-is(md) {
       height: 62%;

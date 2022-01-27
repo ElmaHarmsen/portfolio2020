@@ -71,7 +71,7 @@ function Projects(props) {
             <img className='project-image' src={require("../assets/projects/native-app-8.jpg")} alt="" />
           </SwiperSlide>
         </Swiper>
-        <div className="swiper-navigation">
+        <div className="swiper-navigation-native-app">
           <div className="swiper-prev-native-app"><img className='swiper-icon' src={require("../assets/prev.png")} /></div>
           <div className="swiper-next-native-app"><img className='swiper-icon' src={require("../assets/next.png")} /></div>
         </div>
@@ -126,7 +126,7 @@ function Projects(props) {
             <img className='project-image' src={require("../assets/projects/ducky-4.jpg")} alt="" />
           </SwiperSlide>
         </Swiper>
-        <div className="swiper-navigation">
+        <div className="swiper-navigation-ducky">
           <div className="swiper-prev-ducky"><img className='swiper-icon' src={require("../assets/prev.png")} /></div>
           <div className="swiper-next-ducky"><img className='swiper-icon' src={require("../assets/next.png")} /></div>
         </div>

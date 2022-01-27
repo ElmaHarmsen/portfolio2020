@@ -81,25 +81,26 @@
         height: 596.95px;
         overflow: hidden;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        border-radius: 6px;
+        border-radius: 15px;
       }
 
       @include screen-is(md) {
         transform: translateY(calc(-100% - 10px));
-        width: 400px;
-        height: 795px;
+        width: 380px;
+        height: 756.133px;
+        border-radius: 20px;
       }
 
       .project-image {
 
         @include screen-is(tablet) {
           width: 300px;
-          border-radius: 6px;
+          border-radius: 15px;
         }
 
         @include screen-is(md) {
-          width: 400px;
-          border-radius: 6px;
+          width: 380px;
+          border-radius: 20px;
         }
       }
     }
@@ -119,30 +120,31 @@
         height: 555px;
         overflow: hidden;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        border-radius: 6px;
+        border-radius: 15px;
       }
 
       @include screen-is(md) {
         transform: translateY(calc(-100% - 10px));
-        width: 400px;
-        height: 740px;
+        width: 380px;
+        height: 703px;
+        border-radius: 20px;
       }
 
       .project-image {
 
         @include screen-is(tablet) {
           width: 300px;
-          border-radius: 6px;
+          border-radius: 15px;
         }
 
         @include screen-is(md) {
-          width: 400px;
-          border-radius: 6px;
+          width: 380px;
+          border-radius: 20px;
         }
       }
     }
 
-    .swiper-navigation {
+    .swiper-navigation-native-app {
       display: none;
 
       @include screen-is(tablet) {
@@ -156,7 +158,33 @@
       }
 
       @include screen-is(md) {
-        transform: translateY(calc(-795px / 2 - 10px - 35px)); //height of the slider / 2
+        transform: translateY(calc(-756.133px / 2 - 10px - 35px)); //height of the slider / 2
+        right: calc(100px - 35px - 10px);
+        width: calc(400px + 2 * 35px + 2 * 10px);
+      }
+
+      .swiper-icon {
+        opacity: .4;
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    .swiper-navigation-ducky {
+      display: none;
+
+      @include screen-is(tablet) {
+        transform: translateY(calc(-555px / 2 - 10px - 35px)); //height of the slider / 2
+        position: absolute;
+        right: calc(100px - 35px - 10px);
+        width: calc(300px + 2 * 35px + 2 * 10px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      @include screen-is(md) {
+        transform: translateY(calc(-703px / 2 - 10px - 35px)); //height of the slider / 2
         right: calc(100px - 35px - 10px);
         width: calc(400px + 2 * 35px + 2 * 10px);
       }

@@ -41,7 +41,7 @@ const languageToContent = {
     nl: "Bekijk de codebase in het Github project."
   },
   about_info: {
-    en: "I very much love to travel, and whenever I find myself at home in Groningen, I enjoy playing games and reading books just as much. Having just finished my bachelors degree in Communication and Multimedia Design, I am currently preparing for the life abroad where I plan on studying a masters degree. It is yet to be decided what and where exactly that’s gonna be, but I am excited to see where this road will take me.",
+    en: "I very much love to travel, and whenever I find myself at home in Groningen, I enjoy playing games and reading books just as much. Having just finished my bachelor's degree in Communication and Multimedia Design, I am currently preparing for the life abroad where I plan on studying a master's degree. It is yet to be decided what and where exactly that is going to be, but I am excited to see where this road will take me.",
     nl: "Ik houd enorm van reizen, en als ik thuis ben in Groningen geniet ik zet zoveel van games en boeken. Recentelijk heb ik mijn bachelor in Communicatie en Multimedia Design afgerond en nu bereid ik me voor op een leven in het buitenland waar ik van plan ben een master te studeren. De beslissing wat dit gaat zijn en waar dit gaat plaatsvinden ligt nog open, maar ik kijk ernaar uit om te zien waar dit pad me zal brengen."
   },
   about_collaboration: {
@@ -57,8 +57,8 @@ const languageToContent = {
     nl: "Lees direct mijn resume online."
   },
   contact_social: {
-    en: "Browse my profile on LinkedIn.",
-    nl: "Bekijk mijn profiel op LinkedIn."
+    en: "Send me a message on LinkedIn.",
+    nl: "Stuur me een bericht op LinkedIn."
   },
 
   //old

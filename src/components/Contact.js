@@ -19,13 +19,13 @@ function Footer(props) {
             </div>
             <h3>{dictionary("contact_mail", props.languageSetting)}</h3>
           </a>
-          <a className="contact-link-container" href="https://drive.google.com/file/d/1rYHABz0eXo0GQfOQ5TYRJPtOQTn0iwtl/view?usp=sharing" target="blank">
+          <a className="contact-link-container" href="https://drive.google.com/file/d/1gfdF6MsC7xWMqPHCRiBZJQ03-YyR9s28/view?usp=sharing" target="blank">
             <div className="contact-link">
               <img className='contact-link-icon' src={require("../assets/document.png")} />
             </div>
             <h3>{dictionary("contact_cv", props.languageSetting)}</h3>
           </a>
-          <a className="contact-link-container" href="linkedin.com/in/elma-harmsen-087872181" target="blank">
+          <a className="contact-link-container" href="https://www.linkedin.com/in/elma-harmsen/" target="blank">
             <div className="contact-link">
               <img className='contact-link-icon' src={require("../assets/linkedin.png")} />
             </div>

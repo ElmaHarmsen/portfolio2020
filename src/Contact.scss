@@ -67,6 +67,7 @@
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       right: 20px;
       transform: translateY(calc(-100% - 20px));
+      border-radius: 10px;
 
       @include screen-is(tablet) {
         display: none;
