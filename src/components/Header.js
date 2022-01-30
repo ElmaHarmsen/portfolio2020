@@ -7,10 +7,10 @@ function Header(props) {
   return (
     <section className='header'>
       <section className="section-top">
-        <h1>portfolio</h1>
+        <h1 className='animated-text-top'>portfolio</h1>
       </section>
       <section className='section-bottom'>
-        <h2>Elma</h2>
+        <h2 className='animated-text-bottom'>Elma</h2>
       </section>
       <div className="map-container">
         {

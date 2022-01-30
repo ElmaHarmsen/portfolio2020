@@ -53,16 +53,6 @@ $breakpoints: (
   src: url('./assets/Quicksand-Medium.ttf');
 }
 
-//Animations
-@keyframes slide-in {
-  0% {
-    transform: translateX(-100px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-
 //2022 styles
 .header, .projects, .about, .contact {
   height: 100vh;
@@ -73,6 +63,7 @@ $breakpoints: (
     flex-flow: column;
     padding-left: 10px;
     padding-right: 10px;
+    overflow: hidden;
 
     @include screen-is(tablet) {
       padding-left: 70px; 
@@ -291,4 +282,41 @@ a {
   position: absolute;
   bottom: 20px;
   left: 100px;
+}
+
+.animated-text-top {
+  animation: "slide-in" .4s ease-out;
+
+  @include screen-is(tablet) {
+    animation: "slide-in" .6s ease;
+  }
+}
+
+.animated-text-bottom {
+  animation: "slide-in" .6s ease;
+
+  @include screen-is(tablet) {
+    animation: "slide-in" .8s ease;
+    
+    // transition: opacity .6s ease,transform .6s cubic-bezier(.17,.24,.19,.99),line-height .6s ease;
+    // transition-delay: 0s, 0s, 0s;
+    // transition-delay: .05s;
+    // will-change: opacity,transform,line-height;
+    // transform: translateX(100%);
+    // opacity: 1;
+  }
+}
+
+//Animations
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  70% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }

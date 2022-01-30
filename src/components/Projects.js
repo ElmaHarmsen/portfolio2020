@@ -12,10 +12,10 @@ function Projects(props) {
     <section className='projects-container'>
       <section className="projects">
         <section className="section-top">
-          <h1>project</h1>
+          <h1 className='animated-text-top'>project</h1>
         </section>
         <section className='section-bottom'>
-          <h2>Native App</h2>
+          <h2 className='animated-text-bottom'>Native App</h2>
           <div className='project-info'>
             <div className="italic-texts">
               <h4>{dictionary("project_nativeapp_headline", props.languageSetting)}</h4>
@@ -79,10 +79,10 @@ function Projects(props) {
 
       <section className="projects">
         <section className="section-top">
-          <h1>project</h1>
+          <h1 className='animated-text-top'>project</h1>
         </section>
         <section className='section-bottom'>
-          <h2>Dictionary</h2>
+          <h2 className='animated-text-bottom'>Dictionary</h2>
           <div className='project-info'>
             <div className="italic-texts">
               <h4>{dictionary("project_dictionary_headline", props.languageSetting)}</h4>
