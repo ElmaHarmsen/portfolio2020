@@ -41,12 +41,12 @@ const languageToContent = {
     nl: "Bekijk de codebase in het Github project."
   },
   about_info: {
-    en: "I very much love to travel, and whenever I find myself at home in Groningen, I enjoy playing games and reading books just as much. Having just finished my bachelor's degree in Communication and Multimedia Design, I am currently preparing for the life abroad where I plan on studying a master's degree. It is yet to be decided what and where exactly that is going to be, but I am excited to see where this road will take me.",
-    nl: "Ik houd enorm van reizen, en als ik thuis ben in Groningen geniet ik zet zoveel van games en boeken. Recentelijk heb ik mijn bachelor in Communicatie en Multimedia Design afgerond en nu bereid ik me voor op een leven in het buitenland waar ik van plan ben een master te studeren. De beslissing wat dit gaat zijn en waar dit gaat plaatsvinden ligt nog open, maar ik kijk ernaar uit om te zien waar dit pad me zal brengen."
+    en: "As a web developer I am mainly involved in designing and developing the frontend for websites and apps. I have been doing this with great pleasure since the beginning of my study Communication and Multimedia Design.",
+    nl: "Als web developer houd ik mij voornamelijk bezig met het ontwerpen en ontwikkelen van de frontend voor websites en apps. Dit doe ik al sinds het begin van mijn studie Communicatie en Multimedia Design met veel plezier."
   },
   about_collaboration: {
-    en: "My latest project was with React Native, and I’m currently trying to keep my skills in VueJs and React up to date. I would like to provide service in Web Development, and that’s why I’m looking for a collaboration with you.",
-    nl: "Mijn laatste project was met React Native. Momenteel ben ik bezig mijn vaardigheden in VueJs en React up-to-date te houden. Ik zou graag websites willen ontwikkelen en daarom ben ik op zoek naar een samenwerking met jou."
+    en: "In 2022 I will take it a step further and pursue my passion for neat user interfaces with the master's degree in Human Computer Interaction, in Sweden. Besides, I like to travel a lot, as much as I enjoy a wonderful game or a nice book. I am currently looking for a part-time job alongside my studies, and of course a great collaboration.",
+    nl: "In 2022 ga ik een stapje verder en achtervolg ik mijn passie voor verfijnde gebruikersinterfaces met de master in Human Computer Interaction, in Zweden. Ik houd ook veel van reizen, evenveel als ik kan genieten van een leuke game of een goed boek. Momenteel ben ik op zoek naar een parttime baan naast mijn studie, en uiteraard een toffe samenwerking."
   },
   contact_mail: {
     en: "Send me an email using elmaharmsen01@gmail.com.",
