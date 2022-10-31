@@ -11,8 +11,8 @@
     right: 20px;
 
     @include screen-is(md) {
-      top: calc(38% - 50px);
-      right: 100px;
+      top: calc(38% - 55px);
+      right: 160px;
       flex-flow: row;
     }
   }
@@ -28,7 +28,7 @@
     @include screen-is(md) {
       flex-flow: row;
       right: 100px;
-      bottom: calc(62% - 35px - 10px);
+      top: calc(38% - 85px);
     }
 
     .switch-language, .switch-theme {
@@ -36,29 +36,23 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      margin-bottom: 10px;
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      background-color: var(--color2);
       transition: all .2s ease;
 
       @include screen-is(md) {
-        margin-right: 5px;
-        margin-bottom: 0;
+        margin: 0px 15px;
       }
     }
 
     @include screen-is(tablet) {
       .switch-language:hover, .switch-theme:hover {
-        transform: translateX(-10px); 
+        transform: scale(1.2); 
         cursor: pointer;
       }
     }
   
     @include screen-is(md) {
       .switch-language:hover, .switch-theme:hover {
-        transform: translateY(-10px); 
+        transform: scale(1.2); 
         cursor: pointer;
       }
     }
@@ -66,6 +60,11 @@
     .switch-icon {
       width: 15px;
       height: 15px;
+
+      @include screen-is(md) {
+        width: 55px;
+        height: 55px;
+      }
     }
 
   }
@@ -78,12 +77,10 @@
     width: 35px;
     height: 35px;
     margin-bottom: 10px;
-    border-radius: 50%;
-    background-color: var(--color1);
     transition: all .2s ease;
 
     @include screen-is(md) {
-      margin-right: 5px;
+      margin: 0px 15px;
       margin-bottom: 0;
       width: 45px;
       height: 45px;
@@ -92,14 +89,14 @@
 
   @include screen-is(tablet) {
     .nav-button:hover {
-      transform: translateX(-10px); 
+      transform: scale(1.2); 
       cursor: pointer;
     }
   }
 
   @include screen-is(md) {
     .nav-button:hover {
-      transform: translateY(-10px); 
+      transform: scale(1.2); 
       cursor: pointer;
     }
   }
@@ -108,7 +105,7 @@
     width: 15px;
 
     @include screen-is(md) {
-      width: 20px;
+      width: 35px;
     }
   }
 }

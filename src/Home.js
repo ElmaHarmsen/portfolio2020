@@ -50,7 +50,7 @@ function Home() {
 
   return (
     <div className="App">
-      <div className="section" id="Home"><Header darkTheme = {darkTheme} /></div>
+      <div className="section" id="Home"><Header darkTheme = {darkTheme} languageSetting = {languageSetting} /></div>
       <Navigation sectionPositions = {sectionPositions} languageSetting = {languageSetting} onLanguageChange = {(value => setLanguage(value))} darkTheme = {darkTheme} onThemeChange = {(value => setDarkTheme(value))} />
       <div className="section" id="Projects"><Projects languageSetting = {languageSetting} /></div>
       <div className="section" id="About"><About darkTheme = {darkTheme} languageSetting = {languageSetting} /></div> 

@@ -12,28 +12,28 @@ function Projects(props) {
     <section className='projects-container'>
       <section className="projects">
         <section className="section-top">
-          <h1 className='animated-text-top'>project</h1>
+          <h1 className='animated-text-top'>Native app</h1>
         </section>
         <section className='section-bottom'>
-          <h2 className='animated-text-bottom'>Native App</h2>
           <div className='project-info'>
-            <div className="italic-texts">
-              <h4>{dictionary("project_nativeapp_headline", props.languageSetting)}</h4>
-              <h4>{dictionary("project_nativeapp_technologies", props.languageSetting)}</h4>
-            </div>
-            <h3>{dictionary("project_nativeapp_info", props.languageSetting)}</h3>
-            <a className="project-link-container" href="https://drive.google.com/file/d/1nlUUZb94Yh96X_lSVwG-87WHUzMVQ_57/view?usp=sharing" target="blank">
-              <div className="project-link">
-                <img className='project-link-icon' src={require("../assets/link.png")} />
-              </div>
-              <h3>{dictionary("project_nativeapp_link", props.languageSetting)}</h3>
-            </a>
             <a className="project-link-container" href="https://drive.google.com/file/d/1h4TZikSRReqfUiiH51s2ZEodAqYV47Il/view?usp=sharing" target="blank">
               <div className="project-link">
-                <img className='project-link-icon' src={require("../assets/video-camera.png")} />
+                <img className='project-link-icon' src={require("../assets/play.png")} />
               </div>
-              <h3>{dictionary("project_nativeapp_video", props.languageSetting)}</h3>
+              <h2>{dictionary("project_nativeapp_video", props.languageSetting)}</h2>
             </a>
+            <h3>{dictionary("project_nativeapp_info", props.languageSetting)}</h3>
+            <div className="project-technologies">
+              <h3>{dictionary("project_nativeapp_technologies", props.languageSetting)}</h3>
+            </div>
+          </div>
+
+          <div className="button-container">
+            <div className="button-back-to-top" onClick={() => window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            })}
+            >next</div>
           </div>
         </section>
         <Swiper
@@ -79,28 +79,21 @@ function Projects(props) {
 
       <section className="projects">
         <section className="section-top">
-          <h1 className='animated-text-top'>project</h1>
+          <h1 className='animated-text-top'>{dictionary("header_project_dictionary", props.languageSetting)}</h1>
         </section>
         <section className='section-bottom'>
-          <h2 className='animated-text-bottom'>Dictionary</h2>
+          <h2 className='animated-text-bottom'></h2>
           <div className='project-info'>
-            <div className="italic-texts">
-              <h4>{dictionary("project_dictionary_headline", props.languageSetting)}</h4>
-              <h4>{dictionary("project_dictionary_technologies", props.languageSetting)}</h4>
-            </div>
-            <h3>{dictionary("project_dictionary_info", props.languageSetting)}</h3>
             <a className="project-link-container" href="https://duckydictionary.netlify.app/" target="blank">
               <div className="project-link">
-                <img className='project-link-icon' src={require("../assets/link.png")} />
+                <img className='project-link-icon' src={require("../assets/cursor.png")} />
               </div>
-              <h3>{dictionary("project_dictionary_link", props.languageSetting)}</h3>
+              <h2>{dictionary("project_dictionary_link", props.languageSetting)}</h2>
             </a>
-            <a className="project-link-container" href="https://github.com/ElmaHarmsen/lifeinczech" target="blank">
-              <div className="project-link">
-                <img className='project-link-icon' src={require("../assets/github.png")} />
-              </div>
-              <h3>{dictionary("project_dictionary_github", props.languageSetting)}</h3>
-            </a>
+            <h3>{dictionary("project_dictionary_info", props.languageSetting)}</h3>
+            <div className="project-technologies">
+              <h3>{dictionary("project_dictionary_technologies", props.languageSetting)}</h3>
+            </div>
           </div>
         </section>
         <Swiper

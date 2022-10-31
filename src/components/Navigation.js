@@ -24,10 +24,6 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
         visitility: 0 //0
       },
       {
-        name: "About",
-        visitility: 0 //1
-      },
-      {
         name: "Projects",
         visitility: 0 //2
       },
@@ -97,19 +93,19 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
     // }, //turned off because the nav is not fixed so you would never press the home btn
     {
       name: "nav_projects",
-      img:  "projects",
+      img:  "nav-projects",
       position: props.sectionPositions[1],
       title: "Projects"
     },
     {
       name: "nav_about",
-      img:  "about",
+      img:  "nav-about-me",
       position: props.sectionPositions[2],
       title: "About"
     },
     {
       name: "nav_contact",
-      img:  "email",
+      img:  "nav-chat",
       position: props.sectionPositions[3],
       title: "Contact"
     }
@@ -132,15 +128,15 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
         {theNavItems}
       </div>
       <div className="nav-switches-container">
-        <div className="switch-theme" onClick={() => props.onThemeChange(!props.darkTheme)}>
+        {/* <div className="switch-theme" onClick={() => props.onThemeChange(!props.darkTheme)}>
          {props.darkTheme ? (
-          <img className='switch-icon' src={require("../assets/dark.png")} alt="" />
+          <img className='switch-icon' src={require("../assets/nav-light.png")} alt="" />
          ) : (
-          <img className='switch-icon' src={require("../assets/light.png")} alt="" />
+          <img className='switch-icon' src={require("../assets/nav-light.png")} alt="" />
          )}
-        </div>
+        </div> */}
         <div className="switch-language" onClick={() => props.onLanguageChange(props.languageSetting === "nl" ? "en" : "nl")}>
-          <p>{props.languageSetting === "nl" ? "en" : "nl"}</p>
+          <h4>{props.languageSetting === "nl" ? "en" : "nl"}</h4>
         </div>
       </div>
       {/* <div className="section-button" onClick={() => navigateToSection()}>

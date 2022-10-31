@@ -1,5 +1,18 @@
 const languageToContent = {
   //new
+  header_project_dictionary: {
+    en: "Dictionary",
+    nl: "Woordenboek"
+  },
+  header_contact: {
+    en: "Take the step",
+    nl: "Neem de stap"
+  },
+  home_info: {
+    en: "Devoted human computer interaction designer",
+    nl: "Toegewijde ontwerper van mens-computer interactie"
+    // en: "Arising from the Netherlands, I travelled to Scandinavia to expand my borders and embark on new quests. As a web developer I primarily involved myself in the development of user interface for both websites and applications, and I will continue to do so with great delight. I came to Sweden to pursue my devotion for human computer interaction. A new journey which will surely bring me to a great destination. My goal is to make our world a fine place. That is why I will take on the challenge, and dive deep into accomplishing flawless interactions between human and computer."
+  },
   project_nativeapp_info: {
     en: "As a graduation project for my bachelor programme of Communication and Multimedia Design, I developed a native application for Weflycheap. The app is built with React Native, but remains to be a prototype. It allows users to filter through deals, save favorite deals in the app, and get reminded of new deals matching their interests, while using personalisation techniques throughout the app to make the user feel supported in their search towards the ideal holiday.",
     nl: "Als afstudeeropdracht voor mijn bachelor opleiding Communicatie en Multimedia Design heb ik voor Weflycheap een native applicatie ontwikkeld. In de app kunnen gebruiker deals filteren, favorieten deals bewaren in de app en herinneringen opstellen voor nieuwe interessante deals. Door de hele app wordt personalisatie toegepast om de gebruiker te ondersteunen in het proces naar de ideale vakantie."
@@ -17,8 +30,8 @@ const languageToContent = {
     nl: "Download de native app voor je smartphone."
   },
   project_nativeapp_video: {
-    en: "Experience a video demonstration of the app.",
-    nl: "Bekijk een video demonstratie van de app."
+    en: "Watch a demo",
+    nl: "Bekijk een demo"
   },
   project_dictionary_info: {
     en: "For the purpose of learning VueJs, I developed a dictionary platform. The website serves various functionalities, such as adding words, as well as editing and removing words, searching for words. Though currently disabled, the website would provide protection of the dictionary with a login functionality.",
@@ -33,32 +46,32 @@ const languageToContent = {
     nl: "VueJs en JavaScript frontend development, ExpressJs backend development & MongoDB data management."
   },
   project_dictionary_link: {
-    en: "Get a closer look on the website.",
-    nl: "Neem een kijkje op de website."
+    en: "View the website",
+    nl: "Neem een kijkje op de website"
   },
   project_dictionary_github: {
     en: "Visit the codebase on my Github repository.",
     nl: "Bekijk de codebase in het Github project."
   },
   about_info: {
-    en: "As a web developer I am mainly involved in designing and developing the frontend for websites and apps. I have been doing this with great pleasure since the beginning of my study Communication and Multimedia Design.",
-    nl: "Als web developer houd ik mij voornamelijk bezig met het ontwerpen en ontwikkelen van de frontend voor websites en apps. Dit doe ik al sinds het begin van mijn studie Communicatie en Multimedia Design met veel plezier."
+    en: "Arising from the Netherlands, I travelled to Scandinavia to expand my borders and embark on new quests. As a web developer I primarily involved myself in the development of user interface for both websites and applications, and I will continue to do so with great delight.",
+    nl: "..."
   },
   about_collaboration: {
-    en: "In 2022 I will take it a step further and pursue my passion for neat user interfaces with the master's degree in Human Computer Interaction, in Sweden. Besides, I like to travel a lot, as much as I enjoy a wonderful game or a nice book. I am currently looking for a part-time job alongside my studies, and of course a great collaboration.",
-    nl: "In 2022 ga ik een stapje verder en achtervolg ik mijn passie voor verfijnde gebruikersinterfaces met de master in Human Computer Interaction, in Zweden. Ik houd ook veel van reizen, evenveel als ik kan genieten van een leuke game of een goed boek. Momenteel ben ik op zoek naar een parttime baan naast mijn studie, en uiteraard een toffe samenwerking."
+    en: "I came to Sweden to pursue my devotion for human computer interaction. A new journey which will surely bring me to a great destination. My goal is to make our world a fine place. That is why I will take on the challenge, and dive deep into accomplishing flawless interactions between human and computer.",
+    nl: ""
   },
   contact_mail: {
-    en: "Send me an email using elmaharmsen01@gmail.com.",
-    nl: "Stuur me een email met elmaharmsen01@gmail.com."
+    en: "Write an email to elmaharmsen01@gmail.com",
+    nl: "Stuur me een email met elmaharmsen01@gmail.com"
   },
   contact_cv: {
-    en: "Directly view my resume online.",
-    nl: "Lees direct mijn resume online."
+    en: "Take a look at my online resume",
+    nl: "Lees direct mijn online resume"
   },
   contact_social: {
-    en: "Send me a message on LinkedIn.",
-    nl: "Stuur me een bericht op LinkedIn."
+    en: "Shoot me a message on LinkedIn",
+    nl: "Stuur me een bericht op LinkedIn"
   },
 
   //old

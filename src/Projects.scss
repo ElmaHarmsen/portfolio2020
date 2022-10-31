@@ -22,15 +22,11 @@
         }
       }
 
-      .italic-texts {
-        margin-bottom: 10px;
-      }
-
       .project-link-container {
         display: grid;
         grid-template-columns: 35px 1fr;
         gap: 10px;
-        margin-top: 10px;
+        margin-bottom: 10px;
         transition: all .2s ease;
 
         .project-link {
@@ -38,31 +34,27 @@
           flex-direction: row;
           justify-content: center;
           align-items: center;
-          margin-right: 10px;
-          width: 35px;
-          height: 35px;
-          border-radius: 50%;
-          background-color: var(--color2);
+          margin-right: 5px;
           transition: all .2s ease;
 
-          @include screen-is(md) {
-            margin-right: 15px;
-          }
-
           .project-link-icon {
-            width: 20px;
+            width: 26px;
           }
         }
 
-        h3 {
+        h2 {
           align-self: center;
         }
       }
 
       .project-link-container:hover {
         .project-link {
-          transform: translateX(10px);
+          transform: scale(1.2);
         }
+      }
+
+      .project-technologies {
+        margin-top: 10px;
       }
     }
 

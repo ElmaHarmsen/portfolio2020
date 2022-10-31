@@ -11,10 +11,9 @@ function About(props) {
   return (
     <section className="about">
       <section className="section-top">
-        <h1>what</h1>
+        <h1>About me</h1>
       </section>
       <section className='section-bottom'>
-        <h2>About Me?</h2>
         <div className="about-info">
           <h3>{dictionary("about_info", props.languageSetting)}</h3>
           <h3 className='bottom-alinea'>{dictionary("about_collaboration", props.languageSetting)}</h3>
