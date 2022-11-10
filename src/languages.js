@@ -16,21 +16,25 @@ const languageToContent = {
     en: "Devoted human computer interaction designer",
     nl: "Toegewijde ontwerper van mens-computer interactie"
   },
+  project_fast_fashion_info: {
+    en: "The fast fashion industry has a global impact which negatively affects our environment. Facing this gigantic problem, I teamed up with some of my fellow students from Uppsala University, to figure out a solution the student community could benefit from. Our solution focusses primarily on two aspects; one, in order to reduce fashion waste, encourage students to take measures to reuse clothes and swap them with other people if and whenever possible and two, to inform them about the importance of making sustainable choices.",
+    nl: "De fast fashion-industrie heeft wereldwijd veel invloed, en veroorzaakt een negatieve impact op ons milieu. Geconfronteerd met dit gigantische probleem, ik werkte samen met enkele van mijn medestudenten van de Universiteit van Uppsala om een oplossing te bedenken waar de studentengemeenschap zijn voordeel uit kan halen. Onze oplossing richt zich voornamelijk op twee aspecten; één, om kleding verspilling te verminderen, studenten aan te moedigen maatregelen te nemen om kleding te hergebruiken en deze waar mogelijk met andere mensen te ruilen, en twee, hen te informeren over het belang van het maken van duurzame keuzes."
+  },
+  project_fast_fashion_technologies: {
+    en: "Tasks: Research the problem, create concepts, design a prototype and test the solution.",
+    nl: "Taken: Onderzoeken van het probleem, concepten creëren, een prototype ontwerpen en de oplossing testen."
+  },
+  project_fast_fashion_video: {
+    en: "Watch a video",
+    nl: "Bekijk een video"
+  },
   project_nativeapp_info: {
     en: "As a graduation project for my bachelor programme of Communication and Multimedia Design, I developed a native application for Weflycheap. The app is built with React Native, but remains to be a prototype. It allows users to filter through deals, save favorite deals in the app, and get reminded of new deals matching their interests, while using personalisation techniques throughout the app to make the user feel supported in their search towards the ideal holiday.",
     nl: "Als afstudeeropdracht voor mijn bachelor opleiding Communicatie en Multimedia Design heb ik voor Weflycheap een native applicatie ontwikkeld. In de app kunnen gebruiker deals filteren, favorieten deals bewaren in de app en herinneringen opstellen voor nieuwe interessante deals. Door de hele app wordt personalisatie toegepast om de gebruiker te ondersteunen in het proces naar de ideale vakantie."
   },
-  project_nativeapp_headline: {
-    en: "Mobile application for Weflycheap, online provider for flight and holiday deals.",
-    nl: "Mobiele applicatie voor Weflycheap, online aanbieder van vluchten- en vakantiedeals."
-  },
   project_nativeapp_technologies: {
-    en: "Tasks: React Native and JavaScript development & User Interface design.",
-    nl: "Taken: React Native en JavaScript development & User Interface ontwerp."
-  },
-  project_nativeapp_link: {
-    en: "Download the native app for your smartphone.",
-    nl: "Download de native app voor je smartphone."
+    en: "Tasks: React Native and JavaScript development, and User Interface design.",
+    nl: "Taken: React Native en JavaScript development, en User Interface ontwerp."
   },
   project_nativeapp_video: {
     en: "Watch a demo",
@@ -40,13 +44,9 @@ const languageToContent = {
     en: "For the purpose of learning VueJs, I developed a dictionary platform. The website serves various functionalities, such as adding words, as well as editing and removing words, searching for words. Though currently disabled, the website would provide protection of the dictionary with a login functionality.",
     nl: "Om VueJs te leren heb ik een woordenboek platform ontwikkeld. De website heeft verschillende functionaliteiten. Zo kunnen woorden toegevoegd, bewerkt en verwijderd worden en kan er naar woorden gezocht worden. Hoewel momenteel uitgeschakeld zou het platform het woordenboek beschermen met een inlog functie."
   },
-  project_dictionary_headline: {
-    en: "Online platform for my personal dictionary.",
-    nl: "Online platform voor mijn persoonlijke woordenboek."
-  },
   project_dictionary_technologies: {
-    en: "Tasks: VueJs and JavaScript frontend development, ExpressJs backend development & MongoDB data management.",
-    nl: "Taken: VueJs en JavaScript frontend development, ExpressJs backend development & MongoDB data management."
+    en: "Tasks: VueJs and JavaScript frontend development, ExpressJs backend development, and MongoDB data management.",
+    nl: "Taken: VueJs en JavaScript frontend development, ExpressJs backend development, en MongoDB data management."
   },
   project_dictionary_link: {
     en: "View the website",

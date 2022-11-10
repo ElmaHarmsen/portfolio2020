@@ -12,6 +12,63 @@ function Projects(props) {
     <section className='projects-container'>
       <section className="projects">
         <section className="section-top">
+          <h1 className='animated-text-top'>Fast Fashion</h1>
+        </section>
+        <section className='section-bottom'>
+          <div className='project-info'>
+            {/* <a className="project-link-container" href="https://drive.google.com/file/d/1h4TZikSRReqfUiiH51s2ZEodAqYV47Il/view?usp=sharing" target="blank">
+              <div className="project-link">
+                <img className='project-link-icon' src={require("../assets/play.png")} />
+              </div>
+              <h2>{dictionary("project_fast_fashion_video", props.languageSetting)}</h2>
+            </a> */}
+            <h3>{dictionary("project_fast_fashion_info", props.languageSetting)}</h3>
+            <div className="project-technologies">
+              <h3>{dictionary("project_fast_fashion_technologies", props.languageSetting)}</h3>
+            </div>
+          </div>
+        </section>
+        <Swiper
+          spaceBetween={5}
+          loop={true}
+          onSwiper={swiper => setTimeout(() => swiper.update())}
+          className="swiper-container-native-app"
+          navigation={{
+            nextEl: ".swiper-next-native-app",
+            prevEl: ".swiper-prev-native-app"
+          }}
+        >
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/fast-fashion-1.png")} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/fast-fashion-2.png")} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/fast-fashion-3.png")} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/fast-fashion-4.png")} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className='project-image' src={require("../assets/projects/fast-fashion-5.png")} alt="" />
+          </SwiperSlide>
+        </Swiper>
+        <div className="swiper-navigation-native-app">
+          <div className="swiper-prev-native-app"><img className='swiper-icon' src={require("../assets/prev.png")} /></div>
+          <div className="swiper-next-native-app"><img className='swiper-icon' src={require("../assets/next.png")} /></div>
+        </div>
+        <div className="button-container">
+          <div className="button-next-project" onClick={() => window.scrollTo({
+            top: window.innerHeight * 2,
+            behavior: 'smooth'
+          })}
+          ></div>
+        </div>
+      </section>
+
+      <section className="projects">
+        <section className="section-top">
           <h1 className='animated-text-top'>Native app</h1>
         </section>
         <section className='section-bottom'>
@@ -66,6 +123,13 @@ function Projects(props) {
         <div className="swiper-navigation-native-app">
           <div className="swiper-prev-native-app"><img className='swiper-icon' src={require("../assets/prev.png")} /></div>
           <div className="swiper-next-native-app"><img className='swiper-icon' src={require("../assets/next.png")} /></div>
+        </div>
+        <div className="button-container">
+          <div className="button-next-project" onClick={() => window.scrollTo({
+            top: window.innerHeight * 3,
+            behavior: 'smooth'
+          })}
+          ></div>
         </div>
       </section>
 

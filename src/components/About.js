@@ -23,10 +23,17 @@ function About(props) {
         <div className="map-container">
         {
           props.darkTheme
-          ? <div className='map-color'></div>
+          ? <div className='map-color-se'></div>
           : <div className='map-black'></div>
         }
-      </div>      
+      </div>  
+      <div className="map-container">
+        {
+          props.darkTheme
+          ? <div className='map-color-nl'></div>
+          : <div className='map-black'></div>
+        }
+      </div>       
     </div> 
     </section>
   );
