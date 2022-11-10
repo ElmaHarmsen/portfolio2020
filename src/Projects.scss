@@ -9,8 +9,6 @@
 
       .project-info {
         padding-top: 20px;
-        padding-left: 10px;
-        padding-right: 10px;
 
         @include screen-is(tablet) {
           padding-top: 30px;
@@ -18,7 +16,7 @@
         }
 
         @include screen-is(md) {
-          width: 55%;
+          width: 50%;
         }
       }
 

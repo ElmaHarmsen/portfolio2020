@@ -3,8 +3,7 @@
 .header {
   .section-bottom .header-info {
     padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 3px;
   }
 
   .map-container {
@@ -22,8 +21,8 @@
     }
 
     @include screen-is(md) {
-      width: 60%;
-      height: 62%;
+      width: 70%;
+      height: 100%;
     }
 
     .map-black {

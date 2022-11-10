@@ -3,32 +3,44 @@
 .navigation {
 
   .nav-buttons-container {
-    position: absolute;
-    z-index: 1;
+    position: fixed;
+    z-index: 999;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     top: 20px;
-    right: 20px;
+    left: 10px;
+
+    @include screen-is(tablet) {
+      top: 20px;
+      left: calc(70px + 30px + 20px);
+      flex-flow: row;
+    }
 
     @include screen-is(md) {
-      top: calc(38% - 55px);
-      right: 160px;
+      top: 20px;
+      left: calc(100px + 30px + 20px);
       flex-flow: row;
     }
   }
 
   .nav-switches-container {
-    position: absolute;
-    z-index: 1;
+    position: fixed;
+    z-index: 998;
     display: flex;
     flex-direction: column;
-    bottom: calc(73% - 2 * 35px - 2 * 20px);
-    right: 20px;
+    right: 10px;
+    top: 20px;
+
+    @include screen-is(tablet) {
+      flex-flow: row;
+      right: 0;
+      left: 70px;
+    }
 
     @include screen-is(md) {
       flex-flow: row;
-      right: 100px;
-      top: calc(38% - 85px);
+      right: 0;
+      left: 100px;
     }
 
     .switch-language, .switch-theme {
@@ -37,10 +49,6 @@
       justify-content: center;
       align-items: center;
       transition: all .2s ease;
-
-      @include screen-is(md) {
-        margin: 0px 15px;
-      }
     }
 
     @include screen-is(tablet) {
@@ -67,36 +75,37 @@
       }
     }
 
+    .language-icon {
+      width: 30px;
+      height: 30px;
+    }
+
   }
 
   .nav-button {
+    color: var(--text-on-color2);
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    margin-right: 0px;
+    margin-bottom: 5px;
     align-items: center;
-    width: 35px;
-    height: 35px;
-    margin-bottom: 10px;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
 
-    @include screen-is(md) {
-      margin: 0px 15px;
-      margin-bottom: 0;
-      width: 45px;
-      height: 45px;
+    @include screen-is(tablet) {
+      margin-right: 10px;
     }
   }
 
   @include screen-is(tablet) {
     .nav-button:hover {
-      transform: scale(1.2); 
+      transform: translateY(-2px); 
       cursor: pointer;
     }
   }
 
   @include screen-is(md) {
     .nav-button:hover {
-      transform: scale(1.2); 
+      transform: translateY(-2px); 
       cursor: pointer;
     }
   }

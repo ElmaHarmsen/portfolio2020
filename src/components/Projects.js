@@ -27,14 +27,6 @@ function Projects(props) {
               <h3>{dictionary("project_nativeapp_technologies", props.languageSetting)}</h3>
             </div>
           </div>
-
-          <div className="button-container">
-            <div className="button-back-to-top" onClick={() => window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            })}
-            >next</div>
-          </div>
         </section>
         <Swiper
           spaceBetween={5}
@@ -84,12 +76,13 @@ function Projects(props) {
         <section className='section-bottom'>
           <h2 className='animated-text-bottom'></h2>
           <div className='project-info'>
-            <a className="project-link-container" href="https://duckydictionary.netlify.app/" target="blank">
+            {/* to do: make a video demo of ducky dictionary */}
+            {/* <a className="project-link-container" href="#" target="blank">
               <div className="project-link">
-                <img className='project-link-icon' src={require("../assets/cursor.png")} />
+                <img className='project-link-icon' src={require("../assets/play.png")} />
               </div>
-              <h2>{dictionary("project_dictionary_link", props.languageSetting)}</h2>
-            </a>
+              <h2>{dictionary("project_nativeapp_video", props.languageSetting)}</h2>
+            </a> */}
             <h3>{dictionary("project_dictionary_info", props.languageSetting)}</h3>
             <div className="project-technologies">
               <h3>{dictionary("project_dictionary_technologies", props.languageSetting)}</h3>

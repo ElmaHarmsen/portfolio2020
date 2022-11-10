@@ -8,10 +8,13 @@ const languageToContent = {
     en: "Take the step",
     nl: "Neem de stap"
   },
+  header_about: {
+    en: "About me",
+    nl: "Over mij"
+  },
   home_info: {
     en: "Devoted human computer interaction designer",
     nl: "Toegewijde ontwerper van mens-computer interactie"
-    // en: "Arising from the Netherlands, I travelled to Scandinavia to expand my borders and embark on new quests. As a web developer I primarily involved myself in the development of user interface for both websites and applications, and I will continue to do so with great delight. I came to Sweden to pursue my devotion for human computer interaction. A new journey which will surely bring me to a great destination. My goal is to make our world a fine place. That is why I will take on the challenge, and dive deep into accomplishing flawless interactions between human and computer."
   },
   project_nativeapp_info: {
     en: "As a graduation project for my bachelor programme of Communication and Multimedia Design, I developed a native application for Weflycheap. The app is built with React Native, but remains to be a prototype. It allows users to filter through deals, save favorite deals in the app, and get reminded of new deals matching their interests, while using personalisation techniques throughout the app to make the user feel supported in their search towards the ideal holiday.",
@@ -22,8 +25,8 @@ const languageToContent = {
     nl: "Mobiele applicatie voor Weflycheap, online aanbieder van vluchten- en vakantiedeals."
   },
   project_nativeapp_technologies: {
-    en: "React Native and JavaScript development & User Interface design.",
-    nl: "React Native en JavaScript development & User Interface ontwerp."
+    en: "Tasks: React Native and JavaScript development & User Interface design.",
+    nl: "Taken: React Native en JavaScript development & User Interface ontwerp."
   },
   project_nativeapp_link: {
     en: "Download the native app for your smartphone.",
@@ -42,8 +45,8 @@ const languageToContent = {
     nl: "Online platform voor mijn persoonlijke woordenboek."
   },
   project_dictionary_technologies: {
-    en: "VueJs and JavaScript frontend development, ExpressJs backend development & MongoDB data management.",
-    nl: "VueJs en JavaScript frontend development, ExpressJs backend development & MongoDB data management."
+    en: "Tasks: VueJs and JavaScript frontend development, ExpressJs backend development & MongoDB data management.",
+    nl: "Taken: VueJs en JavaScript frontend development, ExpressJs backend development & MongoDB data management."
   },
   project_dictionary_link: {
     en: "View the website",
@@ -55,11 +58,11 @@ const languageToContent = {
   },
   about_info: {
     en: "Arising from the Netherlands, I travelled to Scandinavia to expand my borders and embark on new quests. As a web developer I primarily involved myself in the development of user interface for both websites and applications, and I will continue to do so with great delight.",
-    nl: "..."
+    nl: "Oorspronkelijk uit Nederland, ik ben sinds kort naar Scandinavië gereisd om mijn grenzen te verleggen en te beginnen aan een nieuw avontuur. Als webontwikkelaar heb ik mij voornamelijk bezig gehouden met het ontwikkelen van gebruikersinterfaces voor zowel websites als apps, en dat zal ik met veel plezier blijven doen."
   },
   about_collaboration: {
-    en: "I came to Sweden to pursue my devotion for human computer interaction. A new journey which will surely bring me to a great destination. My goal is to make our world a fine place. That is why I will take on the challenge, and dive deep into accomplishing flawless interactions between human and computer.",
-    nl: ""
+    en: "I came to Sweden to pursue my devotion for human-computer interaction. A new journey which will surely bring me to a great destination. My goal is to make our world a fine place. That is why I will take on the challenge, and dive deep into accomplishing flawless interactions between human and computer.",
+    nl: "Ik kwam naar Zweden om mijn toewijding voor mens-computer interactie te volgen. Een nieuwe stap die me zeker naar een belangrijk doel zal brengen. Mijn ambitie is om van onze wereld een fijne plek te maken. Daarom ga ik de uitdaging aan en zal ik mij inzetten voor het creëren van buitengewoon goede interacties tussen mens en computer."
   },
   contact_mail: {
     en: "Write an email to elmaharmsen01@gmail.com",

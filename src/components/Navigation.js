@@ -85,12 +85,12 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
   }
 
   const navItems = [
-    // {
-    //   name: "nav_header",
-    //   img:  "house",
-    //   position: props.sectionPositions[0],
-    //   title: "Home"
-    // }, //turned off because the nav is not fixed so you would never press the home btn
+    {
+      name: "nav_header",
+      img:  "house",
+      position: props.sectionPositions[0],
+      title: "Home"
+    }, 
     {
       name: "nav_projects",
       img:  "nav-projects",
@@ -116,7 +116,7 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
     return (
       <div key={item.name}>
         <div className='nav-button' onClick={() => navigateToSection(index)}>
-          <img className='nav-icon' src={require(`../assets/${item.img}.png`)} />
+          <h2 className='nav-button'>{item.title}</h2>
         </div>
       </div>
     )
@@ -136,12 +136,13 @@ function Navigation(props) { //Navigation is the name of the component. //Betwee
          )}
         </div> */}
         <div className="switch-language" onClick={() => props.onLanguageChange(props.languageSetting === "nl" ? "en" : "nl")}>
-          <h4>{props.languageSetting === "nl" ? "en" : "nl"}</h4>
+          {props.languageSetting === "nl" ? (
+            <img className='language-icon' src={require("../assets/united-kingdom.png")} alt="" />
+          ) : (
+            <img className='language-icon' src={require("../assets/netherlands.png")} alt="" />
+          )}
         </div>
       </div>
-      {/* <div className="section-button" onClick={() => navigateToSection()}>
-        <h4>NEXT SECTION</h4>
-      </div> */}
     </section>
   );
 }

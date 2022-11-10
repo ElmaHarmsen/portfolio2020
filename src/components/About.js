@@ -11,7 +11,7 @@ function About(props) {
   return (
     <section className="about">
       <section className="section-top">
-        <h1>About me</h1>
+        <h1>{dictionary("header_about", props.languageSetting)}</h1>
       </section>
       <section className='section-bottom'>
         <div className="about-info">
@@ -20,9 +20,6 @@ function About(props) {
         </div>
       </section>
       <div className="about-visuals">
-        <div className="about-image-container">
-          <img className='about-image' src={require("../assets/me.jpg")} alt="" />
-        </div>
         <div className="map-container">
         {
           props.darkTheme
